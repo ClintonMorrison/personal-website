@@ -1,0 +1,22 @@
+[% extends 'pages/templates/page.html' %]
+
+[% region main %]
+
+[% for each project in projects %]
+<br/>
+<a name="[[project.name]]"></a>
+<br/>
+
+<div class="centered wide box block">
+  <h1> [[project.title]] </h1> 
+  <br/>
+  <img class="wide fitted" src="http://clintonmorrison.com/images/projects/[[project.name]]/picture.png"></img>
+  <br/>
+  <p>[[project.long_description]]</p>
+  <a class="left half button" href="[[project.source_url]]">Source Code</a> 
+  <a class="right half button" href="[[project.view_url]]">Try It</a>
+  <div class="clearfix"></div>
+</div>
+[% end for each %]
+
+[% end region %]

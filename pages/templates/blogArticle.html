@@ -1,0 +1,14 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+  [% add sass 'pages/style/blogArticle.scss' %]
+  <span class="corner note"> [[article.date_published]] </span>
+<div style="white-space: pre-wrap;"> 
+[[article.body]]
+</div>
+
+<br/><br/>
+<hr>
+<br/><br/>
+<a class="button" href="[% url 'blog' %]">Return to Blog</a>
+[% end region %]

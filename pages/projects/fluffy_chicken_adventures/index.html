@@ -1,0 +1,25 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+[% add sass 'pages/projects/fluffy_chicken_adventures/style.scss' %]
+<object type="application/x-java-applet" height="500" width="1000">
+  <param name="code" value="FluffyChickenGame.class" />
+  <param name="archive" value="[% static 'projects/fluffy_chicken_adventures/fluffy-chicken-adventures-106.jar' %]"/>
+  <p>Applet failed to run.  No Java plug-in was found.</p>
+</object>
+
+<h3> Description </h3>
+<p> 
+	In this side scrolling action game you can help Binky the Fluffy Chicken save the world!
+	Use the left and right arrow keys to move. Press the up key to jump.
+	Hold down the space bar to fire lasers at your foes. Collect the golden fluffy chicken trophy
+	at the end of each level to move on to the next stage. To help your chicken, try to also collect coins,
+	hearts, and lightning bolts. There are a total of 10 levels to complete. 
+	The difficulty, music, and sound effects can be toggled in the "Settings" menu. 
+</p>
+
+<p>
+	You need Java installed to play this game.
+</p>
+
+[% end region %]

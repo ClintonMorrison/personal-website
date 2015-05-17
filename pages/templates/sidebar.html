@@ -1,0 +1,17 @@
+<nav class="sidebar">
+  <ul>
+    <li class="title">
+      <a href="/">Clinton Morrison</a>
+    </li>
+  </ul>
+
+  <ul>
+    [% for each page in pages %]
+      <li class="[[page.selected]]">
+        <a href="[[page.url]]"> [[page.title]] </a>
+      </li>
+    [% end for each %]
+  </ul>
+
+</nav>
+

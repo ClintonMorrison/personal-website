@@ -1,0 +1,30 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+[% add sass 'pages/projects/avoid_the_shapes/style.scss' %]
+
+<!-- removed 'autoplay' -->
+<audio id="gameMusic" loop><source src="[% static 'projects/avoid_the_shapes/game_music.ogg' %]"></audio>
+
+<canvas id="canvas" width="768" height="500">
+  This game requires a browser that supports the HTML5 canvas tag to play this game.
+</canvas>
+
+<!-- Load high scores from database -->
+
+[% add javascript 'pages/projects/avoid_the_shapes/script.js' %]
+
+<!-- Hidden form for high score submissions -->
+<form id="highScoreSubmitForm" action="submitScore.php" method="post" style="display: none;">
+   <input id="gameField" type="hidden" name="game"> <br><br>
+   <input id="userField" type="hidden" name="user"> <br><br>
+   <input id="scoreField" type="hidden" name="score"> <br><br>
+</form>
+
+<h3> Description </h3>
+<p> This game is simple but surprisingly fun. You control the yellow circle. Point your mouse in the direction you
+would like it to move and it will follow. Avoid touching the other circles. They will cause you to explode! You can
+toggle the music on and off by clicking the music note in the bottom right hand corner. </p>
+
+<p>Note that you need a HTML5 compatible web browser with JavaScript enabled to play this game.</p>
+[% end region %]

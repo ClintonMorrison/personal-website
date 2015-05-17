@@ -1,0 +1,13 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+
+[% for each article in articles %]
+  <a class="wide bubble" href="[% url 'blog/article' %]&name=[[article.name]]">
+    <span class="corner note"> [[article.date_published]]</span>
+    [[article.title]]
+  </a>
+  <div class="bubble connector"></div>
+[% end for each %]
+
+[% end region %]

@@ -1,0 +1,43 @@
+[% extends 'pages/templates/page.html' %]
+
+[% region main %]
+<br/><br/>
+<div class="centered wide content box block" style="max-width: 1200px;">
+
+  <h1> Hello there! </h1>
+  <br/><br/>
+  <p class="huge center"> 
+    I am Clinton Morrison, a Canadian web developer.
+  </p>
+  <br/>
+
+  <div class="wide padded block two column">
+
+    <!-- PROJECTS -->
+    <div class="column">
+      <h2 class="centered"> Projects </h2>
+      [% for each project in projects %]
+        <a class="bubble" href="[% url 'projects' %]#[[project.name]]">[[project.title]]</a>
+        <div class="bubble connector"></div>
+      [% end for each %]
+      <a class="bubble" style="" href="[% url 'projects' %]">. . .</a>
+      <div class="bubble connector"></div>
+      <br/>
+    </div>
+
+
+    <!-- BLOG -->
+    <div class="column">
+      <h2 class="centered"> Blog </h2>
+      [% for each article in articles %]
+        <a class="bubble" href="[% url 'blog/article' %]&name=[[article.name]]">[[article.title]]</a>
+        <div class="bubble connector"></div>
+      [% end for each %]
+      <a class="bubble" href="[% url 'blog' %]">. . .</a>
+      <div class="bubble connector"></div>
+    </div>
+
+  </div>
+</div>
+
+[% end region %]

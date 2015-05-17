@@ -1,0 +1,31 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+[% add javascript 'pages/projects/calculate/calculate.js' %]
+[% add sass 'pages/projects/calculate/style.scss' %]
+
+
+<div style="height:250px">
+  <h3> Calculate!</h3>
+	<p class="disabled"> Enter an expression to evaluate. </p>
+
+  <div class="wide group">
+    <input type="text"  id="query" style="width: calc(100% - 170px);" placeholder="2 + 2">
+    <div class="inverted button" id="go"><i class="fa fa-bolt inverted"></i></div>
+  </div>
+  
+  <div class="two column block">
+    <div class="column">
+      <h4 class="ui top attached header">Input</h4>
+      <div class="number area" id="input"></div>
+    </div>
+
+    <div class="column">
+      <h4 class="ui top attached header">Result</h4>
+      <div class="number area" id="result"></div>
+    </div>
+  </div>
+
+</div>
+
+[% end region %]

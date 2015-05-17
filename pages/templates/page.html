@@ -1,0 +1,40 @@
+[% extends 'pages/templates/base.html' %]
+
+[% region head %]
+  <meta charset="utf-8">
+  <meta name="author" content="Clinton Morrison">
+
+  <link rel="icon" href="://clintonmorrison.com/favicon.ico"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
+  <title>[[title]] - clintonmorrison.com </title>
+  [% add sass 'pages/style/base.scss' %]
+  [% add css 'pages/thirdparty/normalize/normalize.min.css' %]
+[% end region %]
+
+[% region body %]
+
+  <!-- <script src="//code.jquery.com/jquery-2.1.4.min.js"></script> -->
+  [% add javascript 'pages/thirdparty/jquery/jquery-2.1.4.js' %]
+  [% add javascript 'pages/thirdparty/lodash/lodash.min.js' %]
+
+  [% add javascript 'pages/js/base.js' %]
+
+  [[sidebar]]
+
+  <div class="main container">
+
+    <div class="content container">
+      [[main]]
+    </div>
+    
+    <footer>
+      <br/>
+      <p> &copy; Clinton Morrison 2015. </p>
+
+    </footer>
+  </div>
+
+
+
+[% end region %]

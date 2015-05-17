@@ -1,0 +1,46 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+[% add sass 'pages/projects/space_defender/style.scss' %]
+
+<canvas id="gameCanvas" width="774" height="500">
+  Error. You're browser doesn't support the canvas tag.
+ </canvas> 
+
+<audio id="menuMusic" autoplay loop>
+  <source src="[% static 'projects/space_defender/music_menu.wav' %]"/>
+</audio>
+
+<audio id="gameMusic" autoplay loop>
+  <source src="[% static 'projects/space_defender/music_game.wav' %]"/>
+</audio>
+
+[% add javascript 'pages/projects/space_defender/spaceGame.js' %]
+[% add javascript 'pages/projects/space_defender/gameUtil.js' %]
+[% add javascript 'pages/projects/space_defender/gameBase.js' %]
+
+<p>
+  You need a HTML5 compatible web browser with JavaScript enabled to play this game. 
+  Sound effects and background music will not work in Internet Explorer.
+ </p>
+		
+<h4> Description </h4>
+<p> 
+  This is a space shooter game. Fly through space and fire lasers to destroy the 
+	alien space ships! You earn points for each space ship destroy. Destroy as many as you can!
+  Collect green repair kits to 	increase your health. You can also play
+  against a friend in two player mode! Music and sound effects can be toggled off in the 
+	settings menu. 
+</p>
+
+<p>
+<h3> Controls </h3>
+The game can be paused by pressing "P" or "Escape" at any time. <br> <br>
+<em> Player 1 - </em>
+Use WSAD to move your space ship. Fire lasers by holding down the space bar. <br> <br>
+
+<em> Player 2 - </em>
+Use arrow keys to move your space ship. Fire lasers by holding enter down. <br>
+</p> 
+
+[% end region %]
