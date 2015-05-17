@@ -1,7 +1,7 @@
 import MySQLdb
 import MySQLdb.cursors
 import re
-import core.config
+import config
 from pprint import pprint
 import json
 
@@ -18,7 +18,7 @@ def get_handle(name = 'main'):
   if _database_handles.get(name, False):
      return _database_handles.get(name, False)
 
-  config = core.config.databases.get(name, False)
+  config = config.databases.get(name, False)
 
   if not config:
     raise Exception('No configuration for database handle: ' + name)
