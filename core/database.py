@@ -18,12 +18,12 @@ def get_handle(name = 'main'):
   if _database_handles.get(name, False):
      return _database_handles.get(name, False)
 
-  config = config.databases.get(name, False)
+  db_config = config.databases.get(name, False)
 
-  if not config:
+  if not db_config:
     raise Exception('No configuration for database handle: ' + name)
 
-  handle = DatabaseHandle(config.get('host'), config.get('user'), config.get('passwd'), config.get('db'))
+  handle = DatabaseHandle(db_config.get('host'), db_config.get('user'), db_config.get('passwd'), db_config.get('db'))
   _database_handles[name] = handle
   return handle
 
