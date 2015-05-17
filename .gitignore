@@ -8,5 +8,7 @@ __pycache__/
 # VIM stuff
 *.sw[a-z]
 
+# Configuration
+config.py
 
 
