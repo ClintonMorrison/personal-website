@@ -5,6 +5,13 @@ __pycache__/
 # C extensions
 *.so
 
+# Default error pages
+[0-9]*.shtml
+[0-9]*.php
+
+# Backups
+*.bak
+
 # VIM stuff
 *.sw[a-z]
 
