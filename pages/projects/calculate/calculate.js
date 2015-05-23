@@ -1,10 +1,11 @@
 var previousQuery = "";
 
 $(document).ready(function() {
-	
 	$('#go').click(function() {
 		processInput();
 	});
+  
+  $('#go').click();
 
 	$('#query').bind('input', function() {
 		var newQuery = $('#query').val();
@@ -45,11 +46,9 @@ var processInput = _.throttle(function() {
 	var query = $('#query').val();
 
 	if ( ! query || stripWhitespace(query).length === 0) {
-		if ($('.output').css('display') !== 'none')
-			$('.output').transition('fade down');
+    $('.output').hide();
 	} else {
-		if ($('.output').css('display') === 'none')
-			$('.output').transition('fade down');	
+    $('.output').show();
 	}
 
 	$('#input').html(formatForDisplay(query));
