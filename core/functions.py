@@ -1,7 +1,8 @@
+import config
 
 def path_to_url(path = 'index', parameters = [], hash = ''):
-  return "http://clintonmorrison.com/personal-website/main.cgi?q=" + path
+  return "http://" + config.base_url + "/" + path
 
 # Gets URL for static resource
 def static_to_url(path):
-  return "http://clintonmorrison.com/static/" + path
+  return path_to_url("static/" + path)

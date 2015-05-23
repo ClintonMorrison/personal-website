@@ -1,0 +1,40 @@
+html body {
+  .block.box {
+    h1 {
+      font-size: 220%;
+    }
+  }
+  
+  li.blog {
+    margin-left: 20px;
+  }
+  
+  img {
+    display: inline-block;
+    padding-bottom: 20px;
+
+    &.left {
+      float: left;
+      padding-right: 20px;
+    }
+    &.right {
+      float: right;
+    }
+    &.center {
+      text-align: center;
+    }
+  }
+  .img-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  code {
+    display: block;
+    padding: 20px;
+    font-size: 80%;
+    white-space: pre;
+    border: 1px solid #333;
+    background: #ececec;
+  }
+}

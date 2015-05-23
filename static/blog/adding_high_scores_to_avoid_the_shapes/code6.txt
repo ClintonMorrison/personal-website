@@ -1,0 +1,6 @@
+<form id="submitScoreForm" action="scoreSubmit.php" 
+   method="post" style="display: none;">
+   <input id="gameName" type="hidden" name=" gameName "> <br><br>
+   <input id="userName" type="hidden" name=" userName "> <br><br>
+   <input id="userScore" type="hidden" name="userScore"> <br><br>
+</form>

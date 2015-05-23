@@ -1,0 +1,35 @@
+<script type="text/javascript">
+   //Create a GameScore
+   function GameScore(game, user, score) {
+      this.game = game;
+      this.user = user;
+      this.score = score;
+   }
+
+   //Create array of scores to store top 5 high scores
+   var scores = [];
+
+   <?php $db=mysqli_connect("database_host", 
+      "user_name","password", "database_name");
+
+   // Verify connection was sucessful
+   if (!mysqli_connect_errno($db)) {
+	
+      //Query database
+      $result = mysqli_query($db, "SELECT userName, 
+         userScore FROM GameHighScore " . 
+         "WHERE  gameName='avoid the shapes' ORDER BY 
+         userScore DESC LIMIT 5");
+			
+      //Close database
+      mysqli_close($db);
+
+      //Add score to scores array for each result from query
+      while($row = mysqli_fetch_array($result)) {
+         echo "\nvar newGameScore = new GameScore(
+            'avoid-the-shapes', '" . $row['name'] . 
+            "', '" . $row['score'] . "');";
+         echo "\nscores.push(newGameScore);";
+      }
+   }
+    ?> </script>

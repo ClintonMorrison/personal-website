@@ -1,0 +1,5 @@
+CREATE TABLE GameHighScore(
+gameName VARCHAR(10),
+userName VARCHAR(10),
+userScore INT
+);

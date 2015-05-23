@@ -49,8 +49,8 @@ paths = {
     'title':      'Blog'
   },
   'blog/article': {
-    'controller': 'pages.controllers.blogArticle',
-    'template':   'pages/templates/blogArticle.html',
+    'controller': 'pages.controllers.blog_article',
+    'template':   'pages/templates/blog_article.html',
     'title':      'Blog',
     'dynamic':    True
   },
@@ -81,6 +81,14 @@ paths = {
     'controller': 'pages.controllers.default_controller',
     'template':   'pages/projects/calculate/index.html',
     'title':      'Calculate!'
+  },
+
+  # Other stuff
+  'homepage': {
+    'controller': 'pages.controllers.homepage',
+    'template':   'pages/templates/homepage.html',
+    'title':      'Hi Clint!',
+    'dynamic':    True
   },
 
   # Error pages

@@ -1,0 +1,2 @@
+<!-- Load high scores from database -->
+<?php require('getHighScores.php'); ?>

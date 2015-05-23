@@ -1,0 +1,27 @@
+Article Title
+=============
+
+
+Subheading
+----------
+
+It is simple to display _bold_ words.
+
+It is also easy to write words in *italics*.
+
+You can also make links[www.google.ca] with square brackets.
+
+
+Another subheading
+------------------
+
+Here is a list:
++ item 1
++ item 2
++ item 3
+
+Here is a numbered list:
+# item 1
+# item 2
+# item 3
+

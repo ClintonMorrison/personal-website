@@ -8,9 +8,11 @@ import json
 from pprint import pprint
 import core.pageloader
 from core.exceptions import NotFoundError, ServerError
+import config
 
 # Show debugging messages?
-cgitb.enable()
+if config.debug:
+  cgitb.enable()
 
 variables = os.environ
 
@@ -23,15 +25,20 @@ for term in get_terms:
     get_params[parts[0]] = parts[1]
 
 # Figure out a path to use
-
-
+path = get_params.get('q', False)
+if not path:
+  parts = variables.get('REQUEST_URI', '').split('?')
+  path = parts[0].strip('/')
 
 try:
-  page_data = core.pageloader.get(get_params.get('q', ''), get_params, {}, variables)
+  page_data = core.pageloader.get(path, get_params, {}, variables, use_cache =  not config.debug)
 except NotFoundError:
-  page_data = core.pageloader.get('404', {}, {}, variables, use_cache = False)
-#except ServerError:
-#  page_data = core.pageloader.get('500', {}, {}, variables)
+  page_data = core.pageloader.get('404', {}, {}, variables, use_cache = not config.debug)
+except ServerError:
+  if not config.debug:
+    page_data = core.pageloader.get('500', {}, {}, variables)
+  else:
+    raise
 
 if not page_data:
   raise Exception('There was a problem loading data for the requested page.')

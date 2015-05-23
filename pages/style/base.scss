@@ -54,6 +54,11 @@ html body {
     padding-bottom: 0;
   }
 
+  h4 { 
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
   hr {
       border: 0;
       border-bottom: 1 px solid $menu-fg;
@@ -71,7 +76,7 @@ html body {
   p.huge {
     font-size: 170%;
   }
-
+  
   .clearfix {
     clear: both;
   }
@@ -235,7 +240,9 @@ html body {
       max-width: 800px;
       width: 80%;
       min-height: 100px;
-      -webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.2);
+      -webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.4);
+      -moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.4);
+      box-shadow: 0 0 15px 2px rgba(0,0,0,0.4);
       //background-color: #eee; // original
       //background-color: #eDeDeD;
       background-color: white;
@@ -366,6 +373,7 @@ html body {
   //
   nav {
     background-color: $menu-bg;
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.4);
     width: $menu-width;
     position: fixed;
     left: 0;
