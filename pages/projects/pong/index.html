@@ -1,0 +1,21 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+[% add sass 'pages/projects/pong/style.scss' %]
+<object type="application/x-java-applet" height="400" width="800">
+  <param name="code" value="PongApplet.class" />
+  <param name="archive" value="[% static 'projects/pong/pong.jar' %]" />
+  Applet failed to run.  No Java plug-in was found.
+</object>
+
+<h3> Description </h3>
+<p> 
+	To control your bumper in this simple pong game simply move your mouse up and down. The slider will
+	follow your mouse. The difficulty, music, and sound effects can be toggled in the main menu.
+</p>
+
+<p>
+	You need Java installed to play this game.
+</p>
+
+[% end region %]

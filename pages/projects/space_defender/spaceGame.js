@@ -111,7 +111,7 @@ function SoundEffect(filename) {
      */
     this.soundOn = true;
 
-    for(var i = 0; i < 10; i++)
+    for(var i = 0; i < 4; i++)
         this.sounds.push(new Audio(this.filename));
 
     /**
@@ -127,6 +127,7 @@ function SoundEffect(filename) {
  */
 SoundEffect.prototype.play = function () {
     if (this.soundOn) {
+        console.log("Playing sound:", this.filename);
         this.sounds[this.indexToPlay].play();
         this.indexToPlay++;
         if (this.indexToPlay > this.sounds.length - 1) {
@@ -154,25 +155,25 @@ function SoundManager() {
      * Sound effect to be played when lasers are fired.
      * @type {SoundEffect}
      */
-    this.laserSound = new SoundEffect("sounds//laser.wav");
+    this.laserSound = new SoundEffect("/static/projects/space_defender/laser.wav");
 
     /**
      * Sound effect to be played when a ship takes damage.
      * @type {SoundEffect}
      */
-    this.damageSound = new SoundEffect("sounds//hurt.wav");
+    this.damageSound = new SoundEffect("/static/projects/space_defender/hurt.wav");
 
     /**
      * Sound effect to play when a ship collects a repair kit.
      * @type {SoundEffect}
      */
-    this.repairSound = new SoundEffect("sounds//powerup.wav");
+    this.repairSound = new SoundEffect("/static/projects/space_defender/powerup.wav");
 
     /**
      * Sound effect to play when a ship explodes.
      * @type {SoundEffect}
      */
-    this.explosionSound = new SoundEffect("sounds//explosion.wav");
+    this.explosionSound = new SoundEffect("/static/projects/space_defender/explosion.wav");
 }
 
 /**

@@ -1,0 +1,2 @@
+SELECT userName, userScore FROM  GameHighScore WHERE gameName = 
+	'avoid the shapes' ORDER BY userScore DESC LIMIT 5;

@@ -4,13 +4,25 @@
 [% add sass 'pages/projects/avoid_the_shapes/style.scss' %]
 
 <!-- removed 'autoplay' -->
-<audio id="gameMusic" loop><source src="[% static 'projects/avoid_the_shapes/game_music.ogg' %]"></audio>
+<audio id="gameMusic" loop autoplay><source src="[% static 'projects/avoid_the_shapes/game_music.ogg' %]"></audio>
 
 <canvas id="canvas" width="768" height="500">
   This game requires a browser that supports the HTML5 canvas tag to play this game.
 </canvas>
 
-<!-- Load high scores from database -->
+<!-- Get high scores from database -->
+<script type="text/javascript">
+  var scores = [];
+
+  [% for each score in scores %]
+    scores.push({
+      'game': '[[score.game]]',
+      'user': '[[score.name]]',
+      'score': '[[score.score]]'
+    });
+  [% end for each %]
+</script>
+
 
 [% add javascript 'pages/projects/avoid_the_shapes/script.js' %]
 

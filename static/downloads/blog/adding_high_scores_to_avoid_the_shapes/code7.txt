@@ -1,0 +1,14 @@
+function submitScoreToDatabase() {
+   //Set hidden fields in submit form
+   document.getElementById('gameName').value 
+      = "avoid_the_shapes";
+	  
+   document.getElementById('userName').value 
+      = this.nameString;
+	  
+   document.getElementById('userScore').value 
+      = score;
+
+   //Submit score to PHP file
+   document.getElementById('submitScoreForm').submit();
+}

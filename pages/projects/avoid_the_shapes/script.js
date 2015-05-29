@@ -1,1 +1,1629 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1N 1x=["\\s\\j\\X\\f\\l\\b\\1k\\l\\h\\s\\j\\1r\\f\\I\\j\\r\\d\\t\\m\\t\\c\\h\\s\\j\\1l\\f\\I\\j\\r\\d\\t\\m\\t\\c\\h\\s\\j\\k\\1j\\f\\11\\10\\h\\s\\j\\b\\Y\\f\\I\\j\\b\\A\\d\\c\\h\\s\\j\\k\\19\\f\\I\\j\\b\\1l\\d\\c\\h\\s\\j\\k\\17\\f\\I\\j\\k\\b\\d\\c\\h\\s\\j\\k\\Z\\f\\I\\j\\k\\M\\d\\c\\h\\s\\j\\k\\1k\\f\\I\\j\\k\\o\\d\\c\\h\\s\\j\\15\\f\\11\\10\\h\\s\\j\\k\\X\\f\\11\\l\\K\\S\\l\\m\\l\\e\\e\\l\\m\\l\\K\\A\\l\\m\\l\\K\\D\\l\\m\\l\\K\\T\\l\\10\\h\\s\\j\\b\\1f\\f\\11\\l\\k\\R\\l\\10\\h\\s\\j\\b\\N\\f\\I\\j\\b\\W\\d\\c\\h\\s\\j\\e\\N\\f\\I\\j\\k\\1a\\d\\c\\h\\e\\N\\a\\k\\x\\f\\1w\\e\\q\\a\\k\\D\\1w\\h\\s\\j\\k\\18\\f\\I\\j\\K\\q\\d\\l\\K\\1a\\a\\K\\B\\l\\c\\h\\s\\j\\k\\A\\f\\b\\I\\h\\s\\j\\b\\i\\f\\K\\L\\1e\\e\\12\\h\\s\\j\\b\\s\\f\\t\\h\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\s\\j\\y\\f\\u\\a\\e\\u\\d\\l\\k\\s\\l\\c\\h\\s\\j\\k\\e\\f\\I\\j\\b\\18\\d\\1w\\K\\r\\a\\k\\D\\1w\\m\\1w\\e\\q\\a\\k\\D\\1w\\m\\I\\j\\r\\d\\u\\a\\1i\\V\\S\\t\\m\\u\\a\\17\\V\\S\\t\\c\\m\\I\\j\\r\\d\\K\\t\\m\\K\\t\\c\\c\\h\\e\\s\\a\\K\\o\\d\\l\\e\\i\\d\\c\\l\\m\\b\\i\\c\\h\\1q\\d\\s\\j\\o\\f\\b\\h\\o\\1h\\S\\t\\h\\o\\H\\H\\c\\b\\12\\d\\c\\h\\u\\a\\K\\M\\f\\G\\d\\i\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\s\\j\\b\\1j\\f\\u\\a\\K\\u\\d\\c\\h\\1r\\f\\I\\j\\r\\d\\i\\a\\K\\Y\\V\\b\\1j\\a\\K\\s\\m\\i\\a\\K\\i\\V\\b\\1j\\a\\K\\J\\c\\v\\h\\e\\s\\a\\K\\p\\f\\G\\d\\i\\c\\w\\i\\a\\K\\N\\d\\c\\h\\k\\1j\\a\\k\\I\\d\\i\\a\\K\\C\\c\\v\\h\\u\\a\\K\\E\\f\\G\\d\\i\\c\\w\\1l\\f\\1r\\v\\h\\G\\j\\e\\i\\d\\c\\w\\e\\Y\\d\\c\\h\\e\\F\\d\\c\\v\\G\\j\\e\\F\\d\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\s\\j\\y\\f\\u\\a\\e\\u\\d\\l\\k\\s\\l\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\1i\\l\\h\\y\\a\\b\\1n\\d\\t\\m\\t\\m\\K\\X\\m\\K\\W\\c\\h\\y\\a\\e\\13\\f\\S\\h\\1q\\d\\s\\j\\o\\f\\t\\h\\o\\1h\\15\\a\\13\\h\\o\\H\\H\\c\\w\\15\\11\\o\\10\\a\\B\\d\\y\\c\\v\\L\\d\\X\\f\\f\\l\\b\\u\\l\\c\\w\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\K\\Q\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\e\\n\\1J\\j\\l\\H\\b\\s\\m\\b\\t\\m\\u\\a\\17\\V\\k\\t\\c\\h\\b\\Y\\a\\B\\d\\y\\c\\h\\b\\N\\a\\B\\d\\y\\c\\v\\L\\d\\X\\f\\f\\f\\l\\b\\1k\\l\\c\\w\\k\\19\\a\\B\\d\\y\\c\\v\\12\\j\\L\\d\\X\\f\\f\\f\\l\\k\\T\\l\\c\\w\\k\\17\\a\\B\\d\\y\\c\\v\\12\\j\\L\\d\\X\\f\\f\\f\\l\\k\\i\\l\\c\\w\\k\\Z\\a\\B\\d\\y\\c\\v\\12\\j\\L\\d\\X\\f\\f\\f\\l\\k\\q\\l\\c\\w\\k\\1k\\a\\B\\d\\y\\c\\v\\k\\e\\a\\B\\d\\y\\c\\v\\G\\j\\e\\G\\d\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\1q\\d\\s\\j\\o\\f\\t\\h\\o\\1h\\15\\a\\13\\h\\o\\H\\H\\c\\w\\L\\d\\15\\11\\o\\10\\a\\q\\a\\E\\H\\15\\11\\o\\10\\a\\16\\1h\\t\\g\\g\\15\\11\\o\\10\\a\\q\\a\\E\\V\\15\\11\\o\\10\\a\\16\\1u\\u\\a\\1i\\g\\g\\15\\11\\o\\10\\a\\q\\a\\C\\H\\15\\11\\o\\10\\a\\16\\1h\\t\\g\\g\\15\\11\\o\\10\\a\\q\\a\\C\\V\\15\\11\\o\\10\\a\\16\\1u\\u\\a\\17\\c\\w\\15\\a\\e\\R\\d\\o\\m\\b\\c\\h\\b\\12\\d\\c\\v\\v\\v\\G\\j\\e\\Y\\d\\c\\w\\L\\d\\b\\s\\1O\\k\\k\\f\\f\\t\\1m\\1m\\X\\f\\f\\l\\b\\u\\l\\c\\b\\12\\d\\c\\h\\L\\d\\X\\f\\f\\l\\b\\u\\l\\c\\b\\Y\\a\\n\\d\\1r\\m\\b\\i\\c\\h\\1q\\d\\s\\j\\o\\f\\t\\h\\o\\1h\\15\\a\\13\\h\\o\\H\\H\\c\\w\\15\\11\\o\\10\\a\\n\\d\\b\\i\\c\\h\\L\\d\\X\\f\\f\\l\\b\\u\\l\\1m\\1m\\b\\Y\\a\\e\\1a\\d\\15\\11\\o\\10\\c\\c\\w\\b\\Y\\a\\k\\1o\\d\\c\\v\\v\\e\\G\\d\\c\\h\\b\\N\\a\\n\\d\\b\\i\\c\\h\\k\\e\\a\\n\\d\\1r\\m\\1l\\c\\h\\L\\d\\X\\f\\f\\l\\b\\1k\\l\\c\\w\\k\\19\\a\\n\\d\\1r\\m\\b\\i\\m\\1l\\c\\h\\1l\\f\\I\\j\\r\\d\\t\\m\\t\\c\\v\\12\\j\\L\\d\\X\\f\\f\\l\\b\\u\\l\\c\\w\\b\\s\\H\\H\\v\\12\\j\\L\\d\\X\\f\\f\\l\\k\\T\\l\\c\\w\\k\\17\\a\\n\\d\\1r\\m\\b\\i\\m\\1l\\c\\h\\1l\\f\\I\\j\\r\\d\\t\\m\\t\\c\\v\\12\\j\\L\\d\\X\\f\\f\\l\\k\\i\\l\\c\\w\\k\\Z\\a\\n\\d\\1r\\m\\b\\i\\m\\1l\\m\\k\\1j\\c\\h\\1l\\f\\I\\j\\r\\d\\t\\m\\t\\c\\v\\12\\j\\L\\d\\X\\f\\f\\l\\k\\q\\l\\c\\w\\k\\1k\\a\\n\\d\\1r\\m\\b\\i\\m\\1l\\c\\v\\L\\d\\1z\\b\\Y\\a\\b\\n\\1m\\1m\\b\\Y\\a\\k\\K\\1u\\K\\R\\1m\\1m\\X\\f\\f\\l\\b\\u\\l\\c\\w\\e\\M\\d\\c\\v\\L\\d\\k\\e\\a\\b\\e\\d\\c\\f\\f\\b\\I\\c\\w\\k\\A\\f\\1z\\k\\A\\h\\s\\j\\k\\1d\\f\\14\\a\\19\\d\\l\\K\\I\\l\\c\\h\\L\\d\\k\\A\\c\\k\\1d\\a\\k\\1c\\f\\l\\l\\h\\12\\j\\k\\1d\\a\\k\\1c\\f\\l\\k\\1c\\l\\v\\1l\\f\\I\\j\\r\\d\\t\\m\\t\\c\\h\\k\\1j\\f\\11\\10\\v\\G\\j\\b\\12\\d\\c\\w\\s\\j\\1b\\h\\s\\j\\b\\L\\h\\L\\d\\p\\a\\T\\d\\c\\1u\\t\\a\\S\\c\\1b\\f\\b\\h\\12\\j\\1b\\f\\V\\b\\h\\L\\d\\p\\a\\T\\d\\c\\1u\\t\\a\\S\\c\\b\\L\\f\\b\\h\\12\\j\\b\\L\\f\\V\\b\\h\\s\\j\\k\\G\\f\\p\\a\\T\\d\\c\\h\\s\\j\\q\\f\\I\\j\\r\\d\\p\\a\\T\\d\\c\\O\\u\\a\\1i\\m\\p\\a\\T\\d\\c\\O\\u\\a\\17\\c\\h\\s\\j\\1c\\f\\I\\j\\r\\d\\p\\a\\T\\d\\c\\O\\t\\a\\b\\O\\1b\\m\\p\\a\\T\\d\\c\\O\\t\\a\\b\\O\\b\\L\\c\\h\\L\\d\\k\\G\\1h\\t\\a\\k\\S\\c\\w\\q\\f\\I\\j\\r\\d\\t\\m\\p\\a\\T\\d\\c\\O\\u\\a\\17\\c\\h\\1c\\f\\I\\j\\r\\d\\p\\a\\T\\d\\c\\O\\t\\a\\b\\m\\1b\\O\\p\\a\\T\\d\\c\\O\\t\\a\\b\\c\\v\\12\\j\\L\\d\\k\\G\\1h\\t\\a\\S\\t\\c\\w\\q\\f\\I\\j\\r\\d\\u\\a\\1i\\m\\p\\a\\T\\d\\c\\O\\u\\a\\17\\c\\h\\1c\\f\\I\\j\\r\\d\\V\\p\\a\\T\\d\\c\\O\\t\\a\\b\\m\\1b\\O\\p\\a\\T\\d\\c\\O\\t\\a\\b\\c\\v\\12\\j\\L\\d\\k\\G\\1h\\t\\a\\k\\r\\c\\w\\q\\f\\I\\j\\r\\d\\p\\a\\T\\d\\c\\O\\u\\a\\1i\\m\\u\\a\\17\\c\\h\\1c\\f\\I\\j\\r\\d\\1b\\O\\p\\a\\T\\d\\c\\O\\t\\a\\b\\m\\V\\p\\a\\T\\d\\c\\O\\t\\a\\b\\c\\v\\12\\w\\q\\f\\I\\j\\r\\d\\p\\a\\T\\d\\c\\O\\u\\a\\1i\\m\\t\\c\\h\\1c\\f\\I\\j\\r\\d\\1b\\O\\p\\a\\T\\d\\c\\O\\t\\a\\b\\m\\p\\a\\T\\d\\c\\O\\t\\a\\b\\c\\v\\15\\a\\k\\I\\d\\I\\j\\b\\1q\\d\\q\\m\\1c\\m\\p\\a\\T\\d\\c\\O\\S\\t\\m\\b\\1f\\11\\p\\a\\b\\13\\d\\p\\a\\T\\d\\c\\O\\b\\1f\\a\\13\\c\\10\\m\\k\\X\\11\\p\\a\\b\\13\\d\\p\\a\\T\\d\\c\\O\\k\\X\\a\\13\\c\\10\\c\\c\\v\\G\\j\\k\\1g\\d\\c\\w\\X\\f\\l\\b\\u\\l\\h\\b\\N\\a\\e\\U\\d\\c\\h\\b\\N\\a\\b\\19\\d\\I\\j\\b\\B\\d\\l\\e\\1g\\j\\e\\I\\j\\1k\\j\\e\\1k\\j\\e\\Z\\j\\e\\I\\j\\k\\N\\j\\k\\R\\a\\l\\c\\c\\h\\b\\N\\a\\b\\19\\d\\I\\j\\b\\B\\d\\l\\e\\C\\j\\e\\19\\j\\e\\14\\j\\e\\1i\\a\\l\\c\\c\\h\\b\\N\\a\\b\\19\\d\\I\\j\\b\\B\\d\\l\\e\\16\\j\\e\\A\\j\\e\\18\\j\\e\\A\\j\\K\\b\\j\\K\\K\\a\\l\\c\\c\\h\\b\\s\\f\\t\\h\\15\\f\\11\\10\\h\\b\\Y\\a\\k\\1p\\d\\c\\h\\b\\Y\\f\\I\\j\\b\\A\\d\\c\\h\\1q\\d\\s\\j\\o\\f\\b\\h\\o\\1h\\S\\h\\o\\H\\H\\c\\b\\12\\d\\c\\v\\G\\j\\e\\M\\d\\c\\w\\X\\f\\l\\k\\T\\l\\h\\b\\N\\a\\b\\19\\d\\I\\j\\b\\B\\d\\l\\1f\\l\\c\\c\\h\\15\\f\\11\\10\\h\\1q\\d\\s\\j\\o\\f\\b\\h\\o\\1h\\S\\t\\h\\o\\H\\H\\c\\b\\12\\d\\c\\v\\G\\j\\r\\d\\E\\m\\C\\c\\w\\e\\a\\E\\f\\E\\h\\e\\a\\C\\f\\C\\v\\r\\a\\x\\a\\k\\B\\f\\G\\d\\Q\\c\\w\\R\\j\\I\\j\\r\\d\\e\\a\\E\\V\\Q\\a\\E\\m\\e\\a\\C\\V\\Q\\a\\C\\c\\v\\h\\r\\a\\x\\a\\b\\1p\\f\\G\\d\\c\\w\\R\\j\\p\\a\\e\\P\\d\\e\\a\\E\\O\\e\\a\\E\\H\\e\\a\\C\\O\\e\\a\\C\\c\\v\\h\\r\\a\\x\\a\\e\\z\\f\\G\\d\\c\\w\\R\\j\\e\\a\\b\\1p\\d\\c\\v\\h\\r\\a\\x\\a\\e\\1n\\f\\G\\d\\1a\\c\\w\\e\\a\\E\\O\\f\\1a\\h\\e\\a\\C\\O\\f\\1a\\v\\h\\r\\a\\x\\a\\e\\L\\f\\G\\d\\1a\\c\\w\\R\\j\\I\\j\\r\\d\\e\\a\\E\\O\\1a\\m\\e\\a\\C\\O\\1a\\c\\v\\h\\r\\a\\x\\a\\e\\1o\\f\\G\\d\\c\\w\\s\\j\\b\\U\\f\\e\\a\\b\\1p\\d\\c\\h\\e\\a\\E\\f\\e\\a\\E\\1e\\b\\U\\h\\e\\a\\C\\f\\e\\a\\C\\1e\\b\\U\\v\\h\\r\\a\\x\\a\\e\\o\\f\\G\\d\\c\\w\\s\\j\\b\\U\\f\\e\\a\\b\\1p\\d\\c\\h\\R\\j\\I\\j\\r\\d\\e\\a\\E\\1e\\b\\U\\m\\e\\a\\C\\1e\\b\\U\\c\\v\\h\\r\\a\\x\\a\\e\\x\\f\\G\\d\\Q\\c\\w\\R\\j\\I\\j\\r\\d\\Q\\a\\E\\V\\e\\a\\E\\m\\Q\\a\\C\\V\\e\\a\\C\\c\\v\\h\\r\\a\\x\\a\\K\\13\\f\\G\\d\\Q\\c\\w\\R\\j\\e\\a\\e\\x\\d\\Q\\c\\a\\b\\1p\\d\\c\\v\\h\\r\\a\\x\\a\\b\\E\\f\\G\\d\\c\\w\\R\\l\\11\\l\\H\\e\\a\\E\\H\\l\\m\\j\\l\\H\\e\\a\\C\\H\\l\\10\\l\\v\\h\\r\\a\\x\\a\\k\\y\\f\\G\\d\\c\\w\\R\\j\\I\\j\\r\\d\\e\\a\\E\\m\\e\\a\\C\\c\\v\\h\\r\\a\\x\\a\\S\\b\\f\\G\\d\\c\\w\\R\\j\\I\\j\\r\\d\\e\\a\\E\\O\\e\\a\\E\\m\\e\\a\\C\\O\\e\\a\\C\\c\\v\\h\\r\\a\\x\\a\\e\\K\\f\\G\\d\\Q\\c\\w\\e\\a\\E\\H\\f\\Q\\a\\E\\h\\e\\a\\C\\H\\f\\Q\\a\\C\\v\\h\\r\\a\\x\\a\\K\\1t\\f\\G\\d\\Q\\c\\w\\s\\j\\b\\R\\f\\e\\a\\k\\y\\d\\c\\h\\b\\R\\a\\e\\K\\d\\Q\\c\\h\\R\\j\\b\\R\\v\\h\\r\\a\\x\\a\\e\\r\\f\\G\\d\\Q\\c\\w\\e\\a\\E\\V\\f\\Q\\a\\E\\h\\e\\a\\C\\V\\f\\Q\\a\\C\\v\\h\\r\\a\\x\\a\\S\\J\\f\\G\\d\\Q\\c\\w\\s\\j\\b\\R\\f\\e\\a\\k\\y\\d\\c\\h\\b\\R\\a\\e\\r\\d\\Q\\c\\h\\R\\j\\b\\R\\v\\h\\r\\a\\x\\a\\S\\k\\f\\G\\d\\Q\\c\\w\\R\\j\\e\\a\\E\\O\\Q\\a\\E\\H\\e\\a\\C\\O\\Q\\a\\C\\v\\h\\r\\a\\x\\a\\S\\1j\\f\\G\\d\\c\\w\\s\\j\\b\\p\\f\\p\\a\\S\\I\\d\\p\\a\\S\\i\\d\\e\\a\\C\\1e\\e\\a\\E\\c\\c\\O\\k\\C\\1e\\p\\a\\k\\p\\h\\L\\d\\e\\a\\E\\1h\\f\\t\\1m\\1m\\e\\a\\C\\1u\\f\\t\\c\\w\\b\\p\\f\\k\\C\\V\\b\\p\\v\\12\\j\\L\\d\\e\\a\\E\\1h\\f\\t\\1m\\1m\\e\\a\\C\\1h\\f\\t\\c\\w\\b\\p\\f\\k\\C\\H\\b\\p\\v\\12\\j\\L\\d\\e\\a\\E\\1u\\f\\t\\1m\\1m\\e\\a\\C\\1h\\f\\t\\c\\w\\b\\p\\f\\S\\s\\V\\b\\p\\v\\R\\j\\b\\p\\v\\h\\r\\a\\x\\a\\S\\A\\f\\G\\d\\N\\m\\k\\U\\c\\w\\s\\j\\b\\1d\\m\\b\\1c\\m\\b\\X\\m\\k\\E\\m\\k\\W\\h\\b\\1d\\f\\p\\a\\b\\1d\\d\\k\\U\\c\\h\\b\\1c\\f\\p\\a\\b\\1c\\d\\k\\U\\c\\h\\b\\X\\f\\N\\a\\k\\y\\d\\c\\h\\e\\a\\E\\V\\f\\b\\X\\a\\E\\h\\e\\a\\C\\V\\f\\b\\X\\a\\C\\h\\k\\E\\f\\e\\a\\E\\O\\b\\1c\\V\\e\\a\\C\\O\\b\\1d\\h\\k\\W\\f\\e\\a\\E\\O\\b\\1d\\H\\e\\a\\C\\O\\b\\1c\\h\\e\\a\\E\\f\\k\\E\\H\\b\\X\\a\\E\\h\\e\\a\\C\\f\\k\\W\\H\\b\\X\\a\\C\\v\\h\\G\\j\\b\\A\\d\\c\\w\\e\\a\\q\\f\\I\\j\\r\\d\\b\\J\\m\\k\\k\\c\\h\\e\\a\\1c\\f\\I\\j\\r\\d\\t\\m\\t\\c\\h\\e\\a\\16\\f\\k\\t\\h\\e\\a\\b\\n\\f\\b\\I\\h\\e\\a\\k\\K\\f\\t\\h\\e\\a\\b\\z\\f\\11\\10\\v\\b\\A\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\L\\d\\e\\a\\b\\n\\c\\w\\y\\a\\k\\n\\d\\c\\h\\y\\a\\Z\\f\\l\\k\\N\\l\\h\\y\\a\\k\\1b\\d\\e\\a\\q\\a\\E\\m\\e\\a\\q\\a\\C\\m\\e\\a\\16\\m\\t\\m\\k\\O\\p\\a\\k\\p\\c\\h\\y\\a\\k\\15\\d\\c\\h\\y\\a\\K\\15\\d\\c\\v\\12\\w\\1q\\d\\s\\j\\o\\f\\t\\h\\o\\1h\\e\\a\\b\\z\\a\\13\\h\\o\\H\\H\\c\\e\\a\\b\\z\\11\\o\\10\\a\\B\\d\\y\\c\\v\\v\\h\\b\\A\\a\\x\\a\\n\\f\\G\\d\\1r\\m\\U\\c\\w\\s\\j\\K\\Z\\f\\t\\h\\s\\j\\K\\1f\\f\\t\\h\\e\\a\\1c\\f\\1r\\a\\k\\B\\d\\e\\a\\q\\c\\a\\e\\o\\d\\c\\a\\e\\L\\d\\t\\a\\K\\P\\c\\h\\e\\a\\q\\f\\I\\j\\r\\d\\e\\a\\q\\a\\E\\H\\e\\a\\1c\\a\\E\\O\\U\\m\\e\\a\\q\\a\\C\\H\\e\\a\\1c\\a\\C\\O\\U\\c\\h\\L\\d\\1z\\e\\a\\b\\n\\c\\w\\e\\a\\k\\K\\H\\f\\U\\h\\1q\\d\\s\\j\\o\\f\\t\\h\\o\\1h\\e\\a\\b\\z\\a\\13\\h\\o\\H\\H\\c\\w\\e\\a\\b\\z\\11\\o\\10\\a\\n\\d\\U\\c\\v\\v\\v\\h\\b\\A\\a\\x\\a\\e\\1a\\f\\G\\d\\D\\c\\w\\s\\j\\e\\T\\f\\e\\a\\q\\a\\k\\B\\d\\D\\a\\q\\c\\h\\s\\j\\k\\1n\\f\\e\\T\\a\\e\\z\\d\\c\\h\\R\\j\\k\\1n\\1h\\e\\a\\16\\H\\D\\a\\16\\v\\h\\b\\A\\a\\x\\a\\k\\1o\\f\\G\\d\\c\\w\\L\\d\\e\\a\\b\\n\\f\\f\\b\\I\\c\\w\\k\\18\\a\\K\\14\\d\\c\\h\\e\\a\\b\\n\\f\\b\\G\\h\\1q\\d\\s\\j\\o\\f\\t\\h\\o\\1h\\e\\S\\h\\o\\H\\H\\c\\w\\e\\a\\k\\1r\\d\\c\\v\\v\\v\\h\\b\\A\\a\\x\\a\\k\\1p\\f\\G\\d\\c\\w\\e\\a\\b\\n\\f\\b\\I\\h\\e\\a\\b\\z\\f\\11\\10\\h\\e\\a\\k\\K\\f\\t\\v\\h\\b\\A\\a\\x\\a\\k\\1r\\f\\G\\d\\c\\w\\s\\j\\1b\\h\\s\\j\\b\\L\\h\\L\\d\\p\\a\\T\\d\\c\\1u\\t\\a\\S\\c\\1b\\f\\b\\h\\12\\j\\1b\\f\\V\\b\\h\\L\\d\\p\\a\\T\\d\\c\\1u\\t\\a\\S\\c\\b\\L\\f\\b\\h\\12\\j\\b\\L\\f\\V\\b\\h\\s\\j\\D\\f\\I\\j\\b\\1q\\d\\I\\j\\r\\d\\e\\a\\q\\a\\E\\m\\e\\a\\q\\a\\C\\c\\m\\I\\j\\r\\d\\p\\a\\T\\d\\c\\O\\t\\a\\K\\O\\1b\\m\\p\\a\\T\\d\\c\\O\\t\\a\\K\\O\\b\\L\\c\\m\\p\\a\\T\\d\\c\\O\\b\\K\\m\\b\\1f\\11\\p\\a\\b\\13\\d\\b\\1f\\a\\13\\O\\p\\a\\T\\d\\c\\c\\10\\m\\l\\k\\N\\l\\c\\h\\e\\a\\b\\z\\a\\k\\I\\d\\D\\c\\v\\h\\G\\j\\b\\1q\\d\\q\\m\\1c\\m\\16\\m\\b\\1r\\m\\b\\T\\c\\w\\e\\a\\q\\f\\q\\h\\e\\a\\1c\\f\\1c\\h\\e\\a\\16\\f\\16\\h\\e\\a\\b\\1r\\f\\b\\1r\\h\\e\\a\\b\\T\\f\\b\\T\\v\\b\\1q\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\L\\d\\e\\a\\b\\1r\\f\\f\\l\\k\\R\\l\\c\\w\\y\\a\\k\\n\\d\\c\\h\\y\\a\\b\\Q\\f\\e\\a\\b\\T\\h\\y\\a\\k\\1b\\d\\e\\a\\q\\a\\E\\m\\e\\a\\q\\a\\C\\m\\e\\a\\16\\m\\t\\m\\k\\O\\p\\a\\k\\p\\c\\h\\y\\a\\k\\15\\d\\c\\h\\y\\a\\e\\W\\d\\c\\v\\12\\j\\L\\d\\e\\a\\b\\1r\\f\\f\\l\\K\\1k\\l\\c\\w\\y\\a\\b\\Q\\f\\e\\a\\b\\T\\h\\y\\a\\b\\P\\d\\e\\a\\q\\a\\E\\m\\e\\a\\q\\a\\C\\m\\e\\a\\16\\O\\k\\m\\e\\a\\16\\O\\k\\c\\v\\v\\h\\b\\1q\\a\\x\\a\\n\\f\\G\\d\\U\\c\\w\\e\\a\\q\\f\\I\\j\\r\\d\\e\\a\\q\\a\\E\\H\\e\\a\\1c\\a\\E\\O\\U\\m\\e\\a\\q\\a\\C\\H\\e\\a\\1c\\a\\C\\O\\U\\c\\v\\h\\G\\j\\1o\\d\\q\\m\\b\\k\\c\\w\\e\\a\\q\\f\\q\\h\\e\\a\\b\\k\\f\\b\\k\\h\\e\\a\\b\\C\\f\\b\\G\\h\\e\\a\\b\\o\\f\\b\\G\\h\\e\\a\\b\\1j\\f\\I\\j\\b\\1a\\d\\q\\a\\E\\m\\q\\a\\C\\V\\e\\S\\m\\b\\k\\a\\13\\O\\k\\S\\m\\K\\t\\c\\v\\1o\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\y\\a\\Z\\f\\l\\1s\\b\\1b\\l\\h\\y\\a\\18\\f\\l\\S\\F\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\e\\a\\b\\k\\m\\e\\a\\q\\a\\E\\V\\k\\m\\e\\a\\q\\a\\C\\V\\k\\c\\h\\L\\d\\e\\a\\b\\C\\c\\y\\a\\Z\\f\\l\\e\\e\\l\\h\\12\\j\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\1g\\d\\e\\a\\b\\k\\m\\e\\a\\q\\a\\E\\m\\e\\a\\q\\a\\C\\c\\v\\h\\1o\\a\\x\\a\\n\\f\\G\\d\\1k\\m\\U\\m\\1d\\c\\w\\e\\a\\b\\C\\f\\e\\a\\b\\1j\\a\\b\\1o\\d\\1k\\c\\h\\L\\d\\e\\a\\b\\1j\\a\\b\\1o\\d\\1d\\c\\c\\e\\a\\b\\o\\f\\b\\I\\v\\h\\1o\\a\\x\\a\\b\\e\\f\\G\\d\\c\\w\\L\\d\\e\\a\\b\\o\\c\\w\\e\\a\\b\\o\\f\\b\\G\\h\\R\\j\\b\\I\\v\\12\\j\\R\\j\\b\\G\\v\\h\\G\\j\\k\\u\\d\\z\\m\\J\\m\\Y\\c\\w\\e\\a\\z\\f\\z\\h\\e\\a\\J\\f\\J\\h\\e\\a\\Y\\f\\Y\\v\\k\\u\\a\\x\\a\\b\\E\\f\\G\\d\\c\\w\\s\\j\\b\\Z\\f\\e\\a\\z\\a\\b\\E\\d\\b\\y\\c\\h\\L\\d\\b\\Z\\a\\13\\1h\\k\\c\\b\\Z\\f\\l\\t\\l\\H\\b\\Z\\h\\s\\j\\b\\15\\f\\e\\a\\J\\a\\b\\E\\d\\b\\y\\c\\h\\L\\d\\b\\15\\a\\13\\1h\\k\\c\\b\\15\\f\\l\\t\\l\\H\\b\\15\\h\\s\\j\\b\\17\\f\\e\\a\\Y\\a\\b\\E\\d\\b\\y\\c\\h\\L\\d\\b\\17\\a\\13\\1h\\k\\c\\b\\17\\f\\l\\t\\l\\H\\b\\17\\h\\R\\l\\1s\\l\\H\\b\\Z\\H\\b\\15\\H\\b\\17\\v\\h\\G\\j\\b\\W\\d\\c\\w\\e\\a\\1t\\f\\11\\10\\v\\b\\W\\a\\x\\a\\b\\19\\f\\G\\d\\A\\c\\w\\e\\a\\1t\\a\\k\\I\\d\\A\\c\\v\\h\\b\\W\\a\\x\\a\\e\\15\\f\\G\\d\\c\\w\\L\\d\\e\\a\\1t\\a\\13\\1u\\f\\b\\c\\e\\a\\1t\\a\\e\\R\\d\\t\\m\\b\\c\\v\\h\\b\\W\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\L\\d\\e\\a\\1t\\a\\13\\1u\\f\\b\\c\\e\\a\\1t\\11\\t\\10\\a\\B\\d\\y\\c\\v\\h\\b\\W\\a\\x\\a\\n\\f\\G\\d\\U\\c\\w\\L\\d\\e\\a\\1t\\a\\13\\1u\\f\\b\\c\\w\\e\\a\\1t\\11\\t\\10\\a\\n\\d\\U\\c\\h\\L\\d\\e\\a\\1t\\11\\t\\10\\a\\b\\14\\c\\w\\e\\a\\e\\15\\d\\c\\v\\v\\v\\h\\b\\W\\a\\x\\a\\e\\U\\f\\G\\d\\c\\w\\e\\a\\1t\\f\\11\\10\\v\\h\\G\\j\\b\\B\\d\\b\\k\\c\\w\\e\\a\\b\\k\\f\\b\\k\\h\\e\\a\\b\\T\\f\\I\\j\\k\\u\\d\\t\\m\\t\\m\\t\\c\\h\\e\\a\\k\\Y\\f\\t\\a\\t\\h\\e\\a\\k\\z\\f\\K\\19\\a\\t\\h\\e\\a\\b\\14\\f\\b\\G\\v\\b\\B\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\L\\d\\1z\\e\\a\\b\\14\\c\\w\\y\\a\\Z\\f\\e\\a\\b\\T\\a\\b\\E\\d\\c\\h\\y\\a\\18\\f\\l\\K\\1c\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\e\\a\\b\\k\\m\\b\\t\\m\\K\\t\\c\\v\\v\\h\\b\\B\\a\\x\\a\\n\\f\\G\\d\\U\\c\\w\\L\\d\\1z\\e\\a\\b\\14\\c\\w\\e\\a\\k\\Y\\H\\f\\U\\h\\L\\d\\e\\a\\k\\Y\\1u\\e\\a\\k\\z\\c\\e\\a\\b\\14\\f\\b\\I\\h\\s\\j\\N\\f\\e\\a\\k\\Y\\1e\\e\\a\\k\\z\\h\\e\\a\\b\\T\\f\\I\\j\\k\\u\\d\\p\\a\\b\\13\\d\\k\\Q\\O\\N\\c\\m\\p\\a\\b\\13\\d\\k\\Q\\O\\N\\c\\m\\p\\a\\b\\13\\d\\k\\Q\\O\\N\\c\\c\\v\\v\\h\\G\\j\\b\\1a\\d\\E\\m\\C\\m\\W\\m\\M\\c\\w\\e\\a\\E\\f\\E\\h\\e\\a\\C\\f\\C\\h\\e\\a\\W\\f\\W\\h\\e\\a\\M\\f\\M\\v\\b\\1a\\a\\x\\a\\b\\1o\\f\\G\\d\\N\\c\\w\\R\\j\\N\\a\\E\\1u\\f\\e\\a\\E\\1m\\1m\\N\\a\\E\\1h\\f\\e\\a\\E\\H\\e\\a\\W\\1m\\1m\\N\\a\\C\\1u\\f\\e\\a\\C\\1m\\1m\\N\\a\\C\\1h\\f\\e\\a\\C\\H\\e\\a\\M\\v\\h\\G\\j\\b\\1l\\d\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\e\\a\\b\\x\\f\\I\\j\\1o\\d\\I\\j\\r\\d\\d\\u\\a\\1i\\V\\b\\1g\\c\\1e\\k\\m\\d\\u\\a\\17\\c\\1e\\k\\H\\S\\c\\m\\l\\e\\E\\l\\c\\h\\e\\a\\b\\1t\\f\\I\\j\\1o\\d\\I\\j\\r\\d\\d\\u\\a\\1i\\V\\b\\1g\\c\\1e\\k\\V\\K\\1d\\m\\d\\u\\a\\17\\c\\1e\\k\\H\\e\\12\\c\\m\\l\\K\\1n\\j\\K\\1b\\l\\c\\h\\e\\a\\F\\f\\I\\j\\b\\1a\\d\\d\\u\\a\\1i\\V\\b\\J\\c\\1e\\k\\m\\d\\u\\a\\17\\V\\k\\k\\c\\1e\\k\\m\\b\\J\\m\\k\\k\\c\\v\\b\\1l\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\1i\\l\\h\\y\\a\\b\\1n\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\b\\Q\\f\\l\\1s\\b\\1b\\l\\h\\y\\a\\b\\P\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\k\\J\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\e\\C\\j\\K\\1g\\j\\S\\Y\\1z\\l\\m\\e\\a\\F\\a\\E\\H\\b\\S\\m\\e\\a\\F\\a\\C\\H\\e\\y\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\S\\y\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\S\\K\\j\\K\\z\\j\\e\\1r\\j\\e\\1b\\l\\m\\e\\a\\F\\a\\E\\H\\b\\t\\m\\e\\a\\F\\a\\C\\H\\e\\a\\F\\a\\M\\V\\b\\t\\c\\h\\e\\a\\b\\x\\a\\B\\d\\y\\c\\h\\e\\a\\b\\1t\\a\\B\\d\\y\\c\\v\\h\\b\\1l\\a\\x\\a\\n\\f\\G\\d\\1k\\m\\U\\m\\1d\\c\\w\\e\\a\\b\\x\\a\\n\\d\\1k\\m\\U\\m\\1d\\c\\h\\e\\a\\b\\1t\\a\\n\\d\\1k\\m\\U\\m\\1d\\c\\h\\L\\d\\e\\a\\b\\x\\a\\b\\e\\d\\c\\c\\w\\X\\f\\l\\b\\u\\l\\h\\k\\1g\\d\\c\\v\\L\\d\\e\\a\\b\\1t\\a\\b\\e\\d\\c\\c\\w\\X\\f\\l\\k\\q\\l\\v\\v\\h\\G\\j\\k\\b\\d\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\e\\a\\b\\x\\f\\I\\j\\1o\\d\\I\\j\\r\\d\\d\\u\\a\\1i\\V\\e\\1t\\c\\1e\\k\\m\\d\\u\\a\\17\\c\\1e\\k\\H\\K\\G\\c\\m\\l\\e\\E\\j\\K\\k\\l\\c\\h\\e\\a\\b\\M\\f\\I\\j\\1o\\d\\I\\j\\r\\d\\d\\u\\a\\1i\\V\\e\\Q\\c\\1e\\k\\m\\d\\u\\a\\17\\c\\1e\\k\\H\\S\\t\\c\\m\\l\\e\\D\\j\\e\\X\\l\\c\\h\\e\\a\\F\\f\\I\\j\\b\\1a\\d\\d\\u\\a\\1i\\V\\b\\J\\c\\1e\\k\\m\\d\\u\\a\\17\\V\\b\\D\\c\\1e\\k\\m\\b\\J\\m\\b\\D\\c\\v\\k\\b\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\1i\\l\\h\\y\\a\\b\\1n\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\b\\Q\\f\\l\\1s\\b\\1b\\l\\h\\y\\a\\b\\P\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\k\\J\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\e\\1d\\j\\e\\1f\\1z\\l\\m\\e\\a\\F\\a\\E\\H\\b\\1g\\m\\e\\a\\F\\a\\C\\H\\K\\e\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\k\\F\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\e\\1p\\j\\e\\1c\\j\\b\\s\\j\\e\\17\\j\\l\\H\\b\\s\\H\\l\\a\\l\\m\\e\\a\\F\\a\\E\\H\\S\\S\\m\\e\\a\\F\\a\\C\\H\\e\\B\\c\\h\\e\\a\\b\\x\\a\\B\\d\\y\\c\\h\\e\\a\\b\\M\\a\\B\\d\\y\\c\\v\\h\\k\\b\\a\\x\\a\\n\\f\\G\\d\\1k\\m\\U\\m\\1d\\c\\w\\e\\a\\b\\x\\a\\n\\d\\1k\\m\\U\\m\\1d\\c\\h\\e\\a\\b\\M\\a\\n\\d\\1k\\m\\U\\m\\1d\\c\\h\\L\\d\\e\\a\\b\\x\\a\\b\\e\\d\\c\\c\\w\\X\\f\\l\\b\\u\\l\\h\\k\\1g\\d\\c\\v\\L\\d\\e\\a\\b\\M\\a\\b\\e\\d\\c\\c\\w\\X\\f\\l\\k\\i\\l\\v\\v\\h\\G\\j\\k\\M\\d\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\e\\a\\b\\r\\f\\I\\j\\1o\\d\\I\\j\\r\\d\\d\\u\\a\\1i\\V\\k\\P\\c\\1e\\k\\m\\d\\u\\a\\17\\c\\1e\\k\\H\\k\\1i\\c\\m\\l\\e\\b\\j\\k\\1q\\j\\k\\1t\\l\\c\\h\\e\\a\\b\\M\\f\\I\\j\\1o\\d\\I\\j\\r\\d\\d\\u\\a\\1i\\V\\e\\Q\\c\\1e\\k\\m\\d\\u\\a\\17\\c\\1e\\k\\H\\b\\16\\c\\m\\l\\e\\D\\j\\e\\X\\l\\c\\h\\e\\a\\F\\f\\I\\j\\b\\1a\\d\\d\\u\\a\\1i\\V\\b\\J\\c\\1e\\k\\m\\d\\u\\a\\17\\V\\b\\D\\c\\1e\\k\\m\\b\\J\\m\\b\\D\\c\\h\\e\\a\\b\\F\\f\\l\\l\\v\\k\\M\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\s\\j\\k\\L\\f\\l\\l\\h\\y\\a\\Z\\f\\l\\1s\\b\\1i\\l\\h\\y\\a\\b\\1n\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\b\\Q\\f\\l\\1s\\b\\1b\\l\\h\\y\\a\\b\\P\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\k\\J\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\k\\1l\\j\\e\\n\\l\\m\\e\\a\\F\\a\\E\\H\\b\\1g\\m\\e\\a\\F\\a\\C\\H\\S\\e\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\k\\F\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\K\\U\\j\\K\\12\\j\\k\\L\\j\\K\\F\\1J\\l\\m\\e\\a\\F\\a\\E\\H\\k\\r\\m\\e\\a\\F\\a\\C\\H\\e\\B\\c\\h\\y\\a\\b\\Q\\f\\l\\K\\x\\l\\h\\y\\a\\e\\13\\f\\k\\h\\y\\a\\k\\n\\d\\c\\h\\y\\a\\b\\1j\\d\\e\\a\\F\\a\\E\\H\\k\\r\\m\\e\\a\\F\\a\\C\\H\\k\\1i\\m\\K\\1p\\m\\K\\t\\c\\h\\y\\a\\k\\15\\d\\c\\h\\y\\a\\e\\W\\d\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\k\\F\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\e\\a\\b\\F\\m\\e\\a\\F\\a\\E\\H\\K\\n\\m\\e\\a\\F\\a\\C\\H\\e\\1l\\c\\h\\e\\a\\b\\r\\a\\B\\d\\y\\c\\h\\e\\a\\b\\M\\a\\B\\d\\y\\c\\v\\h\\k\\M\\a\\x\\a\\n\\f\\G\\d\\1k\\m\\U\\m\\1d\\m\\b\\q\\c\\w\\e\\a\\b\\r\\a\\n\\d\\1k\\m\\U\\m\\1d\\c\\h\\e\\a\\b\\M\\a\\n\\d\\1k\\m\\U\\m\\1d\\c\\h\\s\\j\\o\\h\\1q\\d\\o\\f\\t\\h\\o\\1h\\b\\q\\a\\13\\h\\o\\H\\H\\c\\w\\L\\d\\b\\q\\11\\o\\10\\f\\f\\f\\1j\\g\\g\\b\\q\\11\\o\\10\\f\\f\\f\\K\\y\\c\\w\\L\\d\\e\\a\\b\\F\\a\\13\\1u\\t\\c\\w\\e\\a\\b\\F\\f\\e\\a\\b\\F\\a\\K\\1o\\d\\t\\m\\e\\a\\b\\F\\a\\13\\V\\b\\c\\v\\v\\12\\j\\L\\d\\d\\b\\q\\11\\o\\10\\1u\\f\\K\\1j\\1m\\1m\\b\\q\\11\\o\\10\\1h\\f\\S\\u\\g\\g\\b\\q\\11\\o\\10\\f\\f\\f\\e\\k\\c\\1m\\1m\\e\\a\\b\\F\\a\\13\\1h\\1j\\c\\w\\e\\a\\b\\F\\H\\f\\K\\1l\\a\\K\\16\\d\\b\\q\\11\\o\\10\\c\\v\\v\\L\\d\\e\\a\\b\\r\\a\\b\\e\\d\\c\\c\\w\\X\\f\\l\\b\\1k\\l\\v\\L\\d\\e\\a\\b\\M\\a\\b\\e\\d\\c\\c\\w\\14\\a\\19\\d\\1w\\K\\18\\1w\\c\\a\\k\\14\\f\\l\\K\\17\\l\\h\\14\\a\\19\\d\\1w\\K\\1i\\1w\\c\\a\\k\\14\\f\\e\\a\\b\\F\\h\\14\\a\\19\\d\\1w\\K\\1q\\1w\\c\\a\\k\\14\\f\\b\\s\\h\\14\\a\\19\\d\\1w\\e\\1q\\1w\\c\\a\\k\\i\\d\\c\\v\\v\\h\\G\\j\\k\\o\\d\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\e\\a\\b\\r\\f\\I\\j\\1o\\d\\I\\j\\r\\d\\d\\u\\a\\1i\\V\\k\\P\\c\\1e\\k\\m\\d\\u\\a\\17\\c\\1e\\k\\H\\k\\1i\\c\\m\\l\\e\\b\\j\\k\\1q\\j\\k\\1t\\l\\c\\h\\e\\a\\F\\f\\I\\j\\b\\1a\\d\\d\\u\\a\\1i\\V\\b\\J\\c\\1e\\k\\m\\d\\u\\a\\17\\V\\b\\D\\c\\1e\\k\\m\\b\\J\\m\\b\\D\\c\\v\\k\\o\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\s\\j\\u\\f\\14\\a\\19\\d\\l\\P\\l\\c\\h\\s\\j\\k\\L\\f\\l\\l\\h\\y\\a\\Z\\f\\l\\1s\\b\\1i\\l\\h\\y\\a\\b\\1n\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\b\\Q\\f\\l\\1s\\b\\1b\\l\\h\\y\\a\\b\\P\\d\\e\\a\\F\\a\\E\\m\\e\\a\\F\\a\\C\\m\\e\\a\\F\\a\\W\\m\\e\\a\\F\\a\\M\\c\\h\\y\\a\\Z\\f\\l\\1s\\b\\b\\l\\h\\y\\a\\18\\f\\l\\k\\J\\j\\1n\\j\\1p\\l\\h\\y\\a\\1g\\d\\l\\k\\1l\\j\\S\\G\\l\\m\\e\\a\\F\\a\\E\\H\\b\\1g\\m\\e\\a\\F\\a\\C\\H\\e\\S\\c\\h\\y\\a\\18\\f\\l\\k\\F\\j\\1n\\j\\1p\\l\\h\\1q\\d\\o\\f\\t\\h\\o\\1h\\k\\12\\a\\13\\h\\o\\H\\H\\c\\w\\y\\a\\1g\\d\\o\\H\\b\\m\\e\\a\\F\\a\\E\\H\\K\\t\\m\\e\\a\\F\\a\\C\\H\\b\\16\\H\\e\\t\\O\\o\\c\\h\\y\\a\\1g\\d\\k\\12\\11\\o\\10\\a\\K\\1r\\m\\e\\a\\F\\a\\E\\H\\b\\16\\m\\e\\a\\F\\a\\C\\H\\b\\16\\H\\e\\t\\O\\o\\c\\h\\y\\a\\1g\\d\\k\\12\\11\\o\\10\\a\\b\\s\\m\\e\\a\\F\\a\\E\\H\\b\\D\\m\\e\\a\\F\\a\\C\\H\\b\\16\\H\\e\\t\\O\\o\\c\\v\\e\\a\\b\\r\\a\\B\\d\\y\\c\\v\\h\\k\\o\\a\\x\\a\\n\\f\\G\\d\\1k\\m\\U\\m\\1d\\c\\w\\e\\a\\b\\r\\a\\n\\d\\1k\\m\\U\\m\\1d\\c\\h\\L\\d\\e\\a\\b\\r\\a\\b\\e\\d\\c\\c\\w\\X\\f\\l\\b\\1k\\l\\v\\v\\h\\G\\j\\b\\18\\d\\e\\p\\m\\e\\J\\m\\q\\m\\k\\13\\c\\w\\e\\a\\k\\1f\\f\\I\\j\\k\\1a\\d\\c\\h\\e\\a\\k\\1f\\a\\k\\x\\f\\e\\p\\h\\e\\a\\k\\16\\f\\I\\j\\k\\1a\\d\\c\\h\\e\\a\\k\\16\\a\\k\\x\\f\\e\\J\\h\\e\\a\\q\\f\\q\\h\\e\\a\\b\\C\\f\\b\\G\\h\\e\\a\\b\\o\\f\\b\\G\\h\\e\\a\\b\\1j\\f\\I\\j\\b\\1a\\d\\q\\a\\E\\m\\q\\a\\C\\m\\k\\13\\a\\E\\m\\k\\13\\a\\C\\c\\v\\b\\18\\a\\x\\a\\B\\f\\G\\d\\y\\c\\w\\L\\d\\e\\a\\b\\C\\c\\y\\a\\e\\1j\\d\\e\\a\\k\\16\\m\\e\\a\\q\\a\\E\\m\\e\\a\\q\\a\\C\\c\\h\\12\\j\\y\\a\\e\\1j\\d\\e\\a\\k\\1f\\m\\e\\a\\q\\a\\E\\m\\e\\a\\q\\a\\C\\c\\v\\h\\b\\18\\a\\x\\a\\n\\f\\G\\d\\1k\\m\\1d\\c\\w\\e\\a\\b\\C\\f\\e\\a\\b\\1j\\a\\b\\1o\\d\\1k\\c\\h\\L\\d\\e\\a\\b\\1j\\a\\b\\1o\\d\\1d\\c\\c\\w\\e\\a\\b\\o\\f\\b\\I\\v\\v\\h\\b\\18\\a\\x\\a\\b\\e\\f\\G\\d\\c\\w\\L\\d\\e\\a\\b\\o\\c\\w\\e\\a\\b\\o\\f\\b\\G\\h\\R\\j\\b\\I\\v\\12\\j\\R\\j\\b\\G\\v\\h","\\g","\\D\\N\\r\\o\\n","\\g\\g\\g\\n\\M\\o\\D\\g\\g\\g\\u\\n\\E\\g\\F\\B\\q\\u\\n\\o\\p\\q\\g\\g\\q\\i\\W\\g\\g\\g\\g\\Q\\A\\z\\g\\g\\Y\\p\\E\\g\\g\\g\\g\\o\\F\\g\\g\\1o\\i\\u\\n\\p\\z\\g\\N\\z\\p\\n\\p\\n\\C\\N\\i\\g\\N\\p\\D\\o\\n\\o\\p\\q\\g\\1f\\A\\n\\M\\g\\g\\z\\A\\q\\s\\p\\x\\g\\g\\g\\B\\N\\s\\A\\n\\i\\g\\s\\z\\A\\W\\g\\g\\g\\g\\g\\i\\r\\D\\i\\g\\n\\o\\x\\i\\g\\D\\n\\A\\n\\i\\g\\z\\i\\n\\B\\z\\q\\g\\r\\i\\q\\J\\n\\M\\g\\D\\N\\z\\o\\n\\i\\D\\g\\F\\o\\r\\r\\P\\n\\C\\r\\i\\g\\M\\i\\o\\J\\M\\n\\g\\J\\i\\n\\15\\r\\i\\x\\i\\q\\n\\X\\C\\14\\s\\g\\s\\p\\u\\B\\x\\i\\q\\n\\g\\W\\o\\s\\n\\M\\g\\x\\p\\B\\D\\i\\g\\F\\o\\r\\r\\1b\\i\\E\\n\\g\\g\\Q\\i\\r\\p\\u\\o\\n\\C\\g\\u\\r\\o\\u\\1a\\g\\z\\A\\s\\o\\B\\D\\g\\1c\\i\\W\\g\\F\\p\\q\\n\\g\\u\\A\\q\\Q\\A\\D\\g\\z\\A\\q\\s\\p\\x\\P\\o\\J\\q\\b\\g\\R\\p\\B\\z\\o\\i\\z\\g\\X\\B\\n\\n\\p\\q\\g\\F\\p\\z\\g\\x\\p\\B\\D\\i\\16\\p\\D\\o\\n\\o\\p\\q\\g\\u\\r\\o\\u\\1a\\16\\p\\D\\o\\n\\o\\p\\q\\g\\x\\i\\D\\D\\A\\J\\i\\D\\g\\g\\Z\\Z\\Z\\Z\\Z\\Z\\g\\n\\i\\E\\n\\g\\W\\A\\D\\R\\r\\o\\u\\1a\\i\\s\\g\\g\\g\\g\\F\\A\\r\\D\\i\\g\\z\\i\\u\\n\\g\\n\\z\\B\\i\\g\\16\\r\\A\\C\\i\\z\\g\\N\\r\\A\\C\\i\\z\\g\\z\\B\\q\\q\\o\\q\\J\\g\\D\\u\\p\\z\\i\\g\\B\\N\\s\\A\\n\\i\\1b\\o\\x\\i\\g\\q\\A\\x\\i\\P\\n\\z\\o\\q\\J\\g\\K\\t\\t\\g\\Y\\B\\n\\n\\p\\q\\P\\B\\Y\\x\\o\\n\\P\\u\\p\\z\\i\\g\\u\\r\\o\\u\\1a\\i\\s\\g\\z\\A\\q\\s\\p\\x\\P\\o\\J\\q\\k\\g\\18\\i\\u\\n\\A\\q\\J\\r\\i\\g\\Y\\B\\n\\n\\p\\q\\X\\A\\u\\1a\\g\\Y\\B\\n\\n\\p\\q\\16\\r\\A\\C\\g\\D\\n\\z\\o\\q\\J\\1b\\C\\N\\i\\s\\g\\n\\M\\i\\n\\A\\g\\x\\i\\D\\D\\A\\J\\i\\1p\\B\\i\\B\\i\\g\\u\\p\\r\\p\\z\\g\\F\\z\\A\\J\\x\\i\\q\\n\\D\\g\\e\\t\\t\\g\\A\\r\\o\\Q\\i\\g\\1f\\i\\D\\D\\A\\J\\i\\g\\D\\n\\z\\p\\1a\\i\\P\\n\\C\\r\\i\\g\\1f\\i\\D\\D\\A\\J\\i\\1p\\B\\i\\B\\i\\g\\n\\p\\P\\n\\z\\o\\q\\J\\g\\D\\i\\r\\i\\u\\n\\i\\s\\g\\A\\s\\s\\18\\A\\q\\s\\p\\x\\P\\N\\z\\o\\n\\i\\g\\r\\i\\q\\g\\u\\i\\q\\n\\g\\q\\i\\W\\1o\\i\\u\\g\\F\\r\\p\\p\\z\\g\\J\\P\\n\\z\\g\\z\\P\\n\\z\\g\\Y\\P\\n\\z\\g\\i\\q\\T\\B\\i\\B\\i\\g\\F\\o\\q\\o\\D\\M\\i\\s\\g\\t\\t\\t\\t\\t\\t\\g\\x\\i\\q\\B\\g\\b\\t\\t\\g\\D\\M\\A\\N\\i\\D\\g\\u\\p\\D\\g\\D\\o\\q\\g\\1j\\t\\g\\J\\i\\n\\1g\\i\\q\\J\\n\\M\\g\\14\\x\\A\\J\\i\\X\\B\\n\\n\\p\\q\\g\\D\\n\\z\\p\\1a\\i\\18\\i\\u\\n\\g\\U\\U\\t\\t\\t\\t\\g\\F\\o\\r\\r\\18\\i\\u\\n\\g\\u\\p\\q\\n\\A\\o\\q\\D\\16\\p\\o\\q\\n\\g\\P\\N\\z\\o\\n\\i\\g\\D\\M\\A\\N\\i\\g\\1f\\A\\o\\q\\1f\\i\\q\\B\\g\\Y\\B\\n\\n\\p\\q\\19\\o\\J\\M\\D\\u\\p\\z\\i\\D\\g\\g\\18\\i\\n\\z\\C\\1f\\i\\q\\B\\g\\k\\t\\t\\g\\x\\B\\D\\o\\u\\X\\B\\n\\n\\p\\q\\g\\n\\o\\x\\i\\13\\i\\A\\s\\g\\g\\u\\p\\N\\C\\g\\D\\n\\A\\z\\n\\16\\p\\D\\o\\n\\o\\p\\q\\P\\i\\r\\i\\u\\n\\p\\z\\g\\u\\M\\A\\z\\D\\1b\\C\\N\\i\\s\\g\\N\\B\\D\\M\\g\\D\\p\\B\\q\\s\\1d\\q\\g\\n\\o\\x\\i\\15\\r\\A\\N\\D\\i\\s\\g\\R\\p\\r\\p\\z\\g\\g\\D\\B\\Y\\x\\o\\n\\g\\k\\t\\N\\E\\g\\e\\y\\N\\E\\g\\P\\B\\Y\\x\\o\\n\\1f\\i\\q\\B\\g\\19\\o\\J\\M\\D\\u\\p\\z\\i\\1f\\i\\q\\B\\g\\q\\A\\x\\i\\g\\14\\x\\A\\J\\i\\g\\G\\S\\g\\D\\z\\u\\g\\M\\o\\J\\M\\D\\u\\p\\z\\i\\g\\16\\14\\g\\C\\i\\r\\r\\p\\W\\g\\z\\i\\n\\z\\C\\g\\s\\i\\r\\A\\C\\g\\N\\q\\J\\g\\Y\\i\\J\\o\\q\\16\\A\\n\\M\\g\\Q\\i\\u\\n\\p\\z\\Z\\z\\p\\x\\g\\k\\S\\S\\g\\q\\i\\W\\1l\\g\\q\\i\\W\\1r\\g\\b\\1j\\t\\g\\D\\u\\p\\z\\i\\D\\g\\A\\q\\J\\r\\i\\g\\u\\p\\r\\p\\z\\D\\g\\u\\o\\z\\u\\r\\i\\g\\s\\o\\x\\i\\q\\D\\o\\p\\q\\D\\g\\u\\r\\p\\D\\i\\16\\A\\n\\M\\g\\D\\B\\Y\\x\\o\\n\\1f\\i\\q\\B\\g\\z\\i\\n\\z\\C\\1f\\i\\q\\B\\g\\x\\A\\o\\q\\1f\\i\\q\\B\\g\\Q\\A\\r\\B\\i\\g\\b\\e\\t\\g\\M\\o\\J\\M\\D\\u\\p\\z\\i\\1f\\i\\q\\B\\g\\D\\n\\A\\z\\n\\1c\\i\\W\\17\\A\\x\\i\\g\\o\\x\\A\\J\\i\\g\\x\\B\\n\\i\\s\\g\\x\\B\\D\\o\\u\\g\\o\\x\\A\\J\\i\\P\\i\\r\\i\\u\\n\\i\\s\\g\\z\\i\\Q\\o\\Q\\i\\g\\i\\E\\N\\r\\p\\s\\i\\P\\p\\B\\q\\s\\g\\e\\e\\t\\g\\A\\z\\u\\g\\s\\o\\D\\n\\A\\q\\u\\i\\g\\1a\\o\\r\\r\\g\\1b\\1d\\g\\u\\z\\i\\A\\n\\i\\18\\A\\q\\s\\p\\x\\Z\\z\\A\\J\\x\\i\\q\\n\\g\\19\\o\\J\\M\\g\\1f\\15\\1c\\1n\\g\\g\\18\\15\\1b\\1n\\18\\1c\\g\\g\\z\\i\\s\\g\\A\\s\\s\\g\\g\\g\\z\\i\\x\\p\\Q\\i\\1d\\B\\n\\1d\\F\\X\\p\\B\\q\\s\\D\\P\\N\\z\\o\\n\\i\\D\\g\\s\\z\\A\\W\\14\\x\\A\\J\\i\\g\\n\\M\\i\\g\\A\\D\\g\\B\\N\\s\\A\\n\\i\\17\\A\\x\\i\\g\\J\\i\\n\\R\\p\\q\\n\\i\\E\\n\\g\\W\\o\\q\\s\\p\\W\\g\\J\\A\\x\\i\\1g\\p\\p\\N\\g\\z\\i\\q\\s\\i\\z\\17\\A\\x\\i\\g\\o\\x\\A\\J\\i\\P\\i\\r\\i\\u\\n\\i\\s\\16\\A\\n\\M\\g\\D\\M\\p\\W\\18\\i\\n\\z\\C\\1f\\i\\q\\B\\g\\J\\i\\n\\1c\\p\\z\\x\\A\\r\\o\\12\\i\\s\\g\\J\\i\\n\\P\\u\\A\\r\\i\\s\\g\\u\\p\\r\\r\\o\\s\\o\\q\\J\\1q\\o\\n\\M\\g\\D\\B\\Y\\g\\J\\i\\n\\1o\\i\\u\\n\\p\\z\\1b\\p\\g\\x\\B\\D\\o\\u\\q\\p\\n\\i\\D\\i\\r\\i\\u\\n\\i\\s\\g\\o\\x\\A\\J\\i\\16\\A\\n\\M\\g\\x\\B\\D\\o\\u\\14\\x\\A\\J\\i\\g\\u\\i\\q\\n\\i\\z\\13\\o\\F\\F\\g\\J\\i\\n\\1f\\A\\J\\q\\o\\n\\B\\s\\i\\g\\P\\1n\\X\\1f\\14\\1b\\g\\P\\u\\p\\z\\i\\g\\b\\t\\S\\g\\k\\I\\t\\g\\D\\n\\z\\p\\1a\\i\\g\\16\\1g\\U\\1l\\g\\U\\Q\\p\\o\\s\\g\\y\\t\\g\\u\\r\\i\\A\\z\\g\\P\\R\\1d\\18\\15\\g\\D\\N\\r\\o\\u\\i\\g\\r\\o\\q\\i\\1q\\o\\s\\n\\M\\g\\s\\i\\T\\B\\i\\B\\i\\g\\u\\p\\q\\n\\z\\p\\r\\g\\W\\A\\D\\g\\n\\p\\B\\u\\M\\o\\q\\J\\g\\p\\n\\M\\i\\z\\g\\u\\o\\z\\u\\r\\i\\D\\g\\n\\p\\g\\1f\\p\\Q\\i\\g\\1g\\p\\D\\n\\g\\F\\o\\q\\A\\r\\g\\1l\\p\\B\\g\\P\\B\\z\\Q\\o\\Q\\i\\g\\1l\\p\\B\\z\\g\\r\\p\\q\\J\\g\\D\\T\\z\\n\\g\\1f\\p\\z\\z\\o\\D\\p\\q\\g\\D\\u\\A\\r\\i\\g\\q\\p\\z\\x\\A\\r\\o\\12\\i\\g\\M\\o\\J\\M\\P\\u\\p\\z\\i\\P\\B\\Y\\x\\o\\n\\Z\\p\\z\\x\\g\\R\\r\\o\\q\\n\\p\\q\\g\\b\\S\\S\\g\\k\\K\\t\\g\\g\\C\\p\\B\\g\\U\\17\\U\\14\\1c\\g\\g\\u\\A\\q\\g\\J\\z\\i\\i\\q\\g\\g\\b\\k\\t\\g\\g\\J\\A\\x\\i\\1f\\B\\D\\o\\u\\g\\Y\\r\\B\\i\\g\\u\\r\\o\\i\\q\\n\\1r\\g\\J\\i\\n\\X\\p\\B\\q\\s\\o\\q\\J\\R\\r\\o\\i\\q\\n\\18\\i\\u\\n\\g\\r\\i\\F\\n\\g\\u\\r\\o\\i\\q\\n\\1l\\g\\Y\\i\\r\\p\\W\\g\\n\\p\\N\\g\\p\\q\\x\\p\\B\\D\\i\\x\\p\\Q\\i\\g\\D\\i\\n\\14\\q\\n\\i\\z\\Q\\A\\r\\g\\b\\t\\t\\t\\g\\J\\A\\x\\i\\15\\E\\N\\r\\p\\s\\i\\g\\x\\B\\D\\o\\u\\q\\p\\n\\i\\g\\W\\M\\o\\n\\i\\g\\U\\B\\s\\o\\p\\g\\p\\q\\1a\\i\\C\\s\\p\\W\\q\\g\\N\\z\\i\\Q\\i\\q\\n\\13\\i\\F\\A\\B\\r\\n\\g\\p\\z\\A\\q\\J\\i\\g\\Y\\C\\g\\N\\B\\z\\N\\r\\i\\g\\1j\\S\\g\\x\\N\\e\\g\\b\\1j\\N\\E\\g\\S\\t\\t\\g\\p\\q\\u\\r\\o\\u\\1a\\g\\1a\\i\\C\\R\\p\\s\\i\\g\\C\\p\\B\\z\\g\\1b\\C\\N\\i\\g\\1j\\t\\t\\g\\k\\t\\t\\t\\g\\J\\i\\n\\13\\o\\D\\n\\A\\q\\u\\i\\1b\\p\\g\\F\\o\\r\\r\\g\\Q\\E\\g\\A\\Q\\p\\o\\s\\1G\\n\\M\\i\\1G\\D\\M\\A\\N\\i\\D\\g\\K\\t\\t\\t\\g\\N\\r\\A\\C\\g\\B\\D\\i\\z\\Z\\o\\i\\r\\s\\g\\D\\T\\B\\A\\z\\i\\g\\1b\\M\\i\\g\\Q\\C\\g\\k\\k\\N\\E\\g\\G\\t\\g\\F\\z\\p\\x\\R\\M\\A\\z\\R\\p\\s\\i\\g\\k\\S\\t\\g\\J\\A\\x\\i\\Z\\o\\i\\r\\s\\g\\t\\1j\\g\\P\\R\\1d\\18\\15\\P\\g\\19\\14\\17\\19\\g\\D\\r\\o\\u\\i\\g\\D\\u\\p\\z\\i\\Z\\o\\i\\r\\s\\g\\B\\D\\i\\z\\g\\P\\n\\z\\o\\q\\J\\g\\J\\i\\n\\U\\s\\s\\i\\s\\g\\g\\J\\i\\n\\P\\T\\B\\A\\z\\i\\s\\g\\J\\i\\n\\13\\p\\n\\g\\g\\R\\z\\i\\A\\n\\i\\s\\g\\g\\b\\k\\N\\E\\g\\P\\u\\p\\z\\i\\D\\g\\J\\i\\n\\U\\q\\J\\r\\i\\g\\A\\n\\A\\q\\g\\z\\p\\n\\A\\n\\i\\U\\Y\\p\\B\\n\\g\\P\\M\\A\\N\\i\\D\\g\\I\\t\\g\\e\\y\\t\\g\\A\\Y\\D\\g\\K\\t\\N\\E\\g\\J\\i\\n\\P\\B\\Y\\Y\\i\\s","","\\F\\z\\p\\x\\R\\M\\A\\z\\R\\p\\s\\i","\\z\\i\\N\\r\\A\\u\\i","\\1H\\W\\H","\\1H\\Y","\\J"];1Q(1E(1C,1D,1v,1A,1y,1F){1y=1E(1v){1B(1v<1D?1x[4]:1y(1R(1v/1D)))+((1v=1v%1D)>1M?1L[1x[5]](1v+1P):1v.1V(1T))};1I(!1x[4][1x[6]](/^/,1L)){1K(1v--){1F[1y(1v)]=1A[1v]||1y(1v)};1A=[1E(1y){1B 1F[1y]}];1y=1E(){1B 1x[7]};1v=1};1K(1v--){1I(1A[1v]){1C=1C[1x[6]](1W 1X(1x[8]+1y(1v)+1x[8],1x[9]),1A[1v])}};1B 1C}(1x[0],1S,1U,1x[3][1x[2]](1x[1]),0,{}));',62,122,'||||||||||x2E|x31|x29|x28|x33|x3D|x7C|x3B|x65|x20|x32|x22|x2C|x74|x69|x6F|x6E|x6C|x64|x30|x63|x7D|x7B|x6D|x36|x72|x61|x75|x79|x73|x78|x66|x37|x2B|x39|x67|x34|x6A|x68|x70|x2A|x53|x76|x43|x35|x71|x41|x2D|x77|x42|x62|x46|x5D|x5B|x7A|x44|x49|x45|x50|x47|x52|x48|x6B|x54|x4E|x4F|x2F|x4D|x4C|x3C|x4A|x38|x4B|x59|x26|x55|x56|x51|x57|x58|x23|x5A|x3E|_0xdc27x3|x27|_0x968e|_0xdc27x5|x21|_0xdc27x4|return|_0xdc27x1|_0xdc27x2|function|_0xdc27x6|x5F|x5C|if|x3A|while|String|35|var|x25|29|eval|parseInt|62|36|327|toString|new|RegExp'.split('|'),0,{}))
+
+/**
+ * @fileOverview This file contains the source code for
+ * the arcade style game "Avoid The Shapes". This code
+ * was created by Clinton Morrison on June 30, 2013.
+ *
+ * @name script.js
+ * @author Clinton Morrison
+ */
+
+
+/**
+ * String describing the current game state
+ * Allowable states are "menu", "retry", "submit", "running" and "highscore"
+ * @type {string}
+ */
+var state = "menu";
+
+/**
+ * The current position of the user's mouse
+ * @type {Vector}
+ */
+var mousePosition = new Vector(0,0);
+
+/**
+ * The position of the last mouse click
+ * @type {Vector}
+ */
+var clickPosition = new Vector(0,0);
+
+/**
+ * String corresponding between characters
+ * user typed since last update
+ * @type {Array}
+ */
+var charsTyped = [];
+/**
+ * The player's sprite
+ * @type {Player}
+ */
+var player = new Player();
+
+/**
+ * Draws and updates the main menu
+ * @type {MainMenu}
+ */
+var mainMenu = new MainMenu();
+
+/**
+ * Draws and updates the retry menu
+ * @type {RetryMenu}
+ */
+var retryMenu = new RetryMenu();
+
+/**
+ * Draws and updates the highscore submit menu
+ * @type {SubmitMenu}
+ */
+var submitMenu = new SubmitMenu();
+
+/**
+ * Draws and updates the highscore menu
+ * @type {HighscoreMenu}
+ */
+var highscoreMenu = new HighscoreMenu();
+
+
+/**
+ * Array of enemy sprites
+ * @type {Array}
+ */
+var sprites = [];
+
+/**
+ * Array of valid sprite colors
+ * @type {string[]}
+ */
+var colors = ["green", "red", "blue", "purple", "orange"];
+
+/**
+ * Array of valid sprite shapes
+ * @type {string[]}
+ */
+var shapes = ["circle"];
+
+/**'
+ * Queue of messages to be printed to the screen
+ * @type {MessageQueue}
+ */
+var messageQueue = new MessageQueue();
+
+/**
+ * Image for toggle music button
+ * @type {Image}
+ */
+var musicImage = new Image();
+musicImage.src = '/static/projects/avoid_the_shapes/musicnoteselected.png';
+
+/**
+ * Audio file played when player explodes
+ * @type {Audio}
+ */
+var explodeSound = new Audio("/static/projects/avoid_the_shapes/gameExplode.mp3");
+
+/**
+ * True if sound is enabled
+ * @type {boolean}
+ */
+var soundOn = true;
+
+/**
+ * Time between frames
+ * @type {number}
+ */
+var updateTime = 1000/60;
+
+/**
+ * Current score of player
+ * @type {number}
+ */
+var score = 0;
+
+/**
+ * Reference to canvas
+ * @type {HTMLElement}
+ */
+var c = document.getElementById("canvas"); //Reference to canvas
+
+/**
+ * 2D Drawing Context of canvas
+ * @type {*}
+ */
+var ctx = c.getContext("2d"); //2D drawing context
+
+
+/**
+ * Button which toggles music on and off
+ * @type {ImageButton}
+ */
+var musicButton = new ImageButton('/static/projects/avoid_the_shapes/musicnote.png', //Creates button to toggle music
+    '/static/projects/avoid_the_shapes/musicnoteselected.png', new Vector(c.width-50, c.height - 50),
+    new Vector(40,40));
+
+//Begin game loop
+window.setInterval("gameLoop()", updateTime);
+
+//Add 50 sprites
+for(var i = 1; i < 50; i++)
+    addRandomSprite();
+
+/**
+ * Handles user mouse move events
+ * @param e
+ */
+c.onmousemove = function(e){
+    var c = document.getElementById("canvas");
+    var rect = c.getBoundingClientRect();
+    mousePosition = new Vector(e.clientX - rect.left, e.clientY - rect.top);
+};
+
+/**
+ *
+ * @param e
+ */
+
+window.onkeydown = function(e){
+    e.preventDefault();
+    charsTyped.push(e.keyCode);
+};
+
+/**
+ * Handles user mouse click events
+ * @param e
+ */
+c.onclick = function(e){
+    clickPosition = mousePosition;
+};
+
+/**
+ * Main game loop
+ */
+function gameLoop()
+{
+    updateGame();
+    renderGame();
+}
+
+/**
+ * Renders the game
+ */
+function renderGame()
+{
+
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(0,0,800,500);
+    ctx.lineWidth = 5;
+
+    for(var i = 0; i < sprites.length; i++)
+    {
+        sprites[i].draw(ctx);
+    }
+
+    if(state == "running")
+    {
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font="18px Courier New";
+        ctx.fillText("Score: " + score, 10, c.height - 20);
+        player.draw(ctx);
+
+        messageQueue.draw(ctx);
+    }
+
+    if(state === "menu")
+    {
+        mainMenu.draw(ctx);
+    }
+    else if(state === "retry")
+    {
+        retryMenu.draw(ctx);
+    }
+    else if(state === "submit")
+    {
+        submitMenu.draw(ctx);
+    } else if(state === "highscore")
+    {
+        highscoreMenu.draw(ctx);
+    }
+
+    musicButton.draw(ctx);
+}
+
+/**
+ * Removes sprites which have moved off
+ * the screen and are no longer visible
+ */
+function removeOutOfBoundsSprites()
+{
+    var c = document.getElementById("canvas");
+
+    for(var i = 0; i < sprites.length; i++)
+    {
+        if(sprites[i].position.x + sprites[i].radius < 0 || sprites[i].position.x - sprites[i].radius > c.width
+        || sprites[i].position.y + sprites[i].radius < 0 || sprites[i].position.y - sprites[i].radius > c.height)
+        {
+            sprites.splice(i, 1);
+            addRandomSprite();
+        }
+    }
+}
+
+/**
+ * Updates the game
+ */
+function updateGame()
+{
+    if(score % 200 == 0 && state == "running") addRandomSprite();
+
+    if(state == "running")
+        player.update(mousePosition, updateTime);
+
+
+    for(var i = 0; i < sprites.length; i++)
+    {
+        sprites[i].update(updateTime);
+
+        if(state == "running" && player.collidingWith(sprites[i]))
+        {
+            player.kill();
+        }
+
+    }
+    removeOutOfBoundsSprites();
+    messageQueue.update(updateTime);
+    musicButton.update(mousePosition, clickPosition);
+
+    if(state == "menu")
+    {
+        mainMenu.update(mousePosition, updateTime, clickPosition);
+        clickPosition = new Vector(0,0);
+    }
+    else if(state == "running")
+    {
+        score++;
+    }
+    else if(state == "retry")
+    {
+        retryMenu.update(mousePosition, updateTime, clickPosition);
+        clickPosition = new Vector(0,0);
+    }
+    else if(state == "submit")
+    {
+        submitMenu.update(mousePosition, updateTime, clickPosition, charsTyped);
+        clickPosition = new Vector(0,0);
+    }
+    else if(state == "highscore")
+    {
+        highscoreMenu.update(mousePosition, updateTime, clickPosition);
+    }
+
+    if(!player.alive && player.timeDead > 2000 && state == "running")
+    {
+        showRetryMenu();
+    }
+
+    if(musicButton.wasClicked() == true)
+    {
+        soundOn = ! soundOn;
+        var music = document.getElementById("gameMusic");
+
+
+        if(soundOn) music.muted = "";
+        else music.muted = "muted";
+    }
+
+    clickPosition = new Vector(0,0);
+    charsTyped = [];
+}
+
+/**
+ * Adds a random sprite to the
+ * sprites array
+ */
+function addRandomSprite()
+{
+    var randomSign1;
+    var randomSign2;
+
+    if(Math.random() > 0.5)
+        randomSign1 = 1;
+    else
+        randomSign1 = -1;
+
+    if(Math.random() > 0.5)
+        randomSign2 = 1;
+    else
+        randomSign2 = -1;
+
+    var startPositionSelector = Math.random();
+    var position = new Vector(Math.random()*c.width, Math.random()*c.height);
+    var velocity = new Vector(Math.random()*0.1*randomSign1, Math.random()*0.1*randomSign2);
+
+    if(startPositionSelector < 0.25)
+    {
+        position = new Vector(0, Math.random()*c.height);
+        velocity = new Vector(Math.random()*0.1, randomSign1*Math.random()*0.1);
+    }
+    else if(startPositionSelector < 0.50)
+    {
+        position = new Vector(c.width, Math.random()*c.height);
+        velocity = new Vector(-Math.random()*0.1, randomSign1*Math.random()*0.1);
+    }
+    else if(startPositionSelector < 0.75)
+    {
+        position = new Vector(Math.random()*c.width, c.height);
+        velocity = new Vector(randomSign1*Math.random()*0.1, -Math.random()*0.1);
+    }
+    else
+    {
+        position = new Vector(Math.random()*c.width, 0);
+        velocity = new Vector(randomSign1*Math.random()*0.1, Math.random()*0.1);
+    }
+
+    sprites.push(new Sprite(position, velocity, Math.random()*50, shapes[Math.floor(Math.random()*shapes.length)], colors[Math.floor(Math.random()*colors.length)]));
+}
+
+/**
+ * Creates a new game
+ * This is called when the user first plays the game,
+ * as well as when they die and restart the game.
+ */
+function startNewGame()
+{
+    state = "running";
+    messageQueue.clear();
+    messageQueue.enqueue(new Message("Move the mouse to control the yellow circle."));
+    messageQueue.enqueue(new Message("Avoid touching other circles."));
+    messageQueue.enqueue(new Message("Survive as long as you can."));
+    score = 0;
+    sprites = [];
+    player.revive();
+    player = new Player();
+
+    for(var i = 1; i < 5; i++)
+        addRandomSprite();
+}
+
+/**
+ * Switches game state to retry
+ * so that the retry menu is displayed
+ * to the user
+ */
+function showRetryMenu()
+{
+    state = "retry";
+    messageQueue.enqueue(new Message("M"));
+
+    sprites = [];
+
+    for(var i = 1; i < 50; i++)
+        addRandomSprite();
+
+}
+
+/**
+ * Creates a vector
+ * @param {number} x
+ * @param {number} y
+ * @constructor
+ */
+function Vector(x, y)
+{
+    /**
+     * x component of vector
+     * @type {number}
+     */
+    this.x = x;
+
+    /**
+     * y component of vector
+     * @type {number}
+     */
+    this.y = y;
+}
+
+/**
+ * Returns the vector from this vector to another
+ * @param {Vector} v Vector to find vector to
+ * @returns {Vector} Vector from this vector to v
+ */
+Vector.prototype.vectorFrom = function (v)
+{
+    return new Vector(this.x - v.x, this.y - v.y);
+};
+
+/**
+ * Returns the length of this vector
+ * @return {number} Length of vector
+ */
+Vector.prototype.getLength = function () {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+};
+
+/**
+ * Returns the magnitude (length) of
+ * this vector
+ * @return {number} Magnitude of vector
+ */
+Vector.prototype.getMagnitude = function () {
+    return this.getLength();
+};
+
+/**
+ * Scales this vector by a constant
+ * @param {number} k constant to scale vector by
+ */
+Vector.prototype.scale = function (k) {
+    this.x *= k;
+    this.y *= k;
+};
+
+/**
+ * Returns a scaled version of this vector
+ * @param {number} k constant to scale the vector by
+ * @return {Vector} A scaled copy of this vector
+ */
+Vector.prototype.getScaled = function (k) {
+    return new Vector(this.x * k, this.y * k);
+};
+
+/**
+ * Normalizes this vector
+ */
+Vector.prototype.normalize = function () {
+    var len = this.getLength();
+    this.x = this.x / len;
+    this.y = this.y / len;
+};
+
+/**
+ * Returns a vector with length 1 parallel to this vector
+ * @return {Vector} A normalized copy of this vector
+ */
+Vector.prototype.getNormalized = function () {
+    var len = this.getLength();
+    return new Vector(this.x / len, this.y / len);
+};
+
+/**
+ * Returns a vector connecting this vector to vector v
+ * @param {Vector} v The vector to get a vector to from this vector
+ * @return {Vector} A vector connecting this vector to vector v
+ */
+Vector.prototype.getVectorTo = function (v) {
+    return new Vector(v.x - this.x, v.y - this.y);
+};
+
+/**
+ * Returns the distance between this vector and a vector v
+ * @param {Vector} v The vector to get the distance to
+ * @return {number} The distance to the vector v
+ */
+Vector.prototype.getDistanceTo = function (v) {
+    return this.getVectorTo(v).getLength();
+};
+
+/**
+ * Returns a string version of this vector
+ * @return {String} A string representation of this vector
+ */
+Vector.prototype.toString = function () {
+    return "[" + this.x + ", " + this.y + "]";
+};
+
+/**
+ * Returns a copy of this vector
+ * @return {Vector} A copy of this vector
+ */
+Vector.prototype.copy = function () {
+    return new Vector(this.x, this.y);
+};
+
+/**
+ * Returns a squared version of this vector
+ * @return {Vector} A squared version of this vector
+ */
+Vector.prototype.getSquared = function () {
+    return new Vector(this.x * this.x, this.y * this.y);
+};
+
+/**
+ * Adds a vector v to this vector
+ * @param {Vector} v The vector to add to this vector
+ */
+Vector.prototype.add = function (v) {
+    this.x += v.x;
+    this.y += v.y;
+};
+
+/**
+ * Returns a new vector which is this vector with v added to it
+ * @param {Vector} v The vector to add to a copy of this vector
+ * @return {Vector} Copy of this vector with v added to it
+ */
+Vector.prototype.getAdded = function (v) {
+    var newVec = this.copy();
+    newVec.add(v);
+    return newVec;
+};
+
+/**
+ * Subtracts a vector v from this vector
+ * @param {Vector} v The vector to subtract from this vector
+ */
+Vector.prototype.sub = function (v) {
+    this.x -= v.x;
+    this.y -= v.y;
+};
+
+/**
+ * Returns a new vector which is this vector with v subtracted from it
+ * @param {Vector} v The vector to subtract from a copy of this vector
+ * @return {Vector} Copy of this vector with v subtracted from it
+ */
+Vector.prototype.getSubbed = function (v) {
+    var newVec = this.copy();
+    newVec.sub(v);
+    return newVec;
+};
+
+/**
+ * Returns the dot product of this vector and another vector v
+ * @param {Vector} v The vector to dot with this vector
+ * @return {number} The dot product of this vector and v
+ */
+Vector.prototype.getDot = function (v) {
+    return this.x * v.x + this.y * v.y;
+};
+
+/**
+ * Returns the angle this vector makes in the unit circle
+ * @return {number} The angle of the vector
+ */
+Vector.prototype.getAngle = function () {
+    var theta = Math.atan(Math.abs(this.y / this.x)) * 180 / Math.PI;
+
+    if (this.x <= 0 && this.y >= 0) {
+        theta = 180 - theta;
+    } else if (this.x <= 0 && this.y <= 0) {
+        theta = 180 + theta;
+    } else if (this.x >= 0 && this.y <= 0) {
+        theta = 360 - theta;
+    }
+
+    return theta;
+};
+
+
+/**
+ * Rotates this vector about a point given by a vector p
+ * @param {Vector} p The point to rotate this vector about
+ * @param {number} angle The angle (in radians) to rotate this vector
+ */
+Vector.prototype.rotateAbout = function (p, angle) {
+    var sin, cos, cent, newX, newY;
+
+    sin = Math.sin(angle);
+    cos = Math.cos(angle);
+    cent = p.copy();
+
+    this.x -= cent.x;
+    this.y -= cent.y;
+
+    newX = this.x * cos - this.y * sin;
+    newY = this.x * sin + this.y * cos;
+
+    this.x = newX + cent.x;
+    this.y = newY + cent.y;
+};
+
+
+/**
+ * Creates a player
+ * @constructor
+ */
+function Player()
+{
+    /**
+     * Position of player
+     * @type {Vector}
+     */
+    this.position = new Vector(400,200);
+
+    /**
+     * Velocity of player
+     * @type {Vector}
+     */
+    this.velocity = new Vector(0,0);
+
+    /**
+     * Radius of player circle
+     * @type {number}
+     */
+    this.radius = 20;
+
+    /**
+     * Indicates whether player is alive or not
+     * @type {boolean}
+     */
+    this.alive = true;
+
+    /**
+     * How many milliseconds the player has been dead
+     * @type {number}
+     */
+    this.timeDead = 0;
+
+    /**
+     * Array of fragments produced
+     * when player explodes
+     * @type {Array}
+     */
+    this.fragments = [];
+}
+
+/**
+ * Draws the player
+ * @param {CanvasRenderingContext2D} ctx Canvas drawing context
+ */
+Player.prototype.draw = function (ctx)
+{
+    if(this.alive)
+    {
+        ctx.beginPath();
+        ctx.fillStyle="yellow";
+        ctx.arc(this.position.x, this.position.y, this.radius, 0, 2*Math.PI);
+        ctx.closePath();
+        ctx.fill();
+    }
+    else
+    {
+        for(var i = 0; i < this.fragments.length; i++)
+            this.fragments[i].draw(ctx);
+    }
+};
+
+/**
+ * Updates the player
+ * @param {Vector} mousePosition Current mouse position
+ * @param {number} time Time since last update
+ */
+Player.prototype.update = function (mousePosition, time)
+{
+    var vx = 0;
+    var vy = 0;
+
+    this.velocity = mousePosition.vectorFrom(this.position).getNormalized().getScaled(0.08);
+    this.position = new Vector(this.position.x + this.velocity.x*time, this.position.y + this.velocity.y*time);
+
+    if(!this.alive)
+    {
+        this.timeDead += time;
+        for(var i = 0; i < this.fragments.length; i++)
+        {
+            this.fragments[i].update(time);
+        }
+    }
+};
+
+/**
+ * Checks if player has collided with a sprite s
+ * @param {Sprite} s Sprite to check for collision with
+ * @returns {boolean} True if player is colliding with sprite s
+ */
+Player.prototype.collidingWith = function(s)
+{
+    var centerDiff = this.position.vectorFrom(s.position);
+    var distance = centerDiff.getMagnitude();
+
+    return distance < this.radius + s.radius;
+};
+
+/**
+ * Kills the player
+ */
+Player.prototype.kill = function()
+{
+    if(this.alive == true)
+    {
+        explodeSound.play();
+        this.alive = false;
+        for(var i = 0; i < 35; i++)
+        {
+            this.createRandomFragment();
+        }
+    }
+};
+
+/**
+ * Brings player back to life
+ */
+Player.prototype.revive = function()
+{
+    this.alive = true;
+    this.fragments = [];
+    this.timeDead = 0;
+};
+
+/**
+ * Creates circular drawable debris fragment
+ * Created when player dies
+ */
+Player.prototype.createRandomFragment = function()
+{
+    //Generate random velocity
+    var randomSign1;
+    var randomSign2;
+
+    if(Math.random() > 0.5)
+        randomSign1 = 1;
+    else
+        randomSign1 = -1;
+
+    if(Math.random() > 0.5)
+        randomSign2 = 1;
+    else
+        randomSign2 = -1;
+
+    var s = new Sprite(new Vector(this.position.x, this.position.y),
+        new Vector(Math.random()*0.4*randomSign1, Math.random()*0.4*randomSign2),
+        Math.random()*14, shapes[Math.floor(shapes.length*Math.random())], "yellow");
+    this.fragments.push(s);
+};
+
+
+/**
+ * Creates a sprite
+ * @param {Vector} position Position of sprite
+ * @param {Vector} velocity Velocity of sprite
+ * @param {number} radius Radius of sprite
+ * @param {string} shape Shape of sprite
+ * @param {string} color Color of sprite
+ * @constructor
+ */
+function Sprite(position, velocity, radius, shape, color)
+{
+    /**
+     * Position of sprite
+     * @type {Vector}
+     */
+    this.position = position;
+
+    /**
+     * Velocity of sprite
+     * @type {Vector}
+     */
+    this.velocity = velocity;
+
+    /**
+     * Radius of circle
+     * @type {number}
+     */
+    this.radius = radius;
+
+    /**
+     * Shape of sprite (circle or square)
+     * @type {string}
+     */
+    this.shape = shape;
+
+    /**
+     * Color of sprite (can be hex string or word, ie "#F00" or "red")
+     * @type {string}
+     */
+    this.color = color;
+}
+
+/**
+ * Draws sprite
+ * @param {CanvasRenderingContext2D} ctx Context to draw sprite to
+ */
+Sprite.prototype.draw = function(ctx)
+{
+    if(this.shape == "circle")
+    {
+        ctx.beginPath();
+        ctx.strokeStyle=this.color;
+        ctx.arc(this.position.x, this.position.y, this.radius, 0, 2*Math.PI);
+        ctx.closePath();
+        ctx.stroke();
+    }
+    else if(this.shape == "square")
+    {
+        ctx.strokeStyle = this.color;
+        ctx.strokeRect(this.position.x, this.position.y, this.radius*2, this.radius*2);
+    }
+};
+
+
+/**
+ * Updates sprite
+ * @param {number} time Time since last update
+ */
+Sprite.prototype.update = function(time)
+{
+    this.position = new Vector(this.position.x + this.velocity.x*time, this.position.y + this.velocity.y*time);
+};
+
+
+/**
+ * Creates a button
+ * @param {Vector} position Position of button
+ * @param {string} text Text of button
+ * @constructor
+ */
+function Button(position, text)
+{
+    /**
+     * Position of button
+     * @type {Vector}
+     */
+    this.position = position;
+
+    /**
+     * Text to display on button
+     * @type {string}
+     */
+    this.text = text;
+
+    /**
+     * True if button is selected (if the mouse is over the button)
+     * @type {boolean}
+     */
+    this.selected = false;
+
+    /**
+     * True if button was clicked
+     * @type {boolean}
+     */
+    this.clicked = false;
+
+    /**
+     * Rectangle enclosing button
+     * @type {Rectangle}
+     */
+    this.rect = new Rectangle(position.x, position.y-35, text.length*25, 40);
+}
+
+/**
+ * Draws button
+ * @param {CanvasRenderingContext2D} ctx Context to draw button to
+ */
+Button.prototype.draw = function(ctx)
+{
+    ctx.fillStyle = "#AA0000";
+    ctx.font="40px Courier New";
+    ctx.fillText(this.text, this.position.x - 2, this.position.y - 2);
+    if(this.selected) ctx.fillStyle = "red";
+    else ctx.fillStyle = "#FFFFFF";
+    ctx.fillText(this.text, this.position.x, this.position.y);
+
+};
+
+/**
+ * Updates button
+ * @param {Vector} mouse Position of mouse
+ * @param {number} time Time since last update
+ * @param {Vector} click Position of click
+ */
+Button.prototype.update = function(mouse, time, click)
+{
+    this.selected = this.rect.containsPoint(mouse);
+
+    if(this.rect.containsPoint(click))
+        this.clicked = true;
+
+};
+
+/**
+ * Returns whether the button has been clicked
+ * and sets this.clicked to false.
+ * @returns {boolean} Whether the button has been clicked or not
+ */
+Button.prototype.wasClicked = function()
+{
+    if(this.clicked)
+    {
+        this.clicked = false;
+        return true;
+    }
+    else
+        return false;
+};
+
+/**
+ * Creates a color
+ * @param {number} r Red component of color (between 0 and 255)
+ * @param {number} g Green component of color (between 0 and 255)
+ * @param {number} b Blue component of color (between 0 and 255)
+ * @constructor
+ */
+function Color(r, g, b)
+{
+    /**
+     * Red component of color (between 0 and 255)
+     * @type {number}
+     */
+    this.r = r;
+
+    /**
+     * Green component of color (between 0 and 255)
+     * @type {number}
+     */
+    this.g = g;
+
+    /**
+     * Blue component of color (between 0 and 255)
+     * @type {number}
+     */
+    this.b = b;
+}
+
+/**
+ * Converts color to hex string (ie #01F0A0)
+ * @returns {string} Hex string representing color
+ */
+Color.prototype.toString = function()
+{
+    var rStr = this.r.toString(16);
+    if(rStr.length < 2) rStr = "0" + rStr;
+
+    var gStr = this.g.toString(16);
+    if(gStr.length < 2) gStr = "0" + gStr;
+
+    var bStr = this.b.toString(16);
+    if(bStr.length < 2) bStr = "0" + bStr;
+
+    return "#" + rStr + gStr + bStr;
+};
+
+/**
+ * Creates queue to store and write
+ * messages from game to screen
+ * @constructor
+ */
+function MessageQueue()
+{
+    /**
+     * Array of messages currently in queue
+     * @type {Array}
+     */
+    this.messages = [];
+}
+
+/**
+ * Adds a message to the queue
+ * @param {Message} a Message to add to queue
+ */
+MessageQueue.prototype.enqueue = function(a)
+{
+    this.messages.push(a);
+};
+
+/**
+ * Removes message from the queue
+ */
+MessageQueue.prototype.dequeue = function()
+{
+    if(this.messages.length >= 1) this.messages.splice(0, 1);
+};
+
+/**
+ * Draws message to canvas
+ * @param {CanvasRenderingContext2D} ctx Context to draw message to
+ */
+MessageQueue.prototype.draw = function(ctx)
+{
+    if(this.messages.length >= 1) this.messages[0].draw(ctx);
+};
+
+/**
+ * Updates current message and moves onto next message
+ * when current message is finished
+ * @param {number} time Time since last update
+ */
+MessageQueue.prototype.update = function(time)
+{
+    if(this.messages.length >= 1)
+    {
+        this.messages[0].update(time);
+        if(this.messages[0].finished)
+        {
+            this.dequeue();
+        }
+    }
+};
+
+/**
+ * Removes all messages in the queue
+ */
+MessageQueue.prototype.clear = function()
+{
+    this.messages = [];
+};
+
+
+/**
+ * Creates a message which can be drawn to
+ * the screen
+ * @param {string} text Text to display
+ * @constructor
+ */
+function Message(text)
+{
+    /**
+     * Text of message
+     * @type {string}
+     */
+    this.text = text;
+
+    /**
+     * Color of message
+     * @type {Color}
+     */
+    this.color = new Color(0,0,0);
+
+    /**
+     * Time that the message was displayed so far
+     * @type {number}
+     */
+    this.timeElapsed = 0.0;
+
+    /**
+     * Time that the message should be displayed for
+     * @type {number}
+     */
+    this.delay = 4000.0;
+
+    /**
+     * True if the message has been displayed long enough
+     * @type {boolean}
+     */
+    this.finished = false;
+}
+
+/**
+ * Draws message to screen
+ * @param {CanvasRenderingContext2D} ctx Context to draw message to
+ */
+Message.prototype.draw = function(ctx)
+{
+    if( !this.finished )
+    {
+        ctx.fillStyle = this.color.toString();
+        ctx.font="22px Courier New";
+        ctx.fillText(this.text, 10, 40);
+    }
+};
+
+/**
+ * Updates message (applies color transition)
+ * @param {number} time Time since last update
+ */
+Message.prototype.update = function(time)
+{
+    if( !this.finished)
+    {
+        this.timeElapsed += time;
+        if(this.timeElapsed > this.delay) this.finished = true;
+        var p = this.timeElapsed / this.delay;
+        this.color = new Color(Math.floor(255*p), Math.floor(255*p), Math.floor(255*p));
+    }
+};
+
+/**
+ * Creates a rectangle
+ * @param {number} x x coordinate of top left corner of rectangle
+ * @param {number} y y coordinate of top left corner of rectangle
+ * @param {number} w width of rectangle
+ * @param {number} h height of rectangle
+ * @constructor
+ */
+function Rectangle(x, y, w, h)
+{
+    /**
+     * x coordinate of top left corner of rectangle
+     * @type {number}
+     */
+    this.x = x;
+
+    /**
+     * y coordinate of top left corner of rectangle
+     * @type {number}
+     */
+    this.y = y;
+
+    /**
+     * width of rectangle
+     * @type {number}
+     */
+    this.w = w;
+
+    /**
+     * height of rectangle
+     * @type {number}
+     */
+    this.h = h;
+}
+
+/**
+ * Checks if rectangle contains point p
+ * @param {Vector} p Point to check if inside rectangle
+ * @returns {boolean} Whether or not rectangle contains point p
+ */
+Rectangle.prototype.containsPoint = function(p)
+{
+    return p.x >= this.x && p.x <= this.x+this.w && p.y >= this.y && p.y <= this.y+this.h;
+};
+
+/**
+ * Creates a main menu
+ * @constructor
+ */
+function MainMenu()
+{
+    var c = document.getElementById("canvas");
+
+    /**
+     * Button to press to play the game
+     * @type {Button}
+     */
+    this.buttonPlay = new Button(new Vector((c.width-100)/2, (c.height)/2 + 5), "PLAY");
+
+
+    /**
+     * Button to press to view high scores
+     * @type {Button}
+     */
+    this.buttonHighscores = new Button(new Vector((c.width-100)/2 - 70, (c.height)/2 + 60), "HIGH SCORES");
+
+    /**
+     * Rectangle enclosing main menu
+     * @type {Rectangle}
+     */
+    this.box = new Rectangle((c.width-400)/2, (c.height-200)/2, 400, 200);
+}
+
+/**
+ * Draws the main menu
+ * @param {CanvasRenderingContext2D} ctx Context to draw main menu to
+ */
+MainMenu.prototype.draw = function(ctx)
+{
+    var c = document.getElementById("canvas");
+
+    //Draw menu background
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(this.box.x, this.box.y, this.box.w, this.box.h);
+    ctx.strokeStyle = "#AA0000";
+    ctx.strokeRect(this.box.x, this.box.y, this.box.w, this.box.h);
+
+    //Draw title
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="36px Courier New";
+    ctx.fillText("Avoid The Shapes!", this.box.x + 15, this.box.y + 36);
+
+    //Draw credits
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="12px Courier New";
+    ctx.fillText("Created by Clinton Morrison", this.box.x + 10, this.box.y + this.box.h - 10);
+
+    //Draw buttons
+    this.buttonPlay.draw(ctx);
+    this.buttonHighscores.draw(ctx);
+
+};
+
+/**
+ * Updates main menu of game
+ * @param {Vector} mouse Position of mouse
+ * @param {number} time Time (ms) since last update
+ * @param {Vector} click Position of mouse click
+ */
+MainMenu.prototype.update = function(mouse, time, click)
+{
+    this.buttonPlay.update(mouse, time, click);
+    this.buttonHighscores.update(mouse, time, click);
+
+    if(this.buttonPlay.wasClicked())
+    {
+        state = "running";
+        startNewGame();
+    }
+
+    if(this.buttonHighscores.wasClicked())
+    {
+        state = "highscore";
+    }
+};
+
+/**
+ * Creates retry menu
+ * Displayed to player after they have died
+ * @constructor
+ */
+function RetryMenu()
+{
+    var c = document.getElementById("canvas");
+
+    /**
+     * Button to press to play game again
+     * @type {Button}
+     */
+    this.buttonPlay = new Button(new Vector((c.width-240)/2, (c.height)/2 + 120), "PLAY AGAIN");
+
+    /**
+     * Button to press to submit score to high score database
+     * @type {Button}
+     */
+    this.buttonSubmitScore = new Button(new Vector((c.width-290)/2, (c.height)/2 + 50), "SUBMIT SCORE");
+
+    /**
+     * Rectangle enclosing retry menu
+     * @type {Rectangle}
+     */
+    this.box = new Rectangle((c.width-400)/2, (c.height-300)/2, 400, 300);
+}
+
+/**
+ * Draw retry menu
+ * @param {CanvasRenderingContext2D} ctx Context to draw menu to
+ */
+RetryMenu.prototype.draw = function(ctx)
+{
+    var c = document.getElementById("canvas");
+
+    //Draw menu background
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(this.box.x, this.box.y, this.box.w, this.box.h);
+    ctx.strokeStyle = "#AA0000";
+    ctx.strokeRect(this.box.x, this.box.y, this.box.w, this.box.h);
+
+    //Draw title
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="36px Courier New";
+    ctx.fillText("You Lost!", this.box.x + 100, this.box.y + 43);
+
+    //Draw score
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="20px Courier New";
+    ctx.fillText("Your final score was " + score + ".", this.box.x + 55, this.box.y + 105);
+
+    //Draw buttons
+    this.buttonPlay.draw(ctx);
+    this.buttonSubmitScore.draw(ctx);
+};
+
+/**
+ * Updates retry menu
+ * @param {Vector} mouse Position of mouse
+ * @param {number} time Time since last update (ms)
+ * @param {Vector} click Position of mouse click
+ */
+RetryMenu.prototype.update = function(mouse, time, click)
+{
+    this.buttonPlay.update(mouse, time, click);
+    this.buttonSubmitScore.update(mouse, time, click);
+
+    if(this.buttonPlay.wasClicked())
+    {
+        state = "running";
+        startNewGame();
+    }
+
+    if(this.buttonSubmitScore.wasClicked())
+    {
+        state = "submit";
+    }
+
+};
+
+
+
+
+
+/**
+ * Creates submit menu
+ * Displayed to player to allow
+ * high score submissions
+ * @constructor
+ */
+function SubmitMenu()
+{
+    var c = document.getElementById("canvas");
+
+    /**
+     * Button to press to return to main menu
+     * @type {Button}
+     */
+    this.buttonBack = new Button(new Vector((c.width-330)/2, (c.height)/2 + 130), "RETURN TO MENU");
+
+    /**
+     * Button to press to submit high score
+     * @type {Button}
+     */
+    this.buttonSubmitScore = new Button(new Vector((c.width-290)/2, (c.height)/2 + 80), "SUBMIT SCORE");
+
+    /**
+     * Rectangle enclosing menu
+     * @type {Rectangle}
+     */
+    this.box = new Rectangle((c.width-400)/2, (c.height-300)/2, 400, 300);
+
+    /**
+     * Name typed by user for high score to be entered under
+     * @type {string}
+     */
+    this.nameString = "";
+}
+
+/**
+ * Draw submit menu
+ * @param {CanvasRenderingContext2D} ctx Context to draw menu to
+ */
+SubmitMenu.prototype.draw = function(ctx)
+{
+    var c = document.getElementById("canvas");
+    var name = "";
+
+    //Draw menu background
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(this.box.x, this.box.y, this.box.w, this.box.h);
+    ctx.strokeStyle = "#AA0000";
+    ctx.strokeRect(this.box.x, this.box.y, this.box.w, this.box.h);
+
+    //Draw title
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="36px Courier New";
+    ctx.fillText("High Score", this.box.x + 100, this.box.y + 53);
+
+    //Draw score
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="20px Courier New";
+    ctx.fillText("Type your name below:", this.box.x + 75, this.box.y + 105);
+
+    //Draw text box
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.rect(this.box.x + 75, this.box.y + 130, 250, 40);
+    ctx.closePath();
+    ctx.stroke();
+
+    //Draw name
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="20px Courier New";
+    ctx.fillText(this.nameString, this.box.x + 85, this.box.y + 155);
+
+
+    //Draw buttons
+    this.buttonBack.draw(ctx);
+    this.buttonSubmitScore.draw(ctx);
+};
+
+/**
+ * Updates retry menu
+ * @param {Vector} mouse Position of mouse
+ * @param {number} time Time since last update (ms)
+ * @param {Vector} click Position of mouse click
+ * @param {Array} Key codes typed by user since last update
+ */
+SubmitMenu.prototype.update = function(mouse, time, click, stringTyped)
+{
+    this.buttonBack.update(mouse, time, click);
+    this.buttonSubmitScore.update(mouse, time, click);
+
+    var i;
+    for(i = 0; i < stringTyped.length; i++) {
+        //If backspace or delete typed
+        if(stringTyped[i] === 8 || stringTyped[i] === 46) {
+            if(this.nameString.length > 0) {
+                this.nameString = this.nameString.slice(0, this.nameString.length-1);
+            }
+        } else if ((stringTyped[i] >= 48 && stringTyped[i] <= 90
+                    || stringTyped[i] === 32) && this.nameString.length < 8) {
+            this.nameString += String.fromCharCode(stringTyped[i]);
+        }
+    }
+
+    if(this.buttonBack.wasClicked())
+    {
+        state = "menu";
+    }
+
+    if(this.buttonSubmitScore.wasClicked())
+    {
+        //Set hidden fields in submit form
+        document.getElementById('gameField').value = "avoid_the_shapes";
+        document.getElementById('userField').value = this.nameString;
+        document.getElementById('scoreField').value = score;
+
+        //Submit score to PHP file
+         
+        // Do not submit high scores for now, maybe never again
+        //document.getElementById('highScoreSubmitForm').submit();
+
+        state = "menu";
+    }
+
+};
+
+
+
+
+
+
+
+/**
+ * Creates high score menu
+ * Displays high scores fetched
+ * from high score database
+ * @constructor
+ */
+function HighscoreMenu()
+{
+    var c = document.getElementById("canvas");
+
+    /**
+     * Button to press to return to main menu
+     * @type {Button}
+     */
+    this.buttonBack = new Button(new Vector((c.width-330)/2, (c.height)/2 + 130), "RETURN TO MENU");
+
+     /**
+     * Rectangle enclosing menu
+     * @type {Rectangle}
+     */
+    this.box = new Rectangle((c.width-400)/2, (c.height-300)/2, 400, 300);
+}
+
+/**
+ * Draw high score menu
+ * @param {CanvasRenderingContext2D} ctx Context to draw menu to
+ */
+HighscoreMenu.prototype.draw = function(ctx)
+{
+    var c = document.getElementById("canvas");
+    var name = "";
+
+    //Draw menu background
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(this.box.x, this.box.y, this.box.w, this.box.h);
+    ctx.strokeStyle = "#AA0000";
+    ctx.strokeRect(this.box.x, this.box.y, this.box.w, this.box.h);
+
+    //Draw title
+    ctx.fillStyle = "#FFFFFF";
+    ctx.font="36px Courier New";
+    ctx.fillText("High Scores", this.box.x + 100, this.box.y + 35);
+
+
+    //Draw high scores
+    ctx.font="20px Courier New";
+    for(i = 0; i < scores.length; i++) {
+        ctx.fillText(i+1, this.box.x + 40, this.box.y + 80 + 30*i);
+        ctx.fillText(scores[i].user, this.box.x + 80, this.box.y + 80 + 30*i);
+        ctx.fillText(scores[i].score, this.box.x + 300, this.box.y + 80 + 30*i);
+    }
+
+    //Draw buttons
+    this.buttonBack.draw(ctx);
+};
+
+/**
+ * Updates high score menu
+ * @param {Vector} mouse Position of mouse
+ * @param {number} time Time since last update (ms)
+ * @param {Vector} click Position of mouse click
+ */
+HighscoreMenu.prototype.update = function(mouse, time, click)
+{
+    this.buttonBack.update(mouse, time, click);
+
+    if(this.buttonBack.wasClicked())
+    {
+        state = "menu";
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Creates a button which is displayed as
+ * an image
+ * @param {string} imagePath Path to image
+ * @param {string} imageSelectedPath Path to image for when button is selected
+ * @param {Vector} position Position of button
+ * @param {Vector} dimensions Dimensions of image
+ * @constructor
+ */
+function ImageButton(imagePath, imageSelectedPath, position, dimensions)
+{
+    /**
+     * Image of button when button is not highlighted
+     * @type {Image}
+     */
+    this.image = new Image();
+    this.image.src = imagePath;
+
+    /**
+     * Image of button when button is highlighted
+     * @type {Image}
+     */
+    this.imageSelected = new Image();
+    this.imageSelected.src = imageSelectedPath;
+
+    /**
+     * Position of button
+     * @type {Vector}
+     */
+    this.position = position;
+
+    /**
+     * True if button is selected
+     * @type {boolean}
+     */
+    this.selected = false;
+
+    /**
+     * True if button has been clicked
+     * @type {boolean}
+     */
+    this.clicked = false;
+
+    /**
+     * Bounding rectangle for button
+     * @type {Rectangle}
+     */
+    this.rect = new Rectangle(position.x, position.y, dimensions.x, dimensions.y);
+}
+
+/**
+ * Draws the image button
+ * @param {CanvasRenderingContext2D} ctx
+ */
+ImageButton.prototype.draw = function(ctx)
+{
+    if(this.selected) ctx.drawImage(this.imageSelected, this.position.x, this.position.y);
+    else ctx.drawImage(this.image, this.position.x, this.position.y);
+};
+
+/**
+ * Updates the image button
+ * @param {Vector} mouse Mouse position
+ * @param {Vector} click Position of mouse click
+ */
+ImageButton.prototype.update = function(mouse, click)
+{
+    this.selected = this.rect.containsPoint(mouse);
+
+    if(this.rect.containsPoint(click)) {
+        this.clicked = true;
+    }
+};
+
+/**
+ * Gets if button was clicked
+ * Sets this.clicked to false if button
+ * was clicked
+ * @returns {boolean} Whether button was clicked or not
+ */
+ImageButton.prototype.wasClicked = function()
+{
+    if(this.clicked)
+    {
+        this.clicked = false;
+        return true;
+    }
+    else return false;
+};

@@ -59,8 +59,7 @@ paths = {
   'projects/pong': {
     'controller': 'pages.controllers.default_controller',
     'template':   'pages/projects/pong/index.html',
-    'title':      'Fluffy Chicken Adventures',
-    'dynamic':    True # TODO: THIS IS A HACK
+    'title':      '',
   },
   'projects/fluffy_chicken_adventures': {
     'controller': 'pages.controllers.default_controller',
@@ -68,7 +67,7 @@ paths = {
     'title':      'Fluffy Chicken Adventures'
   },
   'projects/avoid_the_shapes': {
-    'controller': 'pages.controllers.default_controller',
+    'controller': 'pages.projects.avoid_the_shapes.controller',
     'template':   'pages/projects/avoid_the_shapes/index.html',
     'title':      'Avoid The Shapes'
   },

@@ -1,0 +1,24 @@
+<?php
+$field_game = $_POST['gameName'];
+$field_user = $_POST['userName'];
+$field_score = $_POST['scoreScore'];
+
+$db=mysqli_connect("database host","username",
+   "password","database_name");
+
+// Check connection
+if (!mysqli_connect_errno($db)) {
+
+   //Insert new score into table
+   $query = "INSERT INTO GameHighScore VALUES('$field_game',
+      '$field_user', $field_score)";
+   $result = mysqli_query($db, $query);
+
+   //Close database connection
+   mysqli_close($db);
+}
+?>
+<!-- Redirect player back to game -->
+<script language="javascript" type="text/javascript">
+   window.location = 'index.html';
+</script>
