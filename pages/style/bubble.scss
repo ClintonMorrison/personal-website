@@ -1,0 +1,50 @@
+
+html body {
+
+  .bubble, .block.box .bubble {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #bbb;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+
+    &:hover {
+      border: 1px solid #555;
+    }
+
+    &.wide {
+     width: 90%;
+     max-width: 100%;
+    }
+
+    &.connector {
+      height: 30px;
+      width: 0;
+      border-right: solid 1px #bbb;
+      padding: 0;
+      margin: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .corner.note {
+      top: -10px;
+    }
+    
+  }
+  .block .bubble.connector:last-of-type {
+    border: 0;
+    height: 0;
+  }
+
+
+}

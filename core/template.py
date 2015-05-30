@@ -1,6 +1,6 @@
 import re
 import core.functions
-from scss import parser
+import sass
 from pprint import pprint
 
 class Template:
@@ -112,13 +112,17 @@ class Template:
     }
 
   def _add_javascript(self, path):
-    return self._format_filename(path) + "<script type='text/javascript'>\n" + self._read_file(path) + '\n</script>'
+    return   "%s<script type='text/javascript'>\n%s</script>" % (
+      self._format_filename(path), self._read_file(path))
 
   def _add_css(self, path):
-    return self._format_filename(path) + "<style>\n" + self._read_file(path) + "\n</style>"
+    return "%s\n<style>\n%s\n</style>" % (
+      self._format_filename(path),  self._read_file(path))
 
   def _add_sass(self, path):
-    return self._format_filename(path) + "<style>\n" + parser.parse(self._read_file(path)) + "\n</style>"
+    return "%s\n<style>\n%s\n</style>" % (
+      self._format_filename(path),  sass.compile_string(self._read_file(path)))
+
   
   def _url(self, path):
     return core.functions.path_to_url(path)
