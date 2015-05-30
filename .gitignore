@@ -18,4 +18,4 @@ __pycache__/
 # Configuration
 config.py
 
-
+.htaccess

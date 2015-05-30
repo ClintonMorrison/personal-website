@@ -31,12 +31,12 @@ if not path:
   path = parts[0].strip('/')
 
 try:
-  page_data = core.pageloader.get(path, get_params, {}, variables, use_cache =  not config.debug)
+  page_data = core.pageloader.get(path, get_params, {}, variables, config.cache_pages)
 except NotFoundError:
-  page_data = core.pageloader.get('404', {}, {}, variables, use_cache = not config.debug)
+  page_data = core.pageloader.get('404', {}, {}, variables, config.cache_pages)
 except ServerError:
   if not config.debug:
-    page_data = core.pageloader.get('500', {}, {}, variables)
+    page_data = core.pageloader.get('500', {}, {}, variables, config.cache_pages)
   else:
     raise
 
