@@ -18,5 +18,4 @@ RewriteRule \.swo$ - [F,L,NC]
 
 # TODO: Redirect all non-file requests to main CGI script
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule .* main.cgi [L]
-
+RewriteRule .* personal-website/main.cgi [L]
