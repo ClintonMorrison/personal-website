@@ -1,0 +1,24 @@
+
+html body .resume {
+  h2 {
+    font-size: 140%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  .section {
+    padding-bottom: 40px;
+  }
+  .skill-name {
+    width: 175px;
+    display: inline-block;
+  }
+  ul.top-list {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .date {
+    float: right;
+    clear: both;
+  }
+}

@@ -29,7 +29,7 @@ paths = {
     'title':      'About'
   },
   'resume': {
-    'controller': 'pages.controllers.default_controller',
+    'controller': 'pages.controllers.resume',
     'template':   'pages/templates/resume.html',
     'title':      'Resume'
   },
