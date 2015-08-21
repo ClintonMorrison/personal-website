@@ -106,7 +106,8 @@ paths = {
 # If key is requested, serve path at value (do not redirect)
 aliases = {
   'games': 'projects',
-  'projects/space-defender': 'projects/space_defender' # support old link on HTML5 game website
+  'projects/space-defender': 'projects/space_defender', # support old link on HTML5 game website
+  'projects/fluffy-chicken-adventures.html': 'projects/fluffy_chicken_adventures' # previously shared link to game (on Tumblr)
 }
 
 # If key is requested, redirect to different path. TODO: implement this!
