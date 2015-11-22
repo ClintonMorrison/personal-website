@@ -9,6 +9,7 @@ from pprint import pprint
 import core.pageloader
 from core.exceptions import NotFoundError, ServerError
 import config
+import urllib
 
 # Show debugging messages?
 if config.debug:
@@ -22,7 +23,7 @@ get_params = {}
 for term in get_terms:
   parts = term.split('=')
   if len(parts) == 2:
-    get_params[parts[0]] = parts[1]
+    get_params[parts[0]] = urllib.unquote(parts[1])
 
 # Figure out a path to use
 path = get_params.get('q', False)
@@ -48,6 +49,8 @@ for header, value in page_data.get('headers').iteritems():
   print header + ': ' + value + "\n"
 
 # Render body
-print '<?xml version="1.0" encoding="UTF-8"?>'
+if page_data.get('headers', {}).get('Content-Type', 'text/html') == 'text/html':
+  print '<?xml version="1.0" encoding="UTF-8"?>'
+
 print page_data.get('body')
 

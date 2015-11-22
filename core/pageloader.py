@@ -44,9 +44,13 @@ def get(path, get = {}, post = {}, variables = {}, use_cache = True):
     #raise ServerError('no cache found for path: ' + path)
     body = _render_page(path, path_data, get, post, variables)
 
+  contentType = 'text/html' 
+  if path_data.get('type', 'html') == 'json':
+    contentType = 'text/json'
+
   return {
-    'headers': {'Content-Type': 'text/html'},
-    'body': body 
+    'headers': {'Content-Type': contentType},
+    'body': body,
   }
 
   

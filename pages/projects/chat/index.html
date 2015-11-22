@@ -1,0 +1,15 @@
+[% extends 'pages/templates/boxPage.html' %]
+
+[% region contents %]
+[% add sass 'pages/projects/chat/style.scss' %]
+[% add javascript 'pages/projects/chat/chat.js' %]
+<div class="messages">
+</div>
+
+<div class="submit-area">
+  <p class="status"></p>
+  <input type='text' placeholder='Type a message.'></input>
+  <button class="inverted" onclick="chat.submitMessage()">Send</button>
+</div>
+
+[% end region %]

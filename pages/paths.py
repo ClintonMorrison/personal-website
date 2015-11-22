@@ -81,7 +81,16 @@ paths = {
     'template':   'pages/projects/calculate/index.html',
     'title':      'Calculate!'
   },
-
+  'projects/chatbot': {
+    'controller': 'pages.controllers.default_controller',
+    'template':   'pages/projects/chat/index.html',
+    'title':      'Chat'
+  },
+  'projects/chatbot/respond': {
+    'controller': 'pages.projects.chat.respond',
+    'template':   'pages/templates/blank.html',
+    'type':       'json'
+  },
   # Other stuff
   'homepage': {
     'controller': 'pages.controllers.homepage',
@@ -107,7 +116,8 @@ paths = {
 aliases = {
   'games': 'projects',
   'projects/space-defender': 'projects/space_defender', # support old link on HTML5 game website
-  'projects/fluffy-chicken-adventures.html': 'projects/fluffy_chicken_adventures' # previously shared link to game (on Tumblr)
+  'projects/fluffy-chicken-adventures.html': 'projects/fluffy_chicken_adventures', # previously shared link to game (on Tumblr)
+  'chat': 'projects/chatbot'
 }
 
 # If key is requested, redirect to different path. TODO: implement this!

@@ -17,6 +17,7 @@ class Template:
     if extended_templates:
       extended_template = extended_templates[0]
 
+
     # get regions defined and save as variables
     regions = re.findall(r"\[\% region ([A-Za-z0-9]+) \%\](.*?)\[\% end region \%\]", self.contents, re.S)
     for (region_name, value) in regions:
@@ -50,7 +51,7 @@ class Template:
     if remove_empty_tags:
       self.contents = re.sub('\[\[.+?\]\]', '', self.contents)
       self.contents = re.sub('\[\%.+?\%\]', '', self.contents)
-
+    
     return self.contents
 
   def _read_file(self, path):
