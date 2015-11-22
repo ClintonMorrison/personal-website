@@ -14,6 +14,7 @@ $(document).ready(function () {
         url: '/projects/chatbot/respond',
         data: {'message': message},
         success: function (data) {
+          console.log(data);
           if (callback) {
             setTimeout(function() {callback(data.message);}, 400);
           }
