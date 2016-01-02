@@ -5,6 +5,7 @@ from cgi import escape
 class MarkdownParser:
   def __init__(self, resource_path):
     self.resource_path = resource_path
+    self.codeblocks = []
 
   def _render_italics(self, match):
     contents = match.group(1)
@@ -32,9 +33,19 @@ class MarkdownParser:
     url = core.functions.static_to_url(self.resource_path + path)
     return "<div class='img-wrapper'><img class='%s' src='%s'></img></div>" % (position.lower(), url)
 
+  def _render_codeblock(self, code):
+    return "<code>%s</code>" % escape(code.strip())
+ 
+  def _replace_codeblock(self, match):
+    self.codeblocks.append(match.group(1))
+    return "%CODE_BLOCK_PLACEHOLDER%"
+
   def _render_code(self, path, language):
     code = open("static/%s/%s" % (self.resource_path, path), "r").read().encode('string-escape')
     return "<code>%s</code>" % escape(code)
+
+  def _render_code_snippet(self, match):
+    return "<span class='code-snippet'>%s</span>" % (match.group(1))
 
   def _get_resource_handlers(self):
     return {
@@ -75,19 +86,33 @@ class MarkdownParser:
       r"([^\s]*?)\[(.*?)\]": self._render_link,
       r"\n([^\n]*?)\n(\-+)": self._render_header,
       r"[\s^\n]*?[\#]([^\n]*?)\n": self._render_list_item,
+     # r"[^`]`(.*?)`[^`]": self._render_code_snippet
     }
 
     rules_2 = {
-      r"\n([^\n^\-]*?)\n": self._render_paragraph,
+      r"\n([^\n^\^`-]*?)\n": self._render_paragraph,
     }
 
     rules_3 = {
-      r"\%\% (.+?), (.+?), (.+?) \%\%": self._render_resource
+      r"\%\% (.+?), (.+?), (.+?) \%\%": self._render_resource,
     }
+    
+   
+    # Remove codeblocks
+    markdown = re.sub(
+      r"```(.*?)```",
+      self._replace_codeblock,
+      markdown,
+      flags = re.S
+    )
 
     markdown = self.apply_rules(markdown, rules_1)
     markdown = self.apply_rules(markdown, rules_2)
     markdown = self.apply_rules(markdown, rules_3)
+
+    for code in self.codeblocks:
+      markdown = markdown.replace('%CODE_BLOCK_PLACEHOLDER%', self._render_codeblock(code), 1)
+
     return markdown
 
 

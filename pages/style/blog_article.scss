@@ -4,10 +4,13 @@ html body {
       font-size: 220%;
     }
   }
+ 
   
   li.blog {
+    padding-top: 5px;
     margin-left: 20px;
   }
+
   
   img {
     display: inline-block;
@@ -31,7 +34,7 @@ html body {
 
   code {
     display: block;
-    padding: 20px;
+    padding: 10px;
     font-size: 80%;
     white-space: pre;
     border: 1px solid #333;
