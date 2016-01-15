@@ -31,6 +31,7 @@ if not path:
   parts = variables.get('REQUEST_URI', '').split('?')
   path = parts[0].strip('/')
 
+# Try to load page data
 try:
   page_data = core.pageloader.get(path, get_params, {}, variables, config.cache_pages)
 except NotFoundError:

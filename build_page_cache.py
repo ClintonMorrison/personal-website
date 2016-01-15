@@ -1,6 +1,11 @@
 from core import pageloader
 from pages.paths import paths
 
+"""
+This script generates and caches prerendered versions of some
+paths in "static/cache/".
+"""
+
 print "Rebuilding page caches..."
 
 for path, item in paths.items():
