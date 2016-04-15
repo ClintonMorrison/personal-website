@@ -120,6 +120,8 @@ aliases = {
   'chat': 'projects/chatbot'
 }
 
-# If key is requested, redirect to different path. TODO: implement this!
-redirects = {}
+# If key is requested, redirect to different path.
+redirects = {
+  'projects/taskbird': 'http://taskbird.ca'
+}
 

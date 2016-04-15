@@ -47,7 +47,8 @@ if not page_data:
 
 # Render headers
 for header, value in page_data.get('headers').iteritems():
-  print header + ': ' + value + "\n"
+  print header + ': ' + value
+print ""
 
 # Render body
 if page_data.get('headers', {}).get('Content-Type', 'text/html') == 'text/html':
