@@ -1,5 +1,5 @@
 from core.template import Template
-from pages.paths import paths, aliases
+from pages.paths import paths, aliases, redirects
 from core.exceptions import NotFoundError, ServerError
 import os
 
@@ -25,6 +25,15 @@ def _get_path_data(path):
 def get(path, get = {}, post = {}, variables = {}, use_cache = True):
   if path == '':
     path = 'index'
+ 
+  if redirects.get(path, False):
+    return {
+      'headers': {
+        'Content-Type': 'text/html',
+        'Location': redirects.get(path)
+      },
+      'body': 'Please click <a href="%s">here</a>.' % redirects.get(path)
+    }
 
   if aliases.get(path, False):
     path = aliases.get(path)
