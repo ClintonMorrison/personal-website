@@ -12,18 +12,20 @@ def get_page_data(path, get, post, variables):
     limit = 15
   )
 
+  formatted_projects = []
+
   for project in projects:
+    if project.get('hidden', 0) == 1:
+      continue
+
     if not project.get('source_url', False):
       source_path = "downloads/projects/" + project.get('name') + "/source.zip"
       project['source_url'] = core.functions.static_to_url(source_path)
-  
-    if project.get('executable_type', False) == 'view_local':
-      project['view_url'] = core.functions.path_to_url("projects/" + project.get('name'))
-    else:
-      source_path = "downloads/projects/" + project.get('name') + "/executable.zip"
-      project['view_url'] = core.functions.static_to_url(source_path)
 
-  data['projects'] = projects
+    project['view_url'] = project.get('target_url')
+    formatted_projects.append(project)
+
+  data['projects'] = formatted_projects
 
 
   return data
