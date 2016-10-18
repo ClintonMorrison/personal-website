@@ -4,30 +4,40 @@ education:
     start_date: September 2012
     end_date: August 2016
     program: Bachelor of Computer Science with honours and co-op
-    gpa: "4.17"
+    distinctions: First Class Honours
+    gpa: "4.18"
 
 skills:
   - name: Languages & Web
     description: Python, JavaScript, PHP, Java, C, HTML, CSS, and LESS.
   
+  - name: Libraries
+    description: AngularJS, React, jQuery, Django, Rails, Semantic UI, and Lodash.
+
   - name: Technologies
     description: MySQL, Apache, NodeJS, and Redis.
 
   - name: Tools
-    description: Git, SVN, Vim, Phabricator, Trac, and JetBrains IDEs.
-
-  - name: Libraries
-    description: AngularJS, jQuery, Django, Semantic UI, and Lodash.
+    description: Git, SVN, Vim, Phabricator, JIRA, Trac, and JetBrains IDEs.
 
   - name: Non-Technical
     description: Interpersonal and teamwork skills developed through volunteer work.
 
 work:
+  - title:      Junior Frontend Developer
+    company:    BiblioCommons
+    location:   Toronto, Ontario
+    start_date: August 2016
+    end_date:   Present
+    tasks:
+      - Maintained Ruby on Rails web application
+      - Implemented new UI components with React, SCSS, and HTML
+
   - title:      Web Developer
     company:    SimplyCast Interactive Marketing
     location:   Dartmouth, Nova Scotia
-    start_date: May 1, 2014
-    end_date:   Present
+    start_date: May 2014
+    end_date:   August 2016
     tasks: 
       - Performed frontend and backend development for PHP LAMP stack web applications.
       - Implemented a distributed chat application with NodeJS, Redis, and AngularJS.
@@ -41,8 +51,8 @@ work:
   - title:        Teaching Assistant
     company:      Dalhousie CS Learning Centre
     location:     Halifax, Nova Scotia
-    start_date:   September 1, 2015 # Fall 2014, Summer 2015
-    end_date:     Present
+    start_date:   September 2015 # Fall 2014, Summer 2015
+    end_date:     August 2016
     tasks:
       - Assisted students with computer science course work.
       - Explained core algorithm concepts and helped students debug their code.
@@ -51,8 +61,8 @@ work:
   - title:      Co-op Student
     company:    Dillon Consulting
     location:   Sydney, Nova Scotia
-    start_date: July 1, 2011
-    end_date:   June 30, 2011
+    start_date: July 2011
+    end_date:   June 2011
     tasks:
       - Performed CAD modeling of engineering sites and organized drawings.
       - Researched and compared various products.
@@ -81,6 +91,11 @@ work:
       - Raised hundreds of dollars for various causes.
 
 awards:
+
+  - name:        Bruce and Doroth Rossetti Scholarship Bronze Award
+    institution: Dalhousie University
+    date:        "2015"
+    amount:      "$1500"
   - name:        Bruce and Doroth Rossetti Scholarship Bronze Award
     institution: Dalhousie University
     date:        "2014"
