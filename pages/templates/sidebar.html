@@ -1,13 +1,13 @@
-<nav class="sidebar">
+<nav class="sidebar hidden-mobile">
   <ul>
-    <li class="title">
+    <li class="title" >
       <a href="[% url 'index' %]">Clinton Morrison</a>
     </li>
   </ul>
 
   <ul>
     [% for each page in pages %]
-      <li class="[[page.selected]]">
+      <li class="[[page.selected]]" title="[[page.title]]">
         <a href="[[page.url]]"> [[page.title]] </a>
       </li>
     [% end for each %]
@@ -15,3 +15,14 @@
 
 </nav>
 
+<nav class="topbar hidden-desktop">
+  <ul>
+    [% for each page in pages %]
+      <li class="[[page.selected]]" title="[[page.title]]">
+        <a href="[[page.url]]">
+          <i class="fa fa-[[page.icon]]" aria-hidden="true"></i>
+        </a>
+      </li>
+    [% end for each %]
+  </ul>
+</nav>

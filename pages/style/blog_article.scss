@@ -1,3 +1,5 @@
+$mobile-max-width: 825px;
+
 html body {
   .block.box {
     h1 {
@@ -15,6 +17,14 @@ html body {
   img {
     display: inline-block;
     padding-bottom: 20px;
+    max-width: 100%;
+    
+    @media screen and (max-width: $mobile-max-width) { 
+      width: 100%;
+      float: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     &.left {
       float: left;
@@ -39,5 +49,15 @@ html body {
     white-space: pre;
     border: 1px solid #333;
     background: #ececec;
+
+    @media screen and (max-width: $mobile-max-width) {
+      overflow: scroll;
+    }
+  }
+
+  .return.button {
+    @media screen and (max-width: $mobile-max-width) {
+      display: block;
+    }
   }
 }

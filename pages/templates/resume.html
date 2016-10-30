@@ -11,7 +11,7 @@
       [% for each event in education %]
       <li>
         <span class="date">[[event.start_date]] - [[event.end_date]]</span>
-        <p><strong> [[event.institution]] </strong></p>
+        <p><span class="field-title"> [[event.institution]] </span></p>
         <p>[[event.program]]</p>
         <p>[[event.distinctions]] (GPA: [[event.gpa]])</p>
       </li>
@@ -23,7 +23,7 @@
     <h2> Skills </h2>
     <ul class="top-list">
       [% for each skill in skills %]
-      <li> <p><strong class="skill-name">[[skill.name]]</strong>[[skill.description]] </p></li>
+      <li> <p><span class="field-title skill-name">[[skill.name]]</span>[[skill.description]] </p></li>
       [% end for each %]
     </ul>
   </div>
@@ -35,9 +35,11 @@
       [% for each job in work %]
       <li>
         <span class="date">[[job.start_date]] - [[job.end_date]]</span>
-        <p><strong>[[job.title]]</strong> <em>[[job.company]]</em> - <em>[[job.location]]</em></p>
+        <p>
+          <span class="field-title">[[job.title]]</span>
+          <em>[[job.company]]</em> - <em>[[job.location]]</em>
+        </p>
         [[job.tasks_html]]
-        <br/>
       </li>
       [% end for each %]
     </ul>

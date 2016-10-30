@@ -3,7 +3,7 @@
 [% region contents %]
 
 [% for each article in articles %]
-  <a class="wide bubble" href="[% url 'blog/article' %]?name=[[article.name]]">
+  <a class="wide bubble" href="[% url 'blog/article' %]?name=[[article.name]]" title="[[article.title]]">
     <span class="corner note"> [[article.date_published]]</span>
     [[article.title]]
   </a>

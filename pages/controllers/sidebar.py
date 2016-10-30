@@ -3,12 +3,12 @@ import core.functions
 
 def get_page_data(path, get, post, variables):
   pages = [
-    {'title': 'Home', 'path': 'index'},
-    {'title': 'Projects', 'path': 'projects'},
-    {'title': 'Resume', 'path': 'resume'},
-    {'title': 'About', 'path': 'about'},
-    {'title': 'Contact', 'path': 'contact'},
-    {'title': 'Blog', 'path': 'blog'},
+    {'title': 'Home', 'path': 'index', 'icon': 'home'},
+    {'title': 'Projects', 'path': 'projects', 'icon': 'code'},
+    {'title': 'Resume', 'path': 'resume', 'icon': 'file-text'},
+    {'title': 'About', 'path': 'about', 'icon': 'vcard'},
+    {'title': 'Contact', 'path': 'contact', 'icon': 'envelope'},
+    {'title': 'Blog', 'path': 'blog', 'icon': 'commenting'},
   ]
 
   for page in pages:

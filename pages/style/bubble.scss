@@ -4,7 +4,7 @@ html body {
   .bubble, .block.box .bubble {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 80%;
     height: 50px;
     line-height: 50px;
     border: 1px solid #bbb;
@@ -16,6 +16,8 @@ html body {
     text-decoration: none;
     color: black;
     position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
 
     &:hover {
       border: 1px solid #555;

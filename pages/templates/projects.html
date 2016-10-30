@@ -1,12 +1,11 @@
 [% extends 'pages/templates/page.html' %]
 
 [% region main %]
-<br/><br/>
 
 <div class="centered wide box block">
   <h1> Projects </h1> 
   <p>
-    This page lists some of the interesting projects I have worked on! For a more complete list and source code you should check out my <a href='https://github.com/ClintonMorrison'>GitHub</a> profile.
+    This page lists some of the interesting projects I have worked on! For a more complete list and source code you should check out my <a target="_blank" href='https://github.com/ClintonMorrison'>GitHub</a> profile.
   </p>
 </div>
 
@@ -16,10 +15,8 @@
 <br/>
 
 <div class="centered wide box block">
-  <h1> [[project.title]] </h1> 
-  <br/>
-  <img class="wide fitted" src="http://clintonmorrison.com/images/projects/[[project.name]]/picture.png"></img>
-  <br/>
+  <h1 title="[[project.title]]"> [[project.title]] </h1> 
+  <img class="wide fitted project-picture" src="http://clintonmorrison.com/images/projects/[[project.name]]/picture.png"></img>
   <p>[[project.long_description]]</p>
   <a class="left half button" href="[[project.source_url]]">Source Code</a> 
   <a class="right half button" href="[[project.view_url]]">Try It</a>
