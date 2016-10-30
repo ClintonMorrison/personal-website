@@ -143,7 +143,6 @@ class Table:
     query += 'LIMIT %i, %i ';
     args.append(offset)
     args.append(limit)
-
     results = self.handle.query(query, args)
     rows = []
     for result in results:
@@ -152,8 +151,11 @@ class Table:
     return rows
 
   def _format_operation(self, field, op, value):
+    placeholder = ' %s '
+    if isinstance(value, int):
+      placeholder = ' %i '
     if op in ['=', '>', '>=', '<', '<=', '!=']:
-      return field + ' ' + op + ' %s '
+      return field + ' ' + op + placeholder
     if op == 'in':
       raise Exception('TODO!')
 

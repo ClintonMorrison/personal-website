@@ -6,6 +6,7 @@ def get_page_data(path, get, post, variables):
 
   projects_table = database.Table('project')
   projects = projects_table.filter(
+    conditions = [('hidden', '=', 0)],
     orderBy = 'date_published',
     order = 'DESC',
     limit = 3
