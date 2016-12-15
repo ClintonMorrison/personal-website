@@ -23,7 +23,7 @@ def get_possible_paths():
   queries = []
 
   for article in articles: 
-    queries.append('article/%s' % article.get('name'))
+    queries.append('blog/%s' % article.get('name'))
 
   return queries
   

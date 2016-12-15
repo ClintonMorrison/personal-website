@@ -7,7 +7,7 @@ from glob import glob
 import config
 from core.functions import get_func_from_module
 from core import pageloader
-from pages.paths import paths
+from pages.paths import paths, pattern_paths
 
 """
 This script generates and caches prerendered versions of some
@@ -27,7 +27,7 @@ for f in files:
 
 print "\n> Rebuilding pages..."
 
-for path, item in paths.items():
+for path, item in paths.items() + pattern_paths.items():
   can_cache = (not item.get('dynamic')) and (not ':' in path) and (not path == '*')
 
   if not can_cache: 
@@ -49,7 +49,7 @@ for path, item in paths.items():
       os.makedirs(dirname)
 
     print "    GET %s --> '%s'" % (possible_path.ljust(40), filename)
-    page_data = pageloader.get(possible_path, use_cache = False)
+    page_data = pageloader.get(possible_path)
     out_file = open(filename, 'w+')
     
     body = page_data.get('body')

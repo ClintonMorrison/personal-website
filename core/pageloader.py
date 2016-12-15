@@ -1,7 +1,8 @@
 from core.template import Template
-from pages.paths import paths, aliases, redirects
+from pages.paths import paths, pattern_paths, aliases, redirects
 from core.exceptions import NotFoundError, ServerError
 import os
+import re
 
 import importlib
 from pprint import pprint
@@ -13,16 +14,18 @@ def path_exists(path):
 
 def _get_path_data(path):
   data = paths.get(path, False) # Is the path directly defined?
+  if data: return data
   
-  if not data:
-    parts = path.split('/')
-    return False
-    #raise ServerError(parts)
-  
-  return data
+  for pattern, data in pattern_paths.iteritems():
+    match = re.compile(pattern).match(path)
+    if match:
+      data['params'] = match.groupdict()
+      return data
+
+  return False
 
 
-def get(path, get = {}, post = {}, variables = {}, use_cache = True):
+def get(path, get = {}, post = {}, variables = {}):
   if path == '':
     path = 'index'
  
@@ -42,6 +45,9 @@ def get(path, get = {}, post = {}, variables = {}, use_cache = True):
  
   if not path_data:
     raise NotFoundError('Unknown path: ' + path)
+
+  params = path_data.get('params', {})
+  if params: get.update(params)
 
   body = _render_page(path, path_data, get, post, variables)
 

@@ -24,7 +24,7 @@
   <div class="column">
     <h2 class="centered"> Blog </h2>
     [% for each article in articles %]
-      <a class="bubble" href="[% url 'blog/article' %]?name=[[article.name]]">[[article.title]]</a>
+      <a class="bubble" href="[% url 'blog' %]/[[article.name]]">[[article.title]]</a>
       <div class="bubble connector"></div>
     [% end for each %]
     <a class="bubble" href="[% url 'blog' %]">. . .</a>

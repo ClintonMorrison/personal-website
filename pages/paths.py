@@ -41,17 +41,6 @@ paths = {
     'template':   'pages/templates/blog.html',
     'title':      'Blog'
   },
-  #'blog/:name': {
-  #  'controller': 'pages.controllers.blog',
-  #  'template':   'pages/templates/blog.html',
-  #  'title':      'Blog'
-  #},
-  'blog/article/(?P<name>[a-zA-Z_]+)': {
-    'controller':  'pages.controllers.blog_article',
-    'template':    'pages/templates/blog_article.html',
-    'title':       'Blog',
-    'cache_paths': 'pages.controllers.blog_article.get_possible_paths'
-  },
 
   # Project pages
   'projects/pong': {
@@ -102,6 +91,15 @@ paths = {
       'template':   'pages/templates/500.html',
       'title':      '500: Internal server error'
   }
+}
+
+pattern_paths = {
+  'blog/(?P<name>[a-zA-Z0-9_\-]+)': {
+    'controller':  'pages.controllers.blog_article',
+    'template':    'pages/templates/blog_article.html',
+    'title':       'Blog',
+    'cache_paths': 'pages.controllers.blog_article.get_possible_paths'
+  },
 }
 
 # If key is requested, serve path at value (do not redirect)
