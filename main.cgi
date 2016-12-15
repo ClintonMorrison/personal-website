@@ -54,5 +54,8 @@ print ""
 if page_data.get('headers', {}).get('Content-Type', 'text/html') == 'text/html':
   print '<?xml version="1.0" encoding="UTF-8"?>'
 
-print page_data.get('body')
+# Remove version_info placeholder
+body = page_data.get('body')
+body = body.replace('{{%version_info%}}', '')
+print body
 
