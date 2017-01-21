@@ -80,8 +80,8 @@ def _render_page(path, page_data, get, post, variables, load_regions = True):
   if controller_module:
     try:
       controller_module = importlib.import_module(controller_module)
-    except ImportError:
-      raise ServerError('Error importing controller for path: ' + path)
+    except ImportError, e:
+      raise ServerError('Error importing controller for path "%s": %s' % (path, str(e)))
 
     # Get data to inject into the template
     template_data = controller_module.get_page_data(path, get, post, variables)
