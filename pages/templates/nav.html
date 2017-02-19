@@ -1,0 +1,26 @@
+<nav>
+  <div class="nav-wrapper [[nav_classes]]">
+    <a href="#!" class="brand-logo">Clinton Morrison</a>
+    
+    <a href="#" data-activates="mobile-nav-menu" class="button-collapse">
+      <i class="material-icons">menu</i>
+    </a>
+    
+    <ul class="right hide-on-med-and-down">
+      [% for each page in pages %]
+      <li class="[[page.selected]]">
+        <a href="[[page.url]]"> [[page.title]] </a>
+      </li>
+      [% end for each %]
+
+    </ul>
+    
+    <ul class="side-nav" id="mobile-nav-menu">
+      [% for each page in pages %]
+      <li class="[[page.selected]]">
+        <a href="[[page.url]]"> [[page.title]] </a>
+      </li>
+      [% end for each %]
+    </ul>
+  </div>
+</nav>

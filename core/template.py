@@ -2,6 +2,7 @@ import re
 import core.functions
 import sass
 from pprint import pprint
+import yaml
 
 class Template:
   def __init__(self, template_path):
@@ -9,7 +10,9 @@ class Template:
     self.contents = self.raw_contents
 
   def render(self, data, remove_empty_tags = True):
-    self.data = data
+    variables = yaml.load(open("pages/templates/variables.yaml", "r"))
+    variables.update(data)
+    self.data = variables
 
     # does this template exend another?
     extended_templates = re.findall(r"\[\% extends '([A-Za-z/0-9\.]+)' %\]", self.contents)

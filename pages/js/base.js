@@ -1,3 +1,3 @@
-
-console.log("Hello, world!")
-
+$(document).ready(function () {
+    $(".button-collapse").sideNav(); 
+});

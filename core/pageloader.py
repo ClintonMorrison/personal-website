@@ -96,6 +96,10 @@ def _render_page(path, page_data, get, post, variables, load_regions = True):
     for (name, region) in regions.iteritems():
       if not template_data.get(name, False):
         template_data[name] = _render_page(path, region, get, post, variables, False)
-
-  return template.render(template_data)
+  
+   # Read the template file
+  try: 
+    return template.render(template_data)
+  except Exception, e:
+    raise ServerError('Error rendering template "%s": %s' % (template_path, str(e)))
   

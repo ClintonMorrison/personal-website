@@ -1,0 +1,13 @@
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .card {
+        width: 45%;
+        
+        @media screen and (max-width: 840px) {
+            width: 100%;
+        }
+    }
+}

@@ -5,9 +5,9 @@
 paths = {
   '*': {
     'regions': {
-      'sidebar': {
-        'controller': 'pages.controllers.sidebar',
-        'template': 'pages/templates/sidebar.html',
+      'nav': {
+        'controller': 'pages.controllers.nav',
+        'template': 'pages/templates/nav.html',
       }
     }
   },

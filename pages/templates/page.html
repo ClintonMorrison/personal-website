@@ -7,40 +7,55 @@
 
   <link rel="icon" href="://clintonmorrison.com/favicon.ico"/>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
   <title>[[title]] - clintonmorrison.com </title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
   [% add sass 'pages/style/base.scss' %]
-  [% add sass 'pages/style/text.scss' %]
-  [% add sass 'pages/style/block.scss' %]
-  [% add sass 'pages/style/elements.scss' %]
-  [% add sass 'pages/style/bubble.scss' %]
   [% add sass 'pages/style/nav.scss' %]
 
-  [% add css 'pages/thirdparty/normalize/normalize.min.css' %]
 [% end region %]
 
 [% region body %]
 
-  <!-- <script src="//code.jquery.com/jquery-2.1.4.min.js"></script> -->
-  [% add javascript 'pages/thirdparty/jquery/jquery-2.1.4.js' %]
-  [% add javascript 'pages/thirdparty/lodash/lodash.min.js' %]
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
   [% add javascript 'pages/js/base.js' %]
+  
+  <header>
+    [[nav]]
+  </header>
 
-  [[sidebar]]
+  <main class="container">
+    [[main]]
+  </main>
 
-  <div class="main container">
-
-    <div class="content container">
-      [[main]]
+  <footer class="page-footer [[nav_classes]]">
+    <div class="container">
+      <span class="right">
+        <a class="btn-floating [[btn_classes]]" href="mailto:[[contact_email]]" aria-label="Send me an email">
+          <i class="material-icons right">email</i>
+        </a>
+        <a class="btn-floating [[btn_classes]]" href="[[linkedin_url]]" aria-label="View my LinkedIn" target="_blank">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a class="btn-floating [[btn_classes]]" href="[[github_url]]" aria-label="View my GitHub" target="_blank">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </span>
     </div>
     
-    <footer>
-      <br/>
-      <p> &copy; Clinton Morrison 2015. {{%version_info%}}</p>
-    </footer>
-  </div>
-
-
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; Clinton Morrison 2015. {{%version_info%}}
+      </div>
+    </div>
+  </footer>
 
 [% end region %]
