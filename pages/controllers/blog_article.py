@@ -17,3 +17,13 @@ def get_page_data(path, get, post, variables):
   article['body'] = markdownParser.render(article['body'])
 
   return {'article': article, 'title': article.get('title', '')}
+
+def get_possible_paths():
+  articles = database.Table('article').filter()
+  queries = []
+
+  for article in articles: 
+    queries.append('blog/%s' % article.get('name'))
+
+  return queries
+  

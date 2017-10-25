@@ -33,12 +33,12 @@ if not path:
 
 # Try to load page data
 try:
-  page_data = core.pageloader.get(path, get_params, {}, variables, config.cache_pages)
+  page_data = core.pageloader.get(path, get_params, {}, variables)
 except NotFoundError:
-  page_data = core.pageloader.get('404', {}, {}, variables, config.cache_pages)
+  page_data = core.pageloader.get('404', {}, {}, variables)
 except ServerError:
   if not config.debug:
-    page_data = core.pageloader.get('500', {}, {}, variables, config.cache_pages)
+    page_data = core.pageloader.get('500', {}, {}, variables)
   else:
     raise
 
@@ -54,5 +54,8 @@ print ""
 if page_data.get('headers', {}).get('Content-Type', 'text/html') == 'text/html':
   print '<?xml version="1.0" encoding="UTF-8"?>'
 
-print page_data.get('body')
+# Remove version_info placeholder
+body = page_data.get('body')
+body = body.replace('{{%version_info%}}', '')
+print body
 

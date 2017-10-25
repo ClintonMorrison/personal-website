@@ -24,7 +24,6 @@ paths = {
     'title':       'Projects'
   },
   'about': {
-    'controller': 'pages.controllers.default_controller',
     'template':   'pages/templates/about.html',
     'title':      'About'
   },
@@ -34,7 +33,6 @@ paths = {
     'title':      'Resume'
   },
   'contact': {
-    'controller': 'pages.controllers.default_controller',
     'template':   'pages/templates/contact.html',
     'title':      'Contact'
   },
@@ -43,26 +41,13 @@ paths = {
     'template':   'pages/templates/blog.html',
     'title':      'Blog'
   },
-  'blog/:name': {
-    'controller': 'pages.controllers.blog',
-    'template':   'pages/templates/blog.html',
-    'title':      'Blog'
-  },
-  'blog/article': {
-    'controller': 'pages.controllers.blog_article',
-    'template':   'pages/templates/blog_article.html',
-    'title':      'Blog',
-    'dynamic':    True
-  },
 
   # Project pages
   'projects/pong': {
-    'controller': 'pages.controllers.default_controller',
     'template':   'pages/projects/pong/index.html',
     'title':      '',
   },
   'projects/fluffy_chicken_adventures': {
-    'controller': 'pages.controllers.default_controller',
     'template':   'pages/projects/fluffy_chicken_adventures/index.html',
     'title':      'Fluffy Chicken Adventures'
   },
@@ -72,24 +57,22 @@ paths = {
     'title':      'Avoid The Shapes'
   },
   'projects/space_defender': {
-    'controller': 'pages.controllers.default_controller',
     'template':   'pages/projects/space_defender/index.html',
     'title':      'Avoid The Shapes'
   },
   'projects/calculate': {
-    'controller': 'pages.controllers.default_controller',
     'template':   'pages/projects/calculate/index.html',
     'title':      'Calculate!'
   },
   'projects/chatbot': {
-    'controller': 'pages.controllers.default_controller',
     'template':   'pages/projects/chat/index.html',
     'title':      'Chat'
   },
   'projects/chatbot/respond': {
     'controller': 'pages.projects.chat.respond',
     'template':   'pages/templates/blank.html',
-    'type':       'json'
+    'type':       'json',
+    'dynamic':    True
   },
   # Other stuff
   'homepage': {
@@ -101,15 +84,22 @@ paths = {
 
   # Error pages
   '404': {
-      'controller': 'pages.controllers.default_controller',
       'template':   'pages/templates/404.html',
       'title':      '404: File not found'
   },
   '500': {
-      'controller': 'pages.controllers.default_controller',
       'template':   'pages/templates/500.html',
       'title':      '500: Internal server error'
   }
+}
+
+pattern_paths = {
+  'blog/(?P<name>[a-zA-Z0-9_\-]+)': {
+    'controller':  'pages.controllers.blog_article',
+    'template':    'pages/templates/blog_article.html',
+    'title':       'Blog',
+    'cache_paths': 'pages.controllers.blog_article.get_possible_paths'
+  },
 }
 
 # If key is requested, serve path at value (do not redirect)

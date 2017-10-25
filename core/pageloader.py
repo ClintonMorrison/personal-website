@@ -1,7 +1,8 @@
 from core.template import Template
-from pages.paths import paths, aliases, redirects
+from pages.paths import paths, pattern_paths, aliases, redirects
 from core.exceptions import NotFoundError, ServerError
 import os
+import re
 
 import importlib
 from pprint import pprint
@@ -13,16 +14,18 @@ def path_exists(path):
 
 def _get_path_data(path):
   data = paths.get(path, False) # Is the path directly defined?
+  if data: return data
   
-  if not data:
-    parts = path.split('/')
-    return False
-    #raise ServerError(parts)
-  
-  return data
+  for pattern, data in pattern_paths.iteritems():
+    match = re.compile(pattern).match(path)
+    if match:
+      data['params'] = match.groupdict()
+      return data
+
+  return False
 
 
-def get(path, get = {}, post = {}, variables = {}, use_cache = True):
+def get(path, get = {}, post = {}, variables = {}):
   if path == '':
     path = 'index'
  
@@ -43,15 +46,10 @@ def get(path, get = {}, post = {}, variables = {}, use_cache = True):
   if not path_data:
     raise NotFoundError('Unknown path: ' + path)
 
-  body = False
-  if not path_data.get('dynamic', False) and use_cache:
-    cachedPageName = 'static/cache/' + path.replace('/', '-')
-    if os.path.isfile(cachedPageName):
-      file = open(cachedPageName, 'r')
-      body = file.read()
-  if not body:
-    #raise ServerError('no cache found for path: ' + path)
-    body = _render_page(path, path_data, get, post, variables)
+  params = path_data.get('params', {})
+  if params: get.update(params)
+
+  body = _render_page(path, path_data, get, post, variables)
 
   contentType = 'text/html' 
   if path_data.get('type', 'html') == 'json':
@@ -67,7 +65,7 @@ def _render_page(path, page_data, get, post, variables, load_regions = True):
   # Get paths for the template and controller for the page
   template_path = page_data.get('template', False)
   controller_module = page_data.get('controller', False)
-  if not template_path or not controller_module:
+  if not template_path:
     raise ServerError('Path not configured correctly: ' + path)
   
   # Read the template file
@@ -76,14 +74,17 @@ def _render_page(path, page_data, get, post, variables, load_regions = True):
   except IOError:
     raise ServerError('Template file does not exist: ' + template_path)
 
-  # Import the controller
-  try:
-    controller_module = importlib.import_module(controller_module)
-  except ImportError:
-    raise ServerError('Error importing controller for path: ' + path)
+  template_data = {}
 
-  # Get data to inject into the template
-  template_data = controller_module.get_page_data(path, get, post, variables)
+  # Import the controller (if specified)
+  if controller_module:
+    try:
+      controller_module = importlib.import_module(controller_module)
+    except ImportError, e:
+      raise ServerError('Error importing controller for path "%s": %s' % (path, str(e)))
+
+    # Get data to inject into the template
+    template_data = controller_module.get_page_data(path, get, post, variables)
 
   # Add the page's title, if no title is set
   if not template_data.get('title', False):
