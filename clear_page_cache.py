@@ -11,10 +11,10 @@ paths in "static/cache/".
 
 CACHE_PATH = config.cache_path
 
-print "> Clearing cache..."
+print("> Clearing cache...")
 files = glob("%s/*" % CACHE_PATH)
 for f in files:
-  print "    removing '%s'" % f
+  print("    removing '%s'" % f)
   if os.path.isdir(f):
     shutil.rmtree(f)
   else:

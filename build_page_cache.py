@@ -16,22 +16,22 @@ paths in "static/cache/".
 
 CACHE_PATH = config.cache_path
 
-print "> Clearing cache..."
+print("> Clearing cache...")
 files = glob("%s/*" % CACHE_PATH)
 for f in files:
-  print "    removing '%s'" % f
+  print("    removing '%s'" % f)
   if os.path.isdir(f):
     shutil.rmtree(f)
   else:
     os.remove(f)
 
-print "\n> Rebuilding pages..."
+print("\n> Rebuilding pages...")
 
-for path, item in paths.items() + pattern_paths.items():
+for path, item in list(paths.items()) + list(pattern_paths.items()):
   can_cache = (not item.get('dynamic')) and (not ':' in path) and (not path == '*')
 
   if not can_cache: 
-    print "    [skipping: " + path + "]"
+    print("    [skipping: " + path + "]")
     continue
    
   possible_paths = [path]
@@ -48,7 +48,7 @@ for path, item in paths.items() + pattern_paths.items():
     if not os.path.exists(dirname):
       os.makedirs(dirname)
 
-    print "    GET %s --> '%s'" % (possible_path.ljust(40), filename)
+    print("    GET %s --> '%s'" % (possible_path.ljust(40), filename))
     page_data = pageloader.get(possible_path)
     out_file = open(filename, 'w+')
     

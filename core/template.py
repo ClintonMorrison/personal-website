@@ -40,11 +40,11 @@ class Template:
 
     # apply custom functions
     functions = self._get_functions()
-    for (name, function) in functions.iteritems():
+    for (name, function) in functions.items():
       self._applyFunction(name)
 
     # fill in known values
-    for key in self.data.keys():
+    for key in list(self.data.keys()):
       self.contents = self._fill_tag(key, self.data.get(key, False), self.contents)
 
     # remove any unfilled tags
@@ -60,7 +60,7 @@ class Template:
     return contents
 
   def _is_string(self, object):
-    return isinstance(object, basestring)
+    return isinstance(object, str)
 
   def _render_foreach(self, match):
     item_name = match.group(1)
@@ -122,7 +122,7 @@ class Template:
 
   def _add_sass(self, path):
     return "%s\n<style>\n%s\n</style>" % (
-      self._format_filename(path),  sass.compile_string(self._read_file(path)))
+      self._format_filename(path),  sass.compile_string(bytes(self._read_file(path), 'utf-8')))
 
   
   def _url(self, path):

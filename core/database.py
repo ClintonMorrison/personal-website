@@ -78,7 +78,7 @@ class DatabaseHandle:
     elif placeholder == 'l':
       return self.connection.escape_string(arg)
     elif placeholder == 'i':
-      if isinstance(arg, (int, long)):
+      if isinstance(arg, int):
         return self.connection.escape_string(str(arg))
       else:
         return self.connection.escape_string(str(int(arg)))
@@ -174,10 +174,10 @@ class Row:
     query = "UPDATE %l WHERE %l = %i SET "
     args = [self._table.table_name, self._table.id, self.id]
     key_value_pairs = []
-    for key, value in self._data.items():
+    for key, value in list(self._data.items()):
       key_value_pairs.append(key + ' = ' + value)
     query += ", ".join(key_value_pairs)
-    print 'TODO!'
+    print('TODO!')
 
   def __getattr__(self, name):
     return self._data.get(name, None)

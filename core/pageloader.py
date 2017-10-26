@@ -16,7 +16,7 @@ def _get_path_data(path):
   data = paths.get(path, False) # Is the path directly defined?
   if data: return data
   
-  for pattern, data in pattern_paths.iteritems():
+  for pattern, data in pattern_paths.items():
     match = re.compile(pattern).match(path)
     if match:
       data['params'] = match.groupdict()
@@ -80,7 +80,7 @@ def _render_page(path, page_data, get, post, variables, load_regions = True):
   if controller_module:
     try:
       controller_module = importlib.import_module(controller_module)
-    except ImportError, e:
+    except ImportError as e:
       raise ServerError('Error importing controller for path "%s": %s' % (path, str(e)))
 
     # Get data to inject into the template
@@ -93,7 +93,7 @@ def _render_page(path, page_data, get, post, variables, load_regions = True):
   # Load predefined regions given in the paths file
   if load_regions:
     regions = paths.get('*', {'regions': {}}).get('regions', {})
-    for (name, region) in regions.iteritems():
+    for (name, region) in regions.items():
       if not template_data.get(name, False):
         template_data[name] = _render_page(path, region, get, post, variables, False)
 

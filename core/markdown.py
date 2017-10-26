@@ -68,7 +68,7 @@ class MarkdownParser:
 
   def apply_rules(self, markdown, rules):
     new_markdown = markdown
-    for (rule, replace_func) in rules.iteritems():
+    for (rule, replace_func) in rules.items():
       new_markdown = re.sub(
         rule,
         replace_func,
