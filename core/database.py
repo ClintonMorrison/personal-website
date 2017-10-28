@@ -86,10 +86,13 @@ class DatabaseHandle:
     raise Exception('Unsupported placeholder: ' + placeholder)
 
   def query(self, query, args = []):
+    print("QUERY ", query, args)
     placeholders = re.findall(r"\%([\%slin])", query, re.S)
     
     for placeholder in placeholders:
       replacement = self._get_replacement(placeholder, args)
+      print("Replacement is:")
+      print(replacement)
       query = query.replace('%' + placeholder, replacement, 1)
 
     return self._query_raw(query)

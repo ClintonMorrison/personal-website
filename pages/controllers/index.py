@@ -4,7 +4,7 @@ from pprint import pprint
 def get_page_data(path, get, post, variables):
   data = {'title': 'Hello there!'}
 
-  projects_table = database.Table('project')
+  projects_table = database.Table(u'project')
   projects = projects_table.filter(
     conditions = [('hidden', '=', 0)],
     orderBy = 'date_published',

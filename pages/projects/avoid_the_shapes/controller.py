@@ -2,7 +2,7 @@ from core import database as database
 from pprint import pprint
 
 def get_page_data(path, get, post, variables):
-  scores_table = database.Table('GameScore')
+  scores_table = database.Table(u'GameScore')
   scores = scores_table.filter(
     orderBy = 'score',
     order = 'DESC',
