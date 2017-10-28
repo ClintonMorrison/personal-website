@@ -21,3 +21,5 @@ config.py
 \.htaccess
 .htaccess
 *.htaccess
+
+venv/
