@@ -62,6 +62,9 @@ class DatabaseHandle:
 
     return results
 
+  def _escape_string(self, str):
+    return self.connection.escape_string(str).decode('utf-8')
+
   def _get_replacement(self, placeholder, args):
     """
     Gets the replacement for a given placeholder in the query string.
@@ -74,25 +77,22 @@ class DatabaseHandle:
     arg = args.pop(0)
 
     if placeholder == 's':
-      return "'" + self.connection.escape_string(arg) + "'"
+      return "'" + self._escape_string(arg) + "'"
     elif placeholder == 'l':
-      return self.connection.escape_string(arg)
+      return self._escape_string(arg)
     elif placeholder == 'i':
       if isinstance(arg, int):
-        return self.connection.escape_string(str(arg))
+        return self._escape_string(str(arg))
       else:
-        return self.connection.escape_string(str(int(arg)))
+        return self._escape_string(str(int(arg)))
 
     raise Exception('Unsupported placeholder: ' + placeholder)
 
   def query(self, query, args = []):
-    print("QUERY ", query, args)
     placeholders = re.findall(r"\%([\%slin])", query, re.S)
     
     for placeholder in placeholders:
       replacement = self._get_replacement(placeholder, args)
-      print("Replacement is:")
-      print(replacement)
       query = query.replace('%' + placeholder, replacement, 1)
 
     return self._query_raw(query)

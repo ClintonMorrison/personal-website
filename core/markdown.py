@@ -41,7 +41,7 @@ class MarkdownParser:
     return "%CODE_BLOCK_PLACEHOLDER%"
 
   def _render_code(self, path, language):
-    code = open("static/%s/%s" % (self.resource_path, path), "r").read().encode('string-escape')
+    code = open("static/%s/%s" % (self.resource_path, path), "r").read()
     return "<code>%s</code>" % escape(code)
 
   def _render_code_snippet(self, match):
