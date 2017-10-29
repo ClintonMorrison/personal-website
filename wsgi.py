@@ -1,7 +1,7 @@
-from core.app import App
+from core.requesthandler import RequestHandler
 
 def application(variables, start_response):
-    app = App(variables)
+    app = RequestHandler(variables)
     status, headers, body = app.get_response()
     start_response(status, headers)
     return body

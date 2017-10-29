@@ -6,7 +6,7 @@ import config
 import urllib
 
 
-class App:
+class RequestHandler:
     def __init__(self, variables):
         self.variables = variables
 
