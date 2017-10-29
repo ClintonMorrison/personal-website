@@ -50,25 +50,25 @@ def get_page_data(path, get, post, variables):
     'http://api.urbandictionary.com/v0/define',
     params={'term': " ".join(search_words)}
   )
-  results = json.loads(response.content).get('list', {})
+  results = json.loads(response.content.decode('utf-8')).get('list', {})
 
 
   answers = []
   for result in results:
     text = clean_text(result.get('example', ''))
     if text:
-      answers.append(text.encode('utf8'))
+      answers.append(text)
   
 
   if answers:
-    data['message'] = random.choice(answers).encode('utf8')
+    data['message'] = random.choice(answers)
 
   conversation_hash = hashlib.md5()
-  conversation_hash.update("%s %s %s" % (
+  conversation_hash.update(bytes("%s %s %s" % (
     variables.get('REMOTE_ADDR', ''),
     variables.get('HTTP_USER_AGENT', ''),
     time.strftime("%Y-%m-%d")
-  ))
+  ), 'utf-8'))
   conversation_id = conversation_hash.hexdigest()
   
   handle = core.database.get_handle()

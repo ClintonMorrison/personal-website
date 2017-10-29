@@ -3,8 +3,7 @@
 import core.pageloader
 from core.exceptions import NotFoundError, ServerError
 import config
-import urllib
-
+import urllib.parse
 
 class RequestHandler:
     def __init__(self, variables):
@@ -16,7 +15,7 @@ class RequestHandler:
         for term in terms:
             parts = term.split('=')
             if len(parts) == 2:
-                params[parts[0]] = urllib.unquote(parts[1])
+                params[parts[0]] = urllib.parse.unquote(parts[1])
         return params
 
     def get_request_path(self):
