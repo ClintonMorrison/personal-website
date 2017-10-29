@@ -122,7 +122,9 @@ class Template:
 
   def _add_sass(self, path):
     return "%s\n<style>\n%s\n</style>" % (
-      self._format_filename(path),  sass.compile_string(bytes(self._read_file(path), 'utf-8')))
+      self._format_filename(path),
+      sass.compile_string(bytes(self._read_file(path), 'utf-8')).decode('utf-8')
+    )
 
   
   def _url(self, path):

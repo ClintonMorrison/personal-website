@@ -47,15 +47,15 @@ if not page_data:
 
 # Render headers
 for header, value in page_data.get('headers').iteritems():
-  print header + ': ' + value
-print ""
+  print(header + ': ' + value)
+print("")
 
 # Render body
 if page_data.get('headers', {}).get('Content-Type', 'text/html') == 'text/html':
-  print '<?xml version="1.0" encoding="UTF-8"?>'
+  print('<?xml version="1.0" encoding="UTF-8"?>')
 
 # Remove version_info placeholder
 body = page_data.get('body')
 body = body.replace('{{%version_info%}}', '')
-print body
+print(body)
 

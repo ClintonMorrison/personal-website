@@ -2,10 +2,10 @@ base_url = 'mysite.com'
 
 databases = {
     'main': {
-        'host':   'myhost',
-        'user':   'mydbuser',
-        'passwd': 'mypassword',
-        'db':     'mydb'
+        'host':   'localhost',
+        'user':   'root',
+        'passwd': '',
+        'db':     'clintor1_main'
     }
 }
 
