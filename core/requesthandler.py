@@ -6,8 +6,11 @@ import config
 import urllib.parse
 
 class RequestHandler:
-    def __init__(self, variables):
+    def __init__(self, variables, options = None):
         self.variables = variables
+        self.options = options
+        if self.options is None:
+            self.options = {}
 
     def get_params(self):
         terms = self.variables.get('QUERY_STRING', '').split('&')
@@ -50,7 +53,7 @@ class RequestHandler:
 
         # Render body
         body = b''
-        if page_data.get('headers', {}).get('Content-Type', 'text/html') == 'text/html':
+        if page_data.get('headers', {}).get('Content-Type', 'text/html') == 'text/html' and not self.options.get('exclude_xml_version'):
             body += b'<?xml version="1.0" encoding="UTF-8"?>'
 
         # Remove version_info placeholder

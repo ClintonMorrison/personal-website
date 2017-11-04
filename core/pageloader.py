@@ -1,11 +1,8 @@
 from core.template import Template
 from pages.paths import paths, pattern_paths, aliases, redirects
 from core.exceptions import NotFoundError, ServerError
-import os
 import re
-
 import importlib
-from pprint import pprint
 
 def path_exists(path):
   if not _get_path_data(path):

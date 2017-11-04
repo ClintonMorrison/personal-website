@@ -1,4 +1,4 @@
-base_url = 'mysite.com'
+base_url = 'localhost:8002'
 
 databases = {
     'main': {
