@@ -3,8 +3,9 @@ import core.functions
 from cgi import escape
 
 class MarkdownParser:
-  def __init__(self, resource_path):
+  def __init__(self, resource_path, **kwargs):
     self.resource_path = resource_path
+    self.options = kwargs
     self.codeblocks = []
 
   def _render_italics(self, match):
@@ -24,12 +25,17 @@ class MarkdownParser:
     return "<h4>%s</h4>" % (match.group(1))
 
   def _render_paragraph(self, match):
+    if self._is_preview_mode():
+      return  "<span>%s</span>" % (match.group(1))
     return "<p>%s</p>" % (match.group(1))
 
   def _render_list_item(self, match):
     return "<li class='blog'>%s</li>" % (match.group(1))
 
   def _render_image(self, path, position):
+    if self._is_preview_mode():
+      return ''
+
     url = core.functions.static_to_url(self.resource_path + path)
     return "<div class='img-wrapper'><img class='%s' src='%s'></img></div>" % (position.lower(), url)
 
@@ -64,6 +70,8 @@ class MarkdownParser:
     else:
       return "<em style='color: red'>Unknown Resource: %s</em>" % (type)
 
+  def _is_preview_mode(self):
+    return self.options.get('preview_mode', False)
     
 
   def apply_rules(self, markdown, rules):

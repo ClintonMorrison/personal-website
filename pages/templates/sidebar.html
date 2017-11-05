@@ -1,11 +1,15 @@
-<nav class="sidebar hidden-mobile">
+<div class="nav-placeholder"></div>
+
+<nav>
+    <!--
   <ul>
     <li class="title" >
       <a href="[% url 'index' %]">Clinton Morrison</a>
     </li>
   </ul>
+  -->
 
-  <ul>
+  <ul class="links container">
     [% for each page in pages %]
       <li class="[[page.selected]]" title="[[page.title]]">
         <a href="[[page.url]]"> [[page.title]] </a>
@@ -13,16 +17,4 @@
     [% end for each %]
   </ul>
 
-</nav>
-
-<nav class="topbar hidden-desktop">
-  <ul>
-    [% for each page in pages %]
-      <li class="[[page.selected]]" title="[[page.title]]">
-        <a href="[[page.url]]">
-          <i class="fa fa-[[page.icon]]" aria-hidden="true"></i>
-        </a>
-      </li>
-    [% end for each %]
-  </ul>
 </nav>

@@ -1,5 +1,6 @@
 import config
 import importlib
+import textwrap
 
 def path_to_url(path = 'index', parameters = [], hash = ''):
   if hash == '':
@@ -16,3 +17,10 @@ def get_func_from_module(path):
   module = importlib.import_module(module_name)
   func = getattr(module, func_name)
   return func
+
+def truncate_text(text, length):
+  if len(text) <= length:
+    return text
+
+  next_space_index = text.find(' ', length)
+  return text[:next_space_index].rstrip(',.?,:;" ') + ' ...'

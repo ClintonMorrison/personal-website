@@ -2,12 +2,22 @@
 
 [% region contents %]
 
+[% add sass 'pages/style/blog.scss' %]
+[% add sass 'pages/style/blog_article.scss' %]
+
+<div class="articles">
 [% for each article in articles %]
-  <a class="wide bubble" href="[% url 'blog' %]/[[article.name]]" title="[[article.title]]">
-    <span class="corner note"> [[article.date_published]]</span>
-    [[article.title]]
-  </a>
-  <div class="bubble connector"></div>
+  <div class="article-block">
+    <div class="date"> [[article.date_published]]</div>
+    <h2>[[article.title]]</h2>
+
+    <div class="article-intro">[[article.intro]]</div>
+
+    <a class="button button-primary" href="[% url 'blog' %]/[[article.name]]">
+        Read More
+    </a>
+  </div>
 [% end for each %]
+</div>
 
 [% end region %]

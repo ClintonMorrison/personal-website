@@ -12,7 +12,7 @@ def get_page_data(path, get, post, variables):
     raise NotFoundError("No article with name: '" + get.get('name', ''))
   
   article = articles[0]
-  article['date_published'] = article.get('date_published').strftime('%y/%m/%d')
+  article['date_published'] = article.get('date_published').strftime('%B %m, %Y')
   markdownParser = MarkdownParser('blog/%s/' % (article.get('name')))
   article['body'] = markdownParser.render(article['body'])
 

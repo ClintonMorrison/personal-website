@@ -5,23 +5,20 @@
   <meta name="author" content="Clinton Morrison">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="://clintonmorrison.com/favicon.ico"/>
+  <link rel="icon" href="[% static 'favicon.ico' %]"/>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
+
   <title>[[title]] - clintonmorrison.com </title>
   [% add sass 'pages/style/base.scss' %]
-  [% add sass 'pages/style/text.scss' %]
-  [% add sass 'pages/style/block.scss' %]
-  [% add sass 'pages/style/elements.scss' %]
-  [% add sass 'pages/style/bubble.scss' %]
   [% add sass 'pages/style/nav.scss' %]
 
-  [% add css 'pages/thirdparty/normalize/normalize.min.css' %]
+  [% add css 'pages/thirdparty/skeleton/normalize.css' %]
+  [% add css 'pages/thirdparty/skeleton/skeleton.css' %]
+
 [% end region %]
 
 [% region body %]
 
-  <!-- <script src="//code.jquery.com/jquery-2.1.4.min.js"></script> -->
   [% add javascript 'pages/thirdparty/jquery/jquery-2.1.4.js' %]
   [% add javascript 'pages/thirdparty/lodash/lodash.min.js' %]
 
@@ -31,7 +28,7 @@
 
   <div class="main container">
 
-    <div class="content container">
+    <div class="content">
       [[main]]
     </div>
     

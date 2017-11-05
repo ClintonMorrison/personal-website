@@ -2,13 +2,13 @@
 
 [% region contents %]
 <p class="huge center"> 
-  I am Clinton Morrison, a Canadian web developer.
+  I'm Clinton Morrison, a Canadian web developer.
 </p>
 
-<div class="wide padded block two column">
+<div class="row">
 
   <!-- PROJECTS -->
-  <div class="column">
+  <div class="one-half column">
     <h2 class="centered"> Projects </h2>
     [% for each project in projects %]
       <a class="bubble" href="[% url 'projects' %]#[[project.name]]">[[project.title]]</a>
@@ -21,7 +21,7 @@
 
 
   <!-- BLOG -->
-  <div class="column">
+  <div class="one-half column">
     <h2 class="centered"> Blog </h2>
     [% for each article in articles %]
       <a class="bubble" href="[% url 'blog' %]/[[article.name]]">[[article.title]]</a>
