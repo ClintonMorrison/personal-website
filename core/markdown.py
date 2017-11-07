@@ -22,7 +22,9 @@ class MarkdownParser:
     return "<a target='_blank' href='%s'>%s</a>" % (url, label)
 
   def _render_header(self, match):
-    return "<h4>%s</h4>" % (match.group(1))
+    if self._is_preview_mode():
+      return ""
+    return "<h2>%s</h2>" % (match.group(1))
 
   def _render_paragraph(self, match):
     if self._is_preview_mode():

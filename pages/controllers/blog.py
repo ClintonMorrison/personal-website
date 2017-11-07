@@ -15,9 +15,9 @@ def get_page_data(path, get, post, variables):
   )
 
   for article in articles:
-    article['date_published'] = article.get('date_published').strftime('%B %m, %Y')
+    article['date_published'] = core.functions.format_date(article.get('date_published'))
     markdownParser = MarkdownParser('blog/%s/' % (article.get('name')), preview_mode=True)
-    text = core.functions.truncate_text(article.get('body'), 150)
+    text = core.functions.truncate_text(article.get('body'), 450)
     article['intro'] = markdownParser.render(text)
 
   data['articles'] = articles

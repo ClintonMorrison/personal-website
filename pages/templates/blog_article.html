@@ -2,14 +2,13 @@
 
 [% region contents %]
   [% add sass 'pages/style/blog_article.scss' %]
-  <span class="corner note"> [[article.date_published]] </span>
+  <span class="date"> [[article.date_published]] </span>
 <div> 
 <br/>
 [[article.body]]
 </div>
 
-<br/><br/>
-<hr>
-<br/><br/>
+<hr/>
+
 <a class="return button" href="[% url 'blog' %]">Return to Blog</a>
 [% end region %]

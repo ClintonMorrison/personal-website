@@ -1,5 +1,9 @@
 $mobile-max-width: 825px;
 
+.content {
+  font-size: 18px;
+}
+
 li.blog {
   padding-top: 5px;
   margin-left: 20px;
@@ -43,6 +47,7 @@ code {
   white-space: pre;
   border: 1px solid #333;
   background: #ececec;
+  margin-bottom: 2.5em;
 
   @media screen and (max-width: $mobile-max-width) {
     overflow: scroll;

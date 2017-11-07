@@ -1,0 +1,36 @@
+.project-picture {
+  max-width: 100%;
+}
+
+.project-section-intro {
+  margin-bottom: 2.5em;
+}
+
+.project-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.5em;
+
+  .picture-column {
+    width: 35%;
+  }
+
+  .description-column {
+    width: 60%;
+  }
+
+  .button + .button {
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .project-block {
+    display: block;
+
+    .picture-column,
+    .description-column {
+      width: 100%;
+    }
+  }
+}

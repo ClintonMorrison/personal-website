@@ -1,23 +1,13 @@
-.articles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .article-block {
   display: inline-block;
   padding: .5em;
   overflow: hidden;
-  width: 48%;
+  margin-bottom: 1.5em;
+  max-width: 40em;
 
   h2 {
     margin-bottom: .25em;
     font-size: 1.5em;
-  }
-
-  .date {
-    color: #333;
-    text-transform: uppercase;
   }
 
   p {
@@ -27,25 +17,9 @@
 }
 
 .article-intro {
-  height: 5em;
   margin-bottom: 1em;
   text-align: justify;
   overflow: hidden;
-}
-
-@media screen and (max-width: 1030px) {
-  .articles {
-    display: block;
-  }
-
-  .article-block {
-    display: block;
-    width: 80%;
-  }
-
-  .article-intro {
-    height: auto;
-  }
 }
 
 @media screen and (max-width: 700px) {
