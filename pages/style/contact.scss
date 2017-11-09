@@ -1,0 +1,18 @@
+.contact-links {
+  margin-bottom: 2em;
+
+  a {
+    display: inline-block;
+    text-align: center;
+    width: 4em;
+
+    svg {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  a + a {
+    margin-left: 1em;
+  }
+}

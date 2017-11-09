@@ -109,7 +109,8 @@ class Template:
       'add sass': self._add_sass,
       'add css': self._add_css,
       'url': self._url,
-      'static': self._static
+      'static': self._static,
+      'partial': self._render_partial
     }
 
   def _add_javascript(self, path):
@@ -136,4 +137,6 @@ class Template:
   def _format_filename(self, path):
     return "\n<!-- FILE: " + path + " -->\n"
 
-
+  def _render_partial(self, path):
+    template = Template(path)
+    return template.render({})

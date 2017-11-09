@@ -24,13 +24,13 @@ skills:
     description: Interpersonal and teamwork skills developed through volunteer work.
 
 work:
-  - title:      Junior Frontend Developer
+  - title:      Junior Full Stack Engineer
     company:    BiblioCommons
     location:   Toronto, Ontario
     start_date: August 2016
     end_date:   Present
     tasks:
-      - Maintained Ruby on Rails web application
+      - Java, Spring, Ruby on Rails, Node
       - Implemented new UI components with React, SCSS, and HTML
 
   - title:      Web Developer
