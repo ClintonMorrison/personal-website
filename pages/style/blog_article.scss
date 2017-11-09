@@ -1,14 +1,10 @@
 $mobile-max-width: 825px;
 
 .content {
-  font-size: 18px;
+  li {
+    margin-bottom: 0;
+  }
 }
-
-li.blog {
-  padding-top: 5px;
-  margin-left: 20px;
-}
-
 
 img {
   display: inline-block;

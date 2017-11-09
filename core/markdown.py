@@ -22,22 +22,17 @@ class MarkdownParser:
     return "<a target='_blank' href='%s'>%s</a>" % (url, label)
 
   def _render_header(self, match):
-    if self._is_preview_mode():
-      return ""
     return "<h2>%s</h2>" % (match.group(1))
 
   def _render_paragraph(self, match):
-    if self._is_preview_mode():
-      return  "<span>%s</span>" % (match.group(1))
     return "<p>%s</p>" % (match.group(1))
 
   def _render_list_item(self, match):
     return "<li class='blog'>%s</li>" % (match.group(1))
 
+  def _render_list(self, match):
+    return "<ul>%s</ul>" % (match.group(1))
   def _render_image(self, path, position):
-    if self._is_preview_mode():
-      return ''
-
     url = core.functions.static_to_url(self.resource_path + path)
     return "<div class='img-wrapper'><img class='%s' src='%s'></img></div>" % (position.lower(), url)
 
@@ -72,10 +67,6 @@ class MarkdownParser:
     else:
       return "<em style='color: red'>Unknown Resource: %s</em>" % (type)
 
-  def _is_preview_mode(self):
-    return self.options.get('preview_mode', False)
-    
-
   def apply_rules(self, markdown, rules):
     new_markdown = markdown
     for (rule, replace_func) in rules.items():
@@ -104,6 +95,7 @@ class MarkdownParser:
     }
 
     rules_3 = {
+      r"(<li((?!<p>).)*</li>)": self._render_list,
       r"\%\% (.+?), (.+?), (.+?) \%\%": self._render_resource,
     }
     
@@ -116,8 +108,11 @@ class MarkdownParser:
       flags = re.S
     )
 
+    print("0>", markdown)
     markdown = self.apply_rules(markdown, rules_1)
+    print("1>", markdown)
     markdown = self.apply_rules(markdown, rules_2)
+    print("2>", markdown)
     markdown = self.apply_rules(markdown, rules_3)
 
     for code in self.codeblocks:
@@ -126,3 +121,12 @@ class MarkdownParser:
     return markdown
 
 
+class MarkdownBlogPreviewParser(MarkdownParser):
+  def _render_paragraph(self, match):
+    return "<span>%s</span>" % (match.group(1))
+
+  def _render_image(self, path, position):
+      return ""
+
+  def _render_header(self, match):
+    return ""
