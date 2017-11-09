@@ -6,21 +6,20 @@
 
 
 <div style="height:250px">
-  <h3> Calculate!</h3>
-	<p class="disabled"> Enter an expression to evaluate. </p>
+  <p class="disabled"> Enter an expression to evaluate. </p>
 
-  <div class="wide group">
+  <div>
     <input type="text"  id="query" style="width: calc(100% - 170px);" placeholder="2 + 2">
     <div class="inverted button" id="go"><i class="fa fa-bolt inverted"></i></div>
   </div>
   
-  <div class="two column block output">
-    <div class="column">
+  <div class="row block output">
+    <div class="one-half column">
       <h4 class="ui top attached header">Input</h4>
       <div class="number area" id="input"></div>
     </div>
 
-    <div class="column">
+    <div class="one-half column">
       <h4 class="ui top attached header">Result</h4>
       <div class="number area" id="result"></div>
     </div>

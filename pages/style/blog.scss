@@ -18,12 +18,15 @@
 
 .article-intro {
   margin-bottom: 1em;
-  text-align: justify;
   overflow: hidden;
 }
 
 @media screen and (max-width: 700px) {
   .article-block {
     width: 100%;
+  }
+
+  .article-intro {
+    text-align: justify;
   }
 }
