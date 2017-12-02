@@ -107,11 +107,8 @@ class MarkdownParser:
             flags=re.S
         )
 
-        print("0>", markdown)
         markdown = self.apply_rules(markdown, rules_1)
-        print("1>", markdown)
         markdown = self.apply_rules(markdown, rules_2)
-        print("2>", markdown)
         markdown = self.apply_rules(markdown, rules_3)
 
         for code in self.codeblocks:
