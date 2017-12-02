@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
   <title>[[title]] - clintonmorrison.com </title>
+
   [% add sass 'pages/style/base.scss' %]
   [% add sass 'pages/style/text.scss' %]
   [% add sass 'pages/style/block.scss' %]
@@ -17,6 +18,16 @@
   [% add sass 'pages/style/nav.scss' %]
 
   [% add css 'pages/thirdparty/normalize/normalize.min.css' %]
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42766313-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-42766313-1');
+  </script>
+
 [% end region %]
 
 [% region body %]
