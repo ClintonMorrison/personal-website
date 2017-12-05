@@ -48,10 +48,10 @@ html body {
   }
   
   .corner.note {
-      position: absolute;
-      top: 0px;
-      right: 5px;
       color: #999;
+      text-align: right;
+      text-transform: uppercase;
+      margin-top: -1em;
   }
 
 

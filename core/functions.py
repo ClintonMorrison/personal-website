@@ -16,3 +16,4 @@ def get_func_from_module(path):
   module = importlib.import_module(module_name)
   func = getattr(module, func_name)
   return func
+

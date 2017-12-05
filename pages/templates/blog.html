@@ -4,7 +4,7 @@
 
 [% for each article in articles %]
   <a class="wide bubble" href="[% url 'blog' %]/[[article.name]]" title="[[article.title]]">
-    <span class="corner note"> [[article.date_published]]</span>
+    <div class="corner note"> [[article.date_published]]</div>
     [[article.title]]
   </a>
   <div class="bubble connector"></div>

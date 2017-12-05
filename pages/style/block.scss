@@ -61,13 +61,10 @@ html body {
         color: #AAA;
         background-color: #191818;
         font-weight: 300;
-        height: 50px;
+        min-height: 50px;
         text-align: center;
         margin: -20px;
         margin-bottom: 24px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
         padding-left: 20px;
         padding-right: 20px;
       }
