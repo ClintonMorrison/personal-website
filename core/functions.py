@@ -17,3 +17,5 @@ def get_func_from_module(path):
   func = getattr(module, func_name)
   return func
 
+def format_date(date):
+  return date.strftime('%-B %-m, %-Y')

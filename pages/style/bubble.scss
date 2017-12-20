@@ -6,7 +6,6 @@ html body {
     margin-right: auto;
     width: 80%;
     height: 50px;
-    line-height: 50px;
     border: 1px solid #bbb;
     padding: 10px;
     text-align: center;
@@ -16,8 +15,10 @@ html body {
     text-decoration: none;
     color: black;
     position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       border: 1px solid #555;
@@ -39,7 +40,9 @@ html body {
     }
 
     .corner.note {
-      top: -10px;
+      position: absolute;
+      right: .5rem;
+      bottom: .25rem;
     }
     
   }
