@@ -7,7 +7,7 @@ import json
 
 _database_handles = False
 
-def get_handle(name = 'main'):
+def get_handle(name = 'main', use_cached = True):
   '''
   Gets a handle for the given database. Makes a new connection if necessary.
   '''
@@ -15,7 +15,7 @@ def get_handle(name = 'main'):
   if not _database_handles:
     _database_handles = {}
 
-  if _database_handles.get(name, False):
+  if _database_handles.get(name, False) and use_cached:
      return _database_handles.get(name, False)
 
   db_config = config.databases.get(name, False)
@@ -33,13 +33,20 @@ class DatabaseHandle:
     """
     Creates a connection to the MySQL database
     """
+    self.host = host
+    self.username = username
+    self.passwd = passwd
+    self.db = db
+
+    self._connect()
+
+  def _connect(self):
     self.connection = MySQLdb.connect(
-      host        = host,
-      user        = username,
-      passwd      = passwd,
-      db          = db,
-      cursorclass = MySQLdb.cursors.DictCursor
-    )
+      host=self.host,
+      user=self.username,
+      passwd=self.passwd,
+      db=self.db,
+      cursorclass=MySQLdb.cursors.DictCursor)
     self.cursor = self.connection.cursor()
 
   def _query_raw_one(self, query):
@@ -55,7 +62,12 @@ class DatabaseHandle:
     """
     Performs a query given a raw query string, returning all results.
     """
-    self.cursor.execute(query);
+    try:
+      self.cursor.execute(query)
+    except MySQLdb.OperationalError:
+      self._connect()
+      self.cursor.execute(query)
+
     results = []
     for row in self.cursor.fetchall():
       results.append(row)
