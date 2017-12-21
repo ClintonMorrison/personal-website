@@ -1,7 +1,7 @@
 
 source venv/bin/activate
 git pull
-git checkout python3
+git checkout master
 pip install -r requirements.txt
 python clear_page_cache.py
 python build_page_cache.py
