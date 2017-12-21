@@ -2,34 +2,33 @@ $border-color: #eee;
 $foreground-color: #222;
 $accent-color: #33c3f0;
 
-// body bg #727b81
-// menu #3d424d
-// menu fg #b5bfca
-// body text #e7f2fd
-
-$menu-background: #727b81;
-
+$menu-background: #fff;
+$menu-foreground: #222;
+$body-background: #727b81;
+$body-foreground: #e7f2fd;
 
 .nav-placeholder {
   height: 5em;
 }
 
 nav {
-  background-color: white;
+  background-color: $menu-background;
   border-top: 1px solid $border-color;
   border-bottom: 2px solid $accent-color;
   position: fixed;
+  margin-bottom: 1em;
   top: 0;
   width: 100%;
   z-index: 1;
 
   a {
-    color: #eee;
-    padding: 1em;
+    color: $menu-foreground;
+    padding: .5em 1.5em;
 
     &:hover,
     &:focus {
-      background-color: lighten(#ccc, 35%); //lighten($accent-color, 35%);
+      color: lighten($menu-foreground, 5%);
+      background-color: darken($menu-background, 5%); //lighten($accent-color, 35%);
     }
   }
 
@@ -44,14 +43,14 @@ nav {
   }
 
   a {
-    color: $foreground-color;
     display: block;
     text-decoration: none;
   }
 
   .links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -62,11 +61,11 @@ nav {
 
   nav {
     position: static;
-    margin-bottom: 1em;
 
     .links {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 0;
     }
 
     li + li {

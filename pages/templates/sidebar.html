@@ -1,20 +1,13 @@
 <div class="nav-placeholder"></div>
 
 <nav>
-    <!--
-  <ul>
-    <li class="title" >
-      <a href="[% url 'index' %]">Clinton Morrison</a>
-    </li>
-  </ul>
-  -->
-
-  <ul class="links container">
-    [% for each page in pages %]
-      <li class="[[page.selected]]" title="[[page.title]]">
-        <a href="[[page.url]]"> [[page.title]] </a>
-      </li>
-    [% end for each %]
-  </ul>
-
+    <div class="container">
+      <ul class="links">
+        [% for each page in pages %]
+          <li class="[[page.selected]]">
+            <a href="[[page.url]]"> [[page.title]] </a>
+          </li>
+        [% end for each %]
+      </ul>
+    </div>
 </nav>

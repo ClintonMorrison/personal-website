@@ -1,9 +1,9 @@
 .contact-links {
-  margin-bottom: 2em;
-
   a {
     display: inline-block;
+    line-height: 1.4;
     text-align: center;
+    margin-right: 1em;
     width: 4em;
 
     svg {
@@ -12,7 +12,14 @@
     }
   }
 
-  a + a {
-    margin-left: 1em;
+  @media screen and (max-width: 350px) {
+    text-align: center;
+
+    a {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2em;
+    }
   }
 }
