@@ -14,22 +14,16 @@ $body-foreground: #e7f2fd;
 nav {
   background-color: $menu-background;
   border-top: 1px solid $border-color;
-  border-bottom: 2px solid $accent-color;
+  border-bottom: 2px solid $border-color; //$accent-color;
   position: fixed;
-  margin-bottom: 1em;
   top: 0;
   width: 100%;
   z-index: 1;
+  margin-bottom: 3em;
 
   a {
     color: $menu-foreground;
     padding: .5em 1.5em;
-
-    &:hover,
-    &:focus {
-      color: lighten($menu-foreground, 5%);
-      background-color: darken($menu-background, 5%); //lighten($accent-color, 35%);
-    }
   }
 
   ul {
@@ -40,6 +34,15 @@ nav {
     display: inline-block;
     margin: 0;
     padding: 0;
+
+     .active,
+    &:hover,
+    &:focus {
+      color: lighten($menu-foreground, 5%);
+      // background-color: darken($menu-background, 5%); //lighten($accent-color, 35%);
+      border-bottom: 2px solid $accent-color;
+      margin-bottom: -2px;
+    }
   }
 
   a {
