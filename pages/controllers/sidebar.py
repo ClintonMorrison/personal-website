@@ -17,6 +17,6 @@ def get_page_data(path, get, post, variables):
 
     # Select pages that look like the current page
     if page.get('path') in path:
-      page['selected'] = 'selected'
+      page['active'] = 'active'
 
   return {'pages': pages}

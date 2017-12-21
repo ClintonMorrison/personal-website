@@ -11,7 +11,8 @@ def path_exists(path):
 
 def _get_path_data(path):
   data = paths.get(path, False) # Is the path directly defined?
-  if data: return data
+  if data:
+    return data
   
   for pattern, data in pattern_paths.items():
     match = re.compile(pattern).match(path)
@@ -44,7 +45,8 @@ def get(path, get = {}, post = {}, variables = {}):
     raise NotFoundError('Unknown path: ' + path)
 
   params = path_data.get('params', {})
-  if params: get.update(params)
+  if params:
+      get.update(params)
 
   body = _render_page(path, path_data, get, post, variables)
 

@@ -4,8 +4,8 @@
     <div class="container">
       <ul class="links">
         [% for each page in pages %]
-          <li class="[[page.selected]]">
-            <a href="[[page.url]]"> [[page.title]] </a>
+          <li>
+            <a href="[[page.url]]" class="[[page.active]]"> [[page.title]] </a>
           </li>
         [% end for each %]
       </ul>
