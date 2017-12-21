@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, nav li, .date, .button {
   text-transform: uppercase;
 }
 
+.button {
+  font-size: 1em;
+}
+
 body {
   font-size: 18px;
 }
@@ -26,6 +30,6 @@ svg {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h2, h3, h4, h5 {
   margin-bottom: 0;
 }
