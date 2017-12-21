@@ -14,9 +14,14 @@ def get_page_data(path, get, post, variables):
   article = articles[0]
   article['date_published'] = core.functions.format_date(article.get('date_published'))
   markdownParser = MarkdownParser('blog/%s/' % (article.get('name')))
+  raw_articule = article['body']
   article['body'] = markdownParser.render(article['body'])
 
-  return {'article': article, 'title': article.get('title', '')}
+  return {
+    'article': article,
+    'title': article.get('title', ''),
+    'raw_article': raw_articule
+  }
 
 def get_possible_paths():
   articles = database.Table('article').filter()

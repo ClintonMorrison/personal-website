@@ -25,7 +25,12 @@ class MarkdownParser:
         return "<h2>%s</h2>" % (match.group(1))
 
     def _render_paragraph(self, match):
-        return "<p>%s</p>" % (match.group(1))
+        text = match.group(1).strip()
+
+        if not text:
+            return ""
+
+        return "<p>%s</p>" % (text)
 
     def _render_list_item(self, match):
         return "<li class='blog'>%s</li>" % (match.group(1))
@@ -81,16 +86,16 @@ class MarkdownParser:
 
     def render(self, markdown):
         rules_1 = {
-            r"\*([^\n]*?)\*": self._render_italics,
-            r"\*\*([^\n]*?)\*\*": self._render_bold,
-            r"([^\s]*?)\[(.*?)\]": self._render_link,
             r"\n([^\n]*?)\n(\-+)": self._render_header,
             r"[\s^\n]*?[\#]([^\n]*?)\n": self._render_list_item,
             # r"[^`]`(.*?)`[^`]": self._render_code_snippet
         }
 
         rules_2 = {
-            r"\n([^\n^\^`-]*?)\n": self._render_paragraph,
+            r"([^\n^<^>]+)\n": self._render_paragraph,
+            r"([^\s]*?)\[(.*?)\]": self._render_link,
+            r"\*([^\n]*?)\*": self._render_italics,
+            r"\*\*([^\n]*?)\*\*": self._render_bold
         }
 
         rules_3 = {
