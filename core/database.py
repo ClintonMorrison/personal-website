@@ -2,8 +2,6 @@ import MySQLdb
 import MySQLdb.cursors
 import re
 import config
-from pprint import pprint
-import json
 
 _database_handles = False
 
