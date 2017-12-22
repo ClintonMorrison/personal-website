@@ -74,14 +74,6 @@ paths = {
     'type':       'json',
     'dynamic':    True
   },
-  # Other stuff
-  'homepage': {
-    'controller': 'pages.controllers.homepage',
-    'template':   'pages/templates/homepage.html',
-    'title':      'Hi Clint!',
-    'dynamic':    True
-  },
-
   # Error pages
   '404': {
       'template':   'pages/templates/404.html',
