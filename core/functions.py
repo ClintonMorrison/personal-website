@@ -26,4 +26,4 @@ def truncate_text(text, length):
   return text[:next_space_index].rstrip(',.?,:;" ') + ' ...'
 
 def format_date(date):
-  return date.strftime('%-B %-m, %-Y')
+  return date.strftime('%-B %-d, %-Y')
