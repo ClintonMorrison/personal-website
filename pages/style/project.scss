@@ -2,14 +2,13 @@
   max-width: 100%;
 }
 
-.project-section-intro {
-  margin-bottom: 2.5em;
+h2 {
+    padding-top: 1em;
 }
 
 .project-block {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3.5em;
 
   .picture-column {
     width: 35%;
