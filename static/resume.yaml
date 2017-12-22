@@ -8,20 +8,17 @@ education:
     gpa: "4.18"
 
 skills:
-  - name: Languages & Web
-    description: Python, JavaScript, PHP, Java, C, HTML, CSS, and LESS.
+  - name: Languages
+    description: Python, JavaScript, Ruby, PHP, Java, HTML, CSS, SCSS, and LESS.
   
-  - name: Libraries
-    description: AngularJS, React, jQuery, Django, Rails, Semantic UI, and Lodash.
+  - name: Frameworks
+    description: React, AngularJS, jQuery, Rails, Django, Spring.
 
   - name: Technologies
-    description: MySQL, Apache, NodeJS, and Redis.
+    description: MySQL, PostgreSQL, Redis, Nginx, Apache, NodeJS.
 
   - name: Tools
-    description: Git, SVN, Vim, Phabricator, JIRA, Trac, and JetBrains IDEs.
-
-  - name: Non-Technical
-    description: Interpersonal and teamwork skills developed through volunteer work.
+    description: Git, Vim, Phabricator, JIRA, and JetBrains.
 
 work:
   - title:      Junior Full Stack Engineer
@@ -39,14 +36,11 @@ work:
     start_date: May 2014
     end_date:   August 2016
     tasks: 
-      - Performed frontend and backend development for PHP LAMP stack web applications.
-      - Implemented a distributed chat application with NodeJS, Redis, and AngularJS.
-      - Developed and documented several public REST APIs and a webhook system. 
-      - Optimized the backend of the SimplyCast CRM, increasing the speed of some queries by 50%.
-      - Integrated SimplyCast with Microsoft Dynamics, Office 365, BigCommerce and Vtiger.
-      - Received "World Best Bug Master" award for quickly resolving bugs.
-      - Assigned tasks to other developers to ensure rapid resolution of reported issues.
-      - Worked full time during co-op work terms and part time during academic terms.
+      - Frontend and backend development for PHP LAMP stack web applications.
+      - Integrations with Microsoft Dynamics, Office 365, BigCommerce and Vtiger.
+      - Created distributed chat application with NodeJS, Redis, and AngularJS.
+      - Developed and documented public-facing APIs.
+      - Optimized CRM backend, increasing the speed of queries by 50%.
 
   - title:        Teaching Assistant
     company:      Dalhousie CS Learning Centre
@@ -56,39 +50,7 @@ work:
     tasks:
       - Assisted students with computer science course work.
       - Explained core algorithm concepts and helped students debug their code.
-      - Tutored students individually and in small group
-
-  - title:      Co-op Student
-    company:    Dillon Consulting
-    location:   Sydney, Nova Scotia
-    start_date: July 2011
-    end_date:   June 2011
-    tasks:
-      - Performed CAD modeling of engineering sites and organized drawings.
-      - Researched and compared various products.
-      - Worked effectively in a team to analyze water quality test results.
-      - Reviewed and prepared engineering reports.
-
-  - title:      Tutor/Mentor
-    company:    Youth Peer Tutoring
-    location:   Sydney, Nova Scotia
-    start_date: September 2011
-    end_date:   June 2012
-    tasks:
-      - Provided social and academic support for junior high students.
-      - Emphasized concepts and learning strategies
-      - Acted as role model during weekly sessions.
-      - Improved the grades of several students in math and science.
-
-  - title:      Volunteer
-    company:    Key Club International
-    location:   Sydney, Nova Scotia
-    start_date: September 2011
-    end_date:   June 2012
-    tasks:
-      - Assisted with planning, organization, and setup of numerous charity events.
-      - Supervised and directed others to ensure quality and success of events.
-      - Raised hundreds of dollars for various causes.
+      - Tutored students individually and in small groups.
 
 awards:
 
