@@ -2,18 +2,22 @@ import core.functions
 
 def get_page_data(path, get, post, variables):
   pages = [
-    {'title': 'Home', 'path': 'index', 'icon': 'home'},
-    {'title': 'Projects', 'path': 'projects', 'icon': 'code'},
-    {'title': 'Resume', 'path': 'resume', 'icon': 'file-text'},
-    {'title': 'Contact', 'path': 'contact', 'icon': 'envelope'},
-    {'title': 'Blog', 'path': 'blog', 'icon': 'commenting'},
+    {'title': 'Home', 'path': ''},
+    {'title': 'Projects', 'path': 'projects'},
+    {'title': 'Resume', 'path': 'resume'},
+    {'title': 'Contact', 'path': 'contact'},
+    {'title': 'Blog', 'path': 'blog'},
   ]
 
   for page in pages:
     page['url'] = core.functions.path_to_url(page.get('path', ''))
 
+    page_path = page.get('path')
+    if page_path == '':
+      page_path = 'index'
+
     # Mark current page as active
-    if page.get('path') in path:
+    if path == page_path or page_path in path:
       page['active'] = 'active'
 
   return {'pages': pages}

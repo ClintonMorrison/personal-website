@@ -1,14 +1,15 @@
-.project-picture {
-  max-width: 100%;
+.project-section-intro {
+  padding-bottom: 1.5em;
 }
 
-h2 {
-    padding-top: 1em;
+.project-picture {
+  max-width: 100%;
 }
 
 .project-block {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2.5em;
 
   .picture-column {
     width: 35%;

@@ -18,6 +18,8 @@ def get_page_data(path, get, post, variables):
     if project.get('hidden', 0) == 1:
       continue
 
+    project['date_published'] = core.functions.format_date(project.get('date_published'))
+
     if not project.get('source_url', False):
       source_path = "downloads/projects/" + project.get('name') + "/source.zip"
       project['source_url'] = core.functions.static_to_url(source_path)
