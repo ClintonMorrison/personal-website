@@ -1,11 +1,8 @@
 $border-color: #eee;
-$foreground-color: #222;
 $accent-color: #33c3f0;
 
 $menu-background: #fff;
 $menu-foreground: #222;
-$body-background: #727b81;
-$body-foreground: #e7f2fd;
 
 .nav-placeholder {
   height: 5em;
@@ -14,7 +11,7 @@ $body-foreground: #e7f2fd;
 nav {
   background-color: $menu-background;
   border-top: 1px solid $border-color;
-  border-bottom: 2px solid $border-color; //$accent-color;
+  border-bottom: 2px solid $border-color;
   position: fixed;
   top: 0;
   width: 100%;
@@ -72,7 +69,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 650px) {
   .nav-placeholder {
     display: none;
   }
