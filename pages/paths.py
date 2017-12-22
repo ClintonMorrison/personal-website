@@ -6,8 +6,8 @@ paths = {
   '*': {
     'regions': {
       'sidebar': {
-        'controller': 'pages.controllers.sidebar',
-        'template': 'pages/templates/sidebar.html',
+        'controller': 'pages.controllers.nav',
+        'template': 'pages/templates/nav.html',
       }
     }
   },
@@ -22,10 +22,6 @@ paths = {
     'controller':  'pages.controllers.projects',
     'template':    'pages/templates/projects.html',
     'title':       'Projects'
-  },
-  'about': {
-    'template':   'pages/templates/about.html',
-    'title':      'About'
   },
   'resume': {
     'controller': 'pages.controllers.resume',
