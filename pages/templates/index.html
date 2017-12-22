@@ -1,36 +1,22 @@
 [% extends 'pages/templates/boxPage.html' %]
 
 [% region contents %]
-<p class="huge center"> 
-  Hello there! I'm a software engineer in Toronto, Canada.
+
+<p>
+  Hello there! I'm a full-stack software engineer in Toronto, Canada.
+    Currently I am working at <a href="https://www.bibliocommons.com/">BiblioCommons</a>, helping to create awesome digital spaces for public libraries.
 </p>
 
-<div class="row">
 
-  <!-- PROJECTS -->
-  <div class="one-half column">
-    <h2 class="centered"> Projects </h2>
-    [% for each project in projects %]
-      <a class="bubble" href="[% url 'projects' %]#[[project.name]]">[[project.title]]</a>
-      <div class="bubble connector"></div>
-    [% end for each %]
-    <a class="bubble" style="" href="[% url 'projects' %]">. . .</a>
-    <div class="bubble connector"></div>
-    <br/>
-  </div>
+<p>
+  I'm passionate about building great things.
+  You can see some of my work <a href="[% url 'projects' %]">on this site</a>
+  or on <a href="https://github.com/ClintonMorrison">GitHub</a>.
+</p>
 
-
-  <!-- BLOG -->
-  <div class="one-half column">
-    <h2 class="centered"> Blog </h2>
-    [% for each article in articles %]
-      <a class="bubble" href="[% url 'blog' %]/[[article.name]]">[[article.title]]</a>
-      <div class="bubble connector"></div>
-    [% end for each %]
-    <a class="bubble" href="[% url 'blog' %]">. . .</a>
-    <div class="bubble connector"></div>
-  </div>
-
-</div>
+<p>
+   I write about technology and my current projects on
+  <a href="[% url 'blog' %]">my blog</a>.
+</p>
 
 [% end region %]
