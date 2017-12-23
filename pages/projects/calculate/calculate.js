@@ -1,24 +1,20 @@
 var previousQuery = "";
 
 $(document).ready(function() {
-	$('#go').click(function() {
-		processInput();
-	});
-  
-  $('#go').click();
+  processInput();
 
 	$('#query').bind('input', function() {
 		var newQuery = $('#query').val();
 
 		if (newQuery !== previousQuery) {
-			$('#go').click();
+			processInput();
 			previousQuery = newQuery;
 		}
 	});
 
 	$(document).keypress(function(e) {
 		if(e.which == 13) {
-			$('#go').click();
+			processInput();
 		}
 	});
 

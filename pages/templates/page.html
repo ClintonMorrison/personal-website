@@ -6,11 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="[% static 'favicon.ico' %]"/>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i" rel="stylesheet">
-
-
   <title>[[title]] - clintonmorrison.com </title>
   [% add css 'pages/thirdparty/skeleton/normalize.css' %]
   [% add css 'pages/thirdparty/skeleton/skeleton.css' %]
@@ -24,6 +21,10 @@
 [% region body %]
   [% add javascript 'pages/js/base.js' %]
 
+  <script>
+    console.log("Version: {%version_info%}");
+  </script>
+
   [[sidebar]]
 
   <div class="main container">
@@ -31,13 +32,6 @@
     <div class="content">
       [[main]]
     </div>
-
-  <!--
-    <footer>
-      <br/>
-      <p> &copy; Clinton Morrison 2015. {{%version_info%}}</p>
-    </footer>
-  -->
   </div>
 
 

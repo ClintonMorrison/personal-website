@@ -1,6 +1,6 @@
 .number.area {
-	font-family: 'Courier New';
-	font-size: 14pt;
+  font-family: 'Courier New';
+  font-size: 14pt;
   margin-right: 50px;
   overflow: auto;
   height: 70px;
@@ -9,8 +9,9 @@
 
 #query {
   font-family: 'Courier New';
+  width: 100%;
 }
 
-#go {
-  width: 70px;
+.calculator-container {
+  height: 250px;
 }
