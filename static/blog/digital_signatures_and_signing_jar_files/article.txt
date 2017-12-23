@@ -1,0 +1,21 @@
+When a Java applet runs in a web browser there are certain security restrictions imposed for your safety. For example, Java applets are normally not allowed to read, write, or modify files on your computer. This is a good thing, without this type of protection harm could be done to your computer from any website that has Java applets. However, sometimes these security restrictions get in the way. What if your Java applet actually needs to access files on your system, or something else that isn't normally allowed?
+
+Fortunately, it is possible to "digitally sign" your applet. This is a way for the user to verify that you are who you say you are. As the name implies, the idea is similar to signing your name. However it is much harder to falsely replicate than an actual signature. Digital signatures use public key cryptography. This means a key is provided with your applet, and the user's computer checks it with another key held by a third party (a company such a VeriSign) to verify its validity. Getting a third party company to verify your signature is expensive, so is something usually only businesses do. It is actually not necessary to get a company to do this for your applet, you can sign the applet by yourself. This is called "self-signing" the applet and is probably what you will want to do.
+
+Java will allow more permissions (such as reading and writing files) to digitally signed applets, as long as the user consents to giving said permissions to the applet. Even self-signed applets, though not verifiable, will get these extra permissions if the user agrees to let it run. Though, it will warn the user that the author couldn't be verified.
+
+So, how does one actually digitally sign an applet? Well firstly you have to package your applet in .JAR file. A JAR file is really just a zippered folder containing the compiled .CLASS files for you applet. It is this JAR file that you digitally sign. Note that Java applications are also typically packaged in JAR files, and are naturally digitally signed the exact same way. I have found that signing a jar file is actually surprisingly hard to do.
+
+You will need the JDK (Java Development Kit) installed. You will also need to know where it is on your computer, and be familiar with using whatever console you have on your computer. I use Windows so I used Command Prompt. You can use the below commands to sign an applet:
+
+%% CODE, sign.sh, bash %%
+
+So what does all of that mean? Well the first command is me navigating to the bin folder of the JDK. This folder has a couple files you need to sign the JAR file, "keytool.exe" and "jarsigner.exe".
+
+The second command asks for a keyStore file to be generated under the name ClintonMorrison. You will be asked for a password for this keyStore. It doesn't matter what you enter but you will have to enter it a few more times.
+
+The third line generates a self-certified key and puts it in your keyStore file. You will have to enter the password again, as well as some information about yourself to be saved in the file.
+
+The fourth line finally signs your JAR file with the key stored in the file myKeystore that you created in step 2.
+
+Hopefully you have a better idea about what digital signatures are, and at least a faint idea about how to sign your Java applications and applets. Digital signatures are of course used by a lot of different programs in a lot of different settings outside of Java.

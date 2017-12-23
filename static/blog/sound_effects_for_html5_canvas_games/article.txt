@@ -1,0 +1,28 @@
+Game development with HTML5 definitely presents a lot of challenges. JavaScript can be a messy language to write large programs. Cross browser compatibility issues are also problematic. Finally, there simply aren't good tools, frameworks, and support for game development for this platform yet. Something most games need is sound effects. Sound effects for HTML5 games are a challenge but certainly possible, albeit with some limitations.
+
+So far I've worked on two HTML5 games. "Avoid The Shapes", as well as "Space Defender", which I will be publishing soon. They both use JavaScript to draw simple vector graphics to the HTML5 canvas object. I've used sound effects and music for both of these games. For "Space Defender" I implemented some simple objects for loading and simultaneously playing sounds.
+
+Using the Sound API
+-------------------
+
+With the release of HTML5, you can now directly access the audio API using JavaScript, rather than having to use the HTML audio tag. You will want to use the audio API to load and play sound effects. If you are experienced with the Java AudioClip object for applets, the API will seem familiar to you. You can create, load, and play a sound using the code below:
+
+%% CODE, sound.js, js %%
+
+The above code loads the sound file "laser.wav" from the folder "sounds" on my website. The second line plays the sound effect. It is that simple! This is both a good and bad thing. While it is easy to use, there is no simple way to do more complicated audio effects. For example, it would be very difficult to do real time audio filtering or 3D sound effects.
+
+A SoundEffect Object
+--------------------
+
+Another problem is that a single instance of the sound effect cannot play simultaneously with itself. For example, if two space shapes fired a laser, the game could not play two laser sounds at the same time. To overcome this I created a "SoundEffect" object which loads several instances of the sound and determines which one to play. The source code is below:
+
+%% CODE, SoundEffect.js, js %%
+
+The SoundEffect object stores the filename of the audio file, as well as an array of Audio objects. Specifically, it loads the sound effect 10 times. It also stores "indexToPlay," an integer corresponding to the index of the audio object in the array that is to be played next time the sound effect is played. It is incremented each time an Audio object is played, and reset to 0 when it exceeds the size of the array. This is used to prevent the game from trying to play a sound effect it recently played. Since there are 10 audio objects stored, each sound effect can be played up to 10 times simultaneously. It is unlikely that you would want to play the sound more often than this. This solution has worked very well for my space game.
+
+Cross Browser Limitations
+-------------------------
+
+Audio support in web browsers is a nightmare. There is literally no audio format that is supported by all browsers. This makes picking an audio format difficult. One of the most supported formats is WAV. WAV is supported by Chrome, Firefox, Safari, and Opera, but not Internet Explorer. MP3 and ACC files are also widely supported by almost all browsers. They only lack support for the Linux and Mac versions of Firefox. MP3 and AAC are not free, and actually cost royalties to distributers that use them. You can see a detailed discussion of HTML5 audio support here[http://en.wikipedia.org/wiki/HTML5_Audio]. To play your sound effects on all browsers you can store two audio file formats and use the one that the user's browser is compatible with. However, this is certainly a pain. In my opinion there would be significant value to all browsers agreeing to support one audio format in common. The real problem is lack of support for open audio formats like OGG by the proprietary browsers. Internet Explorer and Safari do not support OGG.
+
+Hopefully this article helped you understand how to add sound effects to your HTML5 game or application. It definitely is not too difficult. Hopefully in the future there will be a standardized and more sophisticated audio API that all game developers will be able to easily use. I also hope there is more support for open and free audio formats in the future.

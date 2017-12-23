@@ -1,0 +1,25 @@
+If you have ever programmed in Java or any language you are probably familiar with some basic data structures. In particular, arrays, linked lists, and array lists are used very frequently. These three data structures largely do the same thing. They all store an ordered list of objects. However, they certainly do not all work the same. They also do not all perform the same. Understanding the strengths and weaknesses of each data structure is essential to writing efficient programs.
+
+One of the characteristics of each of these data structures is how quickly specific data can be retrieved from them. The below code shows the initialization of an array, an array list, and a linked list. It also shows the second piece of data in each data structure being retrieved.
+
+%% CODE, test.java, Java %%
+
+The retrieval time is a significant consideration for applications where the data must be retrieved very frequently, especially when there is a very large amount of data stored. To compare how each data structure performed, I wrote a short Java program. Below I describe what the program I wrote does.
+
+# The program created an instance of each data structure.
+# A short list of random integers was generated and stored in each of the data structures.
+# A second list of random indices to retrieve was generated.
+# Each data structure was tasked with retrieving the data stored in all of the listed indices.
+# The time each data structure takes to complete this was recorded.
+# The above steps were repeated for increasingly large lists of random numbers.
+# The data was written into a text file which can be exported to Excel.
+
+I ran my program with lists containing 10,000 to 100,000 integers. Each time the computer retrieved 200 random values from each. Below are the graphs I obtained from Excel. The y-axis shows how long it took to retrieve a set of random numbers, and the x-axis shows how many integers were stored in each data structure.
+
+%% IMAGE, graph.png, CENTER %%
+
+From the graph it is obvious that the linked list has the worst retrieval time for very large sets of data. The time taken by the array, on the other hand, is independent of size. The time taken by the array list also seems largely independent of size, although it suddenly drops when the size is around 35,000.
+
+The results can be explained in terms of how the data structures work. Linked lists contain a set of linked nodes. To find a specific node the computer has to start from the first node and jump from node to node until it reaches the node it was searching for. Arrays and array lists, on the other hand, store the data in a block of memory. When asking for a particular index, it simply calculates what the address of that integer would be stored in and returns it immediately. Therefore arrays and array lists have better retrieval times than linked lists for large amounts of data. The array list in Java is a wrapper class around the basic array object. It provides a lot of useful predefined function for common operations like data insertion and node deletion. The actual implementation of the array list likely accounts for the strange behavior where the retrieval speed of the array list suddenly went down around 35,000 elements.
+
+It is definitely worth noting that these results don't mean linked lists are bad to use. In fact it looks like the linked list may actually perform better than the array list for arrays containing less than 10,000 elements. Linked lists perform much better than arrays for operations involving insertion and deletion of nodes. Linked lists are ideal for cases where those operations are frequently used. But it is also important to remember they are much slower at retrieving information. It really can make a large difference for programs involving huge lists of objects. Maybe in the future I will write an article comparing the insertion and deletion times of these data structures.

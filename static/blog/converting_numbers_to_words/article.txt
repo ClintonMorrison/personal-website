@@ -1,0 +1,235 @@
+I recently encountered something in a project I was working on where I needed to convert numbers in Javascript into actual English words. Here are some examples:
+```
+2     ->  two
+1001  ->  one thousand one
+922   ->  nine hundred twenty-two
+```
+I looked around for libraries that supported that kind of thing and I did not find many options. There were almost none that converted *all* numbers correctly.
+
+I thought it would be fun and useful to write a small library that handles doing this. Handling all the special cases and oddities of how we write numbers was an interesting challenge.
+
+Writing numbers in English
+--------------------
+Before delving too deep into how to convert numbers to words, it's important to consider how we actually write numbers.
+
+When writing numbers with digits, we always express amounts in "base 10". This means we describe amounts in terms of 1s, 10s, 100s, etc (powers of 10). For example, 324 means 3 hundreds, 2 tens, and 4 ones, or:
+```
+324 = 3(100) + 2(10) + 4(1)
+```
+
+When writing numbers with words we follow slightly different conventions. We only use certain powers of ten when grouping the numbers:
+# ones (10^0)
+# tens (10^1)
+# hundreds (10^2)
+# thousands (10^3)
+# millions (10^6)
+# billions (10^9)
+# trillions (10^12)
+
+Consider the number 12001. In digit form the number is:
+```
+12001 = 1(10000) + 2(1000) + 1(1)
+```
+
+However, we write this as "twelve thousand one", or:
+```
+12001 = 12(1000) + 1
+```
+
+There are some other oddities with how we write numbers. Unique words are used for all the numbers from 0 to 19.
+
+There are other exceptions for numbers between 20 and 100. Instead of saying "X tens" we have unique words for all of the multiples of 10: twenty, thirty, fourty, fifty, sixty, seventy, eighty, and ninety. We write numbers between 20 and 99 as the multiple of ten followed by the ones place, e.g. "twnety-one" or "sixty-five".
+
+Additionally, some numbers are prefixed by "one" while others are not. We say "one hundred" for 100, but we do not say "one ten" for 10.
+
+
+The Idea
+---------------------------
+The code I wrote to convert numbers to words follows a simple algorithm, based on the ideas I discussed in the previous section. For the sake of discussion I will call the procedure "numberToWords()".
+
+The algorithm involves checking if the number can be factored into groups of:
+# trillions
+# millions
+# thousands
+# hundreds
+# tens
+# ones
+
+The idea is to find the biggest group that a number can be written as. Once that is found, the number is written as:
+```
+<quantity of group> <group name> <remainder>
+```
+
+For example, for 5001:
+```
+<quantity of group> <group name> <remainder>
+5                 thousand     1
+five              thousand     one
+```
+
+Word representations for the "quantity of group" and "remainder"  numbers actually can be found by recursively applying the same strategy.
+
+Here's another example that illistrates how the group is picked. Suppose you wanted to generate words for the number 54321.
+# Can 54321 be grouped into trillions? No. 54321 < 1 trillion
+# Can 54321 be grouped into millions? No. 54321 < 1 million
+# Can 54321 be grouped into billions? No. 54321 < 1 billion
+# Can 54321 be grouped into thousands? Yes. 54321 is 54 thousand + 321. Now recursively apply the same procedure to 54 and 321.
+
+The result is:
+```
+numberToWords(54) + "thousand" + numberToWords(321)
+"fifty-four"      + "thousand" + "three hundred twenty-one"
+```
+
+Implementaiton
+--------------
+Now, I had to actually implement something that does this. I started with an object that associates numbers with their english names, as well as a sorted array of said numbers:
+
+```
+/**
+* Object of form number => word
+*
+* @type {object}
+*/
+var numberMap = {
+0: 'zero',
+1: 'one',
+2: 'two',
+3: 'three',
+4: 'four',
+5: 'five',
+6: 'six',
+7: 'seven',
+8: 'eight',
+9: 'nine',
+10: 'ten',
+11: 'eleven',
+12: 'twelve',
+13: 'thirteen',
+14: 'fourteen',
+15: 'fifteen',
+16: 'sixteen',
+17: 'seventeen',
+18: 'eighteen',
+19: 'nineteen',
+20: 'twenty',
+30: 'thirty',
+40: 'forty',
+50: 'fifty',
+60: 'sixty',
+70: 'seventy',
+80: 'eighty',
+90: 'ninety',
+100: 'hundred',
+1000: 'thousand',
+1000000: 'million',
+1000000000: 'billion',
+1000000000000: 'trillion'
+};
+
+/**
+* A list of numbers contained in numberMap in descending order.
+*
+* This is helpful because the order of object keys (ie on the numberMap object)
+* is not guaranteed to be preserved when iterating over the keys.
+*
+* @type {array}
+*/
+var numberList = [
+1000000000000,
+1000000000,
+1000000,
+1000,
+100,
+90,
+80,
+70,
+60,
+50,
+40,
+30,
+20,
+19,
+18,
+17,
+16,
+15,
+14,
+13,
+12,
+11,
+10,
+9,
+8,
+7,
+6,
+5,
+4,
+3,
+2,
+1,
+0
+];
+```
+
+The idea of the algorithm is to find the biggest number in the list that the input can be "grouped" into. This is achieved by iterating through the sorted array. If an exact match is found, we can just return the english representation of the number directly. Otherwise, the first number that is smaller than the input is the "group" we are interested. For example, if the input was 121 the "group" would be 100. The below code does this:
+
+```
+// Search list of numbers for closest smaller number.
+// numToConvert will be written in terms of this number.
+for (i = 0; i < numberList.length; i++) {
+n = numberList[i];
+
+// If an exact match is found, just return that word.
+if (numToConvert === n) {
+words += numberMap[n];
+return words;
+}
+
+// A smaller number was found.
+if (numToConvert > n) {
+break;
+}
+}
+```
+
+Next, we have to figure how many groups the input can be divided into. For example, 121 has one group of 100. We also calulcate the amount left over, which would be 21 in the example. Word expressions for the remainder and the number of groups are obtained by recursively applying the algorithm. Below is the code that does this:
+
+```
+// How many "n"s can numToConvert be grouped into?
+// e.g. five "thousand".
+prefixNum = Math.floor(numToConvert / n);
+if (prefixNum !== 1 || _shouldPrefixWithOne(n)) {
+words += numberToWords(prefixNum) + ' ';
+}
+
+// Add word for "n".
+words += numberMap[n] + ' ';
+
+// Add word for amount not accounted for yet.
+if (remainder > 0) {
+words += numberToWords(remainder);
+}
+
+// Remove trailing whitespace.
+return words.trim();
+```
+
+Special cases
+-------------
+The above code works for most numbers, but there special cases that need to be handled.
+
+*Hyphenation* - numbers like 21 have to be written as "twenty-one". A small snippet of code checks if the number is between 20 and 99, and adds a hyphen if that is the case.
+
+*Prefixing with "one"* - as previously mentioned, some numbers have to be prefixed with one while others are not. Code was added that omits the leading one if the number is less than 100.
+
+*Negative numbers* - the code checks for negative numbers explicitly. If a number is negative it is prefixed with the word "negative". It is treated as a postivie number for the rest of the process.
+
+Conclusion
+----------
+The library that I implemented works, and is available on GitHub[https://github.com/ClintonMorrison/numberToWordsJS]!
+
+However, there is still a few things could be added to the library:
+# support for floating decimal numbers, e.g. 2.5 -> "two and five tenths" or "two and a half"
+# support for languages other than English
+# ability to go from english words to a number (instead of the other way around)

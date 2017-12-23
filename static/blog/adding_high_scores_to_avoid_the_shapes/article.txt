@@ -1,0 +1,56 @@
+When I published my "Avoid the Shapes" game in August 2013 I said that I planned to add a high score system to the game when I got around to it. I finally did get around to it. In fact I have just finished working on it earlier this week. Now players have the choice to submit the score they obtained after they die. I have also added a "High Scores" button to the main menu which allows players to see the top 5 high scores anyone has gotten in the game. In this article I will discuss how I did this.
+
+
+Modifications to the game
+-------------------------
+
+I actually rewrote a significant portion of the game. I began writing HTML5 games before I fully understood how object orientated programming should be approached in JavaScript. While I am still not totally happy with the overall design of the game, the code is much cleaner and better documented.
+
+I also changed the background music of the game to something that suits the gameplay slightly better. I obviously also added a high score system. Most of the interesting work on this was not JavaScript, but rather SQL and PHP.
+
+
+Creating a High Score Database
+The first thing I had to do was create a database. I needed a database which stores a list of scores, names, and game titles. Users do not need to log in to submit high scores, so really all that is needed are the values "gameName", "userName", and "userScore". The below SQL code creates a table for storing high scores.
+
+%% CODE, code1.txt, SQL %%
+
+Data can be inserted into the database with SQL commands. I wanted the database to store all scores, not just the top scores. So each time a player submits a score a similar SQL query to the one below is performed:
+
+%% CODE, code2.txt, SQL %%
+
+The names and scores of the top 5 high scores are retrieved with the below query:
+
+%% CODE, code3.txt, SQL %%
+
+Retrieving High Scores with PHP
+-------------------------------
+
+To display the top scores in the game the information must be retrieved from the database when the game is loaded. However, JavaScript cannot directly access databases. Instead, I used PHP to access the scores. I wrote a simple PHP script which connected to and queried the database. After this it generates JavaScript code. The JavaScript code creates an array called "scores" which stores all of the top scores in the global scope. A simplified version of the code is:
+
+%% CODE, code4.txt, PHP %%
+
+Now I had to include the PHP code in the HTML file which runs the game. My website is set up to parse HTML files as if they were PHP files, so I simply added a PHP REQUIRE call to the HTML file.
+
+%% CODE, code5.txt, PHP %%
+
+When a player loads the HTML file, the server replaces the PHP tag with JavaScript code creating the array of scores. The actual game then uses the array "scores" which the PHP file created to print the high score information.
+
+Submitting New High Scores with PHP
+-----------------------------------
+
+I also had to find a way to allow users to submit high scores. Again, JavaScript cannot directly access databases. However, PHP scripts can. I wrote a PHP file which receives a game title, a user name, and a score via POST and inserts a new score into the database. The JavaScript code of the game must be able to post data to the PHP file. A simple way to do this is to create a hidden HTML form with hidden values. The hidden values can be set with JavaScript. The form can then be submitted with JavaScript when the player presses the "Submit Score" button in the game. Below is HTML for such a hidden form:
+
+%% CODE, code6.txt, PHP %%
+
+The JavaScript I used to submit a value to the PHP file is also straight forward.
+
+%% CODE, code7.txt, PHP %%
+
+When the JavaScript submits the score, it is posted to scoreSubmit.php. Some of the PHP code I used in scoreSubmit.php is below:
+
+%% CODE, code8.txt, PHP %%
+
+Security Flaws
+--------------
+
+There are quite a few security issues that come up with this kind of database. The most notable issue is SQL injection. The player may use his web browser's developer console to modify the values which are submitted to the PHP files. If not filtered properly, the player may be able to get their own SQL commands to execute on the database, which is obviously a bad thing. There are a few different approaches to handling this, but it is very easy to get it wrong. In order to avoid misleading others, I will not discuss how to approach this problem. Also note that I omitted the parts of my PHP which handle security.

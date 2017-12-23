@@ -1,18 +1,16 @@
 from core import database as database
 from core.exceptions import NotFoundError, ServerError
 from core.markdown import MarkdownParser
-from pprint import pprint
+from core.article_helpers import get_article
 import core.functions
+import yaml
 
 def get_page_data(path, get, post, variables):
-  articles_table = database.Table('article')
-  articles = articles_table.filter([['name', '=', get.get('name', '')]])
+  article = get_article(get.get('name', ''))
 
-  if not articles or len(articles) < 1:
-    raise NotFoundError("No article with name: '" + get.get('name', ''))
+  if not article:
+    raise NotFoundError("No article with name: '{}'".format(get.get('name', '')))
   
-  article = articles[0]
-  article['date_published'] = core.functions.format_date(article.get('date_published'))
   markdownParser = MarkdownParser('blog/%s/' % (article.get('name')))
   raw_articule = article['body']
   article['body'] = markdownParser.render(article['body'])

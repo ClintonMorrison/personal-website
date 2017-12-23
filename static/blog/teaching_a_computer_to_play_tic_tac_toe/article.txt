@@ -1,0 +1,13 @@
+%% IMAGE, picture.png, LEFT %% After seeing the movie "Wargames" I thought it would be fun to make a computer that plays Tic Tac Toe. So I wrote a very basic Tic Tac Toe game in C Sharp using Visual Studios 2012.
+
+At first I gave the computer a very simple strategy. I had the computer randomly pick one of the free spaces available to place it's "X". Obviously, this is not a very good strategy and the computer can do much better. However, since Tic Tac Toe is such a simple game the computer was able to tie a fair number of games.
+
+In order to make the game better, I implemented a brute force strategy. Specifically, I had the computer look at the current game state, and generate all of the possible future game states after the player moves. By continuing this process for all of the possible future situations, a very large "tree" of possible series of moves is produced. Each path through the tree ends with either the player winning, or the computer winning. With all of this data, the computer can look at all of the different moves it can make, and see which moves are most likely to lead to future situations where the computer will win.
+
+For example, consider if the player already has two "O"s in a row. When the computer generates the tree of possible games, it will see that for all moves where it does not block the player's row of 3, the player would be able to win.
+
+Of course, this strategy does not take into account what the player is actually most likely do. Generating such a tree of possible games does not consider the fact that human players are unlikely to do certain moves. To account for this, a weight (a number between 0 and 1) could be associated with each connection between two nodes in the tree. The higher the number, the more likely the player is to do a certain move. These weights would change as the computer learns what human players typically do.
+
+Using this approach the computer plays much better games of Tic Tac Toe. Although it is obvious that a brute force approach of this nature is entirely overkill for a game like this. It is so simple that the same level of skill could very easily be programmed directly into the computer.
+
+I think it is worth noting that the general approach I applied here is similar to IBM's chess playing computer. Indeed, Deep Blue also relied on brute force search strategies to make optimal moves.

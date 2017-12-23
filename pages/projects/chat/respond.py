@@ -1,7 +1,6 @@
 import core.database
 import json
 import requests
-import urllib.request, urllib.parse, urllib.error
 import re
 import random
 import nltk

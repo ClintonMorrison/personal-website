@@ -1,0 +1,34 @@
+Online advertising is hard to understand. Everyone hates ads. Users are increasingly using adblock. Most clicks on ads are accidental. There is good evidence that online advertising does not actually work. At the same time, some of the biggest tech companies make most of their revenue this way (Google and Facebook are two prominent examples).
+
+Adblock
+--------
+Adblock is becoming more popular every year. This is going to be a big problem for online advertisers. There are some statistics about Adblock use here[http://digiday.com/publishers/global-state-of-ad-blocking/].
+
+They are mostly what you'd expect. Adblock is most popular with younger users (aged 18-24). A little less than half of Americans in the 18-24 age group are using adblock on desktop computers. I expect that these numbers will only go up over time. As these people age and adblock becomes more popular the majority of users could conceivably be using adblock.
+
+Website owners have the option of not blocking content if adblock is detected. This way users have to disable adblock to see the page. It's not clear if this is a good idea or not. On a news site, they might just make potential visitors read an article on a different site. Even if no revenue is generated from adblock users, they might still share the article with their friends (which could generate more ad income). Shutting them out seems like a bad idea to me.
+
+Nevertheless, some companies are doing this. For example, Wired[https://www.wired.com/how-wired-is-going-to-handle-ad-blocking/] blocks access to articles if they detect adblock. At the same time, they give the option of paying $1 per month for an ad-free experience.
+
+Accidental clicks
+--------
+There are some disturbing statistics about online ads listed here[http://www.mediapost.com/publications/article/268266/60-of-all-mobile-banner-ad-clicks-are-accidents.html]. Accidental clicks are a big problem, especially on mobile devices. Some apps occasionally show ads in a full screen overlay. If you did not expect the overlay to appear, you might accidentally touch it. Sometimes the overlay has an "x" button or a "skip ad" button. These are usually small. It is far too easy to accidentally click the ad when going for these buttons. It seems the goal is to get users to accidentally click ads and bill advertisers for it. Obviously, victims of this are not going to be receptive to the message. It seems like a bad idea all around. It creates a bad experience for users, but also wastes the advertiser's money.
+
+Does advertising even work?
+--------
+
+I think the biggest problem is that ads don't actually work. I personally feel that people are not influenced by online ads, especially banner ads. I see this as visual noise that people do their best to ignore. I have a hard time believing that ads actually make people buy things. I realize that there are surely *some* cases where it actually works, but I see that as the exception.
+
+An interesting idea explored here[http://www.theatlantic.com/business/archive/2014/06/a-dangerous-question-does-internet-advertising-work-at-all/372704/] is that people who click ads usually were already going to buy the product. This distorts the metrics that are usually used to argue that ads are effective. The belief in ads is based on the fact that some percentage of people who click the ads go on to buy the product. This proves there is a correlation between clicking the ad and buying the product, but it does not prove that the ad actually helped. A study[http://www.nber.org/papers/w20171] from 2014 suggests that Google keyword ads have little-to-no influence on consumer behavior.
+
+No better alternative?
+--------
+I think the main reason that online advertising exists in its current form is that there is not an easy way to do it any better. Even if it is not particularly effective, it may be better than nothing. The idea that you can throw money at ad campaigns and turn that into profit is very attractive. Surely, it works to some extent. As advertising becomes increasingly targeted ads should be more relevant to users. Yet, I cannot see users being too receptive to these messages. People who are less computer literate are probably more likely to be influenced by and click on ads. My belief is that advertising online will be less effective as computer literacy increases, even as it becomes more personalized.
+
+The new internet
+--------
+If advertising is not a viable source of income in the future, how will websites be financed? One way is by actually paying a subscription to use online services. In the early days the expectation was that most things on the internet would be free. Yet, the subscription business model seems to be increasingly popular. It turns out that people are actually willing to pay to access media if it is priced reasonably, easy to use, and has a good selection of content. Netflix, Apple Music, Google Music, and Spotify are examples of this new wave. People might also be willing to pay to read articles online, as with Wired magazine. Similarly, YouTube is currently free, but some users are willing to pay for exclusive content on YouTube Red. I think this is the way things are going.
+
+It's harder to imagine Google or Facebook without advertising. The real business here is accumulating and monetizing user information. They have a complete picture of their users including their interests, behaviors, and personal information. Right now they monetize this by connecting companies to people that might be interested in their products. Specifically, showing company ads to the users the might be interested.
+
+I think there will always be value in this kind of match making, but I don't believe online advertising in its current form is a good way to structure this. The way forward will involve a deeper understanding of users and their needs, as well as a better way to connect them with these businesses and products. It needs to create more value for users than it does right now. It has to be at a point where suggestions from advertisers are so useful and meaningful that users don't *want* to use Adblock. In this world, apps and websites won't need to trick people into clicking. Unfortunately, we seem to be a very long way from this.

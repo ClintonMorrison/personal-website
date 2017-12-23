@@ -1,0 +1,43 @@
+I have learned a lot since I first created this website. Naturally, I didn't do everything the best way the first time. Over the past two weeks I have totally rewritten the site. It looks different (better, hopefully), but where it is most different is behind the scenes! All of the changes I have made should allow me to change my website much faster in the future, and publish more content!
+
+Database Integration
+-------------------------
+My website used to consist of a set static HTML pages. Whenever I finished a new project I had to create a new page for the project. I also had to manually update the projects page and homepage of my website to link to the new content every time I added anything.
+
+Now all of the information about projects, games, and blog articles is stored in a database. The website loads content for each page dynamically. This way, the home page, the projects page, the games page, and my blog automatically show new content I add. In theory, I should not have to ever modify any of the web pages of my site to add new content now.
+
+To achieve this, my website now uses PHP on every page to dynamically present content from the database.
+
+
+Templating Engine
+-----------------------
+Fetching content from a database with PHP and outputting it as HTML can be an ugly thing to do. To make things much easier, I wrote my own very simple templating engine! The idea of a templating engine is to separate logic/content from presentation. What you end up with is HTML files that describe the appearance of a page, but do not contain the actual content. Instead, they have tags like {{projectTitle}} or {{projectDescription}} that are placeholders. They will be replaced by the actual content at runtime.
+
+I wrote a series of PHP classes for loading templates and replacing placeholder tags with actual content.    Each page on the website executes PHP that loads a template, adds content to the template, and outputs the final HTML.
+
+Templates can also include other templates! This is excellent for making all of the pages on my site include certain important scripts, as well as making all of the pages have the same header and footer. Previously, all of the pages on my website included the same header and footer with <?php require('header.html'); ?> and <?php require('footer.html'); ?>. It's much better with templates!
+
+
+
+Semantic UI
+---------------
+
+My website now uses Semantic UI! Semantic[http://semantic-ui.com/] UI is a CSS framework that makes creating nice looking websites a lot easier. The menus, tables, buttons, and segments on my website are all styled with Semantic UI. It also makes laying things out much easier with grids. I strongly recommend it!
+
+
+New Blog System
+----------------------
+
+My old blog articles were written HTML. Articles on my new blog are written in a MarkDown[http://en.wikipedia.org/wiki/Markdown] like language. Titles are indicated with hyphens or equal signs underneath text. Plus signs and number signs can be used to create lists. Asterisks can mark words and phrases as bold. Underscores mark words as bold. Additionally, images and source code and be included using special phrases in percent signs. For example, "IMAGE, myImage.png, CENTER" would load the image myImage.png and center it where the tag is. I wrote a PHP class that can parse a document written in this language and convert it to HTML. It was very fun to write the parser and it makes it much nicer to write articles for the blog! Below is an example of what the markup language for the blog is like:
+
+%% CODE, sample.txt, MarkDown %%
+
+
+Spam Protection and Traffic Tracking
+---------------------------------------------
+
+The same PHP code is called on all of the pages of my website, so it was easy to add some code that helps me keep track of how many people visit my site and where the traffic is coming from. I also added code that keeps track of when people submit things to the website. For example, it logs when people use the contact form. If it notices more requests than usual, it begins blocking them. This doesn't prevent spam, but provides some protection from it! It also helps me track where spam is coming from.
+
+
+Overall, I am very happy with the changes I have made to this website!
+

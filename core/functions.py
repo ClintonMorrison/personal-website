@@ -27,3 +27,6 @@ def truncate_text(text, length):
 
 def format_date(date):
   return date.strftime('%-B %-d, %-Y')
+
+def format_date_field(dict, field_name):
+  dict[field_name] = format_date(dict.get(field_name))

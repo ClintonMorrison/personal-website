@@ -1,0 +1,59 @@
+Integer factorization is a problem of great interest to me. It is the process of breaking a number up into a product of smaller numbers. More exactly, the problem is as follows:
+
+Given an integer N, find integers A and B such that N = A * B
+
+This is generally considered a difficult thing to do. In fact the security of modern cryptography depends on the presumed difficulty of this problem.
+
+
+Trial Division
+--------------
+
+An inefficient but simple approach to factor integers is trial division. The idea of this approach is very simple: try dividing N by numbers less than N until you find an integer A that divides N evenly. Then N = A * (N/A). It turns out that if N has any divisors it must have a divisor less than or equal sqrt(N). Therefore you only need to trial divide up sqrt(N). In the worst case this takes about sqrt(N) steps.
+
+
+Faster Trial Division
+---------------------
+
+There is a faster way to do trial division. Suppose you found that N is not divisible by 2. Using the above approach you would later needlessly check if N is divisible by 4, 6, 8, 10, etc. However, if N is not divisible by 2 then it is not divisible by any multiple of 2. More generally, if N is not divisible by a given prime number then it is not divisible by any multiple of that prime number. In other words we only need to check if N is divisible by each prime number less than or equal to sqrt(N). Most numbers are not prime so this involves significantly less steps.
+
+
+Generating Primes
+----------------
+
+To do trial division using only primes we need a way to generate all the prime numbers up to sqrt(N). A reasonably efficient and simple way to do this is with the sieve of Eratosthenes. The general idea of the sieve is as follows:
+
+*List all of the numbers from 2 to sqrt(N). Cross out all of the numbers greater than 2 that are multiplies of 2. Go to the next number that is not crossed out. Cross out all of the multiples of this number to the right in the list. Repeat this until the end of the list is reached. Now the list contains only the prime numbers between 2 and sqrt(N).*
+
+There are many excellent explanations of the sieve of Eratosthenes on the internet. It is reasonably quick to generate all the primes for a small N. It takes about 10 minutes on a modern computer to generate all of the primes between 2 and 1,000,000,000 (there are around 56 million primes in this range).
+
+
+Description of Algorithm
+------------------------
+
+Before running the algorithm, use a sieve to generate sufficiently many primes and save them in a text file. The algorithm to factor N is:
+# Let i = 1.
+# Let P = the ith prime.
+# If P is greater than sqrt(N), N is prime so has no factors. Stop.
+# If N is divisible by P skip to step 6.
+# If N Is not divisible by P increase i by 1 and go back to step 2.
+# A = P and B = N/P are factors of N so that N = A * B.
+
+This is only better than the previous algorithm if the list of primes has already been generated before the algorithm is run.
+
+
+Running Time
+------------
+
+An important result from number theory is that the number of prime numbers between 2 and X grows about as quickly as X / ln(X) as X approaches infinity. Very roughly then, the complexity of this algorithm is sqrt(N) / ln(sqrt(N)). This is not strictly true but does give some sense of the growth rate.
+
+
+Implementation
+--------------
+
+I wrote a C program which uses a sieve to generate all of the primes between 2 and 1,000,000,000. It writes them into a text file named "primes.txt". The code is below:
+
+%% CODE, primes.c, C %%
+
+The program that factors the integers reads the file "primes.txt" line by line while doing trail division. The source code is below:
+
+%% CODE, factor.c, C %%

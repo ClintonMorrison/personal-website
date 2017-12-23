@@ -1,0 +1,7 @@
+It seems that there are quite a few interesting visualizations that people have produced using HTML5 and JavaScript on the internet. Collections of this type of work can be viewed on Chrome Experiments[http://www.chromeexperiments.com/]. I found this[http://xplsv.com/prods/demos/xplsv_orsotheysay/] visualization of space particularly compelling. In the spirit of these web applications, I created an interactive visualization of stars using these technologies.
+
+Similar to the good old Windows 95 "Star field" screen saver, I created a simple HTML5 application which shows a field of stars. I think it looks quite interesting. The speed and direction that the stars drift is related to the position of the mouse. Clicking the mouse makes it much more colourful. You can view the application I made here[http://clintonmorrison.com/projects/explore_the_stars/]. It works best in Chrome. Make sure to view it in a large window! In fact it looks best if you view it in full screen mode. (In a lot of browsers you can do this by pressing F11.)
+
+%% IMAGE, stars.png, CENTER %%
+
+The JavaScript which powers this application was adapted from the objects in my Space Defender game which draw the stars. While the code is quite sloppy, you are welcome to download[http://clintonmorrison.com/downloads/explore_the_stars_source.zip] and experiment with it if you are interested! If you produce anything cool make sure to let me know!

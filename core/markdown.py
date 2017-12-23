@@ -84,7 +84,13 @@ class MarkdownParser:
             )
         return new_markdown
 
+    def clean_text_whitespace(self, text):
+        lines = text.split("\n")
+        return "\n".join([line.strip() for line in lines])
+
     def render(self, markdown):
+        #markdown = self.clean_text_whitespace(markdown)
+
         rules_1 = {
             r"\n([^\n]*?)\n(\-+)": self._render_header,
             r"[\s^\n]*?[\#]([^\n]*?)\n": self._render_list_item,
