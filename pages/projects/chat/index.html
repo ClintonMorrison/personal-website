@@ -1,6 +1,11 @@
 [% extends 'pages/templates/boxPage.html' %]
 
 [% region contents %]
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
 [% add sass 'pages/projects/chat/style.scss' %]
 [% add javascript 'pages/projects/chat/chat.js' %]
 <div class="messages">
@@ -8,7 +13,7 @@
 
 <div class="submit-area">
   <p class="status"></p>
-  <input type='text' placeholder='Type a message.'></input>
+  <input type='text' placeholder='Type a message.' />
   <button class="inverted" onclick="chat.submitMessage()">Send</button>
 </div>
 
