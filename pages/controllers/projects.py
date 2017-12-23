@@ -1,33 +1,39 @@
-from core import database as database
-from pprint import pprint
+import yaml
 import core.functions
+
+def render_source_button(project):
+  text = 'GitHub'
+
+  if project.get('source_type') == 'none':
+    return ''
+  elif project.get('source_type') == 'download':
+    text = 'Download Source'
+
+  return '<a class="button button-primary" href="{}">{}</a>'.format(project.get('source_url'), text)
+
+def render_demo_button(project):
+  text = 'Try It'
+
+  if project.get('demo_type') == 'paper':
+    text = 'View Paper'
+  elif project.get('demo_type') == 'download':
+    text = 'Download Demo'
+
+  return '<a class="button button-primary" href="{}">{}</a>'.format(project.get('demo_url'), text)
 
 def get_page_data(path, get, post, variables):
   data = {}
-
-  projects_table = database.Table('project')
-  projects = projects_table.filter(
-    orderBy = 'date_published',
-    order = 'DESC',
-    limit = 15
-  )
-
-  formatted_projects = []
+  projects = yaml.load(open("static/projects.yml", "r"))
+  visible_projects = []
 
   for project in projects:
-    if project.get('hidden', 0) == 1:
-      continue
-
     project['date_published'] = core.functions.format_date(project.get('date_published'))
+    if project.get('visible'):
+      visible_projects.append(project)
+    project['source_button'] = render_source_button(project)
+    project['demo_button'] = render_demo_button(project)
 
-    if not project.get('source_url', False):
-      source_path = "downloads/projects/" + project.get('name') + "/source.zip"
-      project['source_url'] = core.functions.static_to_url(source_path)
-
-    project['view_url'] = project.get('target_url')
-    formatted_projects.append(project)
-
-  data['projects'] = formatted_projects
+  data['projects'] = visible_projects
 
 
   return data

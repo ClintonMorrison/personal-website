@@ -1,0 +1,149 @@
+- name: honours_thesis
+  title: Document Retrieval with Wildcards
+  date_published: 2016-08-26
+  visible: True
+  demo_type: paper
+  source_type: none
+  demo_url: http://clintonmorrison.com/static/downloads/papers/honours-thesis.pdf
+  short_description: I researched how to extend classic document retrieval problems to support patterns containing wildcards.
+  long_description: >
+    For my computer science honours project, I researched a topic in algorithms and data structures.
+    I explored how to extend classic document retrieval problems to support patterns containing wildcards.
+    The project involved succinct data structures, text indexing, suffix trees, document retrieval, and colored range reporting.
+- name: taskbird
+  title: Task Bird
+  date_published: 2016-04-01
+  visible: True
+  source_type: github
+  source_url: https://github.com/ClintonMorrison/taskbird
+  demo_type: link
+  demo_url: http://taskbird.ca
+  short_description: An awesome task and calendar web app.
+  long_description: >
+    Task Bird is an awesome task management and productivity app created with
+    Django and AngularJS. You can create tasks, events, and projects.
+    Tracking your productivity is easy with lots of filtering options,
+    useful analytics, and reports.
+
+- name: web-framework
+  title: Python Web Framework
+  date_published: 2015-05-28
+  visible: True
+  source_type: github
+  source_url: https://github.com/ClintonMorrison/personal-website
+  demo_type: link
+  demo_url: http://clintonmorrison.com
+  short_description: A simple MVC web framework with python.
+  long_description: >
+    I wrote a web MVC framework in Python.
+    It is currently used by this website!
+    It includes my own template system, a very simple ORM and a
+    Markdown parser for my blog. I did this primarily to learn about how
+    these things work.
+
+- name: calculate
+  title: Calculate!
+  date_published: 2014-12-01
+  visible: True
+  source_type: github
+  source_url: https://github.com/ClintonMorrison/personal-website/tree/master/pages/projects/calculate
+  demo_type: link
+  demo_url: http://clintonmorrison.com/projects/calculate
+  short_description: An online calculator that can quickly evaluate simply expressions.
+  long_description: >
+    This is an online calculator that evaluates simple expressions as you type them.
+    It supports addition, subtraction, multiplication, division, and exponentiation.
+    The expression is converted into postfix form before it is evaluated.
+
+- name: space_defender
+  title: Space Defender
+  date_published: 2013-08-13
+  visible: True
+  source_type: github
+  source_url: https://github.com/ClintonMorrison/space-defender
+  demo_type: link
+  demo_url: http://clintonmorrison.com/projects/space_defender
+  short_description: A HTML5 space shooter game.
+  long_description: >
+    This is a retro arcade style space shooter game with vector graphics.
+    It was created with HTML5 and JavaScript.
+    Fly through space destroying alien space ships!
+    Survive as long as you can. Play against a friend in two player mode!
+
+- name: avoid_the_shapes
+  title: Avoid The Shapes
+  date_published: 2013-06-30
+  visible: True
+  source_type: github
+  source_url: https://github.com/ClintonMorrison/personal-website/tree/master/pages/projects/avoid_the_shapes/avoid-the-shapes
+  demo_type: link
+  demo_url: http://clintonmorrison.com/projects/avoid_the_shapes
+  short_description: An arcade style HTML5 game.
+  long_description: >
+    This is a simple yet fun web game created with HTML5 and JavaScript.
+    The player controls a yellow circle and must avoid touching the other shapes.
+    The longer the player survives the higher his score.
+
+- name: file_encryption_utility
+  title: File Encryption Utility
+  date_published: 2013-05-24
+  visible: False
+  source_type: download
+  source_url: http://clintonmorrison.com/static/downloads/projects/file_encryption_utility/source.zip
+  demo_type: download
+  demo_url: http://clintonmorrison.com/static/downloads/projects/file_encryption_utility/executable.zip
+  short_description: A file encryption utility program written in C.
+  long_description: >
+    This is a short program written in C that can encrypt and decode files on
+    your computer. It uses a Vigenere cipher. A password string is obtained
+    from the user to encode and decode the file.
+
+- name: password_manager
+  title: Password Manager
+  date_published: 2013-05-04
+  visible: False
+  source_type: download
+  source_url: http://clintonmorrison.com/static/downloads/projects/password_manager/source.zip
+  demo_type: download
+  demo_url: http://clintonmorrison.com/static/downloads/projects/password_manager/executable.zip
+  short_description: A C# program for managing passwords.
+  long_description: >
+     Password Manager is a Windows .NET application written in Visual C#.
+     The program allows users to easily enter and view passwords, usernames, and other
+     account information for all of the programs and websites that they might use.
+     The program serializes this data and saves it to a binary file before closing.
+     It also loads the data from the file when starting up.
+     Lastly, a search feature was implemented to make locating account information
+     quickly even easier.
+
+- name: pong
+  title: Pong Game
+  date_published: 2013-05-04
+  visible: False
+  source_type: download
+  source_url: http://clintonmorrison.com/static/downloads/projects/pong/executable.zip
+  demo_type: link
+  demo_url: http://clintonmorrison.com/projects/pong
+  short_description: A Java applet version of the classic arcade game.
+  long_description: >
+     This Java applet is a basic pong game.
+     The game contains a variety of sound effects.
+     These sounds can be toggled on and off in the main menu.
+     The difficulty of the game can also be adjusted in the main menu.
+     The applet is hosted on this website and can be played by pressing the link to the left.
+
+- name: blackjack
+  title: Blackjack Game
+  date_published: 2013-04-01
+  visible: False
+  source_type: download
+  source_url: http://clintonmorrison.com/static/downloads/projects/blackjack/executable.zip
+  demo_type: download
+  demo_url: http://clintonmorrison.com/static/downloads/projects/blackjack/executable.zip
+  short_description: A simple Blackjack game written in Java.
+  long_description: >
+    This is a Java application completed for my first year computer science course.
+    It is a basic Blackjack card game.
+    In addition to the blackjack gameplay,
+    it plays sound effects and stores statistics about how the player performed in a file.
+    I developed it with Eric Diltcher, Aaron Halinik, and Stuart Thompson.
