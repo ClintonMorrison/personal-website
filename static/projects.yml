@@ -10,6 +10,7 @@
     For my computer science honours project, I researched a topic in algorithms and data structures.
     I explored how to extend classic document retrieval problems to support patterns containing wildcards.
     The project involved succinct data structures, text indexing, suffix trees, document retrieval, and colored range reporting.
+
 - name: taskbird
   title: Task Bird
   date_published: 2016-04-01

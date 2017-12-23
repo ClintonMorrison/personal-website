@@ -1,0 +1,25 @@
+
+The last few weeks I have been working on restyling my website. This is something I've done a lot in the past (look at the past articles I've written). I thought it would be fun to compile some screenshots of how my website has changed over time. I didn't have screenshots of this but was able to get them from WayBackMachine[https://web.archive.org/web/*/http://clintonmorrison.com], a website which archives the internet. It's pretty cool!
+
+2014
+----
+
+It seems I published the first version of my site in 2014. At this time I was just learning HTML and this site was my first HTML project. If I recall correctly, it was just a series of HTML files with no server side rendering. My website was hosted on Bluehost and served with Apache. Interestingly, the general layout and content has not changed that much over time. It certainly looks dated though. You can see a it below:
+%% IMAGE, 2014.png, CENTER %%
+
+2015
+----
+By 2015 I had rewritten my website with PHP, and I stored my articles and projects in MySQL. I also redid the UI, using the CSS framework semantic-ui[https://semantic-ui.com/]. A screenshot of the site is below.
+%% IMAGE, 2015.png, CENTER %%
+
+2016
+----
+Sometime during 2016 I rewrote my website again. This time I used Python in the backend and wrote my own simple MVC framework. I didn't use any UI frameworks because I wanted see what it was like to build a site without them. I learned a lot from doing this. The site had a very boxy layout. There's a picture below.
+%% IMAGE, 2016.png, CENTER %%
+
+2017
+---
+In the last few weeks (near the end of 2017) I have redone how my site looks again. I did not change as much about the backend though. I'm still using the Python MVC framework I created, although I did upgrade from Python 2 to Python 3. I also switched from storing my projects and articles in a database to a series of flat files. I think it will be easier for me to manage. Why I did that deserves it's own article though. This time the site has a much very simple design that I think suits it better. I used the very basic Skeleton[http://getskeleton.com/] CSS framework, but added a lot of my own overrides for the typography and spacing.
+%% IMAGE, 2017.png, CENTER %%
+
+It will be interesting to watch how it changes in the future, and look back on this article and the old versions once again.

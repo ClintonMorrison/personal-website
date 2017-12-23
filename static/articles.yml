@@ -1,3 +1,9 @@
+- name: how_my_site_changed
+  title: How My Site Has Changed
+  date_published: 2017-12-23
+  description: >
+    I discuss how my site has changed, and why.
+
 - name: online_advertising
   title: Online Advertising and the Internet
   date_published: 2017-12-21
