@@ -10,7 +10,7 @@ def path_exists(path):
   return True
 
 def _get_path_data(path):
-  data = paths.get(path, False) # Is the path directly defined?
+  data = paths.get(path, False)  # Is the path directly defined?
   if data:
     return data
   
@@ -23,7 +23,16 @@ def _get_path_data(path):
   return False
 
 
-def get(path, get = {}, post = {}, variables = {}):
+def get(path, get = None, post = None, variables = None):
+  if not get:
+    get = {}
+
+  if not post:
+    post = {}
+
+  if not variables:
+    variables = {}
+
   if path == '':
     path = 'index'
  

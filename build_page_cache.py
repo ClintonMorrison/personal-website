@@ -55,12 +55,9 @@ for path, item in list(paths.items()) + list(pattern_paths.items()):
     body = page_data.get('body')
     now = datetime.now(pytz.timezone(config.timezone))
 
-    # Fill version_info placeholder if debug is enabled
-    if config.debug:
-      last_updated = 'Last updated: %s' % (now.strftime('%-I:%M %p, %b %d, %Y'))
-      body = body.replace('{{%version_info%}}', last_updated)
-    else:
-      body = body.replace('{{%version_info%}}', '&starf;')
+    # Fill version_info placeholder
+    last_updated = 'Last updated: %s' % (now.strftime('%-I:%M %p, %b %d, %Y'))
+    body = body.replace('{{%version_info%}}', last_updated)
 
     out_file.write(body)
     out_file.close()
