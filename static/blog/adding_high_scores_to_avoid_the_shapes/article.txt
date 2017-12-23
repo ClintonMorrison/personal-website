@@ -10,6 +10,8 @@ I also changed the background music of the game to something that suits the game
 
 
 Creating a High Score Database
+---------------------------
+
 The first thing I had to do was create a database. I needed a database which stores a list of scores, names, and game titles. Users do not need to log in to submit high scores, so really all that is needed are the values "gameName", "userName", and "userScore". The below SQL code creates a table for storing high scores.
 
 %% CODE, code1.txt, SQL %%
