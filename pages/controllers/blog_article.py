@@ -1,9 +1,6 @@
-from core import database as database
-from core.exceptions import NotFoundError, ServerError
+from core.exceptions import NotFoundError
 from core.markdown import MarkdownParser
 from core.article_helpers import get_article, get_all_articles
-import core.functions
-import yaml
 
 def get_page_data(path, get, post, variables):
   article = get_article(get.get('name', ''))
