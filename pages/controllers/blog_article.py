@@ -1,7 +1,7 @@
 from core import database as database
 from core.exceptions import NotFoundError, ServerError
 from core.markdown import MarkdownParser
-from core.article_helpers import get_article
+from core.article_helpers import get_article, get_all_articles
 import core.functions
 import yaml
 
@@ -22,7 +22,7 @@ def get_page_data(path, get, post, variables):
   }
 
 def get_possible_paths():
-  articles = database.Table('article').filter()
+  articles = get_all_articles()
   queries = []
 
   for article in articles: 
