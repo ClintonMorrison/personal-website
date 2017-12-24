@@ -58,7 +58,7 @@ for path, item in list(paths.items()) + list(pattern_paths.items()):
     # Fill version_info placeholder
     last_updated = 'Last updated: %s' % (now.strftime('%-I:%M %p, %b %d, %Y'))
     body = body.replace('{{%version_info%}}', last_updated)
-
+    body = '<?xml version="1.0" encoding="UTF-8"?>\n' + body
     out_file.write(body)
     out_file.close()
 
