@@ -1,0 +1,20 @@
+[% extends 'pages/templates/base.html' %]
+
+[% region head %]
+  <meta charset="utf-8">
+  <meta name="author" content="Clinton Morrison">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="[% static 'favicon.ico' %]"/>
+  <title>Stars - clintonmorrison.com </title>
+[% end region %]
+
+
+[% region body %]
+  <canvas id="gameCanvas" style="width:100%;height:100%;padding:0px;margin:0px;" >
+      Error. You're browser doesn't support the canvas tag.
+  </canvas>
+
+  [% add javascript 'pages/projects/explore_the_stars/spaceGame.js' %]
+  [% add javascript 'pages/projects/explore_the_stars/gameUtil.js' %]
+  [% add javascript 'pages/projects/explore_the_stars/gameBase.js' %]
+[% end region %]

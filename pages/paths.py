@@ -47,6 +47,10 @@ paths = {
     'template':   'pages/projects/fluffy_chicken_adventures/index.html',
     'title':      'Fluffy Chicken Adventures'
   },
+  'projects/explore_the_stars': {
+      'template':   'pages/projects/explore_the_stars/index.html',
+      'title':      'Explore The Stars'
+  },
   'projects/avoid_the_shapes': {
     'controller': 'pages.projects.avoid_the_shapes.controller',
     'template':   'pages/projects/avoid_the_shapes/index.html',
