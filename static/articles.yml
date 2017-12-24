@@ -1,3 +1,9 @@
+- name: vultr_review
+  title: A Review of Vultr Web Hosting
+  date_published: 2017-12-24
+  description: >
+    I describe my experience with Vultr.
+
 - name: how_my_site_changed
   title: How My Site Has Changed
   date_published: 2017-12-23
