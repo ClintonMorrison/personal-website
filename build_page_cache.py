@@ -41,7 +41,11 @@ for path, item in list(paths.items()) + list(pattern_paths.items()):
     possible_paths = get_func_from_module(cache_paths)()
 
   for possible_path in possible_paths:
-    filename = "%s/%s.html" % (CACHE_PATH, possible_path)
+    filename = "{}/{}.{}".format(
+      CACHE_PATH,
+      possible_path,
+      item.get('type', 'html')
+    )
     
     # Create path for output file
     dirname = os.path.dirname(filename)
