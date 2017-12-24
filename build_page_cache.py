@@ -36,7 +36,7 @@ for path, item in list(paths.items()) + list(pattern_paths.items()):
    
   possible_paths = [path]
   
-  cache_paths = item.get('cache_paths')
+  cache_paths = item.get('possible_paths')
   if cache_paths:
     possible_paths = get_func_from_module(cache_paths)()
 

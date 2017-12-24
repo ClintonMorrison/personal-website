@@ -9,7 +9,8 @@ paths = {
         'controller': 'pages.controllers.nav',
         'template': 'pages/templates/nav.html',
       }
-    }
+    },
+    'sitemap_exclude': True
   },
 
   # Main pages
@@ -72,16 +73,28 @@ paths = {
     'controller': 'pages.projects.chat.respond',
     'template':   'pages/templates/blank.html',
     'type':       'json',
-    'dynamic':    True
+    'dynamic':    True,
+    'sitemap_exclude': True
+
   },
+
+  'sitemap.xml': {
+    'controller': 'pages.controllers.sitemap',
+    'template': 'pages/templates/sitemap.xml',
+    'type':       'xml',
+    'sitemap_exclude': True
+  },
+
   # Error pages
   '404': {
       'template':   'pages/templates/404.html',
-      'title':      '404: File not found'
+      'title':      '404: File not found',
+      'sitemap_exclude': True
   },
   '500': {
       'template':   'pages/templates/500.html',
-      'title':      '500: Internal server error'
+      'title':      '500: Internal server error',
+      'sitemap_exclude': True
   }
 }
 
@@ -90,7 +103,7 @@ pattern_paths = {
     'controller':  'pages.controllers.blog_article',
     'template':    'pages/templates/blog_article.html',
     'title':       'Blog',
-    'cache_paths': 'pages.controllers.blog_article.get_possible_paths'
+    'possible_paths': 'pages.controllers.blog_article.get_possible_paths'
   },
 }
 
