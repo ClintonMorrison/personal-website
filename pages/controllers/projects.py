@@ -18,6 +18,8 @@ def render_demo_button(project):
     text = 'View Paper'
   elif project.get('demo_type') == 'download':
     text = 'Download Demo'
+  elif project.get('demo_type') == 'npm':
+    text = 'View on NPM'
 
   return '<a class="button button-primary" href="{}">{}</a>'.format(project.get('demo_url'), text)
 
