@@ -59,9 +59,7 @@ def get(path, get = None, post = None, variables = None):
 
   body = _render_page(path, path_data, get, post, variables)
 
-  contentType = 'text/html' 
-  if path_data.get('type', 'html') == 'json':
-    contentType = 'text/json'
+  contentType = 'text/{}'.format(path_data.get('type', 'html'))
 
   return {
     'headers': {'Content-Type': contentType},
