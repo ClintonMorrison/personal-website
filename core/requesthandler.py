@@ -31,15 +31,18 @@ class RequestHandler:
     def get_response(self):
         params = self.get_params()
         path = self.get_request_path()
+        response_status = '200 Okay'
 
         # Try to load page data
         try:
             page_data = core.pageloader.get(path, params, {}, self.variables)
         except NotFoundError:
             page_data = self.get_error_response('404')
+            response_status = '404 Not Found'
         except ServerError:
             if not config.debug:
                 page_data = self.get_error_response('500')
+                response_status = '500 Internal Server Error'
             else:
                 raise
 
@@ -60,4 +63,4 @@ class RequestHandler:
         body += page_data.get('body').encode('utf-8')
         body = body.replace(b'{{%version_info%}}', b'')
 
-        return '200 OK', headers, body
+        return response_status, headers, body

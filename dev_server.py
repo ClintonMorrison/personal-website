@@ -3,9 +3,11 @@ import os
 import core.requesthandler
 from pathlib import Path
 
+def parse_status(status):
+    return int(status[:3])
+
 class DevServer(BaseHTTPRequestHandler):
     def _set_headers(self, headers):
-        self.send_response(200)
         for name, value in headers:
             self.send_header(name, value)
         self.end_headers()
@@ -19,6 +21,7 @@ class DevServer(BaseHTTPRequestHandler):
     def do_HEAD(self):
         request_handler = core.requesthandler.RequestHandler(os.environ)
         status, headers, body = request_handler.get_response()
+        self.send_response(parse_status(status))
         self._set_headers(headers)
 
     def do_POST(self):
@@ -32,6 +35,7 @@ class DevServer(BaseHTTPRequestHandler):
         self._respond_with_server()
 
     def _respond_with_file(self, file_path):
+        self.send_response(200)
         self._set_headers([('Content-Type', 'text/plain')])
         file = open(file_path, 'rb')
         self._write_body(file.read())
@@ -42,6 +46,7 @@ class DevServer(BaseHTTPRequestHandler):
         })
 
         status, headers, body = request_handler.get_response()
+        self.send_response(parse_status(status))
         self._set_headers(headers)
         self._write_body(body)
 
