@@ -1,89 +1,111 @@
+- name: vultr_review
+  title: A Review of Vultr Web Hosting
+  visible: False
+  date_published: 2017-12-24
+  description: >
+    I describe my experience with Vultr.
+
 - name: how_my_site_changed
   title: How My Site Has Changed
+  visible: True
   date_published: 2017-12-23
   description: >
     I discuss how my site has changed, and why.
 
 - name: online_advertising
   title: Online Advertising and the Internet
+  visible: True
   date_published: 2017-12-21
   description: >
     I discuss advertising and the internet.
 
 - name: converting_numbers_to_words
   title: Numbers to Words with JavaScript
+  visible: True
   date_published: 2016-01-02
   description: >
     I created a simple JavaScript library for converting integers into their English word representation
 
 - name: new_website_again
   title: New Website (Again)!
+  visible: True
   date_published: 2015-05-29
   description: >
     I rewrote my website again.
 
 - name: new_website
   title: New Website!
+  visible: True
   date_published: 2014-08-02
   description: >
     I describe some of the things I did differently creating my new website.
 
 - name: factoring_small_integers_quickly
   title: Factoring Small Integers Quickly
+  visible: True
   date_published: 2014-03-27
   description: >
     I describe an algorithm which trades off space with time to factor small integers quickly.
 
 - name: adding_high_scores_to_avoid_the_shapes
   title: Adding High Scores to Avoid the Shapes
+  visible: True
   date_published: 2014-01-05
   description: >
     How I added a high score system to Avoid The Shapes.
 
 - name: factoring_integers_using_digit_strings
   title: Factoring Integers Using Digit Strings
+  visible: True
   date_published: 2013-09-21
   description: >
     I explore how integers of certain types can be factored by considering only their digits.
 
 - name: an_interactive_star_field_with_html5
   title: A Star Field With HTML5
+  visible: True
   date_published: 2013-08-21
   description: >
     I describe a Windows 95 Star Field style space visualization I created with HTML5.
 
 - name: sound_effects_for_html5_canvas_games
   title: Sound Effects for HTML5 Canvas Games
+  visible: True
   date_published: 2013-08-08
   description: >
     A tutorial in playing sound effects in HTML5.
 
 - name: retrieval_times_of_java_data_structures
   title: Retrieval Times of Java Data Structures
+  visible: True
   date_published: 2013-07-28
   description: >
     I investigate how several important Java data structures perform.
 
 - name: creating_a_simple_chat_bot
   title: Creating a Simple Chat Bot
+  visible: True
   date_published: 2013-07-24
   description: >
     How to create a simple Chat Bot in Java.
 
 - name: tracking_down_memory_leaks_in_java
   title: Tracking Down Memory Leaks in Java
+  visible: True
   date_published: 2013-06-14
   description: >
     Trouble shooting memory leaks using JConsole!
 
 - name: digital_signatures_and_signing_jar_files
   title: Digital Signatures and Signing JAR Files
+  visible: True
   date_published: 2013-06-08
   description: >
     A brief explanation of how digital signatures and signed JAR files work.
 
 - name: teaching_a_computer_to_play_tic_tac_toe
   title: Teaching a Computer to Play Tic Tac Toe
+  visible: True
   date_published: 2013-05-10
   description: >
     How I made a Tic Tac Toe playing AI in C#.

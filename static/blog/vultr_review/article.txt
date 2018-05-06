@@ -1,0 +1,25 @@
+I used to use Bluehost for hosting my website, but I had a lot of issues with it. I recently switched to Vultr[https://www.vultr.com/?ref=7293020], and have had a great time. Vultr has been better every metric. I'll discuss the things I liked about it.
+
+Control
+-----
+
+With Bluehost, there were a lot of limitations in terms of server administration. You don't get root access to your server, and it's a shared hosting environment.
+
+
+Cost
+-----
+
+My current Vultr plan costs only $2.50 per month. On the other hand, I was paying $15/month for Bluehost. Since my site is very low traffic I am able to get away with the most basic plan.
+
+
+Performance
+-------
+
+I have found the page load speeds are much better with Vultr, compared to Bluehost.
+
+Unfortunately, I didn't save any page speed data from my site while it was still on Bluehost. However, one of my other domains, TaskBird[http://taskbird.ca], is still on Bluehost.  While it's not a completely fair comparison, I used the tool to measure the speed of this domain.
+
+%% IMAGE, bluehost_page_load_speed.png, CENTER %%
+
+With my new Vultr site however, it took only 169 ms. See the picture below.
+%% IMAGE, vultr_page_load_speed.png, CENTER %%
