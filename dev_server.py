@@ -41,8 +41,13 @@ class DevServer(BaseHTTPRequestHandler):
         self._write_body(file.read())
 
     def _respond_with_server(self):
+        parts = self.path.split('?')
+        queryString = ""
+        if len(parts) > 1: queryString = parts[1]
+
         request_handler = core.requesthandler.RequestHandler({
-            'REQUEST_URI': self.path
+            'REQUEST_URI': self.path,
+            'QUERY_STRING': queryString
         })
 
         status, headers, body = request_handler.get_response()

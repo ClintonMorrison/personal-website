@@ -30,7 +30,8 @@ def get_page_data(path, get, post, variables):
 
   for project in projects:
     project['date_published'] = core.functions.format_date(project.get('date_published'))
-    if project.get('visible'):
+    print(path, get, post, variables)
+    if project.get('visible') or get.get('all') == "1":
       visible_projects.append(project)
     project['source_button'] = render_source_button(project)
     project['demo_button'] = render_demo_button(project)
