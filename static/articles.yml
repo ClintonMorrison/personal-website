@@ -1,3 +1,11 @@
+- name: stocks_and_ngrams
+  title: Profiting On Stocks And NGrams
+  visible: True
+  date_published: 2018-09-10
+  description: >
+    I used ngrams to model the stock market.
+
+
 - name: vultr_review
   title: A Review of Vultr Web Hosting
   visible: False

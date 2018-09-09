@@ -1,0 +1,213 @@
+
+The stock market has always been an interest of mine. Trying to model it involves a lot of interesting problems, from machine learning to big data! Beyond just being interesting, it's also potentially profitable. If you could perfectly predict which stock would increase the most each day you could make a lot of money.
+
+I've been learning Golang[https://golang.org/] recently and trying to come up suitable personal projects to use it for. Stock analysis seemed like a good candidate. It will involve a lot of networking to fetch stock data. Performance is also important because I would need to run computationally expensive algorithms on very large sets of data.
+
+The dream is an automated system which ingests weekly stock information and makes predictions about how the prices will move in the following week. Over the weekend the program would download all the prices from the previous week, run models on the new data, and output these predictions. The stock which is predicted to have the highest percent increase would be the best to invest in. I could buy the predicted stock on Monday, and hold it until Friday that week. If the prediction was accurate the price should have gone up and I will make money when I sell it on Friday.
+
+If the predictions are accurate you would make a lot of money each week! The best performing stock each week generally goes up between 10% and 80%. Say you start with $10,000, pay $10 per trade, and your stock goes up by 10% each week. You pay $10 to buy the stock, it increases by by 10%, and then you pay $10 to sell it. If you have M dollars at the start of the week you end up with:
+```
+(M - 10) * 1.1 - 10 = 1.1M - 11 - 10 = 1.1M - 21
+```
+
+So at the end of the first week you have $10,979. After 10 weeks you would have $23,294. After 30 weeks you would have $155,509. You'd be a millionaire in a year. Of course, accurately guessing which stock will perform the best is very difficult; probably impossible. You don't need to pick the best performer to make money though, that's just the most money you could make. It's not even required that the stock you pick goes up in value every week. You just need to be right more often than you're wrong; and not so wrong that you lose all your money. Predicting stocks that perform reasonably well most weeks is sufficient.
+
+I also want to say that stock analysis is a hard problem, and there are many people and companies better equipped to do this sort of thing. I don't seriously expect to get any useful results from my work on this. It would be foolish to invest any real money with the predictions these kind of models make. I'm doing it because it's fun and interesting.
+
+Also there's some code in this article. I've omitted some details and error handling to shorten the snippets included here. You can see the actual code on my GitHub[https://github.com/ClintonMorrison/crystal-ball].
+
+
+
+Getting Company Data
+---
+
+As I said, the goal is to have a pipeline which can process stock prices on a weekly basis. There are APIs to get stock data but you need to know the tickers[https://www.investopedia.com/terms/s/stocksymbol.asp] for the stocks (for example the ticker for Apple is "AAPL"). So we first need to know what publicly traded companies exist, and what their tickers are. If we could collect some extra information about that would be even better, it might help build the models.
+
+Manually cataloging this data is not a good idea, there's a lot of companies! At the time of writing there are 6,316 companies listed on the US stock exchanges. This system is supposed to be automated; you shouldn't have to manually enter information for new companies. Fortunately, there is a public API for getting this sort of data for companies on the NASDAQ and NYSE exchanges. You can download a CSV that includes company name, ticker, industry, sector, and market capitalization. The URL is:
+```
+http://www.nasdaq.com/screening/companies-by-industry.aspx?render=download
+```
+
+So we need a program which can download this data, parse it, and ideally dump it in a database so we can access it later. First, I made a struct for a "company":
+```
+type Company struct {
+    Ticker       string
+    Name         string
+    LastSale     float64
+    MarketCap    float64
+    ADR          string
+    TSO          string
+    IPOYear      int64
+    Sector       string
+    Industry     string
+    SummaryQuote string
+}
+```
+
+Since the data comes from the API as a CSV we need to parse the values in the CSV and marshal it to our Company struct. The built-in encoding/csv package can actually do this.
+
+```
+func parseCompaniesFromCSV(ioReader io.Reader) map[string]Company {
+    companies := make(map[string]Company)
+
+    reader := csv.NewReader(ioReader)
+    reader.Comma = ','
+
+    for {
+        record, err := reader.Read()
+
+        if err == io.EOF {
+            break
+        }
+
+        ticker := strings.TrimSpace(record[0])
+        marketCap, _ := strconv.ParseFloat(record[3], 64)
+        // etc.
+
+        company := Company{
+            symbol,
+            name,
+            lastTrade,
+            marketCap,
+            adr, tso,
+            ipoyear,
+            sector,
+            industry,
+            summaryQuote}
+
+        companies[symbol] = company
+    }
+
+    return companies
+}
+```
+
+
+Downloading this data with Go is really simple:
+
+```
+url := "http://www.nasdaq.com/screening/companies-by-industry.aspx?render=download"
+resp, err := http.Get(url)
+body, err := ioutil.ReadAll(resp.Body)
+reader := bytes.NewReader(body)
+companies := parseCompaniesFromCSV(reader)
+```
+
+ The result is a script that can be run every so often to download all the companies currently listed on the US stock exchanges. For this project I am storing the data in a Postgres database. See the "downloadCompanies.go" script in my GitHub[todo].
+
+
+
+Getting Stock Data
+---
+
+Now that we have company data, we need the stock data! I said the system should handle weekly stock prices. There are not many free documented APIs for getting stock data. I am using AlphaVantage[https://www.alphavantage.co/documentation/]. They have a variety of APIs, including real time, daily, weekly, and monthly stock prices. They also have APIs for foreign and digital currencies. For my purposes I just want the weekly stock prices. To get all of the weekly prices for AAPL the request is:
+```
+https://www.alphavantage.co/query?
+    function=TIME_SERIES_WEEKLY_ADJUSTED
+    &apikey=...
+    &outputsize=full
+    &symbol=AAPL
+```
+
+Just like how I had a struct for companies, I also made a struct for weekly stock quotes:
+```
+type Quote struct {
+	Ticker           string
+	Date             time.Time
+	Open             float64
+	High             float64
+	Low              float64
+	Close            float64
+	Volume           float64
+	Dividend         float64
+}
+```
+
+I wrote a script which loads the list of companies, and fetches the stock data for each company. The API returns the data as JSON, which can be parsed with the "encoding/json" package. The script then adds the relevant data for each quote to the Postgres database. See the "downloadQuotes.go" script in my GitHub[todo].
+
+The rate limiting on the free tier of the AlphaVantage API is quite aggressive; they only allow 5 requests per minute. Since there are 6,316 companies it takes quite a long time to download all the data:
+```
+6316 / 5 = 1263.2 minutes = 21.05 hours
+```
+
+This is a long wait but it's okay since we only need to get new predictions once per week.
+
+Model Variables
+---
+So, we have the company data, and we have the stock data! We even have programs to download new company and price data each week. We can examine, slice, and combine it by querying the database.
+
+Now the hard part: predicting the future.
+
+We have to assume that future behaviour will be related to the past. Hopefully there is some combination of variables to look at that can be used to predict how the stock will behave in the near future. There's lots of data to look at. For each company we have:
+# name
+# ticker
+# market capitalization
+# IPO year
+# sector (e.g. "technology" or "finance")
+# industry (e.g. "pre-packaged software" or "major banks")
+
+<br/>
+For each week for each company we have:
+# Open price
+# Close price
+# High price
+# Low price
+# Volume (number of trades in that week)
+# Dividend (amount issued that week)
+
+<br/>
+Two derived variables that are also useful are:
+# Change (difference between the weekly open and close)
+# Violatility (difference between the weekly high and low)
+
+Models could base their predictions on just a few or all of these variables. Some of them might have no predictive power while others are useful to consider.
+
+The goal is to, given all of this information, predict the percent change for the following week for every company.
+
+
+NGrams
+---
+...
+
+
+
+Stock Prices As NGrams
+---
+You could look at a stock's history as a series of changes: one week it goes up a few percent, the next it stays fairly constant, and than the following week it's down a little. This is a natural way to look at it because it's exactly what we're trying to predict.
+
+Numbers are hard to work with, they're very specific. It would be hard to predict that a stock will go up by exactly 13%. It seems like it would be easier to predict "it will go up a lot" or "it won't change much". For the purposes of simplying the problem and finding patterns, I thought it would be useful to reduce stock histories to a simpler form.
+
+Along those lines, I came up with a scheme for giving a stock a "grade" for each week.
+# A: the stock increased (by more than 1%)
+# B: the stock did not change much (increase by less than 1%, or decreased by less than 1%)
+# C: the stock decreased (by more than 1%)
+
+<br/>
+Consider the Apple stock for the last few weeks.
+# August 10 - 17. open: $207.70, close: $217.58, 4.76% increase
+# August 17 - 24. open: $218.10, close: $216.16, 0.89% decrease
+# August 24 - 31. open: $217.65, close: $227.63, 4.67% increase
+
+So for the first week it gets it get's "A". For the second "B", and the third "A". We can represent this as the string: "ABA". What is interesting about this is that it's now a text processing problem. We can try to use ngrams and other text processing techniques to try and learn about the patterns. For example if stocks that went up a lot the previous week are likely to go up the next week the ngram "AAA" should be common. If stocks that went down a lot the previous two weeks tend to level out the ngram "CCB" should be common.
+
+
+
+
+Making Predictions!
+---
+
+
+Alternative Models
+---
+
+
+Evaluation
+---
+
+
+Building a Pipeline
+---
+
+
+Conclusion
+---
