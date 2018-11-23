@@ -1,7 +1,7 @@
 - name: golang_dates
   title: Date formatting in Go
   visible: True
-  date_published: 2018-11-19
+  date_published: 2018-11-22
   description: >
     My thoughts on date formatting in go.
 
