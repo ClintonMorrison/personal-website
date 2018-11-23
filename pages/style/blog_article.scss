@@ -49,6 +49,7 @@ code {
   border: 1px solid #333;
   background: #ececec;
   margin-bottom: 2.5em;
+  margin-top: -2rem;
 
   @media screen and (max-width: $mobile-max-width) {
     overflow: scroll;
@@ -58,6 +59,22 @@ code {
 .return.button {
   @media screen and (max-width: $mobile-max-width) {
     display: block;
+  }
+}
+
+table.article-table {
+  width: 100%;
+
+  thead {
+    background-color: #efefef;
+  }
+
+  td, th {
+    border: 1px solid #E1E1E1;
+  }
+
+  th:first-child, td:first-child {
+    padding: 12px 15px;
   }
 }
 

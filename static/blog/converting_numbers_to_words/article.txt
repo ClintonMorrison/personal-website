@@ -18,13 +18,13 @@ When writing numbers with digits, we always express amounts in "base 10". This m
 ```
 
 When writing numbers with words we follow slightly different conventions. We only use certain powers of ten when grouping the numbers:
-# ones (10^0)
-# tens (10^1)
-# hundreds (10^2)
-# thousands (10^3)
-# millions (10^6)
-# billions (10^9)
-# trillions (10^12)
+## ones (10^0)
+## tens (10^1)
+## hundreds (10^2)
+## thousands (10^3)
+## millions (10^6)
+## billions (10^9)
+## trillions (10^12)
 
 Consider the number 12001. In digit form the number is:
 ```
@@ -48,12 +48,12 @@ The Idea
 The code I wrote to convert numbers to words follows a simple algorithm, based on the ideas I discussed in the previous section. For the sake of discussion I will call the procedure "numberToWords()".
 
 The algorithm involves checking if the number can be factored into groups of:
-# trillions
-# millions
-# thousands
-# hundreds
-# tens
-# ones
+## trillions
+## millions
+## thousands
+## hundreds
+## tens
+## ones
 
 The idea is to find the biggest group that a number can be written as. Once that is found, the number is written as:
 ```
@@ -70,10 +70,10 @@ five              thousand     one
 Word representations for the "quantity of group" and "remainder"  numbers actually can be found by recursively applying the same strategy.
 
 Here's another example that illistrates how the group is picked. Suppose you wanted to generate words for the number 54321.
-# Can 54321 be grouped into trillions? No. 54321 < 1 trillion
-# Can 54321 be grouped into millions? No. 54321 < 1 million
-# Can 54321 be grouped into billions? No. 54321 < 1 billion
-# Can 54321 be grouped into thousands? Yes. 54321 is 54 thousand + 321. Now recursively apply the same procedure to 54 and 321.
+## Can 54321 be grouped into trillions? No. 54321 < 1 trillion
+## Can 54321 be grouped into millions? No. 54321 < 1 million
+## Can 54321 be grouped into billions? No. 54321 < 1 billion
+## Can 54321 be grouped into thousands? Yes. 54321 is 54 thousand + 321. Now recursively apply the same procedure to 54 and 321.
 
 The result is:
 ```
@@ -230,6 +230,6 @@ Conclusion
 The library that I implemented works, and is available on GitHub[https://github.com/ClintonMorrison/numberToWordsJS]!
 
 However, there is still a few things could be added to the library:
-# support for floating decimal numbers, e.g. 2.5 -> "two and five tenths" or "two and a half"
-# support for languages other than English
-# ability to go from english words to a number (instead of the other way around)
+## support for floating decimal numbers, e.g. 2.5 -> "two and five tenths" or "two and a half"
+## support for languages other than English
+## ability to go from english words to a number (instead of the other way around)

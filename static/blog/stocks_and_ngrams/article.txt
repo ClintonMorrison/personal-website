@@ -1,18 +1,11 @@
 
-The stock market has always been an interest of mine. Trying to model it involves a lot of interesting problems, from machine learning to big data! Beyond just being interesting, it's also potentially profitable. If you could perfectly predict which stock would increase the most each day you could make a lot of money.
+Trying to model the stock market involves a lot of interesting problems. Beyond just being interesting, it's also potentially profitable. If you could perfectly predict which stock would increase the most each day you could make a lot of money.
 
 I've been learning Golang[https://golang.org/] recently and trying to come up suitable personal projects to use it for. Stock analysis seemed like a good candidate. It will involve a lot of networking to fetch stock data. Performance is also important because I would need to run computationally expensive algorithms on very large sets of data.
 
-The dream is an automated system which ingests weekly stock information and makes predictions about how the prices will move in the following week. Over the weekend the program would download all the prices from the previous week, run models on the new data, and output these predictions. The stock which is predicted to have the highest percent increase would be the best to invest in. I could buy the predicted stock on Monday, and hold it until Friday that week. If the prediction was accurate the price should have gone up and I will make money when I sell it on Friday.
+The goal is an automated system which ingests weekly stock information and makes predictions about how the prices will move in the following week. Over the weekend the program would download all the prices from the previous week, run models on the new data, and output these predictions. The stock which is predicted to have the highest percent increase would be the best to invest in. I could buy the predicted stock on Monday, and hold it until Friday that week. If the prediction was accurate the price should have gone up and I will make money when I sell it on Friday.
 
-If the predictions are accurate you would make a lot of money each week! The best performing stock each week generally goes up between 10% and 80%. Say you start with $10,000, pay $10 per trade, and your stock goes up by 10% each week. You pay $10 to buy the stock, it increases by by 10%, and then you pay $10 to sell it. If you have M dollars at the start of the week you end up with:
-```
-(M - 10) * 1.1 - 10 = 1.1M - 11 - 10 = 1.1M - 21
-```
-
-So at the end of the first week you have $10,979. After 10 weeks you would have $23,294. After 30 weeks you would have $155,509. You'd be a millionaire in a year. Of course, accurately guessing which stock will perform the best is very difficult; probably impossible. You don't need to pick the best performer to make money though, that's just the most money you could make. It's not even required that the stock you pick goes up in value every week. You just need to be right more often than you're wrong; and not so wrong that you lose all your money. Predicting stocks that perform reasonably well most weeks is sufficient.
-
-I also want to say that stock analysis is a hard problem, and there are many people and companies better equipped to do this sort of thing. I don't seriously expect to get any useful results from my work on this. It would be foolish to invest any real money with the predictions these kind of models make. I'm doing it because it's fun and interesting.
+I also want to say that stock analysis is a hard problem. I don't seriously expect to get any useful results from my work on this. It would be foolish to invest any real money with the predictions these kind of models make. I'm doing it because it's fun and interesting.
 
 Also there's some code in this article. I've omitted some details and error handling to shorten the snippets included here. You can see the actual code on my GitHub[https://github.com/ClintonMorrison/crystal-ball].
 
@@ -139,26 +132,26 @@ So, we have the company data, and we have the stock data! We even have programs 
 Now the hard part: predicting the future.
 
 We have to assume that future behaviour will be related to the past. Hopefully there is some combination of variables to look at that can be used to predict how the stock will behave in the near future. There's lots of data to look at. For each company we have:
-# name
-# ticker
-# market capitalization
-# IPO year
-# sector (e.g. "technology" or "finance")
-# industry (e.g. "pre-packaged software" or "major banks")
+## name
+## ticker
+## market capitalization
+## IPO year
+## sector (e.g. "technology" or "finance")
+## industry (e.g. "pre-packaged software" or "major banks")
 
 <br/>
 For each week for each company we have:
-# Open price
-# Close price
-# High price
-# Low price
-# Volume (number of trades in that week)
-# Dividend (amount issued that week)
+## Open price
+## Close price
+## High price
+## Low price
+## Volume (number of trades in that week)
+## Dividend (amount issued that week)
 
 <br/>
 Two derived variables that are also useful are:
-# Change (difference between the weekly open and close)
-# Violatility (difference between the weekly high and low)
+## Change (difference between the weekly open and close)
+## Volatility (difference between the weekly high and low)
 
 Models could base their predictions on just a few or all of these variables. Some of them might have no predictive power while others are useful to consider.
 
@@ -167,31 +160,146 @@ The goal is to, given all of this information, predict the percent change for th
 
 NGrams
 ---
-...
+N-grams are a simple and popular approach to analyzing text. The idea is to look at text as an overlapping sequence of "grams", or combinations of characters. It's easiest to understand with an example. Consider the text "ABBAB".
+
+These 1-grams for this text are:
+```
+"A", "B", "B", "A", "B"
+```
+
+The 2-grams are:
+```
+"AB", "BB", "BA", "AB"
+```
+
+The 3-grams are:
+```
+"ABB", "BBA", "BAB"
+```
+
+It's useful to count the occurrences of each possible n-gram, this allows us to see patterns. The possible 2-grams for the above example are "AA", "AB", "BA", and "BB". The 2-gram counts for "ABBAB" are bellow.
+
+```table
+2-gram, Count, Frequency
+AA, 0, 0%
+AB, 2, 50%
+BA, 1, 25%
+BB, 1, 25%
+```
+
+This shows that A is always followed by B, where as B is followed by A or B equally frequently.
 
 
-
-Stock Prices As NGrams
+Stock Prices As Text
 ---
 You could look at a stock's history as a series of changes: one week it goes up a few percent, the next it stays fairly constant, and than the following week it's down a little. This is a natural way to look at it because it's exactly what we're trying to predict.
 
 Numbers are hard to work with, they're very specific. It would be hard to predict that a stock will go up by exactly 13%. It seems like it would be easier to predict "it will go up a lot" or "it won't change much". For the purposes of simplying the problem and finding patterns, I thought it would be useful to reduce stock histories to a simpler form.
 
 Along those lines, I came up with a scheme for giving a stock a "grade" for each week.
-# A: the stock increased (by more than 1%)
-# B: the stock did not change much (increase by less than 1%, or decreased by less than 1%)
-# C: the stock decreased (by more than 1%)
+## A: the stock increased (by more than 1%)
+## B: the stock did not change much (increase by less than 1%, or decreased by less than 1%)
+## C: the stock decreased (by more than 1%)
 
 <br/>
 Consider the Apple stock for the last few weeks.
-# August 10 - 17. open: $207.70, close: $217.58, 4.76% increase
-# August 17 - 24. open: $218.10, close: $216.16, 0.89% decrease
-# August 24 - 31. open: $217.65, close: $227.63, 4.67% increase
+
+
+```table
+Week, Open, Close, Change, Grade
+August 10 - 17, $207.70, $217.58, 4.76% increase, A
+August 17 - 24, $218.10, $216.16, 0.89% decrease, B
+August 24 - 31, $217.65, $227.63, 4.67% increase, A
+```
 
 So for the first week it gets it get's "A". For the second "B", and the third "A". We can represent this as the string: "ABA". What is interesting about this is that it's now a text processing problem. We can try to use ngrams and other text processing techniques to try and learn about the patterns. For example if stocks that went up a lot the previous week are likely to go up the next week the ngram "AAA" should be common. If stocks that went down a lot the previous two weeks tend to level out the ngram "CCB" should be common.
 
 
+Predictions With N-Gram Models
+---
 
+So we compute the grade text for each stock by looking at the weekly changes and assigning every week a grade. Once we have the text for every company we can count the n-grams in each. The idea is that the patterns that appeared in the past will appear in the future too. For example if "CCC" was usually followed by "A" in the past, we assume it will usually be followed by "A" in the future too.
+
+To come up with a prediction we can consider if the n-grams with "A", "B", or "C" are most likely. For example if a stock went up for the last 2 weeks it would have the grade text "AA". To predict what will happen next we can consider the 3-grams "AAA", "AAB", "AAC". Whichever one is most common is what we will predict.
+
+
+
+When we are counting the n-grams, there is a few ways to group the counts:
+## company
+## industry
+## sector
+## all together
+
+That is, we count them separately for each company, we combine counts for companies with the same industry, we combine counts for companies in the same sector, or we just combine all the counts. Which of these will work best? It's hard to say. We need to try to model on the data and see how it performs.
+
+I set up an experiment to compare these different ways to group the data. The experiment is then repeated for every way to group the data, and for an ng-ram length of 2, 3, 4, ..., up to 18.
+
+Each model was trained with stock prices from the beginning of time up to January 1, 2018. To test the models, each one was used to predict the price change for the next week. The code compared the predicted change to the actual change to determine the percentage correct for each model. The below graph summaries the results:
+
+%% IMAGE, model_performance.png, CENTER %%
+
+The best performance was when all of the stock price n-grams were counted together (the green line) with an n-gram length of 3. For all of the ways to group the data, n-grams between 2 and 4 characters worked best. 
+
+Trends
+---
+
+I wrote code to get the prices for each stock, convert it to text using the scheme I just described. With my program you can run the command:
+```
+./stockAnalysis -print-ngrams
+```
+
+It gets the full grade text for every stock and counts all the 1-grams, 2-grams, and 3-grams. The results are below. This is based on US stock market data from January 1995 to October 2018. The following 3 tables show the results.
+
+```table
+1-gram, Count, Frequency
+C, 1102100, 26.42%
+B, 1510621, 36.21%
+A, 1559272, 37.37%
+```
+
+```table
+2-gram, Count, Frequency
+BC, 314880, 7.56%
+CB, 325746, 7.82%
+CA, 351449, 8.44%
+AC, 362142, 8.69%
+CC, 423076, 10.16%
+BB, 575317, 13.81%
+AA, 588718, 14.13%
+AB, 607395, 14.58%
+BA, 616930, 14.81%
+```
+
+```table
+3-gram, Count, Frequency
+CBC, 89130, 2.14%
+BCC, 91220, 2.19%
+CCB, 97430, 2.34%
+BBC, 102502, 2.46%
+CAC, 106018, 2.55%
+BCB, 107729, 2.59%
+CCA, 108067, 2.60%
+CBB, 110544, 2.66%
+ACC, 113877, 2.74%
+BCA, 115038, 2.77%
+ACB, 120160, 2.89%
+CAB, 121674, 2.93%
+ABC, 122791, 2.95%
+CAA, 123546, 2.97%
+CBA, 125098, 3.01%
+BAC, 127708, 3.07%
+ACA, 127832, 3.07%
+AAC, 127923, 3.08%
+CCC, 216916, 5.22%
+AAA, 227290, 5.46%
+BBB, 227770, 5.48%
+AAB, 233264, 5.61%
+ABB, 236091, 5.68%
+BAA, 237113, 5.70%
+BBA, 243468, 5.85%
+ABA, 247570, 5.95%
+BAB, 251544, 6.05%
+```
 
 Making Predictions!
 ---

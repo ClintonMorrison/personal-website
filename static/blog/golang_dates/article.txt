@@ -1,0 +1,137 @@
+I've been learning golang, it's been fun! It's simple, fast, fun, and even nostalgic. It has a nice standard library and wonderful language features for handling concurrency.
+
+Go as a language is well thought out and cleverly designed. Many decisions made by the language designers are surprising breaks with tradition. These are mostly refreshing and positive changes. For example explicit error passing instead of exceptions, only one kind of loop, more flexible object composition with structs, and channels for handling concurrency.
+
+Go also has a unusual approach to date formatting, which I have not grown to appreciate yet.
+
+The Traditional Way
+-----
+
+Date formatting is a feature provided by the standard library of most programming languages, and they mostly work the same way. Usually dates can be parsed and formatted using format strings, which use special format specifiers to indicate how to print the date. Format specifiers correspond to different ways to print different parts of the date. This is easier to see with an example.
+
+Suppose we want to format today's date as "YYYY-MM-DD". For example: 2018-11-19. In Python:
+```
+datetime.datetime.today().strftime('%Y-%m-%d')
+```
+
+In Ruby:
+```
+DateTime.now.strftime('%Y-%m-%d)
+```
+
+In PHP:
+```
+date('Y-m-d')
+```
+
+In Java:
+```
+new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+```
+
+As you can see, they all use letters that relate to what they represent. %Y, Y, and yyyy are used to indicate "write the current year as 4 numbers" in these languages. This is fairly intuitive! You would probably guess that "Y" represents year.
+
+
+The Go Way
+-----
+
+Go's approach is quite different. Instead of format specifiers, formatting is based on a reference date/time:
+```
+Mon Jan 2 15:04:05 MST 2006
+```
+
+The Go documentation explains this here[https://golang.org/pkg/time/#pkg-constants]. The idea is that to specify a format, just write down the reference time in the desired format. The reference time as a "YYYY-MM-DD" string is "2006-01-02", so to print a time in that format in Go:
+```
+time.Now().Format("2006-01-02") // Prints 2018-11-22
+```
+
+This is cool! But kind of weird.
+
+If you wanted to print the full name of the day of the week, again, just write the full name of the reference date's day of the week.
+```
+time.Now().Format("Monday") // Prints "Thursday"
+```
+
+You might wonder of parsing the format string works. The reference time was carefully constructed to be unambiguous. For example, the hour of the reference time is 15. It could also be written as 3 on a 12 hour clock. Notice that "3", "03", and "15" are all not used in any of the other parts of the date or time. It would not work if they were.
+
+For some more insight, here's a snippet[https://github.com/golang/go/blob/6d5caf38e37bf9aeba3291f1f0b0081f934b1187/src/time/format.go#L88] from the standard library code which parses dates. This list of constants relates pieces of the format string to what they represent:
+```
+const (
+    stdLongMonth      = "January"
+    stdMonth          = "Jan"
+    stdNumMonth       = "1"
+    stdZeroMonth      = "01"
+    stdLongWeekDay    = "Monday"
+    stdWeekDay        = "Mon"
+    stdDay            = "2"
+    stdUnderDay       = "_2"
+    stdZeroDay        = "02"
+    stdHour           = "15"
+    stdHour12         = "3"
+    stdZeroHour12     = "03"
+    stdMinute         = "4"
+    stdZeroMinute     = "04"
+    stdSecond         = "5"
+    stdZeroSecond     = "05"
+    stdLongYear       = "2006"
+    stdYear           = "06"
+    stdPM             = "PM"
+    stdpm             = "pm"
+    stdTZ             = "MST"
+    stdISO8601TZ      = "Z0700"  // prints Z for UTC
+    stdISO8601ColonTZ = "Z07:00" // prints Z for UTC
+    stdNumTZ          = "-0700"  // always numeric
+    stdNumShortTZ     = "-07"    // always numeric
+    stdNumColonTZ     = "-07:00" // always numeric
+)
+```
+
+
+Pros & Cons
+----
+
+The main advantage of this system is that it's not hard to figure out. As long as you know the reference, you should be good. Just write it down with the format you want.
+
+I also can see some downsides. Firstly, the code is potentially less readable. The reader must know the reference date well. For example:
+```
+time.Now().Format("04:05") // prints minutes:seconds
+time.Now().Format("03:04") // prints hours:minutes
+```
+
+Does that code format it as minutes and seconds, or hours and minutes? It is hard to say. If the formats were like "MM:SS" and "HH:MM" it would be less ambiguous to the reader. It is better when what the code does is obvious, and does not require a comment to explain it.
+
+I found an even better example on Stack Overflow. Someone was asking[https://stackoverflow.com/questions/20234104/how-to-format-current-time-using-a-yyyymmddhhmmss-format] how to format a date like "yyyyMMddHHmmss" in Golang. The answer was not obvious:
+```
+time.Now().Format("20060102150405")
+```
+
+Secondly, the system breaks down in certain edge cases. The point is that you don't have to think about date format strings, but really that is not true. There are ways you might write the reference date that simply aren't supported. Here are some examples:
+```
+time.Now().Format("2nd of January") // 10nd of November
+
+// Printing full name of timezones is not supported:
+time.Now().Format("Mountain Standard Time")
+```
+
+My point is just that you need to know what's supported. It also supports things that seem a bit like a format string. For example, using an underscore to indicate it should be padded with space. You wouldn't normally write a date this way. With this philosophy, I'm surprised it doesn't work with regular whitespace instead.
+```
+time.Now().Format("_2") // " 2"
+```
+
+
+Finally a new kind of bug is possible, where the wrong number is entered, or numbers are off by a small amount. This could be hard to spot. Suppose you want to print the minutes and seconds of the current time, like: "MM:SS". For example:
+```
+time.Now().Format("04:05") // prints minutes:seconds
+time.Now().Format("05:06") // prints minutes:year
+```
+
+The format string might look right when it is actually wrong. Here is another example:
+```
+// appears to print day and month
+// actually prints month number and month name
+time.Now().format("01 January")
+```
+
+When I initially learned how Golang handles dates I found it quite unattractive. I thought "that's crazy, I should write a blog article about it". I am still not a big fan, but it is a cool idea. As I saw more examples, the idea did grow on me.
+
+Some people[https://pauladamsmith.com/blog/2011/05/go_time.html] like it, and it is definitely an original approach to an old problem. It will be interesting to see if more languages and frameworks adopt this style, or if it remains relegated to Golang.

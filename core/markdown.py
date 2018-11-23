@@ -7,6 +7,8 @@ class MarkdownParser:
         self.resource_path = resource_path
         self.options = kwargs
         self.codeblocks = []
+        self.table_blocks = []
+        self.tables = []
 
     def _render_italics(self, match):
         contents = match.group(1)
@@ -49,6 +51,25 @@ class MarkdownParser:
         self.codeblocks.append(match.group(1))
         return "%CODE_BLOCK_PLACEHOLDER%"
 
+    def _replace_table(self, match):
+        self.table_blocks.append(match.group(1))
+        return "%TABLE_PLACEHOLDER%"
+
+    def _render_table_block(self, raw_table):
+        raw_rows = [ row.strip() for row in raw_table.strip().split("\n")]
+
+        rows = []
+        for raw_row in raw_rows:
+            rows.append([col.strip() for col in raw_row.split(',')])
+
+        headerContent = ''.join([('<th>%s</th>' % col) for col in rows[0]])
+        html = '<thead><tr>%s</tr></thead><tbody>' % headerContent
+        for row in rows[1:]:
+            rowContent = ''.join([('<td>%s</td>' % col) for col in row])
+            html += '<tr>%s</tbody></tr>' % rowContent
+
+        return '<table class="article-table">%s</table>' % (html)
+
     def _render_code(self, path, language):
         code = open("static/%s/%s" % (self.resource_path, path), "r").read()
         return "<code>%s</code>" % escape(code)
@@ -89,11 +110,9 @@ class MarkdownParser:
         return "\n".join([line.strip() for line in lines])
 
     def render(self, markdown):
-        #markdown = self.clean_text_whitespace(markdown)
-
         rules_1 = {
             r"\n([^\n]*?)\n(\-+)": self._render_header,
-            r"[\s^\n]*?[\#]([^\n]*?)\n": self._render_list_item,
+            r"[\s^\n]*?[\#][\#]([^\n]*?)\n": self._render_list_item,
             # r"[^`]`(.*?)`[^`]": self._render_code_snippet
         }
 
@@ -109,6 +128,14 @@ class MarkdownParser:
             r"\%\% (.+?), (.+?), (.+?) \%\%": self._render_resource,
         }
 
+        # Remove table blocks
+        markdown = re.sub(
+            r"```table(.*?)```",
+            self._replace_table,
+            markdown,
+            flags=re.S
+        )
+
         # Remove codeblocks
         markdown = re.sub(
             r"```(.*?)```",
@@ -123,6 +150,9 @@ class MarkdownParser:
 
         for code in self.codeblocks:
             markdown = markdown.replace('%CODE_BLOCK_PLACEHOLDER%', self._render_codeblock(code), 1)
+
+        for table in self.table_blocks:
+            markdown = markdown.replace('%TABLE_PLACEHOLDER%', self._render_table_block(table), 1)
 
         return markdown
 

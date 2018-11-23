@@ -31,12 +31,12 @@ Description of Algorithm
 ------------------------
 
 Before running the algorithm, use a sieve to generate sufficiently many primes and save them in a text file. The algorithm to factor N is:
-# Let i = 1.
-# Let P = the ith prime.
-# If P is greater than sqrt(N), N is prime so has no factors. Stop.
-# If N is divisible by P skip to step 6.
-# If N Is not divisible by P increase i by 1 and go back to step 2.
-# A = P and B = N/P are factors of N so that N = A * B.
+## Let i = 1.
+## Let P = the ith prime.
+## If P is greater than sqrt(N), N is prime so has no factors. Stop.
+## If N is divisible by P skip to step 6.
+## If N Is not divisible by P increase i by 1 and go back to step 2.
+## A = P and B = N/P are factors of N so that N = A * B.
 
 This is only better than the previous algorithm if the list of primes has already been generated before the algorithm is run.
 

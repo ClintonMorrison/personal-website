@@ -6,13 +6,13 @@ One of the characteristics of each of these data structures is how quickly speci
 
 The retrieval time is a significant consideration for applications where the data must be retrieved very frequently, especially when there is a very large amount of data stored. To compare how each data structure performed, I wrote a short Java program. Below I describe what the program I wrote does.
 
-# The program created an instance of each data structure.
-# A short list of random integers was generated and stored in each of the data structures.
-# A second list of random indices to retrieve was generated.
-# Each data structure was tasked with retrieving the data stored in all of the listed indices.
-# The time each data structure takes to complete this was recorded.
-# The above steps were repeated for increasingly large lists of random numbers.
-# The data was written into a text file which can be exported to Excel.
+## The program created an instance of each data structure.
+## A short list of random integers was generated and stored in each of the data structures.
+## A second list of random indices to retrieve was generated.
+## Each data structure was tasked with retrieving the data stored in all of the listed indices.
+## The time each data structure takes to complete this was recorded.
+## The above steps were repeated for increasingly large lists of random numbers.
+## The data was written into a text file which can be exported to Excel.
 
 I ran my program with lists containing 10,000 to 100,000 integers. Each time the computer retrieved 200 random values from each. Below are the graphs I obtained from Excel. The y-axis shows how long it took to retrieve a set of random numbers, and the x-axis shows how many integers were stored in each data structure.
 

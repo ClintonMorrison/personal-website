@@ -3,7 +3,7 @@ I have once again entirely redone my website. This time it is written in Python 
 I am not using Python web framework or any CSS frameworks. I thought it would be more interesting to do everything from scratch. Right now all requests for pages are handled via CGI, but hopefully that will change soon.
 
 It is interesting that the last article I wrote was also about rewriting my site. That says two things:
-# I should write articles more frequently
-# I should rewrite my site less frequently
+## I should write articles more frequently
+## I should rewrite my site less frequently
 
 Maybe this one will stick for longer!
