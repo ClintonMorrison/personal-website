@@ -1,17 +1,16 @@
+- name: stocks_and_ngrams
+  title: Analyzing Stocks With NGrams
+  visible: True
+  date_published: 2018-12-28
+  description: >
+    I used ngrams to model the stock market.
+
 - name: golang_dates
   title: Date formatting in Go
   visible: True
   date_published: 2018-11-22
   description: >
     My thoughts on date formatting in go.
-
-- name: stocks_and_ngrams
-  title: Analyzing Stocks With NGrams
-  visible: False
-  date_published: 2018-09-10
-  description: >
-    I used ngrams to model the stock market.
-
 
 - name: vultr_review
   title: A Review of Vultr Web Hosting
