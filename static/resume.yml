@@ -30,9 +30,9 @@ work:
     start_date: August 2016
     end_date:   Present
     tasks:
-      - Created and documented restful APIs with Node.js/Express and Java/Spring
-      - Implemented UIs with React, Redux, ES6, and SCSS
-      - Maintained legacy Ruby on Rails + jQuery application
+      - Created and documented restful APIs with Node.js/Express and Java/Spring.
+      - Implemented UIs with React, Redux, ES6, and SCSS.
+      - Maintained legacy Ruby on Rails + jQuery application.
 
   - title:      Web Developer
     company:    SimplyCast Interactive Marketing
