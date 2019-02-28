@@ -9,26 +9,30 @@ education:
 
 skills:
   - name: Languages
-    description: Python, JavaScript, Ruby, PHP, Java, HTML, CSS, SCSS, and LESS.
+    description: Java, JavaScript, Golang, Ruby, Python, PHP, Java.
   
   - name: Frameworks
-    description: React, AngularJS, jQuery, Rails, Django, Spring.
+    description: Spring, React, AngularJS, jQuery, Rails, Django.
+
+  - name: Web
+    description: HTML, CSS, SCSS, and LESS.
 
   - name: Technologies
     description: MySQL, PostgreSQL, Redis, Nginx, Apache, NodeJS.
 
   - name: Tools
-    description: Git, Vim, Phabricator, JIRA, and JetBrains.
+    description: Git, Vim, JIRA, VS Code, and JetBrains.
 
 work:
-  - title:      Junior Full Stack Engineer
+  - title:      Full Stack Engineer
     company:    BiblioCommons
     location:   Toronto, Ontario
     start_date: August 2016
     end_date:   Present
     tasks:
-      - Java, Spring, Ruby on Rails, Node
-      - Implemented new UI components with React, SCSS, and HTML
+      - Created and documented restful APIs with Node.js/Express and Java/Spring
+      - Implemented UIs with React, Redux, ES6, and SCSS
+      - Maintained legacy Ruby on Rails + jQuery application
 
   - title:      Web Developer
     company:    SimplyCast Interactive Marketing
@@ -36,11 +40,11 @@ work:
     start_date: May 2014
     end_date:   August 2016
     tasks: 
-      - Frontend and backend development for PHP LAMP stack web applications.
-      - Integrations with Microsoft Dynamics, Office 365, BigCommerce and Vtiger.
+      - Developed PHP LAMP stack web applications.
       - Created distributed chat application with NodeJS, Redis, and AngularJS.
+      - Implemented Microsoft Dynamics, Office 365, BigCommerce and Vtiger integrations.
       - Developed and documented public-facing APIs.
-      - Optimized CRM backend, increasing the speed of queries by 50%.
+      # - Optimized CRM backend, increasing the speed of queries by 50%.
 
   - title:        Teaching Assistant
     company:      Dalhousie CS Learning Centre
