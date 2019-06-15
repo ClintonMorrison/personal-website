@@ -1,0 +1,150 @@
+I have personally always had a hard time deciding how to store my passwords. I mostly have relied on copying and pasting them into an unencrypted plaintext file over the years. There are lots of existing password managers; desktop programs, web apps, and mobile apps. I have tried some, but I had trouble trusting these external services with my data. I also find a lot of the existing password manager apps more complicated than I want.
+
+I thought it would be a fun challenge to try to make the password manager app I've always wanted. I made the backend for it with Golang, and the frontend with React. I decided to call it Lorikeet[https://lorikeet.ca].
+
+
+Hashing
+---
+
+**Hash Functions** are mathematical functions which take some text, and map it to something completely different. They are designed to be difficult to invert. That is, given an output from a hash function, it's very difficult to figure out what the input was.
+
+For example, SHA256 is a popular hash function. The SHA256 hash of the text "password" is:
+```
+T = "password"
+SHA256(T) = "5e884898da28047151d0e56f8dc6292..."
+```
+
+Hash functions have a few uses. In security, the point is to obfuscate the contents original text still supporting comparisons. To avoid storing your original password, websites often store a *hash* of your password. When you login, the website computes the hash of the password you entered it and compares it to the hash of your password that is stored. If they match, you entered the correct password.
+
+If websites stored your original password and an attacker gained access to their database, the attacker could easily log in as any user because they can see all the passwords. If only hashes are stored the attacker will not know anyone's password.
+
+Hashing helps, but there are still flaws. Attackers can build a lookup table of all the possible passwords and what they hash to. Then, they can use the lookup table to figure out user passwords based on the stored hash. They also might notice that certain hashes are more common and guess that these hashes correspond to more popular passwords.
+
+A solution to this problem is using **Salting**. To mitigate those attacks, we can tweak how we hash passwords. Instead of passing passwords directly to the hash function, they can be "salted" first. The idea is to mix some random text (a "salt") with each password before hashing it. This makes lookup tables infeasible because salted passwords are much longer. It also makes it very unlikely two users will have the same hash.
+
+Lorikeet uses salted SHA256 hashes.
+
+Encryption
+---
+
+Hashing is good when we don't need to recover the original data. If we need to recover the original text, we need to use encryption instead.
+
+An **Encryption Function** is a function which takes some text and a passcode. It returns encrypted text, which is completely different from the original text and passcode. For good encryption functions, it is impossible to tell what the original text was without knowing the passcode.
+
+Where as a good hash function is irreversible, it is essential that encryption functions are reversible, so that the data can be decrypted. Every encryption function must have a corresponding **Decryption Function**, which takes the encrypted text and passcode and returns the original text. This is the **inverse** of the encryption function. For example, suppose T, P, E, and D are unencrypted text, a passcode, an encryption function, and a decryption function respectively.
+```
+T = "secret text"
+P = "password"
+
+T' = E(T, P) = "fqje9jrh..."
+T = D(T', P) = "secret text"
+```
+
+The idea is that if you have just the encrypted text (often called **cipher-text**), it is not possible to restore the original text unless you know the passcode.
+
+
+There are many kinds of encryption. Lorikeet uses AES.
+
+
+Security Goals
+---
+My goal was to make it so that the server not be able to decrypt the passwords, even if it wants to. If an attacker can read all the files stored, and listen to network traffic, it should still not be possible to decrypt the passwords. It's not just about attackers; it's about trust. It is equally important that users be assured that it is impossible for me to view their passwords too.
+
+
+It means the server must never *know* what the passwords are. It also must never know the user's Lorikeet To achieve this, passwords need to be encrypted on the client-side before they are even sent to the server. The server can re-encrypt these documents to provide additional obfuscation, as is usually done.
+
+A drawback to this design is that if a user forgets their password, there is no way to for them to reset it. This is because the server cannot fully decrypt the passwords; it never knew them. I think this limitation is acceptable for password management apps, users need to be very careful to remember their credentials.
+
+Client-side
+---
+
+When a user logs in, they enter a username or password. Traditionally, servers grant clients sessions and issue some ID/token as a cookie. In the server's memory (or a database) it keeps track of all the active session IDs, and the users they map to.
+
+If Lorikeet worked this way, the server would need to temporarily store the user's password while the session was active. Otherwise it would not be possible to decrypt the documents. To avoid this, Lorikeet doesn't use sessions. Instead the user's credentials are stored in the browser session storage, and submitted with each request. Since storing the user's plain password in the browser would be undesirable, so a salted sha256 hash of the password is stored instead.
+
+Suppose the user's username is U, their password is P, S is a salt, and H is a hash function. We compute a token T to store in browser session storage:
+```
+T = H(P, U, S)
+```
+
+
+
+As I mentioned, the server should never be sent the user's actual passwords. Instead, the hash
+
+Document encrypted with hashed password.
+Server sent double hashed password (so it can't decrypt the document)
+
+Client-side Encryption
+---
+
+Server-side Encryption
+----
+
+Lockout Table
+----
+
+No matter how good the encryption is, it's still possible to gain access to another user's account by trying all the possible passwords. To avoid this, Lorikeet keeps track
+
+
+Algorithms
+---
+I will outline how passwords are saved.
+
+
+**Loading Passwords**
+
+Suppose the user logs in with their username (u) and password (p).
+
+## User logs in with username u and password p.
+## Compute salted hash of password p: p'.
+## Save username and password in browser session storage.
+## Computer salted hash of hashed password: p''
+## Make request to server to get password, with u and p''.
+## Server loads salt for user, s. Salt filename is u.salt.txt
+## Server computes "signature" for user.
+
+```
+u = username
+p = password
+p' = sha256(p, SALT1)
+p'' = sha256(p', SALT2)
+
+s = salt for user, from file u.salt.txt
+p''' = sha256(p'', s)
+sig = sha256(u, p''')
+
+d'' = encrypted document, from file sig.txt
+d' = D(d'', p''')
+d = D(d', p')
+```
+
+Privacy
+---
+
+
+Backend Architecture
+----
+
+Logging
+---
+
+
+Backup & Restore
+----
+
+
+
+Look & Feel
+-----
+
+
+Deployment
+----
+Golang is easy to deploy
+React is easy to deploy
+Nginx config
+
+
+Conclusion
+---
+

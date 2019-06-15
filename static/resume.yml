@@ -15,16 +15,16 @@ skills:
     description: Spring, React, AngularJS, jQuery, Rails, Django.
 
   - name: Web
-    description: HTML, CSS, SCSS, and LESS.
+    description: HTML, CSS, SCSS, React, Angular.
 
   - name: Technologies
     description: MySQL, PostgreSQL, Redis, Nginx, Apache, NodeJS.
 
   - name: Tools
-    description: Git, Vim, JIRA, VS Code, and JetBrains.
+    description: Git, Vim, JIRA, VS Code, JetBrains.
 
 work:
-  - title:      Full Stack Engineer
+  - title:      Platform Engineer
     company:    BiblioCommons
     location:   Toronto, Ontario
     start_date: August 2016

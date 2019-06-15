@@ -1,3 +1,10 @@
+- name: creating_password_manager
+  title: Creating a Secure Password Manager
+  visible: False
+  date_published: 2019-05-20
+  description: >
+    How I made a password manager with Go and React.
+
 - name: stocks_and_ngrams
   title: Analyzing Stocks With NGrams
   visible: True
