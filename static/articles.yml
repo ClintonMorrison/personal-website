@@ -1,7 +1,7 @@
 - name: creating_password_manager
-  title: Creating a Secure Password Manager
-  visible: False
-  date_published: 2019-05-20
+  title: Creating a Password Manager
+  visible: True
+  date_published: 2019-06-16
   description: >
     How I made a password manager with Go and React.
 

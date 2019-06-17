@@ -118,6 +118,7 @@ class MarkdownParser:
 
         rules_2 = {
             r"([^\n^<^>]+)\n": self._render_paragraph,
+            r"\{(.*)\}\[(.*?)\]": self._render_link,
             r"([^\s]*?)\[(.*?)\]": self._render_link,
             r"\*\*([^\n]*?)\*\*": self._render_bold,
             r"\*([^\n]*?)\*": self._render_italics

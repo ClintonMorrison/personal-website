@@ -1,6 +1,6 @@
-I have personally always had a hard time deciding how to store my passwords. I mostly have relied on copying and pasting them into an unencrypted plaintext file over the years. There are lots of existing password managers; desktop programs, web apps, and mobile apps. I have tried some, but I had trouble trusting these external services with my data. I also find a lot of the existing password manager apps more complicated than I want.
+I have personally always had a hard time deciding how to store my passwords. I mostly have relied on copying and pasting them into an unencrypted plaintext file over the years. There are lots of existing password managers; desktop programs, web apps, and mobile apps. I have tried some, but I had trouble trusting these external services with my data. I also find a lot of the existing password manager apps are more complicated than I want.
 
-I thought it would be a fun challenge to try to make the password manager app I've always wanted. I made the backend for it with Golang, and the frontend with React. I decided to call it Lorikeet[https://lorikeet.ca].
+I thought it would be a fun challenge to try to make the password manager app I've always wanted. I made the backend for it with Golang, and the frontend with React. It's called Lorikeet[https://lorikeet.ca].
 
 
 Hashing
@@ -14,22 +14,20 @@ T = "password"
 SHA256(T) = "5e884898da28047151d0e56f8dc6292..."
 ```
 
-Hash functions have a few uses. In security, the point is to obfuscate the contents original text still supporting comparisons. To avoid storing your original password, websites often store a *hash* of your password. When you login, the website computes the hash of the password you entered it and compares it to the hash of your password that is stored. If they match, you entered the correct password.
+Hash functions have a lot of different applications. In security, they are useful because they can obfuscate the original text while still supporting comparisons. For example, websites often store a *hash* of your password to avoid storing your original password. When you login, the website computes the hash of the password you entered. It compares this to the hash of your password that is stored. If they match, you entered the correct password.
 
-If websites stored your original password and an attacker gained access to their database, the attacker could easily log in as any user because they can see all the passwords. If only hashes are stored the attacker will not know anyone's password.
+If websites stored your original password and an attacker gained access to their database, the attacker could easily log in as any user because they can see all the passwords. Additionally, if you used the same password for other online services they now have access to all your accounts. If only hashes are stored the attacker will not know anyone's password.
 
 Hashing helps, but there are still flaws. Attackers can build a lookup table of all the possible passwords and what they hash to. Then, they can use the lookup table to figure out user passwords based on the stored hash. They also might notice that certain hashes are more common and guess that these hashes correspond to more popular passwords.
 
-A solution to this problem is using **Salting**. To mitigate those attacks, we can tweak how we hash passwords. Instead of passing passwords directly to the hash function, they can be "salted" first. The idea is to mix some random text (a "salt") with each password before hashing it. This makes lookup tables infeasible because salted passwords are much longer. It also makes it very unlikely two users will have the same hash.
+A solution to this problem is **Salting**. To mitigate those attacks, we can tweak how we hash passwords. Instead of passing passwords directly to the hash function, they can be "salted" first. The idea is to mix some random text (a "salt") with each password before hashing it. This makes lookup tables infeasible because salted passwords are much longer. It also makes it very unlikely two users will have the same hash. Usually we use a different salt for each password. If we use the same salt for every password it's sometimes called a "pepper" instead of a salt.
 
-Lorikeet uses salted SHA256 hashes.
+Lorikeet uses SHA256 hashes, with a pepper on the client-side (in the web browser) and a salt on the server-side.
 
 Encryption
 ---
 
-Hashing is good when we don't need to recover the original data. If we need to recover the original text, we need to use encryption instead.
-
-An **Encryption Function** is a function which takes some text and a passcode. It returns encrypted text, which is completely different from the original text and passcode. For good encryption functions, it is impossible to tell what the original text was without knowing the passcode.
+Hashing is good when we don't need to recover the original data. If we need to recover the original text, we need to use encryption instead. An **Encryption Function** is a function which takes some text and a passcode. It returns encrypted text, which is completely different from the original text and passcode. For good encryption functions, it is impossible to tell what the original text was without knowing the passcode.
 
 Where as a good hash function is irreversible, it is essential that encryption functions are reversible, so that the data can be decrypted. Every encryption function must have a corresponding **Decryption Function**, which takes the encrypted text and passcode and returns the original text. This is the **inverse** of the encryption function. For example, suppose T, P, E, and D are unencrypted text, a passcode, an encryption function, and a decryption function respectively.
 ```
@@ -40,111 +38,133 @@ T' = E(T, P) = "fqje9jrh..."
 T = D(T', P) = "secret text"
 ```
 
-The idea is that if you have just the encrypted text (often called **cipher-text**), it is not possible to restore the original text unless you know the passcode.
+The idea is that if you have just the encrypted text (often called **cipher-text**), it is not possible to restore the original text (often called **plain-text**) unless you know the passcode.
 
 
-There are many kinds of encryption. Lorikeet uses AES.
+There are many kinds of encryption. Lorikeet uses AES on both the client-side and server-side. The passcode for encryption are derived from user's Lorikeet username and password. Different passcodes are used for each.
 
 
-Security Goals
+Security
 ---
 My goal was to make it so that the server not be able to decrypt the passwords, even if it wants to. If an attacker can read all the files stored, and listen to network traffic, it should still not be possible to decrypt the passwords. It's not just about attackers; it's about trust. It is equally important that users be assured that it is impossible for me to view their passwords too.
 
 
-It means the server must never *know* what the passwords are. It also must never know the user's Lorikeet To achieve this, passwords need to be encrypted on the client-side before they are even sent to the server. The server can re-encrypt these documents to provide additional obfuscation, as is usually done.
+It means the server must never *know* what the passwords are. It also must never know the user's Lorikeet password. To achieve this, passwords need to be encrypted on the client-side before they are even sent to the server. The server can re-encrypt these documents to provide additional obfuscation, as is usually done.
 
-A drawback to this design is that if a user forgets their password, there is no way to for them to reset it. This is because the server cannot fully decrypt the passwords; it never knew them. I think this limitation is acceptable for password management apps, users need to be very careful to remember their credentials.
+A drawback to this design is that if a user forgets their password, there is no way to for them to reset it. This is because the server cannot fully decrypt the passwords; it never knew how. I think this limitation is acceptable for password management apps, users need to be very careful to remember their credentials.
 
 Client-side
 ---
 
 When a user logs in, they enter a username or password. Traditionally, servers grant clients sessions and issue some ID/token as a cookie. In the server's memory (or a database) it keeps track of all the active session IDs, and the users they map to.
 
-If Lorikeet worked this way, the server would need to temporarily store the user's password while the session was active. Otherwise it would not be possible to decrypt the documents. To avoid this, Lorikeet doesn't use sessions. Instead the user's credentials are stored in the browser session storage, and submitted with each request. Since storing the user's plain password in the browser would be undesirable, so a salted sha256 hash of the password is stored instead.
+If Lorikeet worked this way, the server would need to temporarily store the user's password while the session was active. Otherwise it would not be possible to decrypt the documents. To avoid this, Lorikeet doesn't use sessions. Instead, tokens derived from user's credentials are stored in the browser session storage and submitted with each request. Storing the user's plain password in the browser is undesirable. Instead, Lorikeet stores a peppered SHA256 hash of the password. This token is used to encrypt the passwords before sending them to the server. We don't want to share this token with the server, because then the server could decrypt the passwords. Instead, it hashes this token a second time and sends that to the server to authenticate the user. Some of the code for this is in AuthService.jsx[https://github.com/ClintonMorrison/lorikeet/blob/master/ui/src/services/AuthService.jsx].
 
-Suppose the user's username is U, their password is P, S is a salt, and H is a hash function. We compute a token T to store in browser session storage:
-```
-T = H(P, U, S)
-```
+To summarize, users login with a username and password. A hash of these credentials is stored in the browser, and is used to encrypt/decrypt the data. A hash of this hash is sent to the server to authenticate the user. The server never knows the original credentials.
 
 
+Server-side
+----
+When a user registers for the service, we generate a unique salt for them are store it in a file called "username.salt.txt". The server can check if a user exists by checking if the salt file exists for that user.
 
-As I mentioned, the server should never be sent the user's actual passwords. Instead, the hash
+When the user saves their passwords, the hashed token and encrypted passwords are sent to the server. The server encrypts this data once again with the a salted version of the given token. The data is then saved in a text file. The name of the text file is also derived from the token, salt and username. This means it isn't even possible to determine which encrypted passwords file belongs to which user.
 
-Document encrypted with hashed password.
-Server sent double hashed password (so it can't decrypt the document)
+Reading user's passwords works the same way. The given token and username are used to determine which file contains the passwords and decrypt them. They are still partially encrypted. The frontend can fully decrypt it with it's secret token when it receives them. The code for reading and writing these files is in repository.go[https://github.com/ClintonMorrison/lorikeet/blob/master/internal/server/repository.go]. The encryption code is in encryption.go[https://github.com/ClintonMorrison/lorikeet/blob/master/internal/server/encryption.go].
 
-Client-side Encryption
----
-
-Server-side Encryption
+Lockout
 ----
 
-Lockout Table
-----
+No matter how good the encryption is, it's still possible to gain access to another user's account by trying all the possible passwords. To avoid this, Lorikeet keeps track of failed requests based on username and IP address. If there are too many failures for a single username or from a single IP address in a short period of time Lorikeet stops processing these requests for a few hours. During this cooldown it returns 429 to all such requests, even if the credentials provided are correct.
 
-No matter how good the encryption is, it's still possible to gain access to another user's account by trying all the possible passwords. To avoid this, Lorikeet keeps track
-
-
-Algorithms
----
-I will outline how passwords are saved.
-
-
-**Loading Passwords**
-
-Suppose the user logs in with their username (u) and password (p).
-
-## User logs in with username u and password p.
-## Compute salted hash of password p: p'.
-## Save username and password in browser session storage.
-## Computer salted hash of hashed password: p''
-## Make request to server to get password, with u and p''.
-## Server loads salt for user, s. Salt filename is u.salt.txt
-## Server computes "signature" for user.
-
-```
-u = username
-p = password
-p' = sha256(p, SALT1)
-p'' = sha256(p', SALT2)
-
-s = salt for user, from file u.salt.txt
-p''' = sha256(p'', s)
-sig = sha256(u, p''')
-
-d'' = encrypted document, from file sig.txt
-d' = D(d'', p''')
-d = D(d', p')
-```
-
-Privacy
----
-
-
-Backend Architecture
-----
+This means you only get a few guesses at a user's password per hour. This is effective against both a single bot with one IP guessing multiple user's passwords, or a group of bots with different IPs guessing a single user's password. This is similar to how your iPhone locks you out for a few hours if you get the passcode wrong too many times. It could potentially make the service unavailable for a particular user for a certain amount of time, but the security of their account is more important. The code for this is in lockoutTable.go[https://github.com/ClintonMorrison/lorikeet/blob/master/internal/server/lockoutTable.go].
 
 Logging
 ---
+Logging was another concern with Lorikeet. As a security-focused app, it's important for me to have visibility into what requests the server is getting and what errors are happening. At the same time, privacy was a priority. Because of this, I decided to not use any external services like SumoLogic or Google Analytics.
 
+The logging I builtin is quite basic; it logs errors, and it logs some basic request metadata. None of the request metadata should directly identify which user is making the request. I wrote some code that uses Go's built-in logger implementation in log.go[https://github.com/ClintonMorrison/lorikeet/blob/master/internal/server/log.go]. It creates a multilogger which writes logs to both STDOUT and a file in ".lorikeet/log/". The loggers are instantiated in server.go[https://github.com/ClintonMorrison/lorikeet/blob/master/internal/server/server.go] and passed to all the services that need them.
+
+The request logs are written to ".lorikeet/log/requests.log". The output looks like:
+```
+[REQUEST] 2019/06/01 14:37:38 PUT /api/document | 202 [OK] | 127.0.0.1
+[REQUEST] 2019/06/01 14:38:45 GET /api/document | 401 [Invalid user or credentials.] | 127.0.0.1
+[REQUEST] 2019/06/01 14:38:50 GET /api/document | 401 [Invalid user or credentials.] | 127.0.0.1
+```
+
+The error logs are written to ".lorikeet/log/errors.log". They look like:
+```
+[ERROR] 2019/06/01 14:36:12 [ERROR] open ./data/null.salt.txt: no such file or directory
+[ERROR] 2019/06/01 14:36:18 [ERROR] open ./data/null.salt.txt: no such file or directory
+[ERROR] 2019/06/01 14:36:26 [ERROR] open ./data/null.salt.txt: no such file or directory
+```
 
 Backup & Restore
 ----
+Backing up data for a web app is not something I've had to worry about before. I haven't considered this for other projects I worked on. I have not gotten to work on this problem in my day job either, but it's certainly an interesting problem. As a password manager, it's very important that the data is backed up! If it's just stored on the server, it could be all lost due to hardware failure. Additionally, the encryption workflow is pretty complicated. It's possible that a future change to the app could cause bugs which corrupt user data. To protect against this, it's important to have a backup plan.
 
+So, this project was a good chance for me to explore this problem. For now I have a pretty basic workflow for backing up the data. I wrote a backup script which reads all the files stored in the "./lorikeet/data" directory and puts them in a gzipped tarball, backup/main.go[https://github.com/ClintonMorrison/lorikeet/blob/master/cmd/backup/main.go]. I'm not sure if this will be a scalable solution when the service has more users but it works well for now. There's another script for restoring from backup, restore/main.go[https://github.com/ClintonMorrison/lorikeet/blob/master/cmd/restore/main.go]. Doing a backup and restore looks like:
 
+```
+cd ./lorikeet/
+go build -o doBackup cmd/backup/main.go
+./doBackup
 
-Look & Feel
------
-
+go build -o doRestore cmd/restore/main.go
+./doRestore -file ./lorikeet/backup/backup-2019-05-27T21:59:48-04:00.tar.gz
+```
+Currently the backup is not automatic. I plan to run it weekly, and copy the backups to another server. It would be great to automate this process in the future, especially if people other than me actually use this service!
 
 Deployment
 ----
-Golang is easy to deploy
-React is easy to deploy
-Nginx config
+One reason I decided to use Golang is that it's very easy to deploy. Since Go code compiles to binaries you just need to compile it and run the binary. This is refreshing compared to deploying Java or Python apps which have a lot of dependencies to get them running. The server can be built and run with:
+```
+cd ./lorikeet
+go build -o server cmd/server/main.go
+./server
+```
 
+The React frontend is also very easy to build. I used create-react-app[https://github.com/facebook/create-react-app] to make the app so I didn't even need to worry about configuring this. It produces single page apps which builds to a single index.js file and some bundled javascript and css. The app can be built with:
+```
+cd ./lorikeet/ui
+npm i
+npm run start
+```
 
-Conclusion
+So now we have an API server and a built React app! Requests to the API need to go the React app. Requests to static assets need to go to a the "ui/public" folder. Finally, requests for pages need to all go to the built index.html file, "ui/build/index.html". I used NGINX to achieve this. It is a reverse proxy that receives requests and routes them to the right place. The configuration was like:
+```
+http {
+  server {
+    server_name  lorikeet.ca;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    location ~ ^/api/ {
+      proxy_pass http://0.0.0.0:8080;
+    }
+
+    location ~ / {
+      root /pathToRepo/lorikeet/ui/build/;
+      rewrite ^$ /index.html;
+      try_files $uri /index.html =400;
+    }
+  }
+}
+```
+
+When I make changes to the app I just need to rebuild the React app, rebuild the Go app, and restart the server. I also decided it would be a good idea to create a backup of the data when you deploy, in case one of the code changes causes data corruption. I added a "run.sh" script to do this:
+```
+mv server server-old
+
+git pull &&
+  go build -o server cmd/server/main.go &&
+  go build -o doBackup cmd/backup/main.go &&
+  go build -o doRestore cmd/restore/main.go &&
+  ./doBackup &&
+  ./server
+```
+
+Final Thoughts
 ---
 
+Lorikeet was a lot of fun to make! You should definitely check it out. The site is live at https://lorikeet.ca[https://lorikeet.ca]. Golang and React are both great for this sort of application. The app is simple and has delightfully few dependencies. Materialize CSS was also nice to work with. The app uses client-side and server-side encryption. It logs requests and locks out bots from guessing your password. The process of designing a full (but simple) product was interesting to go through. Getting people to use it will be a whole different challenge. It is understandably difficult to get people to trust small hobbyist projects with their passwords and personal information. I hope you'll give it a try though!
+
+If you do try it, I would love to hear what you think. Don't hesitate to contact[/contact] me.
