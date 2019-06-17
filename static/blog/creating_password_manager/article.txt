@@ -14,7 +14,7 @@ T = "password"
 SHA256(T) = "5e884898da28047151d0e56f8dc6292..."
 ```
 
-Hash functions have a lot of different applications. In security, they are useful because they can obfuscate the original text while still supporting comparisons. For example, websites often store a *hash* of your password to avoid storing your original password. When you login, the website computes the hash of the password you entered. It compares this to the hash of your password that is stored. If they match, you entered the correct password.
+Hash functions have a lot of different applications. In security, they are useful because they can obfuscate the original text permanently. For example, websites often store a *hash* of your password to avoid storing your original password. When you login, the website computes the hash of the password you entered. It compares this to the hash of your password that is stored. If they match, you entered the correct password.
 
 If websites stored your original password and an attacker gained access to their database, the attacker could easily log in as any user because they can see all the passwords. Additionally, if you used the same password for other online services they now have access to all your accounts. If only hashes are stored the attacker will not know anyone's password.
 
@@ -74,7 +74,7 @@ Reading user's passwords works the same way. The given token and username are us
 Lockout
 ----
 
-No matter how good the encryption is, it's still possible to gain access to another user's account by trying all the possible passwords. To avoid this, Lorikeet keeps track of failed requests based on username and IP address. If there are too many failures for a single username or from a single IP address in a short period of time Lorikeet stops processing these requests for a few hours. During this cooldown it returns 429 to all such requests, even if the credentials provided are correct.
+No matter how good the encryption is, it's still possible to gain access to another user's account by trying all the possible passwords. To avoid this, Lorikeet keeps track of failed requests based on username and IP address. If there are too many failures for a single username or from a single IP address in a short period of time Lorikeet stops processing these requests for a few hours. During this cooldown it returns 429[https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors] to all such requests, even if the credentials provided are correct.
 
 This means you only get a few guesses at a user's password per hour. This is effective against both a single bot with one IP guessing multiple user's passwords, or a group of bots with different IPs guessing a single user's password. This is similar to how your iPhone locks you out for a few hours if you get the passcode wrong too many times. It could potentially make the service unavailable for a particular user for a certain amount of time, but the security of their account is more important. The code for this is in lockoutTable.go[https://github.com/ClintonMorrison/lorikeet/blob/master/internal/server/lockoutTable.go].
 
