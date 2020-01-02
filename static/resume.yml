@@ -9,16 +9,16 @@ education:
 
 skills:
   - name: Languages
-    description: Java, JavaScript, Golang, Ruby, Python, PHP, Java.
-  
+    description: Java, JavaScript, Golang, Ruby, Python.
+
   - name: Frameworks
-    description: Spring, React, AngularJS, jQuery, Rails, Django.
+    description: Spring, React, Angular, jQuery, Rails, Django.
 
   - name: Web
     description: HTML, CSS, SCSS, React, Angular.
 
   - name: Technologies
-    description: MySQL, PostgreSQL, Redis, Nginx, Apache, NodeJS.
+    description: PostgreSQL, Redis, Nginx, NodeJS.
 
   - name: Tools
     description: Git, Vim, JIRA, VS Code, JetBrains.
@@ -31,6 +31,8 @@ work:
     end_date:   Present
     tasks:
       - Created and documented restful APIs with Node.js/Express and Java/Spring.
+      - Optimized database queries and improved Java backend performance.
+      #- Owned tasks to completion, and managed API integration projections.
       - Implemented UIs with React, Redux, ES6, and SCSS.
       - Maintained legacy Ruby on Rails + jQuery application.
 

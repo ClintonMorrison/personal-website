@@ -96,6 +96,14 @@ def _render_page(path, page_data, get, post, variables, load_regions = True):
   if not template_data.get('title', False):
     template_data['title'] = page_data.get('title', '')
 
+  # Add the page's description, if no description is set
+  if not template_data.get('description', False):
+    template_data['description'] = page_data.get('description', '')
+  
+  # Add og:type, defaulting to website if not set
+  if not template_data.get('og_type', False):
+    template_data['og_type'] = page_data.get('og_type', 'website')
+
   # Load predefined regions given in the paths file
   if load_regions:
     regions = paths.get('*', {'regions': {}}).get('regions', {})

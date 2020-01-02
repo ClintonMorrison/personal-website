@@ -1,3 +1,4 @@
+from core.functions import truncate_text
 from core.exceptions import NotFoundError
 from core.markdown import MarkdownParser
 from core.article_helpers import get_article, get_all_articles
@@ -15,6 +16,7 @@ def get_page_data(path, get, post, variables):
   return {
     'article': article,
     'title': article.get('title', ''),
+    'description': truncate_text(raw_articule, 80),
     'raw_article': raw_articule
   }
 
