@@ -55,7 +55,7 @@ class Template:
     return self.contents
 
   def _read_file(self, path):
-    f = open(path, 'r')
+    f = open(path, 'r', encoding="utf-8")
     contents = f.read()
     return contents
 

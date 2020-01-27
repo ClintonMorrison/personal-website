@@ -54,7 +54,7 @@ for path, item in list(paths.items()) + list(pattern_paths.items()):
 
     print("    GET %s --> '%s'" % (possible_path.ljust(40), filename))
     page_data = pageloader.get(possible_path)
-    out_file = open(filename, 'w+')
+    out_file = open(filename, 'w+', encoding='utf8')
     
     body = page_data.get('body')
     now = datetime.now(pytz.timezone(config.timezone))

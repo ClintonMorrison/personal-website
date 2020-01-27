@@ -4,8 +4,8 @@ import textwrap
 
 def path_to_url(path = 'index', parameters = [], hash = ''):
   if hash == '':
-    return "%s://%s/%s" % (config.protocol, config.base_url, path)
-  return "%s://%s/%s#%s" % (config.protocol, config.base_url, path, hash)
+    return "/%s" % (path)
+  return "/%s#%s" % (path, hash)
 
 # Gets URL for static resource
 def static_to_url(path):

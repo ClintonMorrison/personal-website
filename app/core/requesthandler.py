@@ -1,5 +1,3 @@
-#!/home/clintor1/python/bin/python2
-
 import core.pageloader
 from core.exceptions import NotFoundError, ServerError
 import config

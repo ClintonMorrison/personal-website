@@ -67,6 +67,7 @@ paths = {
   'projects/avoid_the_shapes': {
     'controller': 'pages.projects.avoid_the_shapes.controller',
     'template':   'pages/projects/avoid_the_shapes/index.html',
+    'dynamic':    True,
     'title':      'Avoid The Shapes',
     'og_type':    'game',
     'description': 'This is a simple yet fun web game created with HTML5 and JavaScript. The player controls a yellow circle and must avoid touching the other shapes. The longer the player survives the higher his score.'
