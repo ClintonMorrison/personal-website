@@ -15,13 +15,7 @@ WORKDIR /opt/app
 
 RUN pip3 install -r ./requirements.txt
 
-
 RUN python3 clear_page_cache.py && \
   python3 build_page_cache.py
 
 CMD ["sh", "./scripts/start.sh"]
-
-## FOR TESTING
-#RUN echo 'sleep infinity' >> /bootstrap.sh
-#RUN chmod +x /bootstrap.sh
-#CMD /bootstrap.sh
