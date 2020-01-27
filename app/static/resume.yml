@@ -18,7 +18,7 @@ skills:
     description: HTML, CSS, SCSS, React, Angular.
 
   - name: Technologies
-    description: PostgreSQL, Redis, Nginx, NodeJS.
+    description: PostgreSQL, Redis, Nginx, NodeJS, AWS, Ansible, Docker.
 
   - name: Tools
     description: Git, Vim, JIRA, VS Code, JetBrains.

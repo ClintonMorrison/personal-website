@@ -1,8 +1,8 @@
 #!/bin/bash
+source version.sh
+
 docker stop personal-website
 docker rm personal-website
-
-VERSION='0.0.1-dev'
 
 docker build -t "clintonmorrison/projects:personal-website-$VERSION" . &&
   echo "Running container..." &&
