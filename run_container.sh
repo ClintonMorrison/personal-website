@@ -4,6 +4,7 @@ source version.sh
 
 docker run -d \
   --name personal-website \
+  --restart unless-stopped \
   -p 8001:80 \
   -e "PERSONAL_WEBSITE_DATABASE_HOST=$PERSONAL_WEBSITE_DATABASE_HOST" \
   -e "PERSONAL_WEBSITE_DATABASE_USER=$PERSONAL_WEBSITE_DATABASE_USER" \
