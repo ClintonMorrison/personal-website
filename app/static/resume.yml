@@ -11,17 +11,23 @@ skills:
   - name: Languages
     description: Java, JavaScript, Golang, Ruby, Python.
 
-  - name: Frameworks
-    description: Spring, React, Angular, jQuery, Rails, Django.
+  - name: Backend Frameworks
+    description: Spring, Express, Ruby on Rails, Django.
+  
+  - name: Frontend Frameworks
+    description: React, Angular, jQuery.
 
   - name: Web
-    description: HTML, CSS, SCSS, React, Angular.
+    description: HTML, CSS, SCSS.
+
+  - name: Databases
+    description: PostgreSQL, DynamoDB, Redis.
 
   - name: Technologies
-    description: PostgreSQL, Redis, Nginx, NodeJS, AWS, Ansible, Docker.
+    description: Nginx, Node.js, AWS, Ansible, Docker.
 
   - name: Tools
-    description: Git, Vim, JIRA, VS Code, JetBrains.
+    description: Git, Teamcity, JIRA, IntelliJ, VS Code.
 
 work:
   - title:      Platform Engineer
@@ -30,22 +36,27 @@ work:
     start_date: August 2016
     end_date:   Present
     tasks:
-      - Created and documented restful APIs with Node.js/Express and Java/Spring.
+      - Worked in multiple stacks, including Java/Spring, Ruby/Rails, and Node.js/Express.
+      - Developed new microservices, RESTful APIs, and API integrations.
+      - Worked closely with designers to create beautiful UIs with React, Redux, ES6, and SCSS.
+      #- Maintained Ruby on Rails + jQuery application.
+      - Dockerized and migrated legacy applications to AWS (S3, EC2, SQS, Lambda, DynamoDB, ECR, and ECS).
       - Optimized database queries and improved Java backend performance.
-      #- Owned tasks to completion, and managed API integration projections.
-      - Implemented UIs with React, Redux, ES6, and SCSS.
-      - Maintained legacy Ruby on Rails + jQuery application.
-
+      - Increased platform observability by leveraging Prometheus, New Relic, and Sumo Logic.
+      - Automated release and testing tasks with Golang and Python scripts.
+      - Created CI/CD pipelines with Teamcity and Ansible.
+      - Mentored junior engineers and co-op students.
   - title:      Web Developer
     company:    SimplyCast Interactive Marketing
     location:   Dartmouth, Nova Scotia
     start_date: May 2014
     end_date:   August 2016
     tasks: 
-      - Developed PHP LAMP stack web applications.
-      - Created distributed chat application with NodeJS, Redis, and AngularJS.
-      - Implemented Microsoft Dynamics, Office 365, BigCommerce and Vtiger integrations.
-      - Developed and documented public-facing APIs.
+      - Developed LAMP stack web applications (Linux, Apache, MySQL, PHP).
+      - Created distributed chat application with Node.js, Redis, and AngularJS.
+      - Implemented integrations with third-party APIs.
+      - Developed and documented public-facing REST APIs.
+      - Worked full-time during co-op work terms and part-time during academic terms.
       # - Optimized CRM backend, increasing the speed of queries by 50%.
 
   - title:        Teaching Assistant
@@ -58,8 +69,15 @@ work:
       - Explained core algorithm concepts and helped students debug their code.
       - Tutored students individually and in small groups.
 
-awards:
+  #- title:        Co-op Student
+  #  company:      Dillon Consulting Limited
+  #  location:     Sydney, Nova Scotia
+  #  start_date:   July 2011 # Fall 2014, Summer 2015
+  #  end_date:     August 2011
+  #  tasks:
+  #    - Basic CAD modelling, organized engineering drawings, researched products, prepared reports and binders.
 
+awards:
   - name:        Bruce and Doroth Rossetti Scholarship Bronze Award
     institution: Dalhousie University
     date:        "2015"
