@@ -30,11 +30,18 @@ skills:
     description: Git, Teamcity, JIRA, IntelliJ, VS Code.
 
 work:
+  - title:      Web Engineer
+    company:    Ritual
+    location:   Toronto, Ontario
+    start_date: December 2020
+    end_date:   Present
+    tasks:
+      - React, Node.js, Next.js
   - title:      Platform Engineer
     company:    BiblioCommons
     location:   Toronto, Ontario
     start_date: August 2016
-    end_date:   Present
+    end_date:   December 2020
     tasks:
       - Worked in multiple stacks, including Java/Spring, Ruby/Rails, and Node.js/Express.
       - Developed new microservices, RESTful APIs, and API integrations.
