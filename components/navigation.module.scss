@@ -1,0 +1,9 @@
+.nav {
+  dl {
+    display: flex;
+  }
+
+  dt + dt {
+    margin-left: 1rem;
+  }
+}

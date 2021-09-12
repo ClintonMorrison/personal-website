@@ -1,0 +1,146 @@
+{
+  "education": [
+    {
+      "institution": "Dalhousie University",
+      "start_date": "September 2012",
+      "end_date": "August 2016",
+      "program": "Bachelor of Computer Science with honours and co-op",
+      "distinctions": "First Class Honours",
+      "gpa": "4.18"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "description": "Java, JavaScript, Golang, Ruby, Python."
+    },
+    {
+      "name": "Backend Frameworks",
+      "description": "Spring, Express, Ruby on Rails, Django."
+    },
+    {
+      "name": "Frontend Frameworks",
+      "description": "React, Angular, jQuery."
+    },
+    {
+      "name": "Web",
+      "description": "HTML, CSS, SCSS."
+    },
+    {
+      "name": "Databases",
+      "description": "PostgreSQL, DynamoDB, Redis."
+    },
+    {
+      "name": "Technologies",
+      "description": "Nginx, Node.js, AWS, Ansible, Docker."
+    },
+    {
+      "name": "Tools",
+      "description": "Git, Teamcity, JIRA, IntelliJ, VS Code."
+    }
+  ],
+  "work": [
+    {
+      "title": "Web Engineer",
+      "company": "Ritual",
+      "location": "Toronto, Ontario",
+      "start_date": "December 2020",
+      "end_date": "Present",
+      "tasks": ["React, Node.js, Next.js"]
+    },
+    {
+      "title": "Platform Engineer",
+      "company": "BiblioCommons",
+      "location": "Toronto, Ontario",
+      "start_date": "August 2016",
+      "end_date": "December 2020",
+      "tasks": [
+        "Worked in multiple stacks, including Java/Spring, Ruby/Rails, and Node.js/Express.",
+        "Developed new microservices, RESTful APIs, and API integrations.",
+        "Worked closely with designers to create beautiful UIs with React, Redux, ES6, and SCSS.",
+        "Dockerized and migrated legacy applications to AWS (S3, EC2, SQS, Lambda, DynamoDB, ECR, and ECS).",
+        "Optimized database queries and improved Java backend performance.",
+        "Increased platform observability by leveraging Prometheus, New Relic, and Sumo Logic.",
+        "Automated release and testing tasks with Golang and Python scripts.",
+        "Created CI/CD pipelines with Teamcity and Ansible.",
+        "Mentored junior engineers and co-op students."
+      ]
+    },
+    {
+      "title": "Web Developer",
+      "company": "SimplyCast Interactive Marketing",
+      "location": "Dartmouth, Nova Scotia",
+      "start_date": "May 2014",
+      "end_date": "August 2016",
+      "tasks": [
+        "Developed LAMP stack web applications (Linux, Apache, MySQL, PHP).",
+        "Created distributed chat application with Node.js, Redis, and AngularJS.",
+        "Implemented integrations with third-party APIs.",
+        "Developed and documented public-facing REST APIs.",
+        "Worked full-time during co-op work terms and part-time during academic terms."
+      ]
+    },
+    {
+      "title": "Teaching Assistant",
+      "company": "Dalhousie CS Learning Centre",
+      "location": "Halifax, Nova Scotia",
+      "start_date": "September 2015",
+      "end_date": "August 2016",
+      "tasks": [
+        "Assisted students with computer science course work.",
+        "Explained core algorithm concepts and helped students debug their code.",
+        "Tutored students individually and in small groups."
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "name": "Bruce and Doroth Rossetti Scholarship Bronze Award",
+      "institution": "Dalhousie University",
+      "date": "2015",
+      "amount": "$1500"
+    },
+    {
+      "name": "Bruce and Doroth Rossetti Scholarship Bronze Award",
+      "institution": "Dalhousie University",
+      "date": "2014",
+      "amount": "$500"
+    },
+    {
+      "name": "Bruce and Doroth Rossetti Scholarship Silver Award",
+      "institution": "Dalhousie University",
+      "date": "2013",
+      "amount": "$1000"
+    },
+    {
+      "name": "Sexton Scholar",
+      "institution": "Dalhousie University",
+      "date": "2012 - 2016",
+      "amount": "$250 / term"
+    },
+    {
+      "name": "Renewable scholarship",
+      "institution": "Dalhousie University",
+      "date": "2012 - 2016",
+      "amount": "$4000 / year"
+    },
+    {
+      "name": "Barry Ward Fawcett Memorial Prize",
+      "institution": "Dalhousie University",
+      "date": "Winter 2015",
+      "amount": "$750"
+    },
+    {
+      "name": "Second Place in Senior Division",
+      "institution": "Cape Breton Science Fair",
+      "date": "2012",
+      "amount": "0"
+    },
+    {
+      "name": "Amoung top five students in graduating class",
+      "institution": "Sydney Academy",
+      "date": "June, 2012",
+      "amount": "0"
+    }
+  ]
+}

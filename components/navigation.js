@@ -1,3 +1,5 @@
+import styles from './navigation.module.scss'
+
 const links = [
   { title: 'Home', path: '/' },
   { title: 'Projects', path: '/projects' },
@@ -8,16 +10,16 @@ const links = [
 
 export default function Navigation() {
   return (
-    <nav>
-      <ul>
+    <nav className={styles.nav}>
+      <dl>
         {links.map(({ title, path }) => (
-          <li key={title}>
+          <dt key={title}>
             <a href={path} className="active">
               {title}
             </a>
-          </li>
+          </dt>
         ))}
-      </ul>
+      </dl>
     </nav>
   )
 }

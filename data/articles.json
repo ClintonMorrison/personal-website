@@ -1,0 +1,135 @@
+[
+  {
+    "name": "creating_password_manager",
+    "title": "Creating a Password Manager",
+    "visible": true,
+    "date_published": "2019-06-16T00:00:00.000Z",
+    "description": "How I made a password manager with Go and React.\n"
+  },
+  {
+    "name": "stocks_and_ngrams",
+    "title": "Analyzing Stocks With NGrams",
+    "visible": true,
+    "date_published": "2018-12-28T00:00:00.000Z",
+    "description": "I used ngrams to model the stock market.\n"
+  },
+  {
+    "name": "golang_dates",
+    "title": "Date formatting in Go",
+    "visible": true,
+    "date_published": "2018-11-22T00:00:00.000Z",
+    "description": "My thoughts on date formatting in go.\n"
+  },
+  {
+    "name": "vultr_review",
+    "title": "A Review of Vultr Web Hosting",
+    "visible": false,
+    "date_published": "2017-12-24T00:00:00.000Z",
+    "description": "I describe my experience with Vultr.\n"
+  },
+  {
+    "name": "how_my_site_changed",
+    "title": "How My Site Has Changed",
+    "visible": true,
+    "date_published": "2017-12-23T00:00:00.000Z",
+    "description": "I discuss how my site has changed, and why.\n"
+  },
+  {
+    "name": "online_advertising",
+    "title": "Online Advertising and the Internet",
+    "visible": false,
+    "date_published": "2017-12-21T00:00:00.000Z",
+    "description": "I discuss advertising and the internet.\n"
+  },
+  {
+    "name": "converting_numbers_to_words",
+    "title": "Numbers to Words with JavaScript",
+    "visible": true,
+    "date_published": "2016-01-02T00:00:00.000Z",
+    "description": "I created a simple JavaScript library for converting integers into their English word representation\n"
+  },
+  {
+    "name": "new_website_again",
+    "title": "New Website (Again)!",
+    "visible": true,
+    "date_published": "2015-05-29T00:00:00.000Z",
+    "description": "I rewrote my website again.\n"
+  },
+  {
+    "name": "new_website",
+    "title": "New Website!",
+    "visible": true,
+    "date_published": "2014-08-02T00:00:00.000Z",
+    "description": "I describe some of the things I did differently creating my new website.\n"
+  },
+  {
+    "name": "factoring_small_integers_quickly",
+    "title": "Factoring Small Integers Quickly",
+    "visible": true,
+    "date_published": "2014-03-27T00:00:00.000Z",
+    "description": "I describe an algorithm which trades off space with time to factor small integers quickly.\n"
+  },
+  {
+    "name": "adding_high_scores_to_avoid_the_shapes",
+    "title": "Adding High Scores to Avoid the Shapes",
+    "visible": true,
+    "date_published": "2014-01-05T00:00:00.000Z",
+    "description": "How I added a high score system to Avoid The Shapes.\n"
+  },
+  {
+    "name": "factoring_integers_using_digit_strings",
+    "title": "Factoring Integers Using Digit Strings",
+    "visible": true,
+    "date_published": "2013-09-21T00:00:00.000Z",
+    "description": "I explore how integers of certain types can be factored by considering only their digits.\n"
+  },
+  {
+    "name": "an_interactive_star_field_with_html5",
+    "title": "A Star Field With HTML5",
+    "visible": true,
+    "date_published": "2013-08-21T00:00:00.000Z",
+    "description": "I describe a Windows 95 Star Field style space visualization I created with HTML5.\n"
+  },
+  {
+    "name": "sound_effects_for_html5_canvas_games",
+    "title": "Sound Effects for HTML5 Canvas Games",
+    "visible": true,
+    "date_published": "2013-08-08T00:00:00.000Z",
+    "description": "A tutorial in playing sound effects in HTML5.\n"
+  },
+  {
+    "name": "retrieval_times_of_java_data_structures",
+    "title": "Retrieval Times of Java Data Structures",
+    "visible": true,
+    "date_published": "2013-07-28T00:00:00.000Z",
+    "description": "I investigate how several important Java data structures perform.\n"
+  },
+  {
+    "name": "creating_a_simple_chat_bot",
+    "title": "Creating a Simple Chat Bot",
+    "visible": true,
+    "date_published": "2013-07-24T00:00:00.000Z",
+    "description": "How to create a simple Chat Bot in Java.\n"
+  },
+  {
+    "name": "tracking_down_memory_leaks_in_java",
+    "title": "Tracking Down Memory Leaks in Java",
+    "visible": true,
+    "date_published": "2013-06-14T00:00:00.000Z",
+    "description": "Trouble shooting memory leaks using JConsole!\n"
+  },
+  {
+    "name": "digital_signatures_and_signing_jar_files",
+    "title": "Digital Signatures and Signing JAR Files",
+    "visible": true,
+    "date_published": "2013-06-08T00:00:00.000Z",
+    "description": "A brief explanation of how digital signatures and signed JAR files work.\n"
+  },
+  {
+    "name": "teaching_a_computer_to_play_tic_tac_toe",
+    "title": "Teaching a Computer to Play Tic Tac Toe",
+    "visible": true,
+    "date_published": "2013-05-10T00:00:00.000Z",
+    "description": "How I made a Tic Tac Toe playing AI in C#.\n"
+  }
+]
