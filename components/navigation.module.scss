@@ -1,9 +1,10 @@
 .nav {
   dl {
     display: flex;
+    justify-content: space-around;
   }
 
   dt + dt {
-    margin-left: 1rem;
+    margin-left: 0.25rem;
   }
 }

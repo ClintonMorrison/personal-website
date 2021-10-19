@@ -6,6 +6,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Clinton Morrison" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta property="og:locale" content="en-US" />
+
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
@@ -14,10 +19,10 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
         />
-        {/* See: https://milligram.io/ */}
+        <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet" />
         <link
+          href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i"
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
         />
       </Head>
       <Component {...pageProps} />

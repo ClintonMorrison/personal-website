@@ -2,18 +2,16 @@ import Head from 'next/head'
 import Navigation from 'components/navigation'
 import styles from './page.module.scss'
 
-// https://terrill.ca/
-// https://beberlei.de/
-// https://voidstarzero.ca/
-// https://hikari.noyu.me/
-
 export default function Page({ title, description, children }) {
+  const titleText = title ? `Clinton Morrison - ${title}` : 'Clinton Morrison'
   return (
     <div className={styles.page}>
       <Head>
-        <title>{title ? `Clinton Morrison - ${title}` : 'Clinton Morrison'}</title>
-        <meta name="description" content={description} />
+        <title>{titleText}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={titleText} />
+        <meta property="og:description" content={description} />
       </Head>
 
       <header>
@@ -21,8 +19,10 @@ export default function Page({ title, description, children }) {
       </header>
 
       <main>
-        <h1>{title}</h1>
-        {children}
+        <div className={styles.contentContainer}>
+          <h1>{title}</h1>
+          {children}
+        </div>
       </main>
 
       <footer>© 2014 - 2021 Clinton Morrison.</footer>

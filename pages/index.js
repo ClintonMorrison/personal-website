@@ -6,9 +6,8 @@ export default function Home() {
       <p>Hello there! I am a full-stack software engineer in Toronto, Canada.</p>
 
       <p>
-        I&apos;m passionate about building great things. You can see some of my work
-        <a>on this site</a>
-        or on{' '}
+        I&apos;m passionate about building great things. You can see some of my work{' '}
+        <a>on this site</a> or on{' '}
         <a rel="noopener noreferrer" target="_blank" href="https://github.com/ClintonMorrison">
           GitHub
         </a>

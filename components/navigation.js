@@ -9,15 +9,19 @@ const links = [
 ]
 
 export default function Navigation() {
+  const lastIndex = links.length - 1
   return (
     <nav className={styles.nav}>
       <dl>
-        {links.map(({ title, path }) => (
-          <dt key={title}>
-            <a href={path} className="active">
-              {title}
-            </a>
-          </dt>
+        {links.map(({ title, path }, i) => (
+          <>
+            <dt key={title}>
+              <a href={path} className="active">
+                {title}
+              </a>
+            </dt>
+            {i !== lastIndex && <dt>/</dt>}
+          </>
         ))}
       </dl>
     </nav>
