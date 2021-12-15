@@ -1,9 +1,12 @@
 import Page from 'components/layout/page'
+import Resume from 'components/resume'
 
-export default function Resume() {
+import data from 'data/resume.json'
+
+export default function ResumePage() {
   return (
     <Page title="Resume" description="...">
-      todo
+      <Resume />
     </Page>
   )
 }

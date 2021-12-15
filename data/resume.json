@@ -2,8 +2,8 @@
   "education": [
     {
       "institution": "Dalhousie University",
-      "start_date": "September 2012",
-      "end_date": "August 2016",
+      "startDate": "September 2012",
+      "endDate": "August 2016",
       "program": "Bachelor of Computer Science with honours and co-op",
       "distinctions": "First Class Honours",
       "gpa": "4.18"
@@ -16,7 +16,7 @@
     },
     {
       "name": "Backend Frameworks",
-      "description": "Spring, Express, Ruby on Rails, Django."
+      "description": "Express, Spring, Ruby on Rails, Django."
     },
     {
       "name": "Frontend Frameworks",
@@ -44,16 +44,16 @@
       "title": "Web Engineer",
       "company": "Ritual",
       "location": "Toronto, Ontario",
-      "start_date": "December 2020",
-      "end_date": "Present",
+      "startDate": "December 2020",
+      "endDate": "Present",
       "tasks": ["React, Node.js, Next.js"]
     },
     {
       "title": "Platform Engineer",
       "company": "BiblioCommons",
       "location": "Toronto, Ontario",
-      "start_date": "August 2016",
-      "end_date": "December 2020",
+      "startDate": "August 2016",
+      "endDate": "December 2020",
       "tasks": [
         "Worked in multiple stacks, including Java/Spring, Ruby/Rails, and Node.js/Express.",
         "Developed new microservices, RESTful APIs, and API integrations.",
@@ -70,8 +70,8 @@
       "title": "Web Developer",
       "company": "SimplyCast Interactive Marketing",
       "location": "Dartmouth, Nova Scotia",
-      "start_date": "May 2014",
-      "end_date": "August 2016",
+      "startDate": "May 2014",
+      "endDate": "August 2016",
       "tasks": [
         "Developed LAMP stack web applications (Linux, Apache, MySQL, PHP).",
         "Created distributed chat application with Node.js, Redis, and AngularJS.",
@@ -84,8 +84,8 @@
       "title": "Teaching Assistant",
       "company": "Dalhousie CS Learning Centre",
       "location": "Halifax, Nova Scotia",
-      "start_date": "September 2015",
-      "end_date": "August 2016",
+      "startDate": "September 2015",
+      "endDate": "August 2016",
       "tasks": [
         "Assisted students with computer science course work.",
         "Explained core algorithm concepts and helped students debug their code.",

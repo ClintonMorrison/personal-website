@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import '../styles/globals.css'
+
+import '../styles/normalize.css'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   return (

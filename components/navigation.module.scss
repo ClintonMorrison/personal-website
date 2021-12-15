@@ -2,9 +2,22 @@
   dl {
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    margin-bottom: 0.5rem;
   }
 
   dt + dt {
     margin-left: 0.25rem;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

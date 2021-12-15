@@ -1,5 +1,8 @@
 import Page from 'components/layout/page'
 
+import projects from 'data/projects.json'
+import Project from 'components/project'
+
 export default function Projects() {
   return (
     <Page title="Projects" description="...">
@@ -11,6 +14,10 @@ export default function Projects() {
         </a>{' '}
         profile.
       </p>
+
+      {projects.map((project) => (
+        <Project key={project.name} project={project} />
+      ))}
     </Page>
   )
 }
