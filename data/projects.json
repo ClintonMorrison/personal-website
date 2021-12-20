@@ -66,7 +66,7 @@
     "sourceType": "github",
     "sourceUrl": "https://github.com/ClintonMorrison/personal-website/tree/master/pages/projects/calculate",
     "demoType": "link",
-    "demoUrl": "http://clintonmorrison.com/projects/calculate",
+    "demoUrl": "/projects/calculate",
     "shortDescription": "An online calculator that can quickly evaluate simply expressions.",
     "longDescription": "This is an online calculator that evaluates simple expressions as you type them. It supports addition, subtraction, multiplication, division, and exponentiation. The expression is converted into postfix form before it is evaluated.\n"
   },
@@ -78,7 +78,7 @@
     "sourceType": "github",
     "sourceUrl": "https://github.com/ClintonMorrison/space-defender",
     "demoType": "link",
-    "demoUrl": "http://clintonmorrison.com/projects/space_defender",
+    "demoUrl": "/projects/space_defender",
     "shortDescription": "A HTML5 space shooter game.",
     "longDescription": "This is a retro arcade style space shooter game with vector graphics. It was created with HTML5 and JavaScript. Fly through space destroying alien space ships! Survive as long as you can. Play against a friend in two player mode!\n"
   },
@@ -90,7 +90,7 @@
     "sourceType": "github",
     "sourceUrl": "https://github.com/ClintonMorrison/personal-website/tree/master/pages/projects/avoid_the_shapes/avoid-the-shapes",
     "demoType": "link",
-    "demoUrl": "http://clintonmorrison.com/projects/avoid_the_shapes",
+    "demoUrl": "/projects/avoid_the_shapes",
     "shortDescription": "An arcade style HTML5 game.",
     "longDescription": "This is a simple yet fun web game created with HTML5 and JavaScript. The player controls a yellow circle and must avoid touching the other shapes. The longer the player survives the higher his score.\n"
   },
