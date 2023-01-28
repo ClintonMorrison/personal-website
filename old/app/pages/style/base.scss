@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -7,9 +9,16 @@ body {
   font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, nav li, .date, .button {
+h1,
+h2,
+h3,
+h4,
+h5,
+nav li,
+.date,
+.button {
   font-weight: bold;
-  font-family: "Unica One", serif;
+  font-family: 'Unica One', serif;
   text-transform: uppercase;
 }
 
@@ -21,15 +30,13 @@ body {
   font-size: 18px;
 }
 
-.date {
-  color: #333;
-  text-transform: uppercase;
-}
-
 svg {
   max-width: 100%;
 }
 
-h2, h3, h4, h5 {
+h2,
+h3,
+h4,
+h5 {
   margin-bottom: 0;
 }

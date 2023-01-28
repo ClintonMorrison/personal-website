@@ -1,5 +1,5 @@
 export default function DemoLink({ project }) {
-  const props = { className: 'button button-primary', href: project.demoUrl }
+  const props = { className: 'button button-primary', href: project.demoUrl, target: '_blank' }
   switch (project.demoType) {
     case 'link':
       return <a {...props}>Try It</a>

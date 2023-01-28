@@ -1,4 +1,6 @@
 import moment from 'moment'
+import { formatDate } from '../../utils/format'
+import AnnotatedTitle from '../common/AnnotatedTitle'
 import DemoLink from './demoLink'
 
 import styles from './project.module.scss'
@@ -11,8 +13,7 @@ export default function Project({ project }) {
 
   return (
     <div className={styles.project}>
-      <h2>{project.title}</h2>
-      <div className="date">{moment(project.datePublished).format('MMM YYYY')}</div>
+      <AnnotatedTitle title={project.title} note={formatDate(project.datePublished)} />
 
       <div className={styles.content}>
         <div className={styles.picture}>
