@@ -25,7 +25,7 @@ export default function Page({ title, description, children }) {
         </div>
       </main>
 
-      <footer>© 2014 - 2021 Clinton Morrison.</footer>
+      <footer>© 2014 - 2023 Clinton Morrison.</footer>
     </div>
   )
 }
