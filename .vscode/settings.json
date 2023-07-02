@@ -4,5 +4,6 @@
   },
   "editor.formatOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.zoomLevel": -1
 }

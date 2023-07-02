@@ -20,7 +20,11 @@ export default function Navigation() {
                 {title}
               </a>
             </dt>
-            {i !== lastIndex && <dt className={styles.divider}>/</dt>}
+            {i !== lastIndex && (
+              <dt key={`${title}-divider`} className={styles.divider}>
+                /
+              </dt>
+            )}
           </>
         ))}
       </dl>

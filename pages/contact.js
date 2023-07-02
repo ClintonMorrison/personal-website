@@ -3,7 +3,7 @@ import EmailIcon from 'components/common/icons/email'
 import GithubIcon from 'components/common/icons/github'
 import LinkedinIcon from 'components/common/icons/linkedin'
 import TwitterIcon from 'components/common/icons/twitter'
-import ContactLink from 'components/contactLink'
+import ContactLink from 'components/ContactLink'
 
 export default function Contact() {
   return (
