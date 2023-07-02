@@ -2,7 +2,7 @@ import yaml
 from core.functions import format_date_field
 
 def get_all_articles():
-  articles = yaml.load(open('static/articles.yml', 'r'))
+  articles = yaml.safe_load(open('static/articles.yml', 'r'))
   filtered_articles = []
 
   for article in articles:
@@ -17,7 +17,7 @@ def get_article_body(name):
   return open('static/blog/{}/article.txt'.format(name), 'r').read()
 
 def get_article(name):
-  articles = yaml.load(open('static/articles.yml', 'r'))
+  articles = yaml.safe_load(open('static/articles.yml', 'r'))
 
   for article in articles:
     if article.get('name') == name:

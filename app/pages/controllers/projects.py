@@ -25,7 +25,7 @@ def render_demo_button(project):
 
 def get_page_data(path, get, post, variables):
   data = {}
-  projects = yaml.load(open("static/projects.yml", "r"))
+  projects = yaml.safe_load(open("static/projects.yml", "r"))
   visible_projects = []
 
   for project in projects:

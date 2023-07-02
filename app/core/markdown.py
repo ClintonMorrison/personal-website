@@ -1,6 +1,6 @@
 import re
 import core.functions
-from cgi import escape
+from html import escape
 
 class MarkdownParser:
     def __init__(self, resource_path, **kwargs):
