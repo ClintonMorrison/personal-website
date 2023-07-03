@@ -12,7 +12,7 @@ skills:
     description: Java, JavaScript, TypeScript, Golang, Python.
 
   - name: Backend Frameworks
-    description: Spring, Express, Ruby on Rails, Django.
+    description: Spring, Express, Next, Ruby on Rails, Django.
   
   - name: Frontend Frameworks
     description: React, Redux, Jest, Playwright, Angular, jQuery.
@@ -48,10 +48,10 @@ work:
     start_date: December 2020
     end_date:   January 2022
     tasks:
-      - Collaborated with product managers, designers, QA analysts, and engineers to implement new features
       - Created responsive UIs using React, Redux, ES6, and TypeScript
+      - Collaborated with product managers, designers, QA analysts, and engineers to implement new features
       - Documented best practices and troubleshooting steps
-      - Built a platform that has enabled 10+ property managers to seamlessly integrate Ritual into their tenant app experience
+      - Built a platform that has enabled 10+ property manager apps to seamlessly integrate Ritual
   - title:      Platform Engineer
     company:    BiblioCommons
     location:   Toronto, Ontario
