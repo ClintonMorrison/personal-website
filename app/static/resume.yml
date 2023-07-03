@@ -9,34 +9,49 @@ education:
 
 skills:
   - name: Languages
-    description: Java, JavaScript, Golang, Ruby, Python.
+    description: Java, JavaScript, TypeScript, Golang, Python.
 
   - name: Backend Frameworks
     description: Spring, Express, Ruby on Rails, Django.
   
   - name: Frontend Frameworks
-    description: React, Angular, jQuery.
+    description: React, Redux, Jest, Playwright, Angular, jQuery.
 
   - name: Web
     description: HTML, CSS, SCSS.
 
   - name: Databases
-    description: PostgreSQL, DynamoDB, Redis.
+    description: PostgreSQL, MySQL, DynamoDB, Redis.
 
   - name: Technologies
-    description: Nginx, Node.js, AWS, Ansible, Docker.
+    description: Nginx, Node.js, AWS, GCP, Keycloak, Ansible, Docker.
 
   - name: Tools
-    description: Git, Teamcity, JIRA, IntelliJ, VS Code.
+    description: Git, Teamcity, Jenkins, JIRA, Amplitude, IntelliJ, VS Code.
 
 work:
+  - title:      Senior Web Engineer
+    company:    Ritual
+    location:   Toronto, Ontario
+    start_date: January 2022
+    end_date:   Present
+    tasks:
+      - Full stack development with Java, Spring, Bazel, React, Redux, and TypeScript
+      - Designed and implemented RESTful APIs with OpenAPI, Java, and Spring
+      - Led complex projects from start to finish, breaking down difficult problems into achievable milestones
+      - Wrote detailed design documents and user stories, coordinating across teams and functions to ensure tasks were delivered correctly and on time 
+      - Mentored other engineers and co-op students
+      - Delivered high impact features such as <a href="https://ritual.co/companies/group-ordering" target="_blank">Group Ordering</a> (a way for users to order food together) and <a href="https://help.ritual.co/hc/en-us/articles/15918390242835-What-is-Food-Fest-at-Work-" target="_blank">Food Fest @ Work</a> (a promotional campaign for office workers), leading to thousands of new Ritual users
   - title:      Web Engineer
     company:    Ritual
     location:   Toronto, Ontario
     start_date: December 2020
-    end_date:   Present
+    end_date:   January 2022
     tasks:
-      - React, Node.js, Next.js
+      - Collaborated with product managers, designers, QA analysts, and engineers to implement new features
+      - Created responsive UIs using React, Redux, ES6, and TypeScript
+      - Documented best practices and troubleshooting steps
+      - Built a platform that has enabled 10+ property managers to seamlessly integrate Ritual into their tenant app experience
   - title:      Platform Engineer
     company:    BiblioCommons
     location:   Toronto, Ontario
