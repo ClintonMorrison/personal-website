@@ -53,15 +53,18 @@ for path, item in list(paths.items()) + list(pattern_paths.items()):
       os.makedirs(dirname)
 
     print("    GET %s --> '%s'" % (possible_path.ljust(40), filename))
-    page_data = pageloader.get(possible_path)
-    out_file = open(filename, 'w+', encoding='utf8')
-    
-    body = page_data.get('body')
-    now = datetime.now(pytz.timezone(config.timezone))
+    try:
+      page_data = pageloader.get(possible_path)
+      out_file = open(filename, 'w+', encoding='utf8')
+      
+      body = page_data.get('body')
+      now = datetime.now(pytz.timezone(config.timezone))
 
-    # Fill version_info placeholder
-    last_updated = 'Last updated: %s' % (now.strftime('%-I:%M %p, %b %d, %Y'))
-    body = body.replace('{{%version_info%}}', last_updated)
-    out_file.write(body)
-    out_file.close()
+      # Fill version_info placeholder
+      last_updated = 'Last updated: %s' % (now.strftime('%-I:%M %p, %b %d, %Y'))
+      body = body.replace('{{%version_info%}}', last_updated)
+      out_file.write(body)
+      out_file.close()
+    except:
+      print("Error generating template for path: " + possible_path)
 
