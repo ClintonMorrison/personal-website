@@ -30,11 +30,18 @@ skills:
     description: Git, Teamcity, Jenkins, JIRA, Amplitude, IntelliJ, VS Code.
 
 work:
+  - title:      Staff Web Engineer
+    company:    Ritual
+    location:   Toronto, Ontario
+    start_date: August 2023
+    end_date:   Present
+    tasks:
+      - Techical lead for Ritual's web products
   - title:      Senior Web Engineer
     company:    Ritual
     location:   Toronto, Ontario
     start_date: January 2022
-    end_date:   Present
+    end_date:   August 2023
     tasks:
       - Full stack development with Java, Spring, Bazel, React, Redux, and TypeScript
       - Designed and implemented RESTful APIs with OpenAPI, Java, and Spring
@@ -42,6 +49,10 @@ work:
       - Wrote detailed design documents and user stories, coordinating across teams and functions to ensure tasks were delivered correctly and on time 
       - Mentored other engineers and co-op students
       - Delivered high impact features such as <a href="https://ritual.co/companies/group-ordering" target="_blank">Group Ordering</a> (a way for users to order food together) and <a href="https://help.ritual.co/hc/en-us/articles/15918390242835-What-is-Food-Fest-at-Work-" target="_blank">Food Fest @ Work</a> (a promotional campaign for office workers), leading to thousands of new Ritual users
+      - Identified process bottlenecks and improved developer productivity
+      #- Created and updated CloudFlare workers
+      #- Added analytics events and amplitude dashboards
+      #- Developed and maintained internal tools for refunding orders and managing merchants.
   - title:      Web Engineer
     company:    Ritual
     location:   Toronto, Ontario
@@ -50,7 +61,7 @@ work:
     tasks:
       - Created responsive UIs using React, Redux, ES6, and TypeScript
       - Collaborated with product managers, designers, QA analysts, and engineers to implement new features
-      - Documented best practices and troubleshooting steps
+      - Documented features, best practices, processes, and troubleshooting steps
       - Built a platform that has enabled 10+ property manager apps to seamlessly integrate Ritual
   - title:      Platform Engineer
     company:    BiblioCommons
