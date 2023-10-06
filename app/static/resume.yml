@@ -11,14 +11,11 @@ skills:
   - name: Languages
     description: Java, JavaScript, TypeScript, Golang, Python.
 
-  - name: Backend Frameworks
+  - name: Backend
     description: Spring, Express, Next, Ruby on Rails, Django.
   
-  - name: Frontend Frameworks
-    description: React, Redux, Jest, Playwright, Angular, jQuery.
-
-  - name: Web
-    description: HTML, CSS, SCSS.
+  - name: Frontend
+    description: React, Redux, Jest, Playwright, Angular, jQuery, HTML, CSS, SCSS.
 
   - name: Databases
     description: PostgreSQL, MySQL, DynamoDB, Redis.
@@ -43,13 +40,14 @@ work:
     start_date: January 2022
     end_date:   August 2023
     tasks:
-      - Full stack development with Java, Spring, Bazel, React, Redux, and TypeScript
-      - Designed and implemented RESTful APIs with OpenAPI, Java, and Spring
+      - Full stack development with Java, Spring, TypeScript, Next.js, React, and Redux 
       - Led complex projects from start to finish, breaking down difficult problems into achievable milestones
-      - Wrote detailed design documents and user stories, coordinating across teams and functions to ensure tasks were delivered correctly and on time 
+      - Wrote detailed design documents and user stories
+      - Coordinated with stakeholders to ensure tasks were delivered correctly and on time 
       - Mentored other engineers and co-op students
-      - Delivered high impact features such as <a href="https://ritual.co/companies/group-ordering" target="_blank">Group Ordering</a> (a way for users to order food together) and <a href="https://help.ritual.co/hc/en-us/articles/15918390242835-What-is-Food-Fest-at-Work-" target="_blank">Food Fest @ Work</a> (a promotional campaign for office workers), leading to thousands of new Ritual users
+      - Delivered high impact features such as <a href="https://ritual.co/companies/group-ordering" target="_blank">Group Ordering</a>
       - Identified process bottlenecks and improved developer productivity
+      #- Designed RESTful APIs with OpenAPI
       #- Created and updated CloudFlare workers
       #- Added analytics events and amplitude dashboards
       #- Developed and maintained internal tools for refunding orders and managing merchants.
@@ -86,7 +84,7 @@ work:
     end_date:   August 2016
     tasks: 
       - Developed LAMP stack web applications (Linux, Apache, MySQL, PHP).
-      - Created distributed chat application with Node.js, Redis, and AngularJS.
+      - Created distributed chat application with Node.js, Redis, and Angular.js.
       - Implemented integrations with third-party APIs.
       - Developed and documented public-facing REST APIs.
       - Worked full-time during co-op work terms and part-time during academic terms.

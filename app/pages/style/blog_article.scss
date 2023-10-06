@@ -51,9 +51,7 @@ code {
   margin-bottom: 2.5em;
   margin-top: -2rem;
 
-  @media screen and (max-width: $mobile-max-width) {
-    overflow: scroll;
-  }
+  overflow-x: auto;
 }
 
 .return.button {

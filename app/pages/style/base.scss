@@ -3,22 +3,21 @@
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 300;
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, nav li, .date, .button {
   font-weight: bold;
-  font-family: "Unica One", serif;
-  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
 }
 
 .button {
   font-size: 1em;
 }
 
-body {
-  font-size: 18px;
+body, li {
+  font-size: 20px;
 }
 
 .date {

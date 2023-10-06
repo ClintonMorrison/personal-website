@@ -10,8 +10,7 @@
     <ul class="top-list">
       [% for each event in education %]
       <li>
-        <span class="date">[[event.start_date]] - [[event.end_date]]</span>
-        <p><span class="field-title"> [[event.institution]] </span></p>
+        <p><span class="field-title"> [[event.institution]] / [[event.start_date]] - [[event.end_date]]</span></p>
         <p>[[event.program]]</p>
         <p>[[event.distinctions]] (GPA: [[event.gpa]])</p>
       </li>
@@ -34,9 +33,11 @@
     <ul class="top-list">
       [% for each job in work %]
       <li>
-        <span class="date">[[job.start_date]] - [[job.end_date]]</span>
+        <span class="date"></span>
         <p>
-          <span class="field-title">[[job.title]]</span>
+          <span class="field-title">[[job.title]] / [[job.start_date]] - [[job.end_date]]</span>
+        </p>
+        <p>
           <em>[[job.company]]</em> - <em>[[job.location]]</em>
         </p>
         [[job.tasks_html]]
