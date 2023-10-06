@@ -14,3 +14,10 @@ pip3 install -r app/requirements.txt
 cd app
 python3 dev_server.py
 ```
+
+### Building container
+Update the version in `version.sh`
+```
+cd ~/Source/personal-website
+./build.sh
+```
