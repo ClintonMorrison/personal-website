@@ -1,4 +1,3 @@
-
 education:
   - institution: Dalhousie University
     start_date: September 2012
@@ -9,11 +8,11 @@ education:
 
 skills:
   - name: Languages
-    description: Java, JavaScript, TypeScript, Golang, Python.
+    description: Java, JavaScript, TypeScript, Ruby, Golang, Python.
 
   - name: Backend
     description: Spring, Express, Next, Ruby on Rails, Django.
-  
+
   - name: Frontend
     description: React, Redux, Jest, Playwright, Angular, jQuery, HTML, CSS, SCSS.
 
@@ -27,23 +26,30 @@ skills:
     description: Git, Teamcity, Jenkins, JIRA, Amplitude, IntelliJ, VS Code.
 
 work:
-  - title:      Staff Web Engineer
-    company:    Ritual
-    location:   Toronto, Ontario
+  - title: Software Engineer
+    company: Stripe
+    location: Toronto, Ontario
+    start_date: November 2023
+    end_date: Present
+    tasks:
+      - Support experience
+  - title: Staff Web Engineer
+    company: Ritual
+    location: Toronto, Ontario
     start_date: August 2023
-    end_date:   Present
+    end_date: November 2023
     tasks:
       - Techical lead for Ritual's web products
-  - title:      Senior Web Engineer
-    company:    Ritual
-    location:   Toronto, Ontario
+  - title: Senior Web Engineer
+    company: Ritual
+    location: Toronto, Ontario
     start_date: January 2022
-    end_date:   August 2023
+    end_date: August 2023
     tasks:
-      - Full stack development with Java, Spring, TypeScript, Next.js, React, and Redux 
+      - Full stack development with Java, Spring, TypeScript, Next.js, React, and Redux
       - Led complex projects from start to finish, breaking down difficult problems into achievable milestones
       - Wrote detailed design documents and user stories
-      - Coordinated with stakeholders to ensure tasks were delivered correctly and on time 
+      - Coordinated with stakeholders to ensure tasks were delivered correctly and on time
       - Mentored other engineers and co-op students
       - Delivered high impact features such as <a href="https://ritual.co/companies/group-ordering" target="_blank">Group Ordering</a>
       - Identified process bottlenecks and improved developer productivity
@@ -51,21 +57,21 @@ work:
       #- Created and updated CloudFlare workers
       #- Added analytics events and amplitude dashboards
       #- Developed and maintained internal tools for refunding orders and managing merchants.
-  - title:      Web Engineer
-    company:    Ritual
-    location:   Toronto, Ontario
+  - title: Web Engineer
+    company: Ritual
+    location: Toronto, Ontario
     start_date: December 2020
-    end_date:   January 2022
+    end_date: January 2022
     tasks:
       - Created responsive UIs using React, Redux, ES6, and TypeScript
       - Collaborated with product managers, designers, QA analysts, and engineers to implement new features
       - Documented features, best practices, processes, and troubleshooting steps
       - Built a platform that has enabled 10+ property manager apps to seamlessly integrate Ritual
-  - title:      Platform Engineer
-    company:    BiblioCommons
-    location:   Toronto, Ontario
+  - title: Platform Engineer
+    company: BiblioCommons
+    location: Toronto, Ontario
     start_date: August 2016
-    end_date:   December 2020
+    end_date: December 2020
     tasks:
       - Worked in multiple stacks, including Java/Spring, Ruby/Rails, and Node.js/Express.
       - Developed new microservices, RESTful APIs, and API integrations.
@@ -77,12 +83,12 @@ work:
       - Automated release and testing tasks with Golang and Python scripts.
       - Created CI/CD pipelines with Teamcity and Ansible.
       - Mentored junior engineers and co-op students.
-  - title:      Web Developer
-    company:    SimplyCast Interactive Marketing
-    location:   Dartmouth, Nova Scotia
+  - title: Web Developer
+    company: SimplyCast Interactive Marketing
+    location: Dartmouth, Nova Scotia
     start_date: May 2014
-    end_date:   August 2016
-    tasks: 
+    end_date: August 2016
+    tasks:
       - Developed LAMP stack web applications (Linux, Apache, MySQL, PHP).
       - Created distributed chat application with Node.js, Redis, and Angular.js.
       - Implemented integrations with third-party APIs.
@@ -90,11 +96,11 @@ work:
       - Worked full-time during co-op work terms and part-time during academic terms.
       # - Optimized CRM backend, increasing the speed of queries by 50%.
 
-  - title:        Teaching Assistant
-    company:      Dalhousie CS Learning Centre
-    location:     Halifax, Nova Scotia
-    start_date:   September 2015 # Fall 2014, Summer 2015
-    end_date:     August 2016
+  - title: Teaching Assistant
+    company: Dalhousie CS Learning Centre
+    location: Halifax, Nova Scotia
+    start_date: September 2015 # Fall 2014, Summer 2015
+    end_date: August 2016
     tasks:
       - Assisted students with computer science course work.
       - Explained core algorithm concepts and helped students debug their code.
@@ -109,41 +115,40 @@ work:
   #    - Basic CAD modelling, organized engineering drawings, researched products, prepared reports and binders.
 
 awards:
-  - name:        Bruce and Doroth Rossetti Scholarship Bronze Award
+  - name: Bruce and Doroth Rossetti Scholarship Bronze Award
     institution: Dalhousie University
-    date:        "2015"
-    amount:      "$1500"
-  - name:        Bruce and Doroth Rossetti Scholarship Bronze Award
+    date: "2015"
+    amount: "$1500"
+  - name: Bruce and Doroth Rossetti Scholarship Bronze Award
     institution: Dalhousie University
-    date:        "2014"
-    amount:      "$500"
-  - name:        Bruce and Doroth Rossetti Scholarship Silver Award
+    date: "2014"
+    amount: "$500"
+  - name: Bruce and Doroth Rossetti Scholarship Silver Award
     institution: Dalhousie University
-    date:        "2013"
-    amount:      "$1000"
+    date: "2013"
+    amount: "$1000"
 
-  - name:        Sexton Scholar
+  - name: Sexton Scholar
     institution: Dalhousie University
-    date:        "2012 - 2016"
-    amount:      "$250 / term"
+    date: "2012 - 2016"
+    amount: "$250 / term"
 
-  - name:        Renewable scholarship
+  - name: Renewable scholarship
     institution: Dalhousie University
-    date:        "2012 - 2016"
-    amount:      "$4000 / year"
+    date: "2012 - 2016"
+    amount: "$4000 / year"
 
-  - name:        Barry Ward Fawcett Memorial Prize
+  - name: Barry Ward Fawcett Memorial Prize
     institution: Dalhousie University
-    date:        "Winter 2015"
-    amount:      "$750"
+    date: "Winter 2015"
+    amount: "$750"
 
-  - name:        Second Place in Senior Division
+  - name: Second Place in Senior Division
     institution: Cape Breton Science Fair
-    date:        "2012"
-    amount:      "0"  # $250 maybe?
+    date: "2012"
+    amount: "0" # $250 maybe?
 
-  - name:        Amoung top five students in graduating class
+  - name: Amoung top five students in graduating class
     institution: Sydney Academy
-    date:        "June, 2012"
-    amount:      "0"
-
+    date: "June, 2012"
+    amount: "0"
