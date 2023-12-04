@@ -1,6 +1,8 @@
 #!/bin/bash
 source version.sh
 
+echo "Building version: $VERSION"
+
 docker stop personal-website
 docker rm personal-website
 
