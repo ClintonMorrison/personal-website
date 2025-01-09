@@ -8,31 +8,35 @@ education:
 
 skills:
   - name: Languages
-    description: Java, JavaScript, TypeScript, Ruby, Golang, Python.
+    description: JavaScript, TypeScript, Ruby, Java, Golang, Python.
 
   - name: Backend
-    description: Spring, Express, Next, Ruby on Rails, Django.
+    description: Spring, Express, Next.js, Ruby on Rails, Django.
 
   - name: Frontend
     description: React, Redux, Jest, Playwright, Angular, jQuery, HTML, CSS, SCSS.
 
   - name: Databases
-    description: PostgreSQL, MySQL, DynamoDB, Redis.
+    description: PostgreSQL, MySQL, MongoDB, DynamoDB, Redis.
 
   - name: Technologies
     description: Nginx, Node.js, AWS, GCP, Keycloak, Ansible, Docker.
 
   - name: Tools
-    description: Git, Teamcity, Jenkins, JIRA, Amplitude, IntelliJ, VS Code.
+    description: Git, Teamcity, Jenkins, Jira, Amplitude, Splunk, Prometheus, Sentry, IntelliJ, VS Code.
 
 work:
-  - title: Software Engineer
+  - title: Senior Software Engineer
     company: Stripe
     location: Toronto, Ontario
     start_date: November 2023
     end_date: Present
     tasks:
-      - Merchant support experience
+      - Full stack web development with Ruby, TypeScript, and React
+      - Built and delivered new features for Stripe's support websites
+      - Led major initivies from design to launch, collobrating with cross-functional teams
+      - Wrote detailed design documents and broke down complex problems into achievable milestones
+      - Ran weekly scrum ceramonies and streamlined team processes
   - title: Staff Web Engineer
     company: Ritual
     location: Toronto, Ontario
