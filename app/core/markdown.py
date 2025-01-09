@@ -72,7 +72,10 @@ class MarkdownParser:
 
     def _render_code(self, path, language):
         code = open("static/%s/%s" % (self.resource_path, path), "r").read()
-        return "<code>%s</code>" % escape(code)
+        code = escape(code)
+        code = code.replace("\\", "&bsol;")
+        print(code)
+        return "<code>%s</code>" % code
 
     def _render_code_snippet(self, match):
         return "<span class='code-snippet'>%s</span>" % (match.group(1))

@@ -3,7 +3,13 @@ Clint's website: https://clintonmorrison.com
 
 
 ### Running locally
+First time setup (Macbook):
+```bash
+brew install mysql pkg-config
 ```
+
+To run the server in local dev mode:
+```bash
 cd ~/Source/personal-website
 ./run_local_dev.sh
 

@@ -70,7 +70,7 @@
   date_published: 2014-12-01
   visible: True
   source_type: github
-  source_url: https://github.com/ClintonMorrison/personal-website/tree/master/pages/projects/calculate
+  source_url: https://github.com/ClintonMorrison/personal-website/tree/master/app/pages/projects/calculate
   demo_type: link
   demo_url: http://clintonmorrison.com/projects/calculate
   short_description: An online calculator that can quickly evaluate simply expressions.
@@ -99,7 +99,7 @@
   date_published: 2013-06-30
   visible: True
   source_type: github
-  source_url: https://github.com/ClintonMorrison/personal-website/tree/master/pages/projects/avoid_the_shapes/avoid-the-shapes
+  source_url: https://github.com/ClintonMorrison/personal-website/tree/master/app/pages/projects/avoid_the_shapes/avoid-the-shapes
   demo_type: link
   demo_url: http://clintonmorrison.com/projects/avoid_the_shapes
   short_description: An arcade style HTML5 game.

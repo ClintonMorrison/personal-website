@@ -92,39 +92,39 @@ Now, I had to actually implement something that does this. I started with an obj
 * @type {object}
 */
 var numberMap = {
-0: 'zero',
-1: 'one',
-2: 'two',
-3: 'three',
-4: 'four',
-5: 'five',
-6: 'six',
-7: 'seven',
-8: 'eight',
-9: 'nine',
-10: 'ten',
-11: 'eleven',
-12: 'twelve',
-13: 'thirteen',
-14: 'fourteen',
-15: 'fifteen',
-16: 'sixteen',
-17: 'seventeen',
-18: 'eighteen',
-19: 'nineteen',
-20: 'twenty',
-30: 'thirty',
-40: 'forty',
-50: 'fifty',
-60: 'sixty',
-70: 'seventy',
-80: 'eighty',
-90: 'ninety',
-100: 'hundred',
-1000: 'thousand',
-1000000: 'million',
-1000000000: 'billion',
-1000000000000: 'trillion'
+    0: 'zero',
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five',
+    6: 'six',
+    7: 'seven',
+    8: 'eight',
+    9: 'nine',
+    10: 'ten',
+    11: 'eleven',
+    12: 'twelve',
+    13: 'thirteen',
+    14: 'fourteen',
+    15: 'fifteen',
+    16: 'sixteen',
+    17: 'seventeen',
+    18: 'eighteen',
+    19: 'nineteen',
+    20: 'twenty',
+    30: 'thirty',
+    40: 'forty',
+    50: 'fifty',
+    60: 'sixty',
+    70: 'seventy',
+    80: 'eighty',
+    90: 'ninety',
+    100: 'hundred',
+    1000: 'thousand',
+    1000000: 'million',
+    1000000000: 'billion',
+    1000000000000: 'trillion'
 };
 
 /**
@@ -136,39 +136,39 @@ var numberMap = {
 * @type {array}
 */
 var numberList = [
-1000000000000,
-1000000000,
-1000000,
-1000,
-100,
-90,
-80,
-70,
-60,
-50,
-40,
-30,
-20,
-19,
-18,
-17,
-16,
-15,
-14,
-13,
-12,
-11,
-10,
-9,
-8,
-7,
-6,
-5,
-4,
-3,
-2,
-1,
-0
+    1000000000000,
+    1000000000,
+    1000000,
+    1000,
+    100,
+    90,
+    80,
+    70,
+    60,
+    50,
+    40,
+    30,
+    20,
+    19,
+    18,
+    17,
+    16,
+    15,
+    14,
+    13,
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
 ];
 ```
 
@@ -178,18 +178,18 @@ The idea of the algorithm is to find the biggest number in the list that the inp
 // Search list of numbers for closest smaller number.
 // numToConvert will be written in terms of this number.
 for (i = 0; i < numberList.length; i++) {
-n = numberList[i];
+    n = numberList[i];
 
-// If an exact match is found, just return that word.
-if (numToConvert === n) {
-words += numberMap[n];
-return words;
-}
+    // If an exact match is found, just return that word.
+    if (numToConvert === n) {
+        words += numberMap[n];
+        return words;
+    }
 
-// A smaller number was found.
-if (numToConvert > n) {
-break;
-}
+    // A smaller number was found.
+    if (numToConvert > n) {
+        break;
+    }
 }
 ```
 
@@ -200,7 +200,7 @@ Next, we have to figure how many groups the input can be divided into. For examp
 // e.g. five "thousand".
 prefixNum = Math.floor(numToConvert / n);
 if (prefixNum !== 1 || _shouldPrefixWithOne(n)) {
-words += numberToWords(prefixNum) + ' ';
+    words += numberToWords(prefixNum) + ' ';
 }
 
 // Add word for "n".
@@ -208,7 +208,7 @@ words += numberMap[n] + ' ';
 
 // Add word for amount not accounted for yet.
 if (remainder > 0) {
-words += numberToWords(remainder);
+    words += numberToWords(remainder);
 }
 
 // Remove trailing whitespace.

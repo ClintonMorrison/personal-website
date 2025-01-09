@@ -49,8 +49,8 @@ class Template:
 
     # remove any unfilled tags
     if remove_empty_tags:
-      self.contents = re.sub('\[\[.+?\]\]', '', self.contents)
-      self.contents = re.sub('\[\%.+?\%\]', '', self.contents)
+      self.contents = re.sub(r'\[\[.+?\]\]', '', self.contents)
+      self.contents = re.sub(r'\[\%.+?\%\]', '', self.contents)
     
     return self.contents
 
@@ -76,13 +76,13 @@ class Template:
   
   def _fill_tag(self, tag, data, string):
     if self._is_string(data):
-        return re.sub('\[\[' + tag + '\]\]', data, string)
+        return re.sub(r'\[\[' + tag + r'\]\]', data, string)
     else:
       new_string = string
-      fields_to_replace = set(re.findall('\[\[' + tag + '.([a-zA-Z0-9_\$]+)' +'\]\]', string, re.S))
+      fields_to_replace = set(re.findall(r'\[\[' + tag + r'.([a-zA-Z0-9_\$]+)' +r'\]\]', string, re.S))
       for field in fields_to_replace:
         try:
-          new_string = re.sub('\[\['+ tag + '.' + field + '\]\]', data[field], new_string)
+          new_string = re.sub(r'\[\['+ tag + '.' + field + r'\]\]', data[field], new_string)
         except KeyError:
           new_string = new_string
       return new_string
@@ -90,7 +90,7 @@ class Template:
     return string
 
   def _applyFunction(self, function_name):
-    tag = "\[\% " + function_name + " '(.+?)' \%\]"
+    tag = r'\[\% ' + function_name + " '(.+?)' \\%\]"
     calls = re.findall(tag, self.contents, re.S)
 
     functions = self._get_functions()
