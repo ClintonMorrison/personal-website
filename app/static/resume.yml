@@ -33,9 +33,8 @@ work:
     end_date: Present
     tasks:
       - Full stack web development with Ruby, TypeScript, and React
-      - Built and delivered new features for Stripe's support websites
+      - Built and maintained new features for Stripe's support websites
       - Led major initivies from design to launch, collobrating with cross-functional teams
-      - Wrote detailed design documents and broke down complex problems into achievable milestones
       - Ran weekly scrum ceramonies and streamlined team processes
   - title: Staff Web Engineer
     company: Ritual
@@ -71,7 +70,7 @@ work:
       - Collaborated with product managers, designers, QA analysts, and engineers to implement new features
       - Documented features, best practices, processes, and troubleshooting steps
       - Built a platform that has enabled 10+ property manager apps to seamlessly integrate Ritual
-  - title: Platform Engineer
+  - title: Software Engineer
     company: BiblioCommons
     location: Toronto, Ontario
     start_date: August 2016
