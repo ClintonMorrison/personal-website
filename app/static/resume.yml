@@ -27,10 +27,21 @@ skills:
 
 work:
   - title: Senior Software Engineer
+    company: Venue.ink
+    location: Toronto, Ontario
+    start_date: February 2025
+    end_date: Present
+    tasks:
+      - Full stack web development with Node.js, TypeScript, and React
+      - Spearheaded frontend development by establishing robust foundations, creating reusable components, and prioritizing an intuitive, user-friendly experience
+      - Worked closely with designers to translate Figma designs into functional UI
+      - Developed and maintained a reusable component library for consistent UI/UX
+      - Collaborated with backend engineers to integrate and optimize tRPC API calls
+  - title: Senior Software Engineer
     company: Stripe
     location: Toronto, Ontario
     start_date: November 2023
-    end_date: Present
+    end_date: January 2025
     tasks:
       - Full stack web development with Ruby, TypeScript, and React
       - Built and maintained new features for Stripe's support websites
@@ -42,7 +53,7 @@ work:
     start_date: August 2023
     end_date: November 2023
     tasks:
-      - Techical lead for Ritual's web products
+      - Technical lead for Ritual's web products
   - title: Senior Web Engineer
     company: Ritual
     location: Toronto, Ontario
