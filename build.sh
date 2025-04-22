@@ -6,8 +6,9 @@ echo "Building version: $VERSION"
 docker stop personal-website
 docker rm personal-website
 
-docker build --platform linux/amd64 -t "clintonmorrison/projects:personal-website-$VERSION" . &&
-  docker push "clintonmorrison/projects:personal-website-$VERSION" 
+TAG="$DOCKER_REGISTRY_PROJECTS/personal-website:$VERSION"
+docker build --platform linux/amd64 -t "$TAG" . &&
+  docker push "$TAG" 
 
 # echo "Running container..." &&
 # bash run_container.sh &&
