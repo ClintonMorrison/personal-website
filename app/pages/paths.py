@@ -137,6 +137,7 @@ aliases = {
 
 # If key is requested, redirect to different path.
 redirects = {
-  'projects/taskbird': 'http://taskbird.ca'
+  'projects/taskbird': 'https://taskbird.clintonmorrison.com',
+  'projects/lorikeet': 'https://lorikeet.clintonmorrison.com',
 }
 

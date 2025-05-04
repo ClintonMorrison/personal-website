@@ -17,7 +17,7 @@ Performance
 
 I have found the page load speeds are much better with Vultr, compared to Bluehost.
 
-Unfortunately, I didn't save any page speed data from my site while it was still on Bluehost. However, one of my other domains, TaskBird[http://taskbird.ca], is still on Bluehost.  While it's not a completely fair comparison, I used the tool to measure the speed of this domain.
+Unfortunately, I didn't save any page speed data from my site while it was still on Bluehost. However, one of my other domains, TaskBird[https://taskbird.clintonmorrison.com/], is still on Bluehost.  While it's not a completely fair comparison, I used the tool to measure the speed of this domain.
 
 %% IMAGE, bluehost_page_load_speed.png, CENTER %%
 

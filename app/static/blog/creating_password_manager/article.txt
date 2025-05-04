@@ -1,6 +1,6 @@
 I have personally always had a hard time deciding how to store my passwords. I mostly have relied on copying and pasting them into an unencrypted plaintext file over the years. There are lots of existing password managers; desktop programs, web apps, and mobile apps. I have tried some, but I had trouble trusting these external services with my data. I also find a lot of the existing password manager apps are more complicated than I want.
 
-I thought it would be a fun challenge to try to make the password manager app I've always wanted. I made the backend for it with Golang, and the frontend with React. It's called Lorikeet[https://lorikeet.ca].
+I thought it would be a fun challenge to try to make the password manager app I've always wanted. I made the backend for it with Golang, and the frontend with React. It's called Lorikeet[https://lorikeet.clintonmorrison.com/].
 
 
 Hashing
@@ -134,7 +134,7 @@ So now we have an API server and a built React app! Requests to the API need to 
 ```
 http {
   server {
-    server_name  lorikeet.ca;
+    server_name  lorikeet.clintonmorrison.com;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
     location ~ ^/api/ {
@@ -165,6 +165,6 @@ git pull &&
 Final Thoughts
 ---
 
-Lorikeet was a lot of fun to make! You should definitely check it out. The site is live at https://lorikeet.ca[https://lorikeet.ca]. Golang and React are both great for this sort of application. The app is simple and has delightfully few dependencies. Materialize CSS was also nice to work with. The app uses client-side and server-side encryption. It logs requests and locks out bots from guessing your password. The process of designing a full (but simple) product was interesting to go through. Getting people to use it will be a whole different challenge. It is understandably difficult to get people to trust small hobbyist projects with their passwords and personal information. I hope you'll give it a try though!
+Lorikeet was a lot of fun to make! You should definitely check it out. The site is live at https://lorikeet.clintonmorrison.com/[https://lorikeet.clintonmorrison.com/]. Golang and React are both great for this sort of application. The app is simple and has delightfully few dependencies. Materialize CSS was also nice to work with. The app uses client-side and server-side encryption. It logs requests and locks out bots from guessing your password. The process of designing a full (but simple) product was interesting to go through. Getting people to use it will be a whole different challenge. It is understandably difficult to get people to trust small hobbyist projects with their passwords and personal information. I hope you'll give it a try though!
 
 If you do try it, I would love to hear what you think. Don't hesitate to contact[/contact] me.

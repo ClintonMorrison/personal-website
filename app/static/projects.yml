@@ -5,7 +5,7 @@
   demo_type: link
   source_type: github
   source_url: https://github.com/ClintonMorrison/lorikeet
-  demo_url: https://lorikeet.ca/
+  demo_url: https://lorikeet.clintonmorrison.com/
   short_description: A password manager with Go/React.
   long_description: >
     This is a password manager web app, created with Golang and React. It uses client-side and server-side AES encryption.
@@ -41,7 +41,7 @@
   source_type: github
   source_url: https://github.com/ClintonMorrison/taskbird
   demo_type: link
-  demo_url: http://taskbird.ca
+  demo_url: https://taskbird.clintonmorrison.com/
   short_description: An awesome task and calendar web app.
   long_description: >
     Task Bird is an awesome task management and productivity app created with
