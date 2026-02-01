@@ -1,6 +1,6 @@
 import re
+import subprocess
 import core.functions
-import sass
 from pprint import pprint
 
 class Template:
@@ -122,9 +122,21 @@ class Template:
       self._format_filename(path),  self._read_file(path))
 
   def _add_sass(self, path):
+    scss_content = self._read_file(path)
+
+    result = subprocess.run(
+        ['sass', '--stdin', '--style=compressed', '--no-source-map'],
+        input=scss_content,
+        capture_output=True,
+        text=True
+    )
+
+    if result.returncode != 0:
+        raise Exception(f"SASS compilation failed: {result.stderr}")
+
     return "%s\n<style>\n%s\n</style>" % (
-      self._format_filename(path),
-      sass.compile(string=bytes(self._read_file(path), 'utf-8'))
+        self._format_filename(path),
+        result.stdout
     )
 
   
