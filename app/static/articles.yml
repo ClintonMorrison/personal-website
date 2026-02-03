@@ -1,3 +1,10 @@
+- name: building_recipe_scaling_app
+  title: Building a Recipe Scaling App with LLMs
+  visible: True
+  date_published: 2026-01-01
+  description: >
+    How I built Scale My Recipes, a tool that parses recipes from any URL and scales ingredients.
+
 - name: creating_password_manager
   title: Creating a Password Manager
   visible: True

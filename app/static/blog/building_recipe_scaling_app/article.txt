@@ -1,0 +1,164 @@
+I cook a lot, and I often find recipes online that I want to try. The problem is that recipes are usually written for a specific number of servings. If I want to make half the recipe, or double it, I have to do math. This is tedious, especially for recipes with many ingredients and unusual measurements.
+
+I thought it would be a fun project to build a tool that automatically scales recipes. You paste in a URL, and it parses the recipe and lets you adjust the servings. It also calculates nutrition information. The app is called Scale My Recipes[https://scalemy.recipes/].
+
+The interesting challenge here is that recipe websites are all different. There's no standard format for how recipes are structured in HTML. Some use structured data, but many don't. I decided to use an LLM to handle this variability.
+
+
+Parsing Recipes From URLs
+---
+
+The first challenge was extracting recipe data from arbitrary URLs. Recipe websites have wildly different HTML structures. Some wrap ingredients in lists, others use paragraphs. Some include nutrition data, others don't. Building a traditional parser for each website would be impossible to maintain.
+
+My solution was to use an LLM to extract the recipe from simplified HTML. The pipeline works like this:
+
+## Fetch the HTML from the URL
+## Strip away all the noise (scripts, styles, images, ads)
+## Remove all HTML attributes
+## Send the simplified HTML to an LLM
+## Parse the structured JSON response
+
+The simplification step is crucial for keeping costs down. Recipe pages are bloated with ads, tracking scripts, and styling. Stripping all of this reduces the HTML from tens of thousands of characters to just a few thousand. Here's what the simplification does:
+
+```
+// Remove elements that add noise
+script, style, iframe, img, svg, video, audio, canvas,
+noscript, header, footer, nav, aside, form, button, input
+
+// Remove all attributes from remaining elements
+<div class="recipe-card" id="main"> → <div>
+
+// Replace styling tags with their content
+<strong>flour</strong> → flour
+```
+
+After simplification, the HTML is small enough to send to the LLM without burning through tokens.
+
+
+Getting Structured Output From LLMs
+---
+
+LLMs are good at understanding messy input, but getting consistent structured output is tricky. I needed the LLM to return valid JSON with specific fields every time. To achieve this, I created detailed prompts that explain exactly what I want.
+
+The system prompt looks something like this:
+
+```
+You are a recipe parsing engine.
+
+Input: the partial HTML contents of a web page that contains a recipe.
+Output: the parsed recipe; respond only with JSON.
+
+The JSON should have these fields:
+- title: the recipe title
+- servingCount: number of servings (use 1 if not specified)
+- servingUnit: what each serving is (e.g. "cookie", "slice", "bowl")
+- ingredients: array of ingredients with name, quantity, and unit
+- steps: array of instruction strings
+```
+
+The prompt also includes detailed guidance for edge cases:
+
+```
+- If a range of quantities is given, use the average
+- Use "unitary" for countable items like eggs or garlic cloves
+- Don't use "serving" as a serving unit, be specific
+- Valid units: teaspoon, tablespoon, cup, gram, pound, ounce, pinch, unitary
+```
+
+This level of detail in the prompt makes the output remarkably consistent. The LLM understands that "2-3 cloves garlic" should become quantity: 2.5, unit: "unitary". It knows that a cake recipe's serving unit should be "slice" not "serving".
+
+To extract the JSON from the response, I find the first `{` and last `}` and parse everything in between. This handles cases where the LLM adds explanatory text before or after the JSON.
+
+
+Unit Conversion and Smart Formatting
+---
+
+Once I have the parsed recipe, users need to be able to scale it. If someone wants to double a recipe, all the quantities need to double. But raw numbers aren't user-friendly. Nobody wants to see "0.5 cups" when they could see "½ cup".
+
+I built a unit conversion system that handles this. It converts quantities to the most readable form:
+
+```
+250 ml → 1 cup
+0.25 cup → ¼ cup
+0.333 cup → ⅓ cup
+15 ml → 1 tablespoon
+```
+
+The system supports Unicode fractions for common values. When formatting a quantity, it checks if the decimal is close to a known fraction:
+
+```
+function formatQuantity(value) {
+  if (isCloseToValue(value, 0.25)) return '¼';
+  if (isCloseToValue(value, 0.333)) return '⅓';
+  if (isCloseToValue(value, 0.5)) return '½';
+  if (isCloseToValue(value, 0.666)) return '⅔';
+  if (isCloseToValue(value, 0.75)) return '¾';
+  // ... more fractions
+}
+```
+
+The `isCloseToValue` function uses a 10% tolerance, so 0.32 still becomes ⅓. This handles the small rounding errors that accumulate when scaling recipes.
+
+For larger quantities, it converts to more sensible units. If you scale a recipe up and end up with 1500ml of milk, it displays as "1.5 liters" instead.
+
+
+Nutrition Information
+---
+
+Calculating nutrition requires knowing the caloric density of each ingredient. I could have used a nutrition API, but I decided to use the LLM for this too. When a recipe is loaded, I send the list of ingredients to the LLM and ask for nutrition data:
+
+```
+For each ingredient, provide:
+- density (grams per milliliter)
+- caloriesPerGram
+- proteinPerGram
+- fatPerGram
+- carbohydratesPerGram
+```
+
+To minimize API calls, I batch all unknown ingredients into a single request. If a recipe has 15 ingredients and I've seen 10 of them before, I only need to look up 5.
+
+The nutrition calculation then uses the density to convert volume measurements to grams:
+
+```
+1 cup flour = 240ml × 0.53 g/ml = 127 grams
+127 grams × 3.64 cal/gram = 462 calories
+```
+
+For "unitary" items like eggs, the LLM provides a `gramsPerUnit` value instead. One large egg is about 50 grams.
+
+
+Caching Everything
+---
+
+LLM calls are slow and expensive. To keep the app responsive, I cache aggressively. Every parsed recipe is saved to disk with the URL as the key. Every ingredient lookup is cached too. The second time someone requests the same recipe, it loads instantly.
+
+I built a simple key-value store that saves JSON files to disk. Each entry has metadata:
+
+```
+{
+  "createdAt": "2024-01-15T...",
+  "updatedAt": "2024-01-15T...",
+  "expiresAt": null,
+  "schemaVersion": 1,
+  "data": { ... the actual recipe ... }
+}
+```
+
+The expiration field lets me invalidate old data if I change the schema. The schema version helps with migrations.
+
+
+Lessons Learned
+---
+
+Building this project taught me a few things about working with LLMs:
+
+**Prompt engineering matters.** The difference between a vague prompt and a detailed one is huge. Specifying exact field names, valid values, and edge cases makes the output much more reliable.
+
+**Simplify your input.** Don't send raw HTML to an LLM. Strip out everything that isn't relevant. This saves money and improves accuracy.
+
+**Cache aggressively.** LLM calls are expensive. If you can cache the result, do it. Most recipe URLs will be requested multiple times by different users.
+
+**Handle units carefully.** Unit conversion is surprisingly complex. There are volume units, mass units, and "unitary" items. Some ingredients are measured by volume in some countries and by mass in others. Building a robust conversion system took more time than I expected.
+
+The app is live at https://scalemy.recipes/[https://scalemy.recipes/]. It's built with Next.js, TypeScript, and Tailwind CSS, using the OpenAI API for parsing. If you try it out, I'd love to hear what you think.
