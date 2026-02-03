@@ -1,3 +1,31 @@
+- name: scale-my-recipes
+  title: Scale My Recipes
+  date_published: 2026-01-01
+  visible: True
+  demo_type: link
+  source_type: none
+  demo_url: https://scalemy.recipes/
+  short_description: A recipe scaling tool powered by AI.
+  long_description: >
+    Scale My Recipes lets you instantly adjust ingredient amounts for more or fewer servings.
+    Paste any recipe URL and the app automatically parses and scales the ingredients.
+    Built with Next.js, React, TypeScript, and Tailwind CSS, with OpenAI integration
+    for intelligent recipe parsing and nutrition information.
+
+- name: canadians-watch
+  title: Canadians Watch
+  date_published: 2020-01-01
+  visible: True
+  demo_type: link
+  source_type: none
+  demo_url: https://canadians.watch/
+  short_description: Find where to stream movies in Canada.
+  long_description: >
+    Canadians Watch helps you find where movies are available to stream in Canada.
+    Search for any film and discover which streaming platforms have it.
+    Features trending movies and detailed information powered by TMDB.
+    Built with Next.js, React, TypeScript, Material-UI, and MySQL.
+
 - name: lorikeet
   title: Lorikeet
   date_published: 2019-05-20

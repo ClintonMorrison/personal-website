@@ -1,7 +1,7 @@
 import os
 import shutil
 from datetime import datetime
-import pytz
+from zoneinfo import ZoneInfo
 from glob import glob
 
 import config
@@ -58,7 +58,7 @@ for path, item in list(paths.items()) + list(pattern_paths.items()):
       out_file = open(filename, 'w+', encoding='utf8')
       
       body = page_data.get('body')
-      now = datetime.now(pytz.timezone(config.timezone))
+      now = datetime.now(ZoneInfo(config.timezone))
 
       # Fill version_info placeholder
       last_updated = 'Last updated: %s' % (now.strftime('%-I:%M %p, %b %d, %Y'))
