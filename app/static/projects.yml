@@ -21,7 +21,7 @@
   demo_url: https://canadians.watch/
   short_description: Find where to stream movies in Canada.
   long_description: >
-    Canadians Watch helps you find where movies are available to stream in Canada.
+    Canadians Watch helps you find where movies and TV shows are available to stream in Canada.
     Search for any film and discover which streaming platforms have it.
     Features trending movies and detailed information powered by TMDB.
     Built with Next.js, React, TypeScript, and Material-UI.
