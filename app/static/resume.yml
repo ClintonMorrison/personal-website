@@ -34,9 +34,9 @@ work:
     tasks:
       - Full stack development with Ruby on Rails and React
       - Led product team focused on improving patient experience
-      - Built and launched mobile apps for [Phoenix](https://phoenix.com) and [Raven](https://raven.com) using React Native and Expo
+      - Built and launched mobile apps for <a href="https://phoenix.com" target="_blank">Phoenix</a> and <a href="https://raven.com" target="_blank">Raven</a> using React Native and Expo
       - Overhauled billing system for weight loss products
-      - Coordinated with designers and product managers to plan, develop, and release new features (such as [Labs](https://www.phoenix.ca/labs))
+      - Coordinated with designers and product managers to plan, develop, and release new features (such as <a href="https://www.phoenix.ca/labs" target="_blank">Labs</a>)
   - title: Senior Software Engineer
     company: Stripe
     location: Toronto, Ontario
