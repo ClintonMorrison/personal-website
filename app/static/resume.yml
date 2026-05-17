@@ -32,7 +32,11 @@ work:
     start_date: March 2025
     end_date: Present
     tasks:
-      - Ruby on Rails and React
+      - Full stack development with Ruby on Rails and React
+      - Led product team focused on improving patient experience
+      - Built and launched mobile apps for [Phoenix](https://phoenix.com) and [Raven](https://raven.com) using React Native and Expo
+      - Overhauled billing system for weight loss products
+      - Coordinated with designers and product managers to plan, develop, and release new features (such as [Labs](https://www.phoenix.ca/labs))
   - title: Senior Software Engineer
     company: Stripe
     location: Toronto, Ontario
@@ -40,8 +44,11 @@ work:
     end_date: March 2025
     tasks:
       - Full stack web development with Ruby, TypeScript, and React
-      - Built and maintained new features for Stripe's support websites
-      - Led major initiatives from design to launch, collaborating with cross-functional teams
+      - Integrated LLMs via AWS Bedrock into Stripe's support site to better serve customers
+      - Added attachment support to the customer support chat widget
+      - Built customer feedback flows including CSAT survey emails and in-widget surveys
+      - Improved end-to-end test coverage
+      - Led initiatives from design to launch, collaborating with cross-functional teams
       - Ran weekly scrum ceremonies and streamlined team processes
   - title: Staff Web Engineer
     company: Ritual
@@ -125,15 +132,15 @@ work:
   #    - Basic CAD modelling, organized engineering drawings, researched products, prepared reports and binders.
 
 awards:
-  - name: Bruce and Doroth Rossetti Scholarship Bronze Award
+  - name: Bruce and Dorothy Rossetti Scholarship Bronze Award
     institution: Dalhousie University
     date: "2015"
     amount: "$1500"
-  - name: Bruce and Doroth Rossetti Scholarship Bronze Award
+  - name: Bruce and Dorothy Rossetti Scholarship Bronze Award
     institution: Dalhousie University
     date: "2014"
     amount: "$500"
-  - name: Bruce and Doroth Rossetti Scholarship Silver Award
+  - name: Bruce and Dorothy Rossetti Scholarship Silver Award
     institution: Dalhousie University
     date: "2013"
     amount: "$1000"
@@ -158,7 +165,7 @@ awards:
     date: "2012"
     amount: "0" # $250 maybe?
 
-  - name: Amoung top five students in graduating class
+  - name: Among top five students in graduating class
     institution: Sydney Academy
     date: "June, 2012"
     amount: "0"
