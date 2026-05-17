@@ -14,7 +14,7 @@
 
 - name: canadians-watch
   title: Canadians Watch
-  date_published: 2020-01-01
+  date_published: 2022-12-01
   visible: True
   demo_type: link
   source_type: none
@@ -24,7 +24,7 @@
     Canadians Watch helps you find where movies are available to stream in Canada.
     Search for any film and discover which streaming platforms have it.
     Features trending movies and detailed information powered by TMDB.
-    Built with Next.js, React, TypeScript, Material-UI, and MySQL.
+    Built with Next.js, React, TypeScript, and Material-UI.
 
 - name: lorikeet
   title: Lorikeet
