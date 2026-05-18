@@ -112,6 +112,17 @@ class MarkdownParser:
         lines = text.split("\n")
         return "\n".join([line.strip() for line in lines])
 
+    def _inline_rules(self):
+        return {
+            r"\{(.*)\}\[(.*?)\]": self._render_link,
+            r"([^\s]*?)\[(.*?)\]": self._render_link,
+            r"\*\*([^\n]*?)\*\*": self._render_bold,
+            r"\*([^\n]*?)\*": self._render_italics,
+        }
+
+    def render_inline(self, text):
+        return self.apply_rules(text, self._inline_rules())
+
     def render(self, markdown):
         rules_1 = {
             r"\n([^\n]*?)\n(\-+)": self._render_header,
@@ -121,10 +132,7 @@ class MarkdownParser:
 
         rules_2 = {
             r"([^\n^<^>]+)\n": self._render_paragraph,
-            r"\{(.*)\}\[(.*?)\]": self._render_link,
-            r"([^\s]*?)\[(.*?)\]": self._render_link,
-            r"\*\*([^\n]*?)\*\*": self._render_bold,
-            r"\*([^\n]*?)\*": self._render_italics
+            **self._inline_rules(),
         }
 
         rules_3 = {

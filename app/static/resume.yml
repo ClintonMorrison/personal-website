@@ -34,9 +34,9 @@ work:
     tasks:
       - Full stack development with Ruby on Rails and React
       - Led product team focused on improving patient experience
-      - Built and launched mobile apps for <a href="https://phoenix.com" target="_blank">Phoenix</a> and <a href="https://raven.com" target="_blank">Raven</a> using React Native and Expo
+      - Built and launched mobile apps for Phoenix[https://phoenix.ca] and Raven[https://getraven.com] using React Native and Expo
       - Overhauled billing system for weight loss products
-      - Coordinated with designers and product managers to plan, develop, and release new features (such as <a href="https://www.phoenix.ca/labs" target="_blank">Labs</a>)
+      - Coordinated with designers and product managers to plan, develop, and release new features (such as Labs[https://www.phoenix.ca/labs])
   - title: Senior Software Engineer
     company: Stripe
     location: Toronto, Ontario
@@ -68,7 +68,7 @@ work:
       - Wrote detailed design documents and user stories
       - Coordinated with stakeholders to ensure tasks were delivered correctly and on time
       - Mentored other engineers and co-op students
-      - Delivered high impact features such as <a href="https://ritual.co/companies/group-ordering" target="_blank">Group Ordering</a>
+      - Delivered high impact features such as {Group Ordering}[https://ritual.co/companies/group-ordering]
       - Identified process bottlenecks and improved developer productivity
       #- Designed RESTful APIs with OpenAPI
       #- Created and updated CloudFlare workers
