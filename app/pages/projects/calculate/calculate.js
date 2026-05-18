@@ -19,29 +19,31 @@ $(document).ready(function() {
 	});
 
 	$('#query').focus();
-
-	$('#about').click(function() { 
-		var msg = '';
-		msg += "Evaluate simple expressions instantly by typing them into the text box. <br><br>";
-		msg += "This is not an equation solver. It can only evaluate expressions containing numbers.<br><br>";
-		msg += "Supports brackets, as well as the operations: +, -, *, /, ^<br><br>";
-		msg += "<em>Examples:</em></br>";
-		msg += "2 + 2<br>";
-		msg += "2^4 - 5*2<br>";
-		msg += "(4+3)*2 - 5/2<br>";
-		showMessageModal(
-			"About Calculate!",
-			msg);
-	});
-
 });
 
 
 
 var processInput = _.throttle(function() {
-	var query = $('#query').val();
+	let query = $('#query').val();
 
-	if ( ! query || stripWhitespace(query).length === 0) {
+	query = query.trim();
+
+	// Replace "×" with "*"
+	query = query.replace(/×/g, '*');
+
+	// Remove non-number non-operator non-whitespace characters
+	query = query.replace(/[^0-9\s\+\.\-\*\/^\(\)]/g, '');
+
+	// Add "+" between each pair of numbers that only have whitespace between them
+	const tokens = query.split(/\s+/);
+	for (let i = 0; i < tokens.length; i++) {
+		if (tokens[i]?.match(/[0-9]+/) && tokens[i + 1]?.match(/[0-9]+/)) {
+			tokens[i] = tokens[i] + " +";
+		}
+	}
+	query = tokens.join(" ");
+
+	if ( !query || query.length === 0) {
     $('.output').hide();
 	} else {
     $('.output').show();
