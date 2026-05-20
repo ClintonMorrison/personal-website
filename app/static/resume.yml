@@ -14,7 +14,7 @@ skills:
     description: Ruby on Rails, Next.js, Express, Spring, Django.
 
   - name: Frontend
-    description: React, Redux, Jest, Playwright, Angular, jQuery, HTML, CSS, SCSS.
+    description: React, Tailwind, Expo, Jest, Playwright, HTML, CSS, SCSS.
 
   - name: Databases
     description: PostgreSQL, MySQL, MongoDB, DynamoDB, Redis.
@@ -23,7 +23,7 @@ skills:
     description: Nginx, Node.js, AWS, GCP, Keycloak, Ansible, Docker.
 
   - name: Tools
-    description: Git, Teamcity, Jenkins, Jira, Amplitude, Splunk, Prometheus, Sentry, IntelliJ, VS Code.
+    description: Git, GitHub, Jira, Linear, Amplitude, Splunk, Prometheus, Sentry, Cursor, Claude.
 
 work:
   - title: Staff Software Developer
@@ -32,11 +32,12 @@ work:
     start_date: March 2025
     end_date: Present
     tasks:
-      - Full stack development with Ruby on Rails and React
-      - Led product team focused on improving patient experience
-      - Built and launched mobile apps for Phoenix[https://phoenix.ca] and Raven[https://getraven.com] using React Native and Expo
-      - Overhauled billing system for weight loss products
-      - Coordinated with designers and product managers to plan, develop, and release new features (such as Labs[https://www.phoenix.ca/labs])
+      - Built patient-facing features end-to-end with Ruby on Rails and React
+      - Led a product engineering team focused on patient experience
+      - Defined technical direction, broke work down into milestones, and delegated across the team
+      - Drove cross-functional planning with design, product, operations, support, and platform teams on new products (e.g. Labs[https://www.phoenix.ca/labs])
+      - Oversaw major project to build greenfield native apps for {Phoenix}[https://apps.apple.com/ca/app/phoenix-health-tracker/id6751853504] and Raven[https://play.google.com/store/apps/details?id=com.phoenixhealth.raven&hl=en_CA] using React Native, Expo, and Tailwind
+      # - Overhauled internal billing system
   - title: Senior Software Engineer
     company: Stripe
     location: Toronto, Ontario
